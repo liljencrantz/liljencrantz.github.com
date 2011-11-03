@@ -1,0 +1,152 @@
+
+body
+{
+    background-color: #eee;
+    background-image: url('../img/xv.png'); 
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.anna-content
+{
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+}
+
+.anna-left-menu
+{
+    float: left;
+    width: 30%;
+}
+
+.anna-left-menu-inner
+{
+    padding: 2em;
+}
+
+.anna-left-menu h2
+{
+    margin-top: 0px;
+}
+
+.anna-main
+{
+    float:left;
+    width: 70%;
+    background-color: white;
+}
+
+.anna-main-inner
+{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 2em;
+}
+
+.anna-main-inner 
+{
+    text-align: justify;
+}
+
+.anna-toc-h1
+{
+    padding-left: 0em;
+}
+
+.anna-toc-h2
+{
+    padding-left: 1em;
+}
+
+.anna-toc-h3
+{
+    padding-left: 2em;
+}
+
+.toc li
+{
+    list-style: none;
+}
+
+a
+{
+    color: #975;
+}
+
+a:visited
+{
+    color: #532;
+}
+
+.anna-string-literal,
+.anna-string-literal .anna-keyword,
+.anna-string-literal .anna-type
+{
+    color: #651;
+}
+
+.anna-comment,
+.anna-comment .anna-keyword,
+.anna-comment .anna-type
+{
+    color: #700;
+}
+
+.anna-keyword
+{
+    color: #177;
+}
+
+.anna-type
+{
+    color: #171
+}
+
+.anna-code-popup
+{
+    position: relative;
+}
+
+.anna-code-popup-inner
+{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: white;
+    border: 1px solid #aaa;
+    padding: 1em;
+    width: 100%;
+    box-shadow: 5px 5px 10px 10px #aaa;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.anna-code-popup-close
+{
+    margin: -1em;
+    float: right;
+    display: block;
+    padding: 0.7em 0.95em;
+    border-top-right-radius: 4px;
+}
+
+.anna-code-popup-close:hover
+{
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.anna-subheading
+{
+    font-style: italic;
+    margin-top: -1em;
+    margin-bottom: 1.5em;
+}
+
+caption
+{
+    font-style: italic;
+}
+

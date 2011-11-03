@@ -1,0 +1,297 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace Char</title>
+    
+    <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>Char</em></a></h1>
+
+    The Char type is the basic character type of the Anna language.<p>Anna Char objects are implemented using wide characters, e.g. the wchar_t type in C. This means that every character takes the same amount of memory. Nearly all Char values, (those with 30 or fewer bits used), are stored directly on the stack and use no heap memory at all.<p>Anna Char objects are imutable, meaning their value never changes.<p>
+    
+    
+    
+    
+    <h2><a name="api-other">Other members</a></h2>
+    <ul>
+    
+      <li><a href="#!__type__Getter">!__type__Getter</a></li>
+
+      <li><a href="#!lowerGetter">!lowerGetter</a></li>
+
+      <li><a href="#!ordinalGetter">!ordinalGetter</a></li>
+
+      <li><a href="#!upperGetter">!upperGetter</a></li>
+
+      <li><a href="#__add__Int__">__add__Int__</a></li>
+
+      <li><a href="#__cmp__">__cmp__</a></li>
+
+      <li><a href="#__decreaseAssign__Int__">__decreaseAssign__Int__</a></li>
+
+      <li><a href="#__eq__">__eq__</a></li>
+
+      <li><a href="#__gt__">__gt__</a></li>
+
+      <li><a href="#__gte__">__gte__</a></li>
+
+      <li><a href="#__increaseAssign__Int__">__increaseAssign__Int__</a></li>
+
+      <li><a href="#__init__">__init__</a></li>
+
+      <li><a href="#__lt__">__lt__</a></li>
+
+      <li><a href="#__lte__">__lte__</a></li>
+
+      <li><a href="#__neq__">__neq__</a></li>
+
+      <li><a href="#__nextAssign__">__nextAssign__</a></li>
+
+      <li><a href="#__prevAssign__">__prevAssign__</a></li>
+
+      <li><a href="#__sub__Char__">__sub__Char__</a></li>
+
+      <li><a href="#__sub__Int__">__sub__Int__</a></li>
+
+      <li><a href="#convert">convert</a></li>
+
+      <li><a href="#hashCode">hashCode</a></li>
+
+      <li><a href="#toString">toString</a></li>
+
+    </ul>
+    
+
+        
+    <hr>
+    
+<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
+<br>
+Getter function for the __type__ property.<p>
+
+
+        
+    <hr>
+    
+<a name='!lowerGetter'>def <a href='../../global/lang/Char.html'>Char</a> <em>!lowerGetter</em> (<a href='../../global/lang/Char.html'>Char</a> this);</a>
+<br>
+Getter function for the lower property.<p>
+
+
+        
+    <hr>
+    
+<a name='!ordinalGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!ordinalGetter</em> (<a href='../../global/lang/Char.html'>Char</a> this);</a>
+<br>
+Getter function for the ordinal property.<p>
+
+
+        
+    <hr>
+    
+<a name='!upperGetter'>def <a href='../../global/lang/Char.html'>Char</a> <em>!upperGetter</em> (<a href='../../global/lang/Char.html'>Char</a> this);</a>
+<br>
+Getter function for the upper property.<p>
+
+
+        
+    <hr>
+    
+<a name='__add__Int__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__add__Int__</em> (<a href='../../global/lang/Char.html'>Char</a> this, <a href='../../global/lang/Int.html'>Int</a> param);</a>
+<br>
+Add two numbers together.<p>
+
+
+        
+    <hr>
+    
+<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='__decreaseAssign__Int__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__decreaseAssign__Int__</em> (<a href='../../global/lang/Char.html'>Char</a> this, <a href='../../global/lang/Int.html'>Int</a> param);</a>
+<br>
+Decrease a number by the specified amount.<p>
+
+
+        
+    <hr>
+    
+<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is equal to the other object, null otherwise.<p>
+
+
+        
+    <hr>
+    
+<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Returns non-null if this object is greater than the other object, null otherwise.<p>
+
+
+        
+    <hr>
+    
+<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is greater than or equal to the other object, null otherwise<p>
+
+
+        
+    <hr>
+    
+<a name='__increaseAssign__Int__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__increaseAssign__Int__</em> (<a href='../../global/lang/Char.html'>Char</a> this, <a href='../../global/lang/Int.html'>Int</a> param);</a>
+<br>
+Increase a number by the specified amount.<p>
+
+
+        
+    <hr>
+    
+<a name='__init__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
+<br>
+Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.<p>
+
+
+        
+    <hr>
+    
+<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Returns non-null if this object is smaller than the other object, null otherwise.<p>
+
+
+        
+    <hr>
+    
+<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is less than or equal to the other object, null otherwise<p>
+
+
+        
+    <hr>
+    
+<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is not equal to the other object, null otherwise<p>
+
+
+        
+    <hr>
+    
+<a name='__nextAssign__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__nextAssign__</em> (<a href='../../global/lang/Char.html'>Char</a> this);</a>
+<br>
+Increase a number by one step.<p>
+
+
+        
+    <hr>
+    
+<a name='__prevAssign__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__prevAssign__</em> (<a href='../../global/lang/Char.html'>Char</a> this);</a>
+<br>
+Decrease a number by one step.<p>
+
+
+        
+    <hr>
+    
+<a name='__sub__Char__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__sub__Char__</em> (<a href='../../global/lang/Char.html'>Char</a> this, <a href='../../global/lang/Char.html'>Char</a> param);</a>
+<br>
+Subtract two numbers from each other.<p>
+
+
+        
+    <hr>
+    
+<a name='__sub__Int__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__sub__Int__</em> (<a href='../../global/lang/Char.html'>Char</a> this, <a href='../../global/lang/Int.html'>Int</a> param);</a>
+<br>
+Subtract two numbers from each other.<p>
+
+
+        
+    <hr>
+    
+<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<br>
+The type of this object<p>
+
+
+        
+    <hr>
+    
+<a name='convert'>def <a href='../../global/lang/Char.html'>Char</a> <em>convert</em> (<a href='../../global/lang/Int.html'>Int</a> value);</a>
+<br>
+Creates a new Char object with the specified ordinal number.<p>
+
+
+        
+    <hr>
+    
+<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
+<br>
+Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.<p>
+
+
+        
+    <hr>
+    
+<a name='lower'>var <a href='../../global/lang/Char.html'>Char</a> <em>lower</em>;</a>
+<br>
+The lower case eqivalent of this Char<p>
+
+
+        
+    <hr>
+    
+<a name='ordinal'>var <a href='../../global/lang/Int.html'>Int</a> <em>ordinal</em>;</a>
+<br>
+The ordinal number of this Char. This property returns the same value as the Int::convert static method.<p>
+
+
+        
+    <hr>
+    
+<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='upper'>var <a href='../../global/lang/Char.html'>Char</a> <em>upper</em>;</a>
+<br>
+The upper case equivalent of this Char<p>
+
+
+    
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+	  
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

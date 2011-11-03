@@ -1,0 +1,1253 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace cerror</title>
+    
+    <link rel="stylesheet" href="../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>cerror</em></a></h1>
+
+    
+    
+    
+    
+    
+    <h2><a name="api-other">Other members</a></h2>
+    <ul>
+    
+      <li><a href="#!errnoGetter">!errnoGetter</a></li>
+
+      <li><a href="#access">access</a></li>
+
+      <li><a href="#addressFamilyNotSupported">addressFamilyNotSupported</a></li>
+
+      <li><a href="#addressInUse">addressInUse</a></li>
+
+      <li><a href="#addressNotAvailable">addressNotAvailable</a></li>
+
+      <li><a href="#again">again</a></li>
+
+      <li><a href="#alreadyInProgress">alreadyInProgress</a></li>
+
+      <li><a href="#badExchange">badExchange</a></li>
+
+      <li><a href="#badFileDescriptor">badFileDescriptor</a></li>
+
+      <li><a href="#badFileDescriptorState">badFileDescriptorState</a></li>
+
+      <li><a href="#badRequest">badRequest</a></li>
+
+      <li><a href="#badRequestCode">badRequestCode</a></li>
+
+      <li><a href="#badSlot">badSlot</a></li>
+
+      <li><a href="#canceled">canceled</a></li>
+
+      <li><a href="#channelRange">channelRange</a></li>
+
+      <li><a href="#communicationError">communicationError</a></li>
+
+      <li><a href="#connectionAborted">connectionAborted</a></li>
+
+      <li><a href="#connectionRefused">connectionRefused</a></li>
+
+      <li><a href="#connectionReset">connectionReset</a></li>
+
+      <li><a href="#deadlock">deadlock</a></li>
+
+      <li><a href="#destinationRequired">destinationRequired</a></li>
+
+      <li><a href="#deviceBusy">deviceBusy</a></li>
+
+      <li><a href="#diskQuota">diskQuota</a></li>
+
+      <li><a href="#domain">domain</a></li>
+
+      <li><a href="#errorString">errorString</a></li>
+
+      <li><a href="#exchangeFull">exchangeFull</a></li>
+
+      <li><a href="#exist">exist</a></li>
+
+      <li><a href="#fault">fault</a></li>
+
+      <li><a href="#fileTooBig">fileTooBig</a></li>
+
+      <li><a href="#hostDown">hostDown</a></li>
+
+      <li><a href="#hostUnreachable">hostUnreachable</a></li>
+
+      <li><a href="#identifierRemoved">identifierRemoved</a></li>
+
+      <li><a href="#illegalByteSequence">illegalByteSequence</a></li>
+
+      <li><a href="#improperLink">improperLink</a></li>
+
+      <li><a href="#inProgress">inProgress</a></li>
+
+      <li><a href="#interrupted">interrupted</a></li>
+
+      <li><a href="#invalid">invalid</a></li>
+
+      <li><a href="#ioError">ioError</a></li>
+
+      <li><a href="#isConencted">isConencted</a></li>
+
+      <li><a href="#isDirectory">isDirectory</a></li>
+
+      <li><a href="#isNamed">isNamed</a></li>
+
+      <li><a href="#keyExpired">keyExpired</a></li>
+
+      <li><a href="#keyRejected">keyRejected</a></li>
+
+      <li><a href="#keyRevoked">keyRevoked</a></li>
+
+      <li><a href="#level2Halted">level2Halted</a></li>
+
+      <li><a href="#level2NotSynced">level2NotSynced</a></li>
+
+      <li><a href="#level3Halted">level3Halted</a></li>
+
+      <li><a href="#level3Reset">level3Reset</a></li>
+
+      <li><a href="#libraryAccess">libraryAccess</a></li>
+
+      <li><a href="#libraryBad">libraryBad</a></li>
+
+      <li><a href="#libraryCorrupt">libraryCorrupt</a></li>
+
+      <li><a href="#libraryExec">libraryExec</a></li>
+
+      <li><a href="#libraryMax">libraryMax</a></li>
+
+      <li><a href="#loop">loop</a></li>
+
+      <li><a href="#maxFile">maxFile</a></li>
+
+      <li><a href="#maxFileInSystem">maxFileInSystem</a></li>
+
+      <li><a href="#maxLink">maxLink</a></li>
+
+      <li><a href="#mediumType">mediumType</a></li>
+
+      <li><a href="#messageSize">messageSize</a></li>
+
+      <li><a href="#multihop">multihop</a></li>
+
+      <li><a href="#nameTooLong">nameTooLong</a></li>
+
+      <li><a href="#netDown">netDown</a></li>
+
+      <li><a href="#netReset">netReset</a></li>
+
+      <li><a href="#netUnreachable">netUnreachable</a></li>
+
+      <li><a href="#noBufferSpace">noBufferSpace</a></li>
+
+      <li><a href="#noChild">noChild</a></li>
+
+      <li><a href="#noData">noData</a></li>
+
+      <li><a href="#noDevice">noDevice</a></li>
+
+      <li><a href="#noDeviceOrAddress">noDeviceOrAddress</a></li>
+
+      <li><a href="#noEntry">noEntry</a></li>
+
+      <li><a href="#noExec">noExec</a></li>
+
+      <li><a href="#noKey">noKey</a></li>
+
+      <li><a href="#noLink">noLink</a></li>
+
+      <li><a href="#noLock">noLock</a></li>
+
+      <li><a href="#noMedium">noMedium</a></li>
+
+      <li><a href="#noMemory">noMemory</a></li>
+
+      <li><a href="#noMessage">noMessage</a></li>
+
+      <li><a href="#noNet">noNet</a></li>
+
+      <li><a href="#noPackage">noPackage</a></li>
+
+      <li><a href="#noProtocol">noProtocol</a></li>
+
+      <li><a href="#noSpace">noSpace</a></li>
+
+      <li><a href="#noStream">noStream</a></li>
+
+      <li><a href="#noSuchProcess">noSuchProcess</a></li>
+
+      <li><a href="#notBlock">notBlock</a></li>
+
+      <li><a href="#notConnected">notConnected</a></li>
+
+      <li><a href="#notDirectory">notDirectory</a></li>
+
+      <li><a href="#notEmpty">notEmpty</a></li>
+
+      <li><a href="#notImplemented">notImplemented</a></li>
+
+      <li><a href="#notSocket">notSocket</a></li>
+
+      <li><a href="#notStream">notStream</a></li>
+
+      <li><a href="#notSupported">notSupported</a></li>
+
+      <li><a href="#notTty">notTty</a></li>
+
+      <li><a href="#notUnique">notUnique</a></li>
+
+      <li><a href="#operationNotSupported">operationNotSupported</a></li>
+
+      <li><a href="#overflow">overflow</a></li>
+
+      <li><a href="#permission">permission</a></li>
+
+      <li><a href="#pipe">pipe</a></li>
+
+      <li><a href="#protocolError">protocolError</a></li>
+
+      <li><a href="#protocolFamilyNotSupported">protocolFamilyNotSupported</a></li>
+
+      <li><a href="#protocolNotSupported">protocolNotSupported</a></li>
+
+      <li><a href="#protocolType">protocolType</a></li>
+
+      <li><a href="#range">range</a></li>
+
+      <li><a href="#readOnly">readOnly</a></li>
+
+      <li><a href="#remote">remote</a></li>
+
+      <li><a href="#remoteAddressChanged">remoteAddressChanged</a></li>
+
+      <li><a href="#remoteIo">remoteIo</a></li>
+
+      <li><a href="#restart">restart</a></li>
+
+      <li><a href="#seekPipe">seekPipe</a></li>
+
+      <li><a href="#shutdown">shutdown</a></li>
+
+      <li><a href="#socketNotSupported">socketNotSupported</a></li>
+
+      <li><a href="#stale">stale</a></li>
+
+      <li><a href="#streamPipe">streamPipe</a></li>
+
+      <li><a href="#textBusy">textBusy</a></li>
+
+      <li><a href="#timeout">timeout</a></li>
+
+      <li><a href="#timer">timer</a></li>
+
+      <li><a href="#tooBig">tooBig</a></li>
+
+      <li><a href="#unattached">unattached</a></li>
+
+      <li><a href="#unclean">unclean</a></li>
+
+      <li><a href="#users">users</a></li>
+
+      <li><a href="#wouldBlock">wouldBlock</a></li>
+
+    </ul>
+    
+
+        
+    <hr>
+    
+<a name='!errnoGetter'>def <a href='../global/lang/Int.html'>Int</a> <em>!errnoGetter</em> (<a href='../global/cerror.html'>cerror</a> this);</a>
+<br>
+Getter function for the errno property.<p>
+
+
+        
+    <hr>
+    
+<a name='access'>var <a href='../global/lang/Int.html'>Int</a> <em>access</em>;</a>
+<br>
+Permission denied.<p>
+
+
+        
+    <hr>
+    
+<a name='addressFamilyNotSupported'>var <a href='../global/lang/Int.html'>Int</a> <em>addressFamilyNotSupported</em>;</a>
+<br>
+Address family not supported.<p>
+
+
+        
+    <hr>
+    
+<a name='addressInUse'>var <a href='../global/lang/Int.html'>Int</a> <em>addressInUse</em>;</a>
+<br>
+Address already in use.<p>
+
+
+        
+    <hr>
+    
+<a name='addressNotAvailable'>var <a href='../global/lang/Int.html'>Int</a> <em>addressNotAvailable</em>;</a>
+<br>
+Address not available.<p>
+
+
+        
+    <hr>
+    
+<a name='again'>var <a href='../global/lang/Int.html'>Int</a> <em>again</em>;</a>
+<br>
+Resource temporarily unavailable (may be the same value as wouldBlock).<p>
+
+
+        
+    <hr>
+    
+<a name='alreadyInProgress'>var <a href='../global/lang/Int.html'>Int</a> <em>alreadyInProgress</em>;</a>
+<br>
+Connection already in progress.<p>
+
+
+        
+    <hr>
+    
+<a name='badExchange'>var <a href='../global/lang/Int.html'>Int</a> <em>badExchange</em>;</a>
+<br>
+Invalid exchange.<p>
+
+
+        
+    <hr>
+    
+<a name='badFileDescriptor'>var <a href='../global/lang/Int.html'>Int</a> <em>badFileDescriptor</em>;</a>
+<br>
+Bad file descriptor.<p>
+
+
+        
+    <hr>
+    
+<a name='badFileDescriptorState'>var <a href='../global/lang/Int.html'>Int</a> <em>badFileDescriptorState</em>;</a>
+<br>
+File descriptor in bad state.<p>
+
+
+        
+    <hr>
+    
+<a name='badRequest'>var <a href='../global/lang/Int.html'>Int</a> <em>badRequest</em>;</a>
+<br>
+Invalid request descriptor.<p>
+
+
+        
+    <hr>
+    
+<a name='badRequestCode'>var <a href='../global/lang/Int.html'>Int</a> <em>badRequestCode</em>;</a>
+<br>
+Invalid request code.<p>
+
+
+        
+    <hr>
+    
+<a name='badSlot'>var <a href='../global/lang/Int.html'>Int</a> <em>badSlot</em>;</a>
+<br>
+Invalid slot.<p>
+
+
+        
+    <hr>
+    
+<a name='canceled'>var <a href='../global/lang/Int.html'>Int</a> <em>canceled</em>;</a>
+<br>
+Operation canceled.<p>
+
+
+        
+    <hr>
+    
+<a name='channelRange'>var <a href='../global/lang/Int.html'>Int</a> <em>channelRange</em>;</a>
+<br>
+Channel number out of range.<p>
+
+
+        
+    <hr>
+    
+<a name='communicationError'>var <a href='../global/lang/Int.html'>Int</a> <em>communicationError</em>;</a>
+<br>
+Communication error on send.<p>
+
+
+        
+    <hr>
+    
+<a name='connectionAborted'>var <a href='../global/lang/Int.html'>Int</a> <em>connectionAborted</em>;</a>
+<br>
+Connection aborted.<p>
+
+
+        
+    <hr>
+    
+<a name='connectionRefused'>var <a href='../global/lang/Int.html'>Int</a> <em>connectionRefused</em>;</a>
+<br>
+Connection refused.<p>
+
+
+        
+    <hr>
+    
+<a name='connectionReset'>var <a href='../global/lang/Int.html'>Int</a> <em>connectionReset</em>;</a>
+<br>
+Connection reset.<p>
+
+
+        
+    <hr>
+    
+<a name='deadlock'>var <a href='../global/lang/Int.html'>Int</a> <em>deadlock</em>;</a>
+<br>
+Resource deadlock avoided.<p>
+
+
+        
+    <hr>
+    
+<a name='destinationRequired'>var <a href='../global/lang/Int.html'>Int</a> <em>destinationRequired</em>;</a>
+<br>
+Destination address required.<p>
+
+
+        
+    <hr>
+    
+<a name='deviceBusy'>var <a href='../global/lang/Int.html'>Int</a> <em>deviceBusy</em>;</a>
+<br>
+Device or resource busy.<p>
+
+
+        
+    <hr>
+    
+<a name='diskQuota'>var <a href='../global/lang/Int.html'>Int</a> <em>diskQuota</em>;</a>
+<br>
+Disk quota exceeded.<p>
+
+
+        
+    <hr>
+    
+<a name='domain'>var <a href='../global/lang/Int.html'>Int</a> <em>domain</em>;</a>
+<br>
+Mathematics argument out of domain of function.<p>
+
+
+        
+    <hr>
+    
+<a name='errno'>var <a href='../global/lang/Int.html'>Int</a> <em>errno</em>;</a>
+<br>
+The latest C library error to occur<p>
+
+
+        
+    <hr>
+    
+<a name='errorString'>def <a href='../global/lang/String.html'>String</a> <em>errorString</em> (<a href='../global/lang/Int.html'>Int</a> error);</a>
+<br>
+Returns a string that describes the error code passed in the argument. Equivalent to the C strerror function.<p>
+
+
+        
+    <hr>
+    
+<a name='exchangeFull'>var <a href='../global/lang/Int.html'>Int</a> <em>exchangeFull</em>;</a>
+<br>
+Exchange full.<p>
+
+
+        
+    <hr>
+    
+<a name='exist'>var <a href='../global/lang/Int.html'>Int</a> <em>exist</em>;</a>
+<br>
+File exists.<p>
+
+
+        
+    <hr>
+    
+<a name='fault'>var <a href='../global/lang/Int.html'>Int</a> <em>fault</em>;</a>
+<br>
+Bad address.<p>
+
+
+        
+    <hr>
+    
+<a name='fileTooBig'>var <a href='../global/lang/Int.html'>Int</a> <em>fileTooBig</em>;</a>
+<br>
+File too large.<p>
+
+
+        
+    <hr>
+    
+<a name='hostDown'>var <a href='../global/lang/Int.html'>Int</a> <em>hostDown</em>;</a>
+<br>
+Host is down.<p>
+
+
+        
+    <hr>
+    
+<a name='hostUnreachable'>var <a href='../global/lang/Int.html'>Int</a> <em>hostUnreachable</em>;</a>
+<br>
+Host is unreachable.<p>
+
+
+        
+    <hr>
+    
+<a name='identifierRemoved'>var <a href='../global/lang/Int.html'>Int</a> <em>identifierRemoved</em>;</a>
+<br>
+Identifier removed.<p>
+
+
+        
+    <hr>
+    
+<a name='illegalByteSequence'>var <a href='../global/lang/Int.html'>Int</a> <em>illegalByteSequence</em>;</a>
+<br>
+Illegal byte sequence.<p>
+
+
+        
+    <hr>
+    
+<a name='improperLink'>var <a href='../global/lang/Int.html'>Int</a> <em>improperLink</em>;</a>
+<br>
+Improper link.<p>
+
+
+        
+    <hr>
+    
+<a name='inProgress'>var <a href='../global/lang/Int.html'>Int</a> <em>inProgress</em>;</a>
+<br>
+Operation in progress.<p>
+
+
+        
+    <hr>
+    
+<a name='interrupted'>var <a href='../global/lang/Int.html'>Int</a> <em>interrupted</em>;</a>
+<br>
+Interrupted function call.<p>
+
+
+        
+    <hr>
+    
+<a name='invalid'>var <a href='../global/lang/Int.html'>Int</a> <em>invalid</em>;</a>
+<br>
+Invalid argument.<p>
+
+
+        
+    <hr>
+    
+<a name='ioError'>var <a href='../global/lang/Int.html'>Int</a> <em>ioError</em>;</a>
+<br>
+Input/output error.<p>
+
+
+        
+    <hr>
+    
+<a name='isConencted'>var <a href='../global/lang/Int.html'>Int</a> <em>isConencted</em>;</a>
+<br>
+Socket is connected.<p>
+
+
+        
+    <hr>
+    
+<a name='isDirectory'>var <a href='../global/lang/Int.html'>Int</a> <em>isDirectory</em>;</a>
+<br>
+Is a directory.<p>
+
+
+        
+    <hr>
+    
+<a name='isNamed'>var <a href='../global/lang/Int.html'>Int</a> <em>isNamed</em>;</a>
+<br>
+Is a named type file.<p>
+
+
+        
+    <hr>
+    
+<a name='keyExpired'>var <a href='../global/lang/Int.html'>Int</a> <em>keyExpired</em>;</a>
+<br>
+Key has expired.<p>
+
+
+        
+    <hr>
+    
+<a name='keyRejected'>var <a href='../global/lang/Int.html'>Int</a> <em>keyRejected</em>;</a>
+<br>
+Key was rejected by service.<p>
+
+
+        
+    <hr>
+    
+<a name='keyRevoked'>var <a href='../global/lang/Int.html'>Int</a> <em>keyRevoked</em>;</a>
+<br>
+Key has been revoked.<p>
+
+
+        
+    <hr>
+    
+<a name='level2Halted'>var <a href='../global/lang/Int.html'>Int</a> <em>level2Halted</em>;</a>
+<br>
+Level 2 halted.<p>
+
+
+        
+    <hr>
+    
+<a name='level2NotSynced'>var <a href='../global/lang/Int.html'>Int</a> <em>level2NotSynced</em>;</a>
+<br>
+Level 2 not synchronized.<p>
+
+
+        
+    <hr>
+    
+<a name='level3Halted'>var <a href='../global/lang/Int.html'>Int</a> <em>level3Halted</em>;</a>
+<br>
+Level 3 halted.<p>
+
+
+        
+    <hr>
+    
+<a name='level3Reset'>var <a href='../global/lang/Int.html'>Int</a> <em>level3Reset</em>;</a>
+<br>
+Level 3 reset.<p>
+
+
+        
+    <hr>
+    
+<a name='libraryAccess'>var <a href='../global/lang/Int.html'>Int</a> <em>libraryAccess</em>;</a>
+<br>
+Cannot access a needed shared library.<p>
+
+
+        
+    <hr>
+    
+<a name='libraryBad'>var <a href='../global/lang/Int.html'>Int</a> <em>libraryBad</em>;</a>
+<br>
+Accessing a corrupted shared library.<p>
+
+
+        
+    <hr>
+    
+<a name='libraryCorrupt'>var <a href='../global/lang/Int.html'>Int</a> <em>libraryCorrupt</em>;</a>
+<br>
+lib section in a.out corrupted.<p>
+
+
+        
+    <hr>
+    
+<a name='libraryExec'>var <a href='../global/lang/Int.html'>Int</a> <em>libraryExec</em>;</a>
+<br>
+Cannot exec a shared library directly.<p>
+
+
+        
+    <hr>
+    
+<a name='libraryMax'>var <a href='../global/lang/Int.html'>Int</a> <em>libraryMax</em>;</a>
+<br>
+Attempting to link in too many shared libraries.<p>
+
+
+        
+    <hr>
+    
+<a name='loop'>var <a href='../global/lang/Int.html'>Int</a> <em>loop</em>;</a>
+<br>
+Too many levels of symbolic links<p>
+
+
+        
+    <hr>
+    
+<a name='maxFile'>var <a href='../global/lang/Int.html'>Int</a> <em>maxFile</em>;</a>
+<br>
+Too many open files.<p>
+
+
+        
+    <hr>
+    
+<a name='maxFileInSystem'>var <a href='../global/lang/Int.html'>Int</a> <em>maxFileInSystem</em>;</a>
+<br>
+Too many open files in system.<p>
+
+
+        
+    <hr>
+    
+<a name='maxLink'>var <a href='../global/lang/Int.html'>Int</a> <em>maxLink</em>;</a>
+<br>
+Too many links.<p>
+
+
+        
+    <hr>
+    
+<a name='mediumType'>var <a href='../global/lang/Int.html'>Int</a> <em>mediumType</em>;</a>
+<br>
+Wrong medium type.<p>
+
+
+        
+    <hr>
+    
+<a name='messageSize'>var <a href='../global/lang/Int.html'>Int</a> <em>messageSize</em>;</a>
+<br>
+Message too long.<p>
+
+
+        
+    <hr>
+    
+<a name='multihop'>var <a href='../global/lang/Int.html'>Int</a> <em>multihop</em>;</a>
+<br>
+Multihop attempted.<p>
+
+
+        
+    <hr>
+    
+<a name='nameTooLong'>var <a href='../global/lang/Int.html'>Int</a> <em>nameTooLong</em>;</a>
+<br>
+Filename too long.<p>
+
+
+        
+    <hr>
+    
+<a name='netDown'>var <a href='../global/lang/Int.html'>Int</a> <em>netDown</em>;</a>
+<br>
+Network is down.<p>
+
+
+        
+    <hr>
+    
+<a name='netReset'>var <a href='../global/lang/Int.html'>Int</a> <em>netReset</em>;</a>
+<br>
+Connection aborted by network.<p>
+
+
+        
+    <hr>
+    
+<a name='netUnreachable'>var <a href='../global/lang/Int.html'>Int</a> <em>netUnreachable</em>;</a>
+<br>
+Network unreachable.<p>
+
+
+        
+    <hr>
+    
+<a name='noBufferSpace'>var <a href='../global/lang/Int.html'>Int</a> <em>noBufferSpace</em>;</a>
+<br>
+No buffer space available.<p>
+
+
+        
+    <hr>
+    
+<a name='noChild'>var <a href='../global/lang/Int.html'>Int</a> <em>noChild</em>;</a>
+<br>
+No child processes.<p>
+
+
+        
+    <hr>
+    
+<a name='noData'>var <a href='../global/lang/Int.html'>Int</a> <em>noData</em>;</a>
+<br>
+No message is available on the STREAM head read queue.<p>
+
+
+        
+    <hr>
+    
+<a name='noDevice'>var <a href='../global/lang/Int.html'>Int</a> <em>noDevice</em>;</a>
+<br>
+No such device.<p>
+
+
+        
+    <hr>
+    
+<a name='noDeviceOrAddress'>var <a href='../global/lang/Int.html'>Int</a> <em>noDeviceOrAddress</em>;</a>
+<br>
+No such device or address.<p>
+
+
+        
+    <hr>
+    
+<a name='noEntry'>var <a href='../global/lang/Int.html'>Int</a> <em>noEntry</em>;</a>
+<br>
+No such file or directory.<p>
+
+
+        
+    <hr>
+    
+<a name='noExec'>var <a href='../global/lang/Int.html'>Int</a> <em>noExec</em>;</a>
+<br>
+Exec format error.<p>
+
+
+        
+    <hr>
+    
+<a name='noKey'>var <a href='../global/lang/Int.html'>Int</a> <em>noKey</em>;</a>
+<br>
+Required key not available.<p>
+
+
+        
+    <hr>
+    
+<a name='noLink'>var <a href='../global/lang/Int.html'>Int</a> <em>noLink</em>;</a>
+<br>
+Link has been severed.<p>
+
+
+        
+    <hr>
+    
+<a name='noLock'>var <a href='../global/lang/Int.html'>Int</a> <em>noLock</em>;</a>
+<br>
+No locks available.<p>
+
+
+        
+    <hr>
+    
+<a name='noMedium'>var <a href='../global/lang/Int.html'>Int</a> <em>noMedium</em>;</a>
+<br>
+No medium found.<p>
+
+
+        
+    <hr>
+    
+<a name='noMemory'>var <a href='../global/lang/Int.html'>Int</a> <em>noMemory</em>;</a>
+<br>
+Not enough space.<p>
+
+
+        
+    <hr>
+    
+<a name='noMessage'>var <a href='../global/lang/Int.html'>Int</a> <em>noMessage</em>;</a>
+<br>
+No message of the desired type.<p>
+
+
+        
+    <hr>
+    
+<a name='noNet'>var <a href='../global/lang/Int.html'>Int</a> <em>noNet</em>;</a>
+<br>
+Machine is not on the network.<p>
+
+
+        
+    <hr>
+    
+<a name='noPackage'>var <a href='../global/lang/Int.html'>Int</a> <em>noPackage</em>;</a>
+<br>
+Package not installed.<p>
+
+
+        
+    <hr>
+    
+<a name='noProtocol'>var <a href='../global/lang/Int.html'>Int</a> <em>noProtocol</em>;</a>
+<br>
+Protocol not available.<p>
+
+
+        
+    <hr>
+    
+<a name='noSpace'>var <a href='../global/lang/Int.html'>Int</a> <em>noSpace</em>;</a>
+<br>
+No space left on device.<p>
+
+
+        
+    <hr>
+    
+<a name='noStream'>var <a href='../global/lang/Int.html'>Int</a> <em>noStream</em>;</a>
+<br>
+No STREAM resources.<p>
+
+
+        
+    <hr>
+    
+<a name='noSuchProcess'>var <a href='../global/lang/Int.html'>Int</a> <em>noSuchProcess</em>;</a>
+<br>
+No such process.<p>
+
+
+        
+    <hr>
+    
+<a name='notBlock'>var <a href='../global/lang/Int.html'>Int</a> <em>notBlock</em>;</a>
+<br>
+Block device required.<p>
+
+
+        
+    <hr>
+    
+<a name='notConnected'>var <a href='../global/lang/Int.html'>Int</a> <em>notConnected</em>;</a>
+<br>
+The socket is not connected.<p>
+
+
+        
+    <hr>
+    
+<a name='notDirectory'>var <a href='../global/lang/Int.html'>Int</a> <em>notDirectory</em>;</a>
+<br>
+Not a directory.<p>
+
+
+        
+    <hr>
+    
+<a name='notEmpty'>var <a href='../global/lang/Int.html'>Int</a> <em>notEmpty</em>;</a>
+<br>
+Directory not empty.<p>
+
+
+        
+    <hr>
+    
+<a name='notImplemented'>var <a href='../global/lang/Int.html'>Int</a> <em>notImplemented</em>;</a>
+<br>
+Function not implemented.<p>
+
+
+        
+    <hr>
+    
+<a name='notSocket'>var <a href='../global/lang/Int.html'>Int</a> <em>notSocket</em>;</a>
+<br>
+Not a socket.<p>
+
+
+        
+    <hr>
+    
+<a name='notStream'>var <a href='../global/lang/Int.html'>Int</a> <em>notStream</em>;</a>
+<br>
+Not a STREAM.<p>
+
+
+        
+    <hr>
+    
+<a name='notSupported'>var <a href='../global/lang/Int.html'>Int</a> <em>notSupported</em>;</a>
+<br>
+Operation not supported.<p>
+
+
+        
+    <hr>
+    
+<a name='notTty'>var <a href='../global/lang/Int.html'>Int</a> <em>notTty</em>;</a>
+<br>
+Inappropriate I/O control operation.<p>
+
+
+        
+    <hr>
+    
+<a name='notUnique'>var <a href='../global/lang/Int.html'>Int</a> <em>notUnique</em>;</a>
+<br>
+Name not unique on network.<p>
+
+
+        
+    <hr>
+    
+<a name='operationNotSupported'>var <a href='../global/lang/Int.html'>Int</a> <em>operationNotSupported</em>;</a>
+<br>
+Operation not supported on socket.<p>
+
+
+        
+    <hr>
+    
+<a name='overflow'>var <a href='../global/lang/Int.html'>Int</a> <em>overflow</em>;</a>
+<br>
+Value too large to be stored in data type.<p>
+
+
+        
+    <hr>
+    
+<a name='permission'>var <a href='../global/lang/Int.html'>Int</a> <em>permission</em>;</a>
+<br>
+Operation not permitted.<p>
+
+
+        
+    <hr>
+    
+<a name='pipe'>var <a href='../global/lang/Int.html'>Int</a> <em>pipe</em>;</a>
+<br>
+Broken pipe.<p>
+
+
+        
+    <hr>
+    
+<a name='protocolError'>var <a href='../global/lang/Int.html'>Int</a> <em>protocolError</em>;</a>
+<br>
+Protocol error.<p>
+
+
+        
+    <hr>
+    
+<a name='protocolFamilyNotSupported'>var <a href='../global/lang/Int.html'>Int</a> <em>protocolFamilyNotSupported</em>;</a>
+<br>
+Protocol family not supported.<p>
+
+
+        
+    <hr>
+    
+<a name='protocolNotSupported'>var <a href='../global/lang/Int.html'>Int</a> <em>protocolNotSupported</em>;</a>
+<br>
+Protocol not supported.<p>
+
+
+        
+    <hr>
+    
+<a name='protocolType'>var <a href='../global/lang/Int.html'>Int</a> <em>protocolType</em>;</a>
+<br>
+Protocol wrong type for socket.<p>
+
+
+        
+    <hr>
+    
+<a name='range'>var <a href='../global/lang/Int.html'>Int</a> <em>range</em>;</a>
+<br>
+Result too large.<p>
+
+
+        
+    <hr>
+    
+<a name='readOnly'>var <a href='../global/lang/Int.html'>Int</a> <em>readOnly</em>;</a>
+<br>
+Read-only file system.<p>
+
+
+        
+    <hr>
+    
+<a name='remote'>var <a href='../global/lang/Int.html'>Int</a> <em>remote</em>;</a>
+<br>
+Object is remote.<p>
+
+
+        
+    <hr>
+    
+<a name='remoteAddressChanged'>var <a href='../global/lang/Int.html'>Int</a> <em>remoteAddressChanged</em>;</a>
+<br>
+Remote address changed.<p>
+
+
+        
+    <hr>
+    
+<a name='remoteIo'>var <a href='../global/lang/Int.html'>Int</a> <em>remoteIo</em>;</a>
+<br>
+Remote I/O error.<p>
+
+
+        
+    <hr>
+    
+<a name='restart'>var <a href='../global/lang/Int.html'>Int</a> <em>restart</em>;</a>
+<br>
+Interrupted system call should be restarted.<p>
+
+
+        
+    <hr>
+    
+<a name='seekPipe'>var <a href='../global/lang/Int.html'>Int</a> <em>seekPipe</em>;</a>
+<br>
+Invalid seek.<p>
+
+
+        
+    <hr>
+    
+<a name='shutdown'>var <a href='../global/lang/Int.html'>Int</a> <em>shutdown</em>;</a>
+<br>
+Cannot send after transport endpoint shutdown.<p>
+
+
+        
+    <hr>
+    
+<a name='socketNotSupported'>var <a href='../global/lang/Int.html'>Int</a> <em>socketNotSupported</em>;</a>
+<br>
+Socket type not supported.<p>
+
+
+        
+    <hr>
+    
+<a name='stale'>var <a href='../global/lang/Int.html'>Int</a> <em>stale</em>;</a>
+<br>
+Stale file handle. This error can occur for NFS and for other file systems.<p>
+
+
+        
+    <hr>
+    
+<a name='streamPipe'>var <a href='../global/lang/Int.html'>Int</a> <em>streamPipe</em>;</a>
+<br>
+Streams pipe error.<p>
+
+
+        
+    <hr>
+    
+<a name='textBusy'>var <a href='../global/lang/Int.html'>Int</a> <em>textBusy</em>;</a>
+<br>
+Text file busy.<p>
+
+
+        
+    <hr>
+    
+<a name='timeout'>var <a href='../global/lang/Int.html'>Int</a> <em>timeout</em>;</a>
+<br>
+Connection timed out.<p>
+
+
+        
+    <hr>
+    
+<a name='timer'>var <a href='../global/lang/Int.html'>Int</a> <em>timer</em>;</a>
+<br>
+Timer expired.<p>
+
+
+        
+    <hr>
+    
+<a name='tooBig'>var <a href='../global/lang/Int.html'>Int</a> <em>tooBig</em>;</a>
+<br>
+Argument list too long.<p>
+
+
+        
+    <hr>
+    
+<a name='unattached'>var <a href='../global/lang/Int.html'>Int</a> <em>unattached</em>;</a>
+<br>
+Protocol driver not attached.<p>
+
+
+        
+    <hr>
+    
+<a name='unclean'>var <a href='../global/lang/Int.html'>Int</a> <em>unclean</em>;</a>
+<br>
+Structure needs cleaning.<p>
+
+
+        
+    <hr>
+    
+<a name='users'>var <a href='../global/lang/Int.html'>Int</a> <em>users</em>;</a>
+<br>
+Too many users.<p>
+
+
+        
+    <hr>
+    
+<a name='wouldBlock'>var <a href='../global/lang/Int.html'>Int</a> <em>wouldBlock</em>;</a>
+<br>
+Operation would block (may be same value as again).<p>
+
+
+    
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+	  
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

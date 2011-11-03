@@ -1,0 +1,441 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace io</title>
+    
+    <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/unix.html'>unix</a>.<em>io</em></a></h1>
+
+    
+    
+    
+    <h2><a name="api-submodules">Submodules</a></h2>
+    <ul>
+    
+      <li><a href='../../global/unix/io/fcntlMode.html'>fcntlMode</a></li>
+
+      <li><a href='../../global/unix/io/openMode.html'>openMode</a></li>
+
+      <li><a href='../../global/unix/io/seekMode.html'>seekMode</a></li>
+
+      <li><a href='../../global/unix/io/statMode.html'>statMode</a></li>
+
+    </ul>
+    
+    
+    <h2><a name="api-types">Types</a></h2>
+    <ul>
+    
+      <li><a href='../../global/unix/io/FLock.html'>FLock</a></li>
+      
+      <li><a href='../../global/unix/io/FdSet.html'>FdSet</a></li>
+      
+      <li><a href='../../global/unix/io/Stat.html'>Stat</a></li>
+      
+      <li><a href='../../global/unix/io/TimeVal.html'>TimeVal</a></li>
+      
+    </ul>
+    
+    
+    <h2><a name="api-other">Other members</a></h2>
+    <ul>
+    
+      <li><a href="#chdir">chdir</a></li>
+
+      <li><a href="#chmod">chmod</a></li>
+
+      <li><a href="#chown">chown</a></li>
+
+      <li><a href="#close">close</a></li>
+
+      <li><a href="#creat">creat</a></li>
+
+      <li><a href="#dup">dup</a></li>
+
+      <li><a href="#dup2">dup2</a></li>
+
+      <li><a href="#fchdir">fchdir</a></li>
+
+      <li><a href="#fchmod">fchmod</a></li>
+
+      <li><a href="#fchown">fchown</a></li>
+
+      <li><a href="#fcntl">fcntl</a></li>
+
+      <li><a href="#fcntlFLock">fcntlFLock</a></li>
+
+      <li><a href="#fcntlInt">fcntlInt</a></li>
+
+      <li><a href="#fdatasync">fdatasync</a></li>
+
+      <li><a href="#fstat">fstat</a></li>
+
+      <li><a href="#fsync">fsync</a></li>
+
+      <li><a href="#getcwd">getcwd</a></li>
+
+      <li><a href="#lchown">lchown</a></li>
+
+      <li><a href="#link">link</a></li>
+
+      <li><a href="#lseek">lseek</a></li>
+
+      <li><a href="#lstat">lstat</a></li>
+
+      <li><a href="#mkdir">mkdir</a></li>
+
+      <li><a href="#open">open</a></li>
+
+      <li><a href="#pipe">pipe</a></li>
+
+      <li><a href="#read">read</a></li>
+
+      <li><a href="#rename">rename</a></li>
+
+      <li><a href="#rmdir">rmdir</a></li>
+
+      <li><a href="#select">select</a></li>
+
+      <li><a href="#standardError">standardError</a></li>
+
+      <li><a href="#standardInput">standardInput</a></li>
+
+      <li><a href="#standardOutput">standardOutput</a></li>
+
+      <li><a href="#stat">stat</a></li>
+
+      <li><a href="#symlink">symlink</a></li>
+
+      <li><a href="#sync">sync</a></li>
+
+      <li><a href="#umask">umask</a></li>
+
+      <li><a href="#unlink">unlink</a></li>
+
+      <li><a href="#write">write</a></li>
+
+    </ul>
+    
+
+        
+    <hr>
+    
+<a name='chdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>chdir</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='chmod'>def <a href='../../global/lang/Int.html'>Int</a> <em>chmod</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='chown'>def <a href='../../global/lang/Int.html'>Int</a> <em>chown</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='close'>def <a href='../../global/lang/Object.html'>Object</a> <em>close</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='creat'>def <a href='../../global/lang/Int.html'>Int</a> <em>creat</em> (<a href='../../global/lang/String.html'>String</a> name, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='dup'>def <a href='../../global/lang/Int.html'>Int</a> <em>dup</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='dup2'>def <a href='../../global/lang/Int.html'>Int</a> <em>dup2</em> (<a href='../../global/lang/Int.html'>Int</a> oldfd, <a href='../../global/lang/Int.html'>Int</a> newfd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fchdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>fchdir</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fchmod'>def <a href='../../global/lang/Int.html'>Int</a> <em>fchmod</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fchown'>def <a href='../../global/lang/Int.html'>Int</a> <em>fchown</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fcntl'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntl</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fcntlFLock'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntlFLock</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd, <a href='../../global/unix/io/FLock.html'>FLock</a> arg);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fcntlInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntlInt</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd, <a href='../../global/lang/Int.html'>Int</a> arg);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fdatasync'>def <a href='../../global/lang/Int.html'>Int</a> <em>fdatasync</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fstat'>def <a href='../../global/lang/Object.html'>Object</a> <em>fstat</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/unix/io/Stat.html'>Stat</a> buf);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='fsync'>def <a href='../../global/lang/Int.html'>Int</a> <em>fsync</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='getcwd'>def <a href='../../global/lang/Object.html'>Object</a> <em>getcwd</em> (<a href='../../global/lang/Buffer.html'>Buffer</a> buf, <a href='../../global/lang/Int.html'>Int</a> size);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='lchown'>def <a href='../../global/lang/Int.html'>Int</a> <em>lchown</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='link'>def <a href='../../global/lang/Int.html'>Int</a> <em>link</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='lseek'>def <a href='../../global/lang/Int.html'>Int</a> <em>lseek</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> offset, <a href='../../global/lang/Int.html'>Int</a> whence);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='lstat'>def <a href='../../global/lang/Object.html'>Object</a> <em>lstat</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/unix/io/Stat.html'>Stat</a> buf);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='mkdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>mkdir</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='open'>def <a href='../../global/lang/Int.html'>Int</a> <em>open</em> (<a href='../../global/lang/String.html'>String</a> name, <a href='../../global/lang/Int.html'>Int</a> flags, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='pipe'>def <a href='../../global/lang/Int.html'>Int</a> <em>pipe</em> ( fd);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='read'>def <a href='../../global/lang/Int.html'>Int</a> <em>read</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Buffer.html'>Buffer</a> buffer, <a href='../../global/lang/Int.html'>Int</a> count);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='rename'>def <a href='../../global/lang/Int.html'>Int</a> <em>rename</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='rmdir'>def <a href='../../global/lang/Int.html'>Int</a> <em>rmdir</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='select'>def <a href='../../global/lang/Int.html'>Int</a> <em>select</em> (<a href='../../global/lang/Int.html'>Int</a> nfds, <a href='../../global/unix/io/FdSet.html'>FdSet</a> readfds, <a href='../../global/unix/io/FdSet.html'>FdSet</a> writefds, <a href='../../global/unix/io/FdSet.html'>FdSet</a> exceptfds, <a href='../../global/unix/io/TimeVal.html'>TimeVal</a> timeout);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='standardError'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardError</em>;</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='standardInput'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardInput</em>;</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='standardOutput'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardOutput</em>;</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='stat'>def <a href='../../global/lang/Object.html'>Object</a> <em>stat</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/unix/io/Stat.html'>Stat</a> buf);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='symlink'>def <a href='../../global/lang/Int.html'>Int</a> <em>symlink</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='sync'>def <a href='../../global/lang/Object.html'>Object</a> <em>sync</em> ();</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='umask'>def <a href='../../global/lang/Int.html'>Int</a> <em>umask</em> (<a href='../../global/lang/Int.html'>Int</a> mask);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='unlink'>def <a href='../../global/lang/Int.html'>Int</a> <em>unlink</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='write'>def <a href='../../global/lang/Int.html'>Int</a> <em>write</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Buffer.html'>Buffer</a> buffer, <a href='../../global/lang/Int.html'>Int</a> count);</a>
+<br>
+<p>
+
+
+    
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+	  
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

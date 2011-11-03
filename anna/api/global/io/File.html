@@ -1,0 +1,356 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace File</title>
+    
+    <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/io.html'>io</a>.<em>File</em></a></h1>
+
+    A high level object respresenting a filesystem entry such as a file, a directory or a socket. Can be used for checking the status of a file, creating a directory, reading, writing and various other operations. A File object represents a file system path; it does not always point to an actually existing file.<p>
+    
+    
+    
+    
+    <h2><a name="api-other">Other members</a></h2>
+    <ul>
+    
+      <li><a href="#!__type__Getter">!__type__Getter</a></li>
+
+      <li><a href="#!existsGetter">!existsGetter</a></li>
+
+      <li><a href="#!filenameGetter">!filenameGetter</a></li>
+
+      <li><a href="#!isDirectoryGetter">!isDirectoryGetter</a></li>
+
+      <li><a href="#!isFileGetter">!isFileGetter</a></li>
+
+      <li><a href="#__cmp__">__cmp__</a></li>
+
+      <li><a href="#__eq__">__eq__</a></li>
+
+      <li><a href="#__gt__">__gt__</a></li>
+
+      <li><a href="#__gte__">__gte__</a></li>
+
+      <li><a href="#__init__">__init__</a></li>
+
+      <li><a href="#__join__">__join__</a></li>
+
+      <li><a href="#__lt__">__lt__</a></li>
+
+      <li><a href="#__lte__">__lte__</a></li>
+
+      <li><a href="#__neq__">__neq__</a></li>
+
+      <li><a href="#changeDirectory">changeDirectory</a></li>
+
+      <li><a href="#close">close</a></li>
+
+      <li><a href="#copyTo">copyTo</a></li>
+
+      <li><a href="#currentDirectory">currentDirectory</a></li>
+
+      <li><a href="#delete">delete</a></li>
+
+      <li><a href="#hashCode">hashCode</a></li>
+
+      <li><a href="#makeDirectory">makeDirectory</a></li>
+
+      <li><a href="#open">open</a></li>
+
+      <li><a href="#readFile">readFile</a></li>
+
+      <li><a href="#toString">toString</a></li>
+
+      <li><a href="#write">write</a></li>
+
+      <li><a href="#writeFile">writeFile</a></li>
+
+    </ul>
+    
+
+        
+    <hr>
+    
+<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
+<br>
+Getter function for the __type__ property.<p>
+
+
+        
+    <hr>
+    
+<a name='!existsGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!existsGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+This value is non-null if the file pointed to by this object currently exists.<p>
+
+
+        
+    <hr>
+    
+<a name='!filenameGetter'>def <a href='../../global/lang/String.html'>String</a> <em>!filenameGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+The name of the file.<p>
+
+
+        
+    <hr>
+    
+<a name='!isDirectoryGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!isDirectoryGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+This value is non-null if the file pointed to by this object is a directory.<p>
+
+
+        
+    <hr>
+    
+<a name='!isFileGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!isFileGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+This value is non-null if the file pointed to by this object is a regular file<p>
+
+
+        
+    <hr>
+    
+<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.<p>
+
+
+        
+    <hr>
+    
+<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is equal to the other object, null otherwise.<p>
+
+
+        
+    <hr>
+    
+<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Returns non-null if this object is greater than the other object, null otherwise.<p>
+
+
+        
+    <hr>
+    
+<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is greater than or equal to the other object, null otherwise<p>
+
+
+        
+    <hr>
+    
+<a name='__init__'>def <a href='../../global/io/File.html'>File</a> <em>__init__</em> (<a href='../../global/io/File.html'>File</a> this, <a href='../../global/lang/String.html'>String</a> filename);</a>
+<br>
+Create a new file object.<p>
+
+
+        
+    <hr>
+    
+<a name='__join__'>def <a href='../../global/io/File.html'>File</a> <em>__join__</em> (<a href='../../global/io/File.html'>File</a> this, <a href='../../global/lang/String.html'>String</a> name);</a>
+<br>
+Joins the specified subdirectory to the directory represented by the File object and returns the result.<p>
+
+
+        
+    <hr>
+    
+<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Returns non-null if this object is smaller than the other object, null otherwise.<p>
+
+
+        
+    <hr>
+    
+<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is less than or equal to the other object, null otherwise<p>
+
+
+        
+    <hr>
+    
+<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
+<br>
+Return non-null if this object is not equal to the other object, null otherwise<p>
+
+
+        
+    <hr>
+    
+<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<br>
+The type of this object<p>
+
+
+        
+    <hr>
+    
+<a name='changeDirectory'>def <a href='../../global/lang/Object.html'>Object</a> <em>changeDirectory</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+Change the current working directory to the directory represented by this File object.<p>
+
+
+        
+    <hr>
+    
+<a name='close'>def <a href='../../global/lang/Object.html'>Object</a> <em>close</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+Close the specified file for reading and writing.<p>
+
+
+        
+    <hr>
+    
+<a name='copyTo'>def <a href='../../global/io/File.html'>File</a> <em>copyTo</em> (<a href='../../global/io/File.html'>File</a> this, <a href='../../global/io/File.html'>File</a> destination);</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='currentDirectory'>def <a href='../../global/io/File.html'>File</a> <em>currentDirectory</em> ();</a>
+<br>
+Returns a File object representing the current working directory<p>
+
+
+        
+    <hr>
+    
+<a name='delete'>def <a href='../../global/lang/Int.html'>Int</a> <em>delete</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+Deletes the file system path represented by the File object.<p>
+
+
+        
+    <hr>
+    
+<a name='exists'>var <a href='../../global/lang/Object.html'>Object</a> <em>exists</em>;</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='fd'>var <a href='../../global/lang/Int.html'>Int</a> <em>fd</em>;</a>
+<br>
+If this file is open, this is its file descriptor.<p>
+
+
+        
+    <hr>
+    
+<a name='filename'>var <a href='../../global/lang/String.html'>String</a> <em>filename</em>;</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
+<br>
+Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.<p>
+
+
+        
+    <hr>
+    
+<a name='isDirectory'>var <a href='../../global/lang/Object.html'>Object</a> <em>isDirectory</em>;</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='isFile'>var <a href='../../global/lang/Object.html'>Object</a> <em>isFile</em>;</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='makeDirectory'>def <a href='../../global/lang/Int.html'>Int</a> <em>makeDirectory</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+Creates a directory in the path specified by the File object.<p>
+
+
+        
+    <hr>
+    
+<a name='open'>def <a href='../../global/io/File.html'>File</a> <em>open</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+Open the specified file for reading and writing.<p>
+
+
+        
+    <hr>
+    
+        
+    <hr>
+    
+<a name='readFile'>def <a href='../../global/lang/String.html'>String</a> <em>readFile</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+Read the contents of the file and return it as a String.<p>
+
+
+        
+    <hr>
+    
+<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='write'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>write</em> (<a href='../../global/io/File.html'>File</a> this, <a href='../../global/lang/Object.html'>Object</a> value);</a>
+<br>
+Write the string representation of the specified objects to the file.<p>
+
+
+        
+    <hr>
+    
+<a name='writeFile'>def <a href='../../global/lang/Int.html'>Int</a> <em>writeFile</em> (<a href='../../global/io/File.html'>File</a> this, <a href='../../global/lang/String.html'>String</a> data);</a>
+<br>
+Write the contents of the String into the specified file.<p>
+
+
+    
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+	  
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

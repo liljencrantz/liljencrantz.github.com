@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace struct</title>
+    
+    <link rel="stylesheet" href="../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>struct</em></a></h1>
+
+    
+    
+    
+    
+    
+    <h2><a name="api-other">Other members</a></h2>
+    <ul>
+    
+      <li><a href="#struct">struct</a></li>
+
+    </ul>
+    
+
+        
+    <hr>
+    
+<a name='struct'>def <a href='../global/parser/Node.html'>Node</a> <em>struct</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
+<br>
+
+The struct macro is used as a short hand for defining objects used
+exclusively for quick access to it's members. It is used by passing a
+set of name/value mappings like so:
+
+foo := struct(something: 3, other: getMeSomeOtherObject());
+
+The above code will make foo into an object of a type with two
+members. The first member will be of type Int and the second will be
+of the return type of the getMeSomeOtherObject function. The something
+member will have an initial value of 3, and the other member will have
+the return value of getMeSomeOtherObject as its value.
+
+Struct values can be any Anna expression, including another struct. 
+<p>
+
+
+    
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+	  
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
