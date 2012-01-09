@@ -33,9 +33,9 @@
 
       <li><a href="#!fromSetter">!fromSetter</a></li>
 
-      <li><a href="#!isOpenGetter">!isOpenGetter</a></li>
-
       <li><a href="#!lastGetter">!lastGetter</a></li>
+
+      <li><a href="#!open?Getter">!open?Getter</a></li>
 
       <li><a href="#!stepGetter">!stepGetter</a></li>
 
@@ -56,6 +56,8 @@
       <li><a href="#__find__">__find__</a></li>
 
       <li><a href="#__get__Int__">__get__Int__</a></li>
+
+      <li><a href="#__get__Range__">__get__Range__</a></li>
 
       <li><a href="#__gt__">__gt__</a></li>
 
@@ -123,17 +125,17 @@ Setter function for the from property.<p>
         
     <hr>
     
-<a name='!isOpenGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!isOpenGetter</em> (<a href='../../global/lang/Range.html'>Range</a> this);</a>
+<a name='!lastGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!lastGetter</em> (<a href='../../global/lang/Range.html'>Range</a> this);</a>
 <br>
-Getter function for the isOpen property.<p>
+Getter function for the last property.<p>
 
 
         
     <hr>
     
-<a name='!lastGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!lastGetter</em> (<a href='../../global/lang/Range.html'>Range</a> this);</a>
+<a name='!open?Getter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!open?Getter</em> (<a href='../../global/lang/Range.html'>Range</a> this);</a>
 <br>
-Getter function for the last property.<p>
+Getter function for the open? property.<p>
 
 
         
@@ -179,7 +181,7 @@ Compare two ranges against each other<p>Comparison method. Should return a negat
         
     <hr>
     
-<a name='__each__'>def <a href='../../global/lang/Range.html'>Range</a> <em>__each__</em> (<a href='../../global/lang/Range.html'>Range</a> this,  block);</a>
+<a name='__each__'>def <a href='../../global/lang/Range.html'>Range</a> <em>__each__</em> (<a href='../../global/lang/Range.html'>Range</a> this, <a href=''>!def Object (Int key, Int value)238</a> block);</a>
 <br>
 Execute the specified function once for each element.<p>
 
@@ -195,10 +197,15 @@ Return non-null if this object is equal to the other object, null otherwise.<p>
         
     <hr>
     
+<a name='__filter__'>def <a href=''>MutableList«Int»</a> <em>__filter__</em> (<a href='../../global/lang/Range.html'>Range</a> this, <a href=''>!def Object (Int key, Int value)238</a> block);</a>
+<br>
+Execute the specified function once for each element and return a new object of the same type, containing the elements for which the function returned non-null.<p>
+
+
         
     <hr>
     
-<a name='__find__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__find__</em> (<a href='../../global/lang/Range.html'>Range</a> this,  block);</a>
+<a name='__find__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__find__</em> (<a href='../../global/lang/Range.html'>Range</a> this, <a href=''>!def Object (Int key, Int value)238</a> block);</a>
 <br>
 Exacute the specified function once for each element until the function returns a non-null value, then return the corresponding element. Returns null if no element matched.<p>
 
@@ -209,6 +216,14 @@ Exacute the specified function once for each element until the function returns 
 <a name='__get__Int__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__get__Int__</em> (<a href='../../global/lang/Range.html'>Range</a> this, <a href='../../global/lang/Int.html'>Int</a> index);</a>
 <br>
 Return the item at the specified offset.<p>
+
+
+        
+    <hr>
+    
+<a name='__get__Range__'>def <a href='../../global/lang/Range.html'>Range</a> <em>__get__Range__</em> (<a href='../../global/lang/Range.html'>Range</a> this, <a href='../../global/lang/Range.html'>Range</a> index);</a>
+<br>
+Return the items in the specified range.<p>
 
 
         
@@ -262,7 +277,7 @@ Return non-null if this object is less than or equal to the other object, null o
         
     <hr>
     
-<a name='__map__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/Range.html'>Range</a> this,  block);</a>
+<a name='__map__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/Range.html'>Range</a> this, <a href=''>!def Object (Int key, Int value)238</a> block);</a>
 <br>
 Exacute the specified function once for each element and return a list containing the output of each function call.<p>
 
@@ -318,17 +333,17 @@ Hash function. Always returns the same number for the same object and also retur
         
     <hr>
     
-<a name='isOpen'>var <a href='../../global/lang/Int.html'>Int</a> <em>isOpen</em>;</a>
+<a name='last'>var <a href='../../global/lang/Int.html'>Int</a> <em>last</em>;</a>
 <br>
-Is this range semi-infinite?<p>
+The last element of this Range.<p>
 
 
         
     <hr>
     
-<a name='last'>var <a href='../../global/lang/Int.html'>Int</a> <em>last</em>;</a>
+<a name='open?'>var <a href='../../global/lang/Int.html'>Int</a> <em>open?</em>;</a>
 <br>
-The last element of this Range.<p>
+Is this range semi-infinite?<p>
 
 
         

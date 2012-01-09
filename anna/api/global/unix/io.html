@@ -41,8 +41,6 @@
       
       <li><a href='../../global/unix/io/Stat.html'>Stat</a></li>
       
-      <li><a href='../../global/unix/io/TimeVal.html'>TimeVal</a></li>
-      
     </ul>
     
     
@@ -54,6 +52,8 @@
       <li><a href="#chmod">chmod</a></li>
 
       <li><a href="#chown">chown</a></li>
+
+      <li><a href="#chroot">chroot</a></li>
 
       <li><a href="#close">close</a></li>
 
@@ -103,8 +103,6 @@
 
       <li><a href="#rmdir">rmdir</a></li>
 
-      <li><a href="#select">select</a></li>
-
       <li><a href="#standardError">standardError</a></li>
 
       <li><a href="#standardInput">standardInput</a></li>
@@ -146,6 +144,14 @@
     <hr>
     
 <a name='chown'>def <a href='../../global/lang/Int.html'>Int</a> <em>chown</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group);</a>
+<br>
+<p>
+
+
+        
+    <hr>
+    
+<a name='chroot'>def <a href='../../global/lang/Object.html'>Object</a> <em>chroot</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
 <br>
 <p>
 
@@ -313,7 +319,7 @@
         
     <hr>
     
-<a name='pipe'>def <a href='../../global/lang/Int.html'>Int</a> <em>pipe</em> ( fd);</a>
+<a name='pipe'>def <a href='../../global/lang/Int.html'>Int</a> <em>pipe</em> (<a href=''>MutableList«Int»</a> fd);</a>
 <br>
 <p>
 
@@ -338,14 +344,6 @@
     <hr>
     
 <a name='rmdir'>def <a href='../../global/lang/Int.html'>Int</a> <em>rmdir</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='select'>def <a href='../../global/lang/Int.html'>Int</a> <em>select</em> (<a href='../../global/lang/Int.html'>Int</a> nfds, <a href='../../global/unix/io/FdSet.html'>FdSet</a> readfds, <a href='../../global/unix/io/FdSet.html'>FdSet</a> writefds, <a href='../../global/unix/io/FdSet.html'>FdSet</a> exceptfds, <a href='../../global/unix/io/TimeVal.html'>TimeVal</a> timeout);</a>
 <br>
 <p>
 

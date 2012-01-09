@@ -25,9 +25,15 @@
     
       <li><a href="#__format__">__format__</a></li>
 
-      <li><a href="#isBlock">isBlock</a></li>
+      <li><a href="#block?">block?</a></li>
 
-      <li><a href="#isCallTo">isCallTo</a></li>
+      <li><a href="#callTo?">callTo?</a></li>
+
+      <li><a href="#childNamed?">childNamed?</a></li>
+
+      <li><a href="#filterByCall">filterByCall</a></li>
+
+      <li><a href="#named?">named?</a></li>
 
     </ul>
     
@@ -35,7 +41,7 @@
         
     <hr>
     
-<a name='__format__'>def <a href='../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../global/parser/Node.html'>Node</a> this,  data);</a>
+<a name='__format__'>def <a href='../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href=''>HashMap«String,Node»</a> data);</a>
 <br>
 Replace every internal identifier (an identifier prefixed with a '%' character) in the specified AST tree with the corresponding AST tree.<p>
 
@@ -43,7 +49,7 @@ Replace every internal identifier (an identifier prefixed with a '%' character) 
         
     <hr>
     
-<a name='isBlock'>def <a href='../global/lang/Int.html'>Int</a> <em>isBlock</em> (<a href='../global/parser/Node.html'>Node</a> this);</a>
+<a name='block?'>def <a href='../global/lang/Int.html'>Int</a> <em>block?</em> (<a href='../global/parser/Node.html'>Node</a> this);</a>
 <br>
 Returns true if the specified AST node is a block.<p>
 
@@ -51,9 +57,33 @@ Returns true if the specified AST node is a block.<p>
         
     <hr>
     
-<a name='isCallTo'>def <a href='../global/lang/Int.html'>Int</a> <em>isCallTo</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<a name='callTo?'>def <a href='../global/lang/Int.html'>Int</a> <em>callTo?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
 <br>
 Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.<p>
+
+
+        
+    <hr>
+    
+<a name='childNamed?'>def <a href='../global/lang/Int.html'>Int</a> <em>childNamed?</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='filterByCall'>def <a href=''>List«Call»</a> <em>filterByCall</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='named?'>def <a href='../global/lang/Int.html'>Int</a> <em>named?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<br>
+Returns true if the specified AST node is an identifier with the specified name.<p>
 
 
     

@@ -43,11 +43,15 @@
 
       <li><a href="#__get__Int__">__get__Int__</a></li>
 
+      <li><a href="#__get__Range__">__get__Range__</a></li>
+
       <li><a href="#__gt__">__gt__</a></li>
 
       <li><a href="#__gte__">__gte__</a></li>
 
       <li><a href="#__init__">__init__</a></li>
+
+      <li><a href="#__join__Call__">__join__Call__</a></li>
 
       <li><a href="#__join__List__">__join__List__</a></li>
 
@@ -59,15 +63,23 @@
 
       <li><a href="#__set__Int__">__set__Int__</a></li>
 
+      <li><a href="#block?">block?</a></li>
+
+      <li><a href="#callTo?">callTo?</a></li>
+
+      <li><a href="#childNamed?">childNamed?</a></li>
+
       <li><a href="#copy">copy</a></li>
 
       <li><a href="#error">error</a></li>
 
+      <li><a href="#filterByCall">filterByCall</a></li>
+
       <li><a href="#hashCode">hashCode</a></li>
 
-      <li><a href="#isBlock">isBlock</a></li>
+      <li><a href="#named?">named?</a></li>
 
-      <li><a href="#isCallTo">isCallTo</a></li>
+      <li><a href="#push">push</a></li>
 
       <li><a href="#replace">replace</a></li>
 
@@ -111,7 +123,7 @@ Setter function for the function property.<p>
         
     <hr>
     
-<a name='__appendAssign__'>def <a href='../../global/parser/Call.html'>Call</a> <em>__appendAssign__</em> (<a href='../../global/parser/Call.html'>Call</a> this,  list);</a>
+<a name='__appendAssign__'>def <a href='../../global/parser/Call.html'>Call</a> <em>__appendAssign__</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href=''>List«Node»</a> list);</a>
 <br>
 Append the specified items to this collection.<p>
 
@@ -127,7 +139,7 @@ Append the specified items to this collection.<p>
         
     <hr>
     
-<a name='__each__'>def <a href='../../global/parser/Call.html'>Call</a> <em>__each__</em> (<a href='../../global/parser/Call.html'>Call</a> this,  block);</a>
+<a name='__each__'>def <a href='../../global/parser/Call.html'>Call</a> <em>__each__</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href=''>!def Object (Int key, Node value)115</a> block);</a>
 <br>
 Execute the specified function once for each element.<p>
 
@@ -143,7 +155,7 @@ Return non-null if this object is equal to the other object, null otherwise.<p>
         
     <hr>
     
-<a name='__format__'>def <a href='../../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../../global/parser/Node.html'>Node</a> this,  data);</a>
+<a name='__format__'>def <a href='../../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../../global/parser/Node.html'>Node</a> this, <a href=''>HashMap«String,Node»</a> data);</a>
 <br>
 Replace every internal identifier (an identifier prefixed with a '%' character) in the specified AST tree with the corresponding AST tree.<p>
 
@@ -154,6 +166,14 @@ Replace every internal identifier (an identifier prefixed with a '%' character) 
 <a name='__get__Int__'>def <a href='../../global/parser/Node.html'>Node</a> <em>__get__Int__</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href='../../global/lang/Int.html'>Int</a> index);</a>
 <br>
 Return the item at the specified offset.<p>
+
+
+        
+    <hr>
+    
+<a name='__get__Range__'>def <a href=''>ImutableList«Node»</a> <em>__get__Range__</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href='../../global/lang/Range.html'>Range</a> range);</a>
+<br>
+Return the items in the specified range.<p>
 
 
         
@@ -183,7 +203,15 @@ Return non-null if this object is greater than or equal to the other object, nul
         
     <hr>
     
-<a name='__join__List__'>def <a href='../../global/parser/Call.html'>Call</a> <em>__join__List__</em> (<a href='../../global/parser/Call.html'>Call</a> this,  list);</a>
+<a name='__join__Call__'>def <a href='../../global/parser/Call.html'>Call</a> <em>__join__Call__</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href='../../global/parser/Call.html'>Call</a> list);</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='__join__List__'>def <a href='../../global/parser/Call.html'>Call</a> <em>__join__List__</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href=''>List«Node»</a> list);</a>
 <br>
 
 
@@ -231,6 +259,30 @@ The type of this object<p>
         
     <hr>
     
+<a name='block?'>def <a href='../../global/lang/Int.html'>Int</a> <em>block?</em> (<a href='../../global/parser/Node.html'>Node</a> this);</a>
+<br>
+Returns true if the specified AST node is a block.<p>
+
+
+        
+    <hr>
+    
+<a name='callTo?'>def <a href='../../global/lang/Int.html'>Int</a> <em>callTo?</em> (<a href='../../global/parser/Node.html'>Node</a> this, <a href='../../global/lang/String.html'>String</a> name);</a>
+<br>
+Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.<p>
+
+
+        
+    <hr>
+    
+<a name='childNamed?'>def <a href='../../global/lang/Int.html'>Int</a> <em>childNamed?</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href='../../global/lang/String.html'>String</a> name);</a>
+<br>
+
+
+
+        
+    <hr>
+    
 <a name='copy'>def <a href='../../global/parser/Node.html'>Node</a> <em>copy</em> (<a href='../../global/parser/Node.html'>Node</a> this);</a>
 <br>
 Return an identical copy of the specified AST tree<p>
@@ -255,6 +307,14 @@ Report a compiler error at the source code location of the specified node<p>
         
     <hr>
     
+<a name='filterByCall'>def <a href=''>List«Call»</a> <em>filterByCall</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href='../../global/lang/String.html'>String</a> name);</a>
+<br>
+
+
+
+        
+    <hr>
+    
 <a name='function'>var <a href='../../global/parser/Node.html'>Node</a> <em>function</em>;</a>
 <br>
 The function node of this call.<p>
@@ -271,17 +331,17 @@ The function node of this call.<p>
         
     <hr>
     
-<a name='isBlock'>def <a href='../../global/lang/Int.html'>Int</a> <em>isBlock</em> (<a href='../../global/parser/Node.html'>Node</a> this);</a>
+<a name='named?'>def <a href='../../global/lang/Int.html'>Int</a> <em>named?</em> (<a href='../../global/parser/Node.html'>Node</a> this, <a href='../../global/lang/String.html'>String</a> name);</a>
 <br>
-Returns true if the specified AST node is a block.<p>
+Returns true if the specified AST node is an identifier with the specified name.<p>
 
 
         
     <hr>
     
-<a name='isCallTo'>def <a href='../../global/lang/Int.html'>Int</a> <em>isCallTo</em> (<a href='../../global/parser/Node.html'>Node</a> this, <a href='../../global/lang/String.html'>String</a> name);</a>
+<a name='push'>def <a href='../../global/parser/Call.html'>Call</a> <em>push</em> (<a href='../../global/parser/Call.html'>Call</a> this, <a href='../../global/parser/Node.html'>Node</a> value);</a>
 <br>
-Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.<p>
+
 
 
         

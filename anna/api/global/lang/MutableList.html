@@ -29,6 +29,8 @@
 
       <li><a href="#!countSetter">!countSetter</a></li>
 
+      <li><a href="#!empty?Getter">!empty?Getter</a></li>
+
       <li><a href="#!firstGetter">!firstGetter</a></li>
 
       <li><a href="#!freezeGetter">!freezeGetter</a></li>
@@ -73,7 +75,7 @@
 
       <li><a href="#__set__Range__">__set__Range__</a></li>
 
-      <li><a href="#all">all</a></li>
+      <li><a href="#all?">all?</a></li>
 
       <li><a href="#hashCode">hashCode</a></li>
 
@@ -110,6 +112,14 @@ Getter function for the count property.<p>
 <a name='!countSetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!countSetter</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
 <br>
 Setter function for the count property.<p>
+
+
+        
+    <hr>
+    
+<a name='!empty?Getter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!empty?Getter</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this);</a>
+<br>
+Getter function for the empty? property.<p>
 
 
         
@@ -163,7 +173,7 @@ Comparison method. Should return a negative number, zero or a positive number if
         
     <hr>
     
-<a name='__each__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__each__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this,  block);</a>
+<a name='__each__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__each__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this, <a href=''>!def Object (Int key, Object value)154</a> block);</a>
 <br>
 Execute the specified function once for each element.<p>
 
@@ -179,7 +189,7 @@ Return non-null if this object is equal to the other object, null otherwise.<p>
         
     <hr>
     
-<a name='__filter__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__filter__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this,  block);</a>
+<a name='__filter__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__filter__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this, <a href=''>!def Object (Int key, Object value)154</a> block);</a>
 <br>
 Execute the specified function once for each element and return a new object of the same type, containing the elements for which the function returned non-null.<p>
 
@@ -187,7 +197,7 @@ Execute the specified function once for each element and return a new object of 
         
     <hr>
     
-<a name='__find__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__find__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this,  block);</a>
+<a name='__find__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__find__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this, <a href=''>!def Object (Int key, Object value)154</a> block);</a>
 <br>
 Exacute the specified function once for each element until the function returns a non-null value, then return the corresponding element. Returns null if no element matched.<p>
 
@@ -259,7 +269,7 @@ Return non-null if this object is less than or equal to the other object, null o
         
     <hr>
     
-<a name='__map__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this,  block);</a>
+<a name='__map__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/MutableList.html'>MutableList</a> this, <a href=''>!def Object (Int key, Object value)154</a> block);</a>
 <br>
 Exacute the specified function once for each element and return a list containing the output of each function call.<p>
 
@@ -299,7 +309,7 @@ The type of this object<p>
         
     <hr>
     
-<a name='all'>def <a href='../../global/lang/Object.html'>Object</a> <em>all</em> (<a href='../../global/lang/List.html'>List</a> this);</a>
+<a name='all?'>def <a href='../../global/lang/Object.html'>Object</a> <em>all?</em> (<a href='../../global/lang/List.html'>List</a> this);</a>
 <br>
 Returns true if all members of this list are non-Null.<p>
 
@@ -310,6 +320,14 @@ Returns true if all members of this list are non-Null.<p>
 <a name='count'>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;</a>
 <br>
 The number of elements in this list.<p>
+
+
+        
+    <hr>
+    
+<a name='empty?'>var <a href='../../global/lang/Int.html'>Int</a> <em>empty?</em>;</a>
+<br>
+True if the list is empty, false otherwise.<p>
 
 
         
@@ -363,9 +381,11 @@ Adds the specified element to the end of the list. Returns the mutated list.<p>
         
     <hr>
     
-<a name='sort'>def <a href='../../global/lang/List.html'>List</a> <em>sort</em> (<a href='../../global/lang/List.html'>List</a> this,  fun = ?);</a>
+<a name='sort'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>sort</em> (<a href='../../global/lang/List.html'>List</a> this, <a href=''>!def Int (Object first, Object second)530</a> fun = ?);</a>
 <br>
-Sort the list. If the original list is mutable, it is sorted inplace, otherwise a new list is returned<p>
+
+Sort the list. If the original list is mutable, it is sorted inplace, otherwise
+a new list is returned<p>
 
 
         

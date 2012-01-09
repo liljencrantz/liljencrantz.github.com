@@ -48,9 +48,19 @@
         
     <hr>
     
+<a name='!timezoneNameGetter'>def <a href='../global/lang/String.html'>String</a> <em>!timezoneNameGetter</em> (<a href='../global/ctime.html'>ctime</a> this);</a>
+<br>
+Getter function for the timezoneName property.<p>
+
+
         
     <hr>
     
+<a name='!timezoneNameSetter'>def <a href='../global/lang/String.html'>String</a> <em>!timezoneNameSetter</em> (<a href='../global/ctime.html'>ctime</a> this, <a href='../global/lang/String.html'>String</a> value);</a>
+<br>
+Setter function for the timezoneName property.<p>
+
+
         
     <hr>
     
@@ -62,9 +72,19 @@ Getter function for the timezoneOffset property.<p>
         
     <hr>
     
+<a name='breakTime'>def <a href=''>ImutableList«Int»</a> <em>breakTime</em> (<a href='../global/lang/Int.html'>Int</a> timestamp, <a href='../global/lang/String.html'>String</a> timezone);</a>
+<br>
+Convert a time stamp to broken down time in the specified timezone. If no timezone is specified, this function is equivalent to the localtime C function.<p>
+
+
         
     <hr>
     
+<a name='getTimeOfDay'>def <a href=''>ImutableList«Int»</a> <em>getTimeOfDay</em> ();</a>
+<br>
+Returns the current time of day as the number of seconds and microseconds since the Epoch (midnight, January 1, 1970, UTC). Wrapper for the C gettimeofday function, see man 2 gettimeofday. Because the timezone argument of gettimeofday doesn't reliably work, it's not supported. Use the timezoneName and timezoneOffset properties for working timezone information.<p>
+
+
         
     <hr>
     
@@ -76,6 +96,11 @@ Convert a broken down time to a time stamp<p>
         
     <hr>
     
+<a name='timezoneName'>var <a href='../global/lang/String.html'>String</a> <em>timezoneName</em>;</a>
+<br>
+The name of the currently configured timezone.<p>
+
+
         
     <hr>
     

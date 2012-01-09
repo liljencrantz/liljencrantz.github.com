@@ -15,7 +15,7 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>Float</em></a></h1>
 
-    The float Type represents a double precision floating point number.<p>Float objects are imutable, can be used as hash keys and implement the basic arithmetic operations like addition, multiplication, etc.<p>
+    The float Type represents a double precision floating point number.<p>Float objects are imutable, can be used as hash keys and implement the basic arithmetic operations like addition, multiplication, etc. Arithmetic operations on combinations of Floats and Ints result in a Float object. Arithmetic operations on Floats ad Complex numbers result in a Complex object.<p>
     
     
     
@@ -94,6 +94,8 @@
       <li><a href="#expIntReverse__">expIntReverse__</a></li>
 
       <li><a href="#expInt__">expInt__</a></li>
+
+      <li><a href="#format">format</a></li>
 
       <li><a href="#hashCode">hashCode</a></li>
 
@@ -398,6 +400,14 @@ Convert the specified character String to a floating point number.<p>
 <a name='expInt__'>def <a href='../../global/lang/Float.html'>Float</a> <em>expInt__</em> (<a href='../../global/lang/Float.html'>Float</a> this, <a href='../../global/lang/Int.html'>Int</a> param);</a>
 <br>
 
+
+
+        
+    <hr>
+    
+<a name='format'>def <a href='../../global/lang/String.html'>String</a> <em>format</em> (<a href='../../global/lang/Float.html'>Float</a> this, <a href='../../global/lang/Int.html'>Int</a> digits = ?);</a>
+<br>
+Convert this floating point number to a string<p>
 
 
         

@@ -27,6 +27,10 @@
 
       <li><a href="#!countGetter">!countGetter</a></li>
 
+      <li><a href="#!defaultGetter">!defaultGetter</a></li>
+
+      <li><a href="#!defaultSetter">!defaultSetter</a></li>
+
       <li><a href="#__cmp__">__cmp__</a></li>
 
       <li><a href="#__each__">__each__</a></li>
@@ -83,6 +87,22 @@ Getter function for the count property.<p>
         
     <hr>
     
+<a name='!defaultGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!defaultGetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this);</a>
+<br>
+Getter function for the default property.<p>
+
+
+        
+    <hr>
+    
+<a name='!defaultSetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!defaultSetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> value);</a>
+<br>
+Setter function for the default property.<p>
+
+
+        
+    <hr>
+    
 <a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
 <br>
 Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.<p>
@@ -91,7 +111,7 @@ Comparison method. Should return a negative number, zero or a positive number if
         
     <hr>
     
-<a name='__each__'>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__each__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this,  block);</a>
+<a name='__each__'>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__each__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href=''>!def Object (Object key, Object value)290</a> block);</a>
 <br>
 Execute the specified function once for each element.<p>
 
@@ -163,7 +183,7 @@ Return non-null if this object is less than or equal to the other object, null o
         
     <hr>
     
-<a name='__map__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this,  block);</a>
+<a name='__map__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href=''>!def Object (Object key, Object value)290</a> block);</a>
 <br>
 Exacute the specified function once for each element and return a list containing the output of each function call.<p>
 
@@ -179,7 +199,7 @@ Return non-null if this object is not equal to the other object, null otherwise<
         
     <hr>
     
-<a name='__setAll__'>def <a href='../../global/lang/String.html'>String</a> <em>__setAll__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Pair.html'>Pair</a> value);</a>
+<a name='__setAll__'>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__setAll__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Pair.html'>Pair</a> value);</a>
 <br>
 
 
@@ -204,6 +224,14 @@ The type of this object<p>
     <hr>
     
 <a name='count'>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;</a>
+<br>
+The number of elements in this Map.<p>
+
+
+        
+    <hr>
+    
+<a name='default'>var <a href='../../global/lang/Object.html'>Object</a> <em>default</em>;</a>
 <br>
 The number of elements in this Map.<p>
 

@@ -25,13 +25,13 @@
     
       <li><a href="#!__type__Getter">!__type__Getter</a></li>
 
-      <li><a href="#!existsGetter">!existsGetter</a></li>
+      <li><a href="#!directory?Getter">!directory?Getter</a></li>
+
+      <li><a href="#!exists?Getter">!exists?Getter</a></li>
+
+      <li><a href="#!file?Getter">!file?Getter</a></li>
 
       <li><a href="#!filenameGetter">!filenameGetter</a></li>
-
-      <li><a href="#!isDirectoryGetter">!isDirectoryGetter</a></li>
-
-      <li><a href="#!isFileGetter">!isFileGetter</a></li>
 
       <li><a href="#__cmp__">__cmp__</a></li>
 
@@ -89,9 +89,25 @@ Getter function for the __type__ property.<p>
         
     <hr>
     
-<a name='!existsGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!existsGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<a name='!directory?Getter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!directory?Getter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+This value is non-null if the file pointed to by this object is a directory.<p>
+
+
+        
+    <hr>
+    
+<a name='!exists?Getter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!exists?Getter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
 <br>
 This value is non-null if the file pointed to by this object currently exists.<p>
+
+
+        
+    <hr>
+    
+<a name='!file?Getter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!file?Getter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
+<br>
+This value is non-null if the file pointed to by this object is a regular file<p>
 
 
         
@@ -100,22 +116,6 @@ This value is non-null if the file pointed to by this object currently exists.<p
 <a name='!filenameGetter'>def <a href='../../global/lang/String.html'>String</a> <em>!filenameGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
 <br>
 The name of the file.<p>
-
-
-        
-    <hr>
-    
-<a name='!isDirectoryGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!isDirectoryGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
-<br>
-This value is non-null if the file pointed to by this object is a directory.<p>
-
-
-        
-    <hr>
-    
-<a name='!isFileGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!isFileGetter</em> (<a href='../../global/io/File.html'>File</a> this);</a>
-<br>
-This value is non-null if the file pointed to by this object is a regular file<p>
 
 
         
@@ -241,7 +241,15 @@ Deletes the file system path represented by the File object.<p>
         
     <hr>
     
-<a name='exists'>var <a href='../../global/lang/Object.html'>Object</a> <em>exists</em>;</a>
+<a name='directory?'>var <a href='../../global/lang/Object.html'>Object</a> <em>directory?</em>;</a>
+<br>
+
+
+
+        
+    <hr>
+    
+<a name='exists?'>var <a href='../../global/lang/Object.html'>Object</a> <em>exists?</em>;</a>
 <br>
 
 
@@ -252,6 +260,14 @@ Deletes the file system path represented by the File object.<p>
 <a name='fd'>var <a href='../../global/lang/Int.html'>Int</a> <em>fd</em>;</a>
 <br>
 If this file is open, this is its file descriptor.<p>
+
+
+        
+    <hr>
+    
+<a name='file?'>var <a href='../../global/lang/Object.html'>Object</a> <em>file?</em>;</a>
+<br>
+
 
 
         
@@ -273,22 +289,6 @@ Hash function. Should always return the same number for the same object and shou
         
     <hr>
     
-<a name='isDirectory'>var <a href='../../global/lang/Object.html'>Object</a> <em>isDirectory</em>;</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='isFile'>var <a href='../../global/lang/Object.html'>Object</a> <em>isFile</em>;</a>
-<br>
-
-
-
-        
-    <hr>
-    
 <a name='makeDirectory'>def <a href='../../global/lang/Int.html'>Int</a> <em>makeDirectory</em> (<a href='../../global/io/File.html'>File</a> this);</a>
 <br>
 Creates a directory in the path specified by the File object.<p>
@@ -305,6 +305,11 @@ Open the specified file for reading and writing.<p>
         
     <hr>
     
+<a name='path'>var <a href=''>List«String»</a> <em>path</em>;</a>
+<br>
+The path to this file<p>
+
+
         
     <hr>
     

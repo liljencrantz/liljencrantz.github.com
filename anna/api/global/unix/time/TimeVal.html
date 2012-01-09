@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Anna - documentation for namespace FdSet</title>
+    <title>Anna - documentation for namespace TimeVal</title>
     
     <link rel="stylesheet" href="../../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../../js/jquery.js"></script>
@@ -13,7 +13,7 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/io.html'>io</a>.<em>FdSet</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/time.html'>time</a>.<em>TimeVal</em></a></h1>
 
     
     
@@ -24,6 +24,14 @@
     <ul>
     
       <li><a href="#!__type__Getter">!__type__Getter</a></li>
+
+      <li><a href="#!secGetter">!secGetter</a></li>
+
+      <li><a href="#!secSetter">!secSetter</a></li>
+
+      <li><a href="#!usecGetter">!usecGetter</a></li>
+
+      <li><a href="#!usecSetter">!usecSetter</a></li>
 
       <li><a href="#__cmp__">__cmp__</a></li>
 
@@ -41,17 +49,9 @@
 
       <li><a href="#__neq__">__neq__</a></li>
 
-      <li><a href="#clear">clear</a></li>
-
       <li><a href="#hashCode">hashCode</a></li>
 
-      <li><a href="#set">set</a></li>
-
-      <li><a href="#set?">set?</a></li>
-
       <li><a href="#toString">toString</a></li>
-
-      <li><a href="#zero">zero</a></li>
 
     </ul>
     
@@ -62,6 +62,38 @@
 <a name='!__type__Getter'>def <a href='../../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../../global/lang/Object.html'>Object</a> this);</a>
 <br>
 Getter function for the __type__ property.<p>
+
+
+        
+    <hr>
+    
+<a name='!secGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!secGetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this);</a>
+<br>
+Getter function for the sec property.<p>
+
+
+        
+    <hr>
+    
+<a name='!secSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!secSetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this, <a href='../../../global/lang/Int.html'>Int</a> value);</a>
+<br>
+Setter function for the sec property.<p>
+
+
+        
+    <hr>
+    
+<a name='!usecGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!usecGetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this);</a>
+<br>
+Getter function for the usec property.<p>
+
+
+        
+    <hr>
+    
+<a name='!usecSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!usecSetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this, <a href='../../../global/lang/Int.html'>Int</a> value);</a>
+<br>
+Setter function for the usec property.<p>
 
 
         
@@ -99,7 +131,7 @@ Return non-null if this object is greater than or equal to the other object, nul
         
     <hr>
     
-<a name='__init__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../../global/unix/io/FdSet.html'>FdSet</a> this);</a>
+<a name='__init__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this);</a>
 <br>
 
 
@@ -139,14 +171,6 @@ The type of this object<p>
         
     <hr>
     
-<a name='clear'>def <a href='../../../global/lang/Object.html'>Object</a> <em>clear</em> (<a href='../../../global/unix/io/FdSet.html'>FdSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
 <a name='hashCode'>def <a href='../../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../../global/lang/Object.html'>Object</a> this);</a>
 <br>
 Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.<p>
@@ -155,17 +179,9 @@ Hash function. Should always return the same number for the same object and shou
         
     <hr>
     
-<a name='set'>def <a href='../../../global/lang/Object.html'>Object</a> <em>set</em> (<a href='../../../global/unix/io/FdSet.html'>FdSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> fd);</a>
+<a name='sec'>var <a href='../../../global/lang/Int.html'>Int</a> <em>sec</em>;</a>
 <br>
-<p>
 
-
-        
-    <hr>
-    
-<a name='set?'>def <a href='../../../global/lang/Int.html'>Int</a> <em>set?</em> (<a href='../../../global/unix/io/FdSet.html'>FdSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-<p>
 
 
         
@@ -179,9 +195,9 @@ String conversion. Called by the String::convert method.<p>
         
     <hr>
     
-<a name='zero'>def <a href='../../../global/lang/Object.html'>Object</a> <em>zero</em> (<a href='../../../global/unix/io/FdSet.html'>FdSet</a> this);</a>
+<a name='usec'>var <a href='../../../global/lang/Int.html'>Int</a> <em>usec</em>;</a>
 <br>
-<p>
+
 
 
     
