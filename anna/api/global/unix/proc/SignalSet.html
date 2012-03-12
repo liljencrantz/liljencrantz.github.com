@@ -1,0 +1,426 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace SignalSet</title>
+    
+    <link rel="stylesheet" href="../../../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Type <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/proc.html'>proc</a>.<em>SignalSet</em></a></h1>
+
+    <p>A set of signals. Used by the unix.proc.signalfd and unix.proc.sigprocmask functions.</p>
+
+
+    
+    
+    
+
+
+
+    
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#__type__">__type__</a> 
+	 - The type of this object</li>
+      </li>
+
+    </ul>
+    
+
+
+
+
+    
+    <h2><a name="api-function">Operators</a></h2>
+    <ul>
+    
+      <li>
+	[] 
+(Get elements of collection)
+	<a href="#__get__">__get__</a> 
+      </li>
+      
+      <li>
+	in 
+(Check if element is in collection)
+	<a href="#__in__">__in__</a> 
+      </li>
+      
+      <li>
+	[] 
+(Set elements of collection)
+	<a href="#__set__">__set__</a> 
+      </li>
+      
+    </ul>
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li class='anna-internal'>
+	<a href="#!__type__Getter">!__type__Getter</a> 
+	 - Getter function for the __type__ property.
+      </li>
+
+      <li >
+	<a href="#__cmp__">__cmp__</a> 
+	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
+      </li>
+
+      <li >
+	<a href="#__eq__">__eq__</a> 
+	 - Return non-null if this object is equal to the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__get__">__get__</a> 
+	 - Check if the specified signal is in the set
+      </li>
+
+      <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__in__">__in__</a> 
+	 - Check if the specified signal is in the set
+      </li>
+
+      <li >
+	<a href="#__init__">__init__</a> 
+	 - Create an empty new set
+      </li>
+
+      <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__set__">__set__</a> 
+	 - If value is non-null, add the specified signal to the set. Otherwise, remove it.
+      </li>
+
+      <li >
+	<a href="#add">add</a> 
+	 - Add the specified signal to the set
+      </li>
+
+      <li >
+	<a href="#all">all</a> 
+	 - Add all signals to the set
+      </li>
+
+      <li >
+	<a href="#clear">clear</a> 
+	 - Remove all signals from the set
+      </li>
+
+      <li >
+	<a href="#hashCode">hashCode</a> 
+	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
+      </li>
+
+      <li >
+	<a href="#remove">remove</a> 
+	 - Remove the specified signal from the set.
+      </li>
+
+      <li >
+	<a href="#toString">toString</a> 
+	 - String conversion. Called by the String::convert method.
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
+
+
+        
+    
+<span >
+<hr>
+<a name='__type__'>var <a href='../../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<br>
+<p>The type of this object</p>
+
+
+</span>
+
+    
+
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!__type__Getter'>def <a href='../../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the __type__ property.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__cmp__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__eq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is equal to the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__get__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__get__</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> signal) (bound);</a>
+<br>
+<p>This method is usually called as the [] operator.</p>
+<p>Check if the specified signal is in the set</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is greater than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__in__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__in__</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> signal) (bound);</a>
+<br>
+<p>This method is usually called as the in operator.</p>
+<p>Check if the specified signal is in the set</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__init__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this) (bound);</a>
+<br>
+
+<p>Create an empty new set</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__neq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is not equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__set__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__set__</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> signal, <a href='../../../global/lang/Object.html'>Object</a> value) (bound);</a>
+<br>
+<p>This method is usually called as the [] operator.</p>
+<p>If value is non-null, add the specified signal to the set. Otherwise, remove it.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='add'>def <a href='../../../global/lang/Int.html'>Int</a> <em>add</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> signal) (bound);</a>
+<br>
+
+<p>Add the specified signal to the set</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='all'>def <a href='../../../global/lang/Int.html'>Int</a> <em>all</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this) (bound);</a>
+<br>
+
+<p>Add all signals to the set</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='clear'>def <a href='../../../global/lang/Int.html'>Int</a> <em>clear</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this) (bound);</a>
+<br>
+
+<p>Remove all signals from the set</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='hashCode'>def <a href='../../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='remove'>def <a href='../../../global/lang/Int.html'>Int</a> <em>remove</em> (<a href='../../../global/unix/proc/SignalSet.html'>SignalSet</a> this, <a href='../../../global/lang/Int.html'>Int</a> signal) (bound);</a>
+<br>
+
+<p>Remove the specified signal from the set.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='toString'>def <a href='../../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>String conversion. Called by the String::convert method.</p>
+
+
+</span>
+
+    
+
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
+b

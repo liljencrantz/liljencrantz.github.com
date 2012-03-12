@@ -15,94 +15,188 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>monkeypatchString</em></a></h1>
 
+    <p>Internally used module. Don't use directly.</p>
+
+
     
     
     
+
+
+
     
+
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-function">Operators</a></h2>
     <ul>
     
-      <li><a href="#__filter__">__filter__</a></li>
+      <li>
+	% 
+(Formating)
+	<a href="#__format__List__">__format__List__</a> <a href="#__format__Map__">__format__Map__</a> 
+      </li>
+      
+    </ul>
+    
 
-      <li><a href="#__format__List__">__format__List__</a></li>
 
-      <li><a href="#__format__Map__">__format__Map__</a></li>
 
-      <li><a href="#lpad">lpad</a></li>
 
-      <li><a href="#rpad">rpad</a></li>
 
-      <li><a href="#search__Char__">search__Char__</a></li>
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#__filter__">__filter__</a> 
+	 - Runs the specified test on each character in the string, and return a new string with the characters for which the test returned null removed.
+      </li>
 
-      <li><a href="#split">split</a></li>
+      <li >
+	<a href="#__format__List__">__format__List__</a> 
+	 - String formating. Replaces each % character found in the format string with the corresponding object from the list of parameters.
+      </li>
+
+      <li >
+	<a href="#__format__Map__">__format__Map__</a> 
+	 - String formating. Replaces each %(NAME) token found in the format string with the corresponding object from the map of named parameters.
+      </li>
+
+      <li >
+	<a href="#lpad">lpad</a> 
+	 - Pad the left side of this string with the specified character up to a minimum of the specified number of characters
+      </li>
+
+      <li >
+	<a href="#rpad">rpad</a> 
+	 - Pad the right side of this string with the specified character up to a minimum of the specified number of characters
+      </li>
+
+      <li >
+	<a href="#search__Char__">search__Char__</a> 
+	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+      </li>
+
+      <li >
+	<a href="#split">split</a> 
+	 - Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
+      </li>
 
     </ul>
     
 
-        
-    <hr>
-    
-<a name='__filter__'>def <a href='../global/lang/String.html'>String</a> <em>__filter__</em> (<a href='../global/lang/String.html'>String</a> this, <a href=''>!def Object (Int idx, Char value)564</a> body);</a>
-<br>
-Runs the specified test on each character in the string, and return a new string with the characters for which the test returned null removed.<p>
 
 
-        
-    <hr>
+
+
+
+
+
     
-<a name='__format__List__'>def <a href='../global/lang/String.html'>String</a> <em>__format__List__</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/List.html'>List</a> data);</a>
-<br>
-String formating. Replaces each % character found in the format string with the corresponding object from the list of parameters.<p>
 
 
         
-    <hr>
     
-<a name='__format__Map__'>def <a href='../global/lang/String.html'>String</a> <em>__format__Map__</em> (<a href='../global/lang/String.html'>String</a> this, <a href=''>HashMap«String,Object»</a> data);</a>
+<span >
+<hr>
+<a name='__filter__'>def <a href='../global/lang/String.html'>String</a> <em>__filter__</em> (<a href='../global/lang/String.html'>String</a> this, <a href=''>def Object (Int idx, Char value)</a> body) (static);</a>
 <br>
-String formating. Replaces each %(NAME) token found in the format string with the corresponding object from the map of named parameters.<p>
 
+<p>Runs the specified test on each character in the string, and return a new string with the characters for which the test returned null removed.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='lpad'>def <a href='../global/lang/String.html'>String</a> <em>lpad</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Int.html'>Int</a> count, <a href='../global/lang/Char.html'>Char</a> char = ' ');</a>
+<span >
+<hr>
+<a name='__format__List__'>def <a href='../global/lang/String.html'>String</a> <em>__format__List__</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/List.html'>List</a> data) (static);</a>
 <br>
-Pad the left side of this string with the specified character up to a minimum of the specified number of characters<p>
+<p>This method is usually called as the % operator.</p>
+<p>String formating. Replaces each % character found in the format string with the corresponding object from the list of parameters.</p>
 
+<p>Note that this formating function is significantly simpler than e.g. the C printf function, as it only deals with replacing placeholders with strings, and not with e.g. numeric conversion. Use the various String::format functions for e.g. numeric formating.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='rpad'>def <a href='../global/lang/String.html'>String</a> <em>rpad</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Int.html'>Int</a> count, <a href='../global/lang/Char.html'>Char</a> char = ' ');</a>
+<span >
+<hr>
+<a name='__format__Map__'>def <a href='../global/lang/String.html'>String</a> <em>__format__Map__</em> (<a href='../global/lang/String.html'>String</a> this, <a href=''>HashMap«String,Object»</a> data) (static);</a>
 <br>
-Pad the right side of this string with the specified character up to a minimum of the specified number of characters<p>
+<p>This method is usually called as the % operator.</p>
+<p>String formating. Replaces each %(NAME) token found in the format string with the corresponding object from the map of named parameters.</p>
 
+<p>Note that this formating function is significantly simpler than e.g. the C printf function, as it only deals with replacing placeholders with strings, and not with e.g. numeric conversion. Use the various format functions for e.g. numeric formating, such as Int::format.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='search__Char__'>def <a href='../global/lang/Int.html'>Int</a> <em>search__Char__</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> ch);</a>
+<span >
+<hr>
+<a name='lpad'>def <a href='../global/lang/String.html'>String</a> <em>lpad</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Int.html'>Int</a> count, <a href='../global/lang/Char.html'>Char</a> char = ' ') (static);</a>
 <br>
-Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.<p>
 
+<p>Pad the left side of this string with the specified character up to a minimum of the specified number of characters</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> char, <a href='../global/lang/Object.html'>Object</a> allowEmpty = 1);</a>
+<span >
+<hr>
+<a name='rpad'>def <a href='../global/lang/String.html'>String</a> <em>rpad</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Int.html'>Int</a> count, <a href='../global/lang/Char.html'>Char</a> char = ' ') (static);</a>
 <br>
-Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.<p>
 
+<p>Pad the right side of this string with the specified character up to a minimum of the specified number of characters</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='search__Char__'>def <a href='../global/lang/Int.html'>Int</a> <em>search__Char__</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> ch) (static);</a>
+<br>
+
+<p>Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> char, <a href='../global/lang/Object.html'>Object</a> allowEmpty = 1) (static);</a>
+<br>
+
+<p>Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>
+
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -113,3 +207,4 @@ Split this string on every occurence of the specified character and return the r
     </div>
   </body>
 </html>
+b

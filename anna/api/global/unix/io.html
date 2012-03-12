@@ -15,19 +15,31 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/unix.html'>unix</a>.<em>io</em></a></h1>
 
-    
+    <p>The unix.io module contains low level wrappers for basic unix functionality revolving around input and output.</p>
+
+<p>Unix input/output centers around file descriptors. File descriptors are small, positive integers that can represent open files, directories, pipes or even network sockets.</p>
+
+
     
     
     <h2><a name="api-submodules">Submodules</a></h2>
     <ul>
     
-      <li><a href='../../global/unix/io/fcntlMode.html'>fcntlMode</a></li>
+      <li ><a href='../../global/unix/io/fcntlMode.html'>fcntlMode</a> 
+	 - Flags specifying file descriptor manipulations for unix.io.fcntl
+</li>
 
-      <li><a href='../../global/unix/io/openMode.html'>openMode</a></li>
+      <li ><a href='../../global/unix/io/openMode.html'>openMode</a> 
+	 - Flags determining the mode for unix.io.open
+</li>
 
-      <li><a href='../../global/unix/io/seekMode.html'>seekMode</a></li>
+      <li ><a href='../../global/unix/io/seekMode.html'>seekMode</a> 
+	 - Different seek modes for use with the unix.io.seek function
+</li>
 
-      <li><a href='../../global/unix/io/statMode.html'>statMode</a></li>
+      <li ><a href='../../global/unix/io/statMode.html'>statMode</a> 
+	 - Flags used for identifying file status together with a unix.io.Stat object.
+</li>
 
     </ul>
     
@@ -35,398 +47,705 @@
     <h2><a name="api-types">Types</a></h2>
     <ul>
     
-      <li><a href='../../global/unix/io/FLock.html'>FLock</a></li>
+      <li ><a href='../../global/unix/io/FLock.html'>FLock</a>
+     - File lock information
+      </li>
       
-      <li><a href='../../global/unix/io/FdSet.html'>FdSet</a></li>
+      <li ><a href='../../global/unix/io/FdSet.html'>FdSet</a>
+     - A set of file descriptors. Used by unix.io.select.
+      </li>
       
-      <li><a href='../../global/unix/io/Stat.html'>Stat</a></li>
+      <li ><a href='../../global/unix/io/Stat.html'>Stat</a>
+     - A structure representing the status of a file.
+      </li>
       
     </ul>
     
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
     <ul>
     
-      <li><a href="#chdir">chdir</a></li>
+      <li >
+	<a href="#standardError">standardError</a> 
+	 - File descriptor for error output</li>
+      </li>
 
-      <li><a href="#chmod">chmod</a></li>
+      <li >
+	<a href="#standardInput">standardInput</a> 
+	 - File descriptor for standard input.</li>
+      </li>
 
-      <li><a href="#chown">chown</a></li>
-
-      <li><a href="#chroot">chroot</a></li>
-
-      <li><a href="#close">close</a></li>
-
-      <li><a href="#creat">creat</a></li>
-
-      <li><a href="#dup">dup</a></li>
-
-      <li><a href="#dup2">dup2</a></li>
-
-      <li><a href="#fchdir">fchdir</a></li>
-
-      <li><a href="#fchmod">fchmod</a></li>
-
-      <li><a href="#fchown">fchown</a></li>
-
-      <li><a href="#fcntl">fcntl</a></li>
-
-      <li><a href="#fcntlFLock">fcntlFLock</a></li>
-
-      <li><a href="#fcntlInt">fcntlInt</a></li>
-
-      <li><a href="#fdatasync">fdatasync</a></li>
-
-      <li><a href="#fstat">fstat</a></li>
-
-      <li><a href="#fsync">fsync</a></li>
-
-      <li><a href="#getcwd">getcwd</a></li>
-
-      <li><a href="#lchown">lchown</a></li>
-
-      <li><a href="#link">link</a></li>
-
-      <li><a href="#lseek">lseek</a></li>
-
-      <li><a href="#lstat">lstat</a></li>
-
-      <li><a href="#mkdir">mkdir</a></li>
-
-      <li><a href="#open">open</a></li>
-
-      <li><a href="#pipe">pipe</a></li>
-
-      <li><a href="#read">read</a></li>
-
-      <li><a href="#rename">rename</a></li>
-
-      <li><a href="#rmdir">rmdir</a></li>
-
-      <li><a href="#standardError">standardError</a></li>
-
-      <li><a href="#standardInput">standardInput</a></li>
-
-      <li><a href="#standardOutput">standardOutput</a></li>
-
-      <li><a href="#stat">stat</a></li>
-
-      <li><a href="#symlink">symlink</a></li>
-
-      <li><a href="#sync">sync</a></li>
-
-      <li><a href="#umask">umask</a></li>
-
-      <li><a href="#unlink">unlink</a></li>
-
-      <li><a href="#write">write</a></li>
+      <li >
+	<a href="#standardOutput">standardOutput</a> 
+	 - File descriptor for standard output.</li>
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
     
-<a name='chdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>chdir</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
-<br>
-<p>
 
 
-        
-    <hr>
+
+
+
     
-<a name='chmod'>def <a href='../../global/lang/Int.html'>Int</a> <em>chmod</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
-<br>
-<p>
-
-
-        
-    <hr>
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
     
-<a name='chown'>def <a href='../../global/lang/Int.html'>Int</a> <em>chown</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group);</a>
-<br>
-<p>
+      <li >
+	<a href="#chdir">chdir</a> 
+	 - Change working directory.
+      </li>
 
+      <li >
+	<a href="#chmod">chmod</a> 
+	 - Change permissions of a file.
+      </li>
 
-        
-    <hr>
+      <li >
+	<a href="#chown">chown</a> 
+	 - Change file owner and group.
+      </li>
+
+      <li >
+	<a href="#chroot">chroot</a> 
+	 - Change root directory.
+      </li>
+
+      <li >
+	<a href="#close">close</a> 
+	 - Close a file descriptor.
+      </li>
+
+      <li >
+	<a href="#creat">creat</a> 
+	 - Open a file descriptor.
+      </li>
+
+      <li >
+	<a href="#dup">dup</a> 
+	 - Duplicate a file descriptor.
+      </li>
+
+      <li >
+	<a href="#dup2">dup2</a> 
+	 - Duplicate a file descriptor.
+      </li>
+
+      <li >
+	<a href="#fchdir">fchdir</a> 
+	 - Change working directory.
+      </li>
+
+      <li >
+	<a href="#fchmod">fchmod</a> 
+	 - Change permissions of a file.
+      </li>
+
+      <li >
+	<a href="#fchown">fchown</a> 
+	 - Change file owner and group.
+      </li>
+
+      <li >
+	<a href="#fcntlFLock">fcntlFLock</a> 
+	 - Manipulate file descriptor.
+      </li>
+
+      <li >
+	<a href="#fcntlInt">fcntlInt</a> 
+	 - Manipulate file descriptor.
+      </li>
+
+      <li >
+	<a href="#fcntlVoid">fcntlVoid</a> 
+	 - Manipulate file descriptor.
+      </li>
+
+      <li >
+	<a href="#fdatasync">fdatasync</a> 
+	 - Synchronize a file's in-core state with storage device.
+      </li>
+
+      <li >
+	<a href="#fstat">fstat</a> 
+	 - Check the status of file with the specified file descriptor. Equivalanet to the C fstat function.
+      </li>
+
+      <li >
+	<a href="#fsync">fsync</a> 
+	 - Synchronize a file's in-core state with storage device.
+      </li>
+
+      <li >
+	<a href="#getcwd">getcwd</a> 
+	 - Get current working directory.
+      </li>
+
+      <li >
+	<a href="#lchown">lchown</a> 
+	 - Change file owner and group.
+      </li>
+
+      <li >
+	<a href="#link">link</a> 
+	 - Create anew name for a file.
+      </li>
+
+      <li >
+	<a href="#lseek">lseek</a> 
+	 - Reposition read/write file offset.
+      </li>
+
+      <li >
+	<a href="#lstat">lstat</a> 
+	 - Check the status of file with the specified path, without following symlinks. Equivalanet to the C lstat function.
+      </li>
+
+      <li >
+	<a href="#mkdir">mkdir</a> 
+	 - Create a new driectory with the specified path. Equivalanet to the C mkdir function.
+      </li>
+
+      <li >
+	<a href="#open">open</a> 
+	 - Open a file descriptor.
+      </li>
+
+      <li >
+	<a href="#pipe">pipe</a> 
+	 - Create a pipe.
+      </li>
+
+      <li >
+	<a href="#read">read</a> 
+	 - Read from a file descriptor.
+      </li>
+
+      <li >
+	<a href="#rename">rename</a> 
+	 - Rename a file.
+      </li>
+
+      <li >
+	<a href="#rmdir">rmdir</a> 
+	 - Remove a directory.
+      </li>
+
+      <li >
+	<a href="#stat">stat</a> 
+	 - Check the status of file with the specified path. Equivalanet to the C stat function.
+      </li>
+
+      <li >
+	<a href="#symlink">symlink</a> 
+	 - Create a symbolic link to a file.
+      </li>
+
+      <li >
+	<a href="#sync">sync</a> 
+	 - Flush file system buffers.
+      </li>
+
+      <li >
+	<a href="#umask">umask</a> 
+	 - Set a new value for file mode creation mask and return the old value.
+      </li>
+
+      <li >
+	<a href="#unlink">unlink</a> 
+	 - Remove a name and possibly a file.
+      </li>
+
+      <li >
+	<a href="#write">write</a> 
+	 - Write to a file descriptor.
+      </li>
+
+    </ul>
     
-<a name='chroot'>def <a href='../../global/lang/Object.html'>Object</a> <em>chroot</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
-<br>
-<p>
 
 
-        
-    <hr>
-    
-<a name='close'>def <a href='../../global/lang/Object.html'>Object</a> <em>close</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-<p>
 
 
-        
-    <hr>
-    
-<a name='creat'>def <a href='../../global/lang/Int.html'>Int</a> <em>creat</em> (<a href='../../global/lang/String.html'>String</a> name, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
-<br>
-<p>
 
 
-        
-    <hr>
-    
-<a name='dup'>def <a href='../../global/lang/Int.html'>Int</a> <em>dup</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='dup2'>def <a href='../../global/lang/Int.html'>Int</a> <em>dup2</em> (<a href='../../global/lang/Int.html'>Int</a> oldfd, <a href='../../global/lang/Int.html'>Int</a> newfd);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fchdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>fchdir</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fchmod'>def <a href='../../global/lang/Int.html'>Int</a> <em>fchmod</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fchown'>def <a href='../../global/lang/Int.html'>Int</a> <em>fchown</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fcntl'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntl</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fcntlFLock'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntlFLock</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd, <a href='../../global/unix/io/FLock.html'>FLock</a> arg);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fcntlInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntlInt</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd, <a href='../../global/lang/Int.html'>Int</a> arg);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fdatasync'>def <a href='../../global/lang/Int.html'>Int</a> <em>fdatasync</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fstat'>def <a href='../../global/lang/Object.html'>Object</a> <em>fstat</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/unix/io/Stat.html'>Stat</a> buf);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='fsync'>def <a href='../../global/lang/Int.html'>Int</a> <em>fsync</em> (<a href='../../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='getcwd'>def <a href='../../global/lang/Object.html'>Object</a> <em>getcwd</em> (<a href='../../global/lang/Buffer.html'>Buffer</a> buf, <a href='../../global/lang/Int.html'>Int</a> size);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='lchown'>def <a href='../../global/lang/Int.html'>Int</a> <em>lchown</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='link'>def <a href='../../global/lang/Int.html'>Int</a> <em>link</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='lseek'>def <a href='../../global/lang/Int.html'>Int</a> <em>lseek</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> offset, <a href='../../global/lang/Int.html'>Int</a> whence);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='lstat'>def <a href='../../global/lang/Object.html'>Object</a> <em>lstat</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/unix/io/Stat.html'>Stat</a> buf);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='mkdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>mkdir</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='open'>def <a href='../../global/lang/Int.html'>Int</a> <em>open</em> (<a href='../../global/lang/String.html'>String</a> name, <a href='../../global/lang/Int.html'>Int</a> flags, <a href='../../global/lang/Int.html'>Int</a> mode);</a>
-<br>
-<p>
-
-
-        
-    <hr>
-    
-<a name='pipe'>def <a href='../../global/lang/Int.html'>Int</a> <em>pipe</em> (<a href=''>MutableList«Int»</a> fd);</a>
-<br>
-<p>
 
 
         
-    <hr>
     
-<a name='read'>def <a href='../../global/lang/Int.html'>Int</a> <em>read</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Buffer.html'>Buffer</a> buffer, <a href='../../global/lang/Int.html'>Int</a> count);</a>
+<span >
+<hr>
+<a name='standardError'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardError</em> (static);</a>
 <br>
-<p>
+<p>File descriptor for error output</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='standardInput'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardInput</em> (static);</a>
+<br>
+<p>File descriptor for standard input.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='standardOutput'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardOutput</em> (static);</a>
+<br>
+<p>File descriptor for standard output.</p>
+
+
+</span>
+
+    
 
 
         
-    <hr>
     
-<a name='rename'>def <a href='../../global/lang/Int.html'>Int</a> <em>rename</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath);</a>
+<span >
+<hr>
+<a name='chdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>chdir</em> (<a href='../../global/lang/String.html'>String</a> path) (static);</a>
 <br>
-<p>
 
+<p>Change working directory.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='rmdir'>def <a href='../../global/lang/Int.html'>Int</a> <em>rmdir</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
+<span >
+<hr>
+<a name='chmod'>def <a href='../../global/lang/Int.html'>Int</a> <em>chmod</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> mode) (static);</a>
 <br>
-<p>
 
+<p>Change permissions of a file.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='standardError'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardError</em>;</a>
+<span >
+<hr>
+<a name='chown'>def <a href='../../global/lang/Int.html'>Int</a> <em>chown</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group) (static);</a>
 <br>
-<p>
 
+<p>Change file owner and group.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='standardInput'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardInput</em>;</a>
+<span >
+<hr>
+<a name='chroot'>def <a href='../../global/lang/Object.html'>Object</a> <em>chroot</em> (<a href='../../global/lang/String.html'>String</a> path) (static);</a>
 <br>
-<p>
 
+<p>Change root directory.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='standardOutput'>var <a href='../../global/lang/Int.html'>Int</a> <em>standardOutput</em>;</a>
+<span >
+<hr>
+<a name='close'>def <a href='../../global/lang/Object.html'>Object</a> <em>close</em> (<a href='../../global/lang/Int.html'>Int</a> fd) (static);</a>
 <br>
-<p>
 
+<p>Close a file descriptor.</p>
+
+<p>Equivalent to the C close function.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='stat'>def <a href='../../global/lang/Object.html'>Object</a> <em>stat</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/unix/io/Stat.html'>Stat</a> buf);</a>
+<span >
+<hr>
+<a name='creat'>def <a href='../../global/lang/Int.html'>Int</a> <em>creat</em> (<a href='../../global/lang/String.html'>String</a> name, <a href='../../global/lang/Int.html'>Int</a> mode) (static);</a>
 <br>
-<p>
 
+<p>Open a file descriptor.</p>
+
+<p>Equivalent to the C creat function.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='symlink'>def <a href='../../global/lang/Int.html'>Int</a> <em>symlink</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath);</a>
+<span >
+<hr>
+<a name='dup'>def <a href='../../global/lang/Int.html'>Int</a> <em>dup</em> (<a href='../../global/lang/Int.html'>Int</a> fd) (static);</a>
 <br>
-<p>
 
+<p>Duplicate a file descriptor.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='sync'>def <a href='../../global/lang/Object.html'>Object</a> <em>sync</em> ();</a>
+<span >
+<hr>
+<a name='dup2'>def <a href='../../global/lang/Int.html'>Int</a> <em>dup2</em> (<a href='../../global/lang/Int.html'>Int</a> oldfd, <a href='../../global/lang/Int.html'>Int</a> newfd) (static);</a>
 <br>
-<p>
 
+<p>Duplicate a file descriptor.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='umask'>def <a href='../../global/lang/Int.html'>Int</a> <em>umask</em> (<a href='../../global/lang/Int.html'>Int</a> mask);</a>
+<span >
+<hr>
+<a name='fchdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>fchdir</em> (<a href='../../global/lang/Int.html'>Int</a> fd) (static);</a>
 <br>
-<p>
 
+<p>Change working directory.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='unlink'>def <a href='../../global/lang/Int.html'>Int</a> <em>unlink</em> (<a href='../../global/lang/String.html'>String</a> path);</a>
+<span >
+<hr>
+<a name='fchmod'>def <a href='../../global/lang/Int.html'>Int</a> <em>fchmod</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> mode) (static);</a>
 <br>
-<p>
 
+<p>Change permissions of a file.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='write'>def <a href='../../global/lang/Int.html'>Int</a> <em>write</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Buffer.html'>Buffer</a> buffer, <a href='../../global/lang/Int.html'>Int</a> count);</a>
+<span >
+<hr>
+<a name='fchown'>def <a href='../../global/lang/Int.html'>Int</a> <em>fchown</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group) (static);</a>
 <br>
-<p>
 
+<p>Change file owner and group.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fcntlFLock'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntlFLock</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd, <a href='../../global/unix/io/FLock.html'>FLock</a> arg) (static);</a>
+<br>
+
+<p>Manipulate file descriptor.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fcntlInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntlInt</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd, <a href='../../global/lang/Int.html'>Int</a> arg) (static);</a>
+<br>
+
+<p>Manipulate file descriptor.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fcntlVoid'>def <a href='../../global/lang/Int.html'>Int</a> <em>fcntlVoid</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> cmd) (static);</a>
+<br>
+
+<p>Manipulate file descriptor.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fdatasync'>def <a href='../../global/lang/Int.html'>Int</a> <em>fdatasync</em> (<a href='../../global/lang/Int.html'>Int</a> fd) (static);</a>
+<br>
+
+<p>Synchronize a file's in-core state with storage device.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fstat'>def <a href='../../global/lang/Object.html'>Object</a> <em>fstat</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/unix/io/Stat.html'>Stat</a> buf) (static);</a>
+<br>
+
+<p>Check the status of file with the specified file descriptor. Equivalanet to the C fstat function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fsync'>def <a href='../../global/lang/Int.html'>Int</a> <em>fsync</em> (<a href='../../global/lang/Int.html'>Int</a> fd) (static);</a>
+<br>
+
+<p>Synchronize a file's in-core state with storage device.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='getcwd'>def <a href='../../global/lang/Object.html'>Object</a> <em>getcwd</em> (<a href='../../global/lang/Buffer.html'>Buffer</a> buf, <a href='../../global/lang/Int.html'>Int</a> size) (static);</a>
+<br>
+
+<p>Get current working directory.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='lchown'>def <a href='../../global/lang/Int.html'>Int</a> <em>lchown</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> owner, <a href='../../global/lang/Int.html'>Int</a> group) (static);</a>
+<br>
+
+<p>Change file owner and group.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='link'>def <a href='../../global/lang/Int.html'>Int</a> <em>link</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath) (static);</a>
+<br>
+
+<p>Create anew name for a file.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='lseek'>def <a href='../../global/lang/Int.html'>Int</a> <em>lseek</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Int.html'>Int</a> offset, <a href='../../global/lang/Int.html'>Int</a> whence) (static);</a>
+<br>
+
+<p>Reposition read/write file offset.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='lstat'>def <a href='../../global/lang/Object.html'>Object</a> <em>lstat</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/unix/io/Stat.html'>Stat</a> buf) (static);</a>
+<br>
+
+<p>Check the status of file with the specified path, without following symlinks. Equivalanet to the C lstat function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='mkdir'>def <a href='../../global/lang/Object.html'>Object</a> <em>mkdir</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/lang/Int.html'>Int</a> mode) (static);</a>
+<br>
+
+<p>Create a new driectory with the specified path. Equivalanet to the C mkdir function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='open'>def <a href='../../global/lang/Int.html'>Int</a> <em>open</em> (<a href='../../global/lang/String.html'>String</a> name, <a href='../../global/lang/Int.html'>Int</a> flags, <a href='../../global/lang/Int.html'>Int</a> mode) (static);</a>
+<br>
+
+<p>Open a file descriptor.</p>
+
+<p>Equivalent to the C open function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='pipe'>def <a href='../../global/lang/Int.html'>Int</a> <em>pipe</em> (<a href=''>MutableList«Int»</a> fd) (static);</a>
+<br>
+
+<p>Create a pipe.</p>
+
+<p>The input and output ends of the pipe are stored in the first two elements of the list fd. If fd is not large enough to hold two elements, it will be enlarged.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='read'>def <a href='../../global/lang/Int.html'>Int</a> <em>read</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Buffer.html'>Buffer</a> buffer, <a href='../../global/lang/Int.html'>Int</a> count) (static);</a>
+<br>
+
+<p>Read from a file descriptor.</p>
+
+<p>Equivalent to the C read function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='rename'>def <a href='../../global/lang/Int.html'>Int</a> <em>rename</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath) (static);</a>
+<br>
+
+<p>Rename a file.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='rmdir'>def <a href='../../global/lang/Int.html'>Int</a> <em>rmdir</em> (<a href='../../global/lang/String.html'>String</a> path) (static);</a>
+<br>
+
+<p>Remove a directory.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='stat'>def <a href='../../global/lang/Object.html'>Object</a> <em>stat</em> (<a href='../../global/lang/String.html'>String</a> path, <a href='../../global/unix/io/Stat.html'>Stat</a> buf) (static);</a>
+<br>
+
+<p>Check the status of file with the specified path. Equivalanet to the C stat function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='symlink'>def <a href='../../global/lang/Int.html'>Int</a> <em>symlink</em> (<a href='../../global/lang/String.html'>String</a> oldpath, <a href='../../global/lang/String.html'>String</a> newpath) (static);</a>
+<br>
+
+<p>Create a symbolic link to a file.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='sync'>def <a href='../../global/lang/Object.html'>Object</a> <em>sync</em> () (static);</a>
+<br>
+
+<p>Flush file system buffers.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='umask'>def <a href='../../global/lang/Int.html'>Int</a> <em>umask</em> (<a href='../../global/lang/Int.html'>Int</a> mask) (static);</a>
+<br>
+
+<p>Set a new value for file mode creation mask and return the old value.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='unlink'>def <a href='../../global/lang/Int.html'>Int</a> <em>unlink</em> (<a href='../../global/lang/String.html'>String</a> path) (static);</a>
+<br>
+
+<p>Remove a name and possibly a file.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='write'>def <a href='../../global/lang/Int.html'>Int</a> <em>write</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/lang/Buffer.html'>Buffer</a> buffer, <a href='../../global/lang/Int.html'>Int</a> count) (static);</a>
+<br>
+
+<p>Write to a file descriptor.</p>
+
+<p>Equivalent to the C write function.</p>
+
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -437,3 +756,4 @@
     </div>
   </body>
 </html>
+b

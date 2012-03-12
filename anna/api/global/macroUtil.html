@@ -15,64 +15,124 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>macroUtil</em></a></h1>
 
-    This module contains various macros that are useful when writing macros. Specifically, these macros, when called, inject bits of code that test if an AST node meets a specific condition, and if not, an error message is printed and a null identifier is returned.<p>
+    <p>This module contains various macros that are useful when writing macros.</p>
+
+<p>Specifically, these macros, when called, inject bits of code that test if an AST node meets a specific condition, and if not, an error message is printed and a null identifier is returned.</p>
+
+
     
     
     
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+
+
+
+
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li><a href="#checkCallCount">checkCallCount</a></li>
+      <li >
+	<a href="#checkCallCount">checkCallCount</a> 
+	 - Inserts a run time check that the AST Call node specified in the first argument has the number of arguments specified in the second argument. If it does not, an error message is printed and the calling function returns an AST null literal.
+      </li>
 
-      <li><a href="#checkNodeBlock">checkNodeBlock</a></li>
+      <li >
+	<a href="#checkNodeBlock">checkNodeBlock</a> 
+	 - Inserts a run time check that the specified AST node is a call to the __block__ function. If it is not, an error message is printed and the calling function returns an AST null literal.
+      </li>
 
-      <li><a href="#checkNodeCallTo">checkNodeCallTo</a></li>
+      <li >
+	<a href="#checkNodeCallTo">checkNodeCallTo</a> 
+	 - Inserts a run time check that the specified AST node is a Call node. If it is not, an error message is printed and the calling function returns an AST null literal.
+      </li>
 
-      <li><a href="#checkNodeType">checkNodeType</a></li>
+      <li >
+	<a href="#checkNodeType">checkNodeType</a> 
+	 - Inserts a code test that checks that the specified node is of the specified type. If the test fails, a Null Literal is returned.
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
+
+
+
+
     
-<a name='checkCallCount'>def <a href='../global/parser/Node.html'>Node</a> <em>checkCallCount</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='checkNodeBlock'>def <a href='../global/parser/Node.html'>Node</a> <em>checkNodeBlock</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
-<br>
-
 
 
         
-    <hr>
     
-<a name='checkNodeCallTo'>def <a href='../global/parser/Node.html'>Node</a> <em>checkNodeCallTo</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
+<span >
+<hr>
+<a name='checkCallCount'>def <a href='../global/parser/Node.html'>Node</a> <em>checkCallCount</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
 <br>
 
+<p>Inserts a run time check that the AST Call node specified in the first argument has the number of arguments specified in the second argument. If it does not, an error message is printed and the calling function returns an AST null literal.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='checkNodeType'>def <a href='../global/parser/Node.html'>Node</a> <em>checkNodeType</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
+<span >
+<hr>
+<a name='checkNodeBlock'>def <a href='../global/parser/Node.html'>Node</a> <em>checkNodeBlock</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
 <br>
-Inserts a code test that checks that the specified node is of the specified type. If the test fails, a Null Literal is returned.<p>
 
+<p>Inserts a run time check that the specified AST node is a call to the __block__ function. If it is not, an error message is printed and the calling function returns an AST null literal.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='checkNodeCallTo'>def <a href='../global/parser/Node.html'>Node</a> <em>checkNodeCallTo</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
+<br>
+
+<p>Inserts a run time check that the specified AST node is a Call node. If it is not, an error message is printed and the calling function returns an AST null literal.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='checkNodeType'>def <a href='../global/parser/Node.html'>Node</a> <em>checkNodeType</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
+<br>
+
+<p>Inserts a code test that checks that the specified node is of the specified type. If the test fails, a Null Literal is returned.</p>
+
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -83,3 +143,4 @@ Inserts a code test that checks that the specified node is of the specified type
     </div>
   </body>
 </html>
+b

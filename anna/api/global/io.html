@@ -15,73 +15,137 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>io</em></a></h1>
 
-    
+    <p>The io module is a high level library for handling files. It is currently rather incomplete but contains the basics needed for reading, writing and checking the status of files.</p>
+
+
     
     
     
     <h2><a name="api-types">Types</a></h2>
     <ul>
     
-      <li><a href='../global/io/File.html'>File</a></li>
+      <li ><a href='../global/io/File.html'>File</a>
+     - A high level object respresenting a filesystem entry such as a file, a directory or a socket. Can be used for checking the status of a file, creating a directory, reading, writing and various other operations. A File object represents a file system path; it does not always point to an actually existing file.
+      </li>
       
-      <li><a href='../global/io/IOError.html'>IOError</a></li>
+      <li ><a href='../global/io/IOError.html'>IOError</a>
+    
+      </li>
       
     </ul>
     
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
     <ul>
     
-      <li><a href="#getCwd">getCwd</a></li>
-
-      <li><a href="#readWholeFile">readWholeFile</a></li>
-
-      <li><a href="#relative?">relative?</a></li>
-
-      <li><a href="#separator">separator</a></li>
+      <li >
+	<a href="#separator">separator</a> 
+	 - The directory separator</li>
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
     
-<a name='getCwd'>def <a href='../global/lang/String.html'>String</a> <em>getCwd</em> ();</a>
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#getCwd">getCwd</a> 
+	 - Returns a string representing the current workin directory.
+      </li>
+
+      <li >
+	<a href="#readWholeFile">readWholeFile</a> 
+	 - Internal helper function: Read in the entire content of the specified file descriptor and return it as a string.
+      </li>
+
+      <li >
+	<a href="#relative?">relative?</a> 
+	
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
+
+
+        
+    
+<span >
+<hr>
+<a name='separator'>var <a href='../global/lang/Char.html'>Char</a> <em>separator</em> (static);</a>
+<br>
+<p>The directory separator</p>
+
+
+</span>
+
+    
+
+
+        
+    
+<span >
+<hr>
+<a name='getCwd'>def <a href='../global/lang/String.html'>String</a> <em>getCwd</em> () (static);</a>
+<br>
+
+<p>Returns a string representing the current workin directory.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='readWholeFile'>def <a href='../global/lang/String.html'>String</a> <em>readWholeFile</em> (<a href='../global/lang/Int.html'>Int</a> fd) (static);</a>
+<br>
+
+<p>Internal helper function: Read in the entire content of the specified file descriptor and return it as a string.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='relative?'>def <a href='../global/lang/Int.html'>Int</a> <em>relative?</em> (<a href='../global/lang/String.html'>String</a> filename) (static);</a>
 <br>
 
 
-
-        
-    <hr>
-    
-<a name='readWholeFile'>def <a href='../global/lang/String.html'>String</a> <em>readWholeFile</em> (<a href='../global/lang/Int.html'>Int</a> fd);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='relative?'>def <a href='../global/lang/Int.html'>Int</a> <em>relative?</em> (<a href='../global/lang/String.html'>String</a> filename);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='separator'>var <a href='../global/lang/Char.html'>Char</a> <em>separator</em>;</a>
-<br>
-
-
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -92,3 +156,4 @@
     </div>
   </body>
 </html>
+b

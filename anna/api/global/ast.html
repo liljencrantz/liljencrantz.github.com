@@ -15,25 +15,33 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>ast</em></a></h1>
 
+    <p>Internal module for the ast macro.</p>
+
+
     
     
     
+
+
+
     
+
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li><a href="#ast">ast</a></li>
-
-    </ul>
-    
-
-        
-    <hr>
-    
-<a name='ast'>def <a href='../global/parser/Node.html'>Node</a> <em>ast</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
-<br>
-
+      <li >
+	<a href="#ast">ast</a> 
+	 - 
 A macro that takes an AST tree and returns it verbatim. This is useful for creating code templates, and often used togerther with the AST Node formating function. 
 
 Example:
@@ -44,16 +52,56 @@ The above example will return an AST that is equivalent to the following code:
 
 someVariableName := 0;
 
-<p>
+
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
 
 
     
+
+
+        
+    
+<span >
+<hr>
+<a name='ast'>def <a href='../global/parser/Node.html'>Node</a> <em>ast</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
+<br>
+
+<p>
+A macro that takes an AST tree and returns it verbatim. This is useful for creating code templates, and often used togerther with the AST Node formating function. 
+
+Example:
+
+ast(%value := 0) % ["value": Identifier(?, "someVariableName") ];
+
+The above example will return an AST that is equivalent to the following code:
+
+someVariableName := 0;
+
+</p>
+
+
+</span>
+
+    
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -64,3 +112,4 @@ someVariableName := 0;
     </div>
   </body>
 </html>
+b

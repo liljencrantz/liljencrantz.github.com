@@ -15,374 +15,614 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/proc.html'>proc</a>.<em>signal</em></a></h1>
 
+    <p>All known signals</p>
+
+
     
     
     
+
+
+
     
-    
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
     <ul>
     
-      <li><a href="#abrt">abrt</a></li>
+      <li >
+	<a href="#abrt">abrt</a> 
+	 - The ABRT signal</li>
+      </li>
 
-      <li><a href="#alrm">alrm</a></li>
+      <li >
+	<a href="#alrm">alrm</a> 
+	 - The ALRM signal</li>
+      </li>
 
-      <li><a href="#bus">bus</a></li>
+      <li >
+	<a href="#bus">bus</a> 
+	 - The BUS signal</li>
+      </li>
 
-      <li><a href="#chld">chld</a></li>
+      <li >
+	<a href="#chld">chld</a> 
+	 - The CHLD signal</li>
+      </li>
 
-      <li><a href="#cld">cld</a></li>
+      <li >
+	<a href="#cld">cld</a> 
+	 - The CLD signal</li>
+      </li>
 
-      <li><a href="#cont">cont</a></li>
+      <li >
+	<a href="#cont">cont</a> 
+	 - The CONT signal</li>
+      </li>
 
-      <li><a href="#fpe">fpe</a></li>
+      <li >
+	<a href="#fpe">fpe</a> 
+	 - The FPE signal</li>
+      </li>
 
-      <li><a href="#hup">hup</a></li>
+      <li >
+	<a href="#hup">hup</a> 
+	 - The HUP signal</li>
+      </li>
 
-      <li><a href="#ill">ill</a></li>
+      <li >
+	<a href="#ill">ill</a> 
+	 - The ILL signal</li>
+      </li>
 
-      <li><a href="#int">int</a></li>
+      <li >
+	<a href="#int">int</a> 
+	 - The INT signal</li>
+      </li>
 
-      <li><a href="#io">io</a></li>
+      <li >
+	<a href="#io">io</a> 
+	 - The IO signal</li>
+      </li>
 
-      <li><a href="#iot">iot</a></li>
+      <li >
+	<a href="#iot">iot</a> 
+	 - The IOT signal</li>
+      </li>
 
-      <li><a href="#kill">kill</a></li>
+      <li >
+	<a href="#kill">kill</a> 
+	 - The KILL signal</li>
+      </li>
 
-      <li><a href="#pipe">pipe</a></li>
+      <li >
+	<a href="#pipe">pipe</a> 
+	 - The PIPE signal</li>
+      </li>
 
-      <li><a href="#poll">poll</a></li>
+      <li >
+	<a href="#poll">poll</a> 
+	 - The POLL signal</li>
+      </li>
 
-      <li><a href="#prof">prof</a></li>
+      <li >
+	<a href="#prof">prof</a> 
+	 - The PROF signal</li>
+      </li>
 
-      <li><a href="#pwr">pwr</a></li>
+      <li >
+	<a href="#pwr">pwr</a> 
+	 - The PWR signal</li>
+      </li>
 
-      <li><a href="#quit">quit</a></li>
+      <li >
+	<a href="#quit">quit</a> 
+	 - The QUIT signal</li>
+      </li>
 
-      <li><a href="#segv">segv</a></li>
+      <li >
+	<a href="#segv">segv</a> 
+	 - The SEGV signal</li>
+      </li>
 
-      <li><a href="#stkflt">stkflt</a></li>
+      <li >
+	<a href="#stkflt">stkflt</a> 
+	 - The STKFLT signal</li>
+      </li>
 
-      <li><a href="#stop">stop</a></li>
+      <li >
+	<a href="#stop">stop</a> 
+	 - The STOP signal</li>
+      </li>
 
-      <li><a href="#sys">sys</a></li>
+      <li >
+	<a href="#sys">sys</a> 
+	 - The SYS signal</li>
+      </li>
 
-      <li><a href="#term">term</a></li>
+      <li >
+	<a href="#term">term</a> 
+	 - The TERM signal</li>
+      </li>
 
-      <li><a href="#trap">trap</a></li>
+      <li >
+	<a href="#trap">trap</a> 
+	 - The TRAP signal</li>
+      </li>
 
-      <li><a href="#tstp">tstp</a></li>
+      <li >
+	<a href="#tstp">tstp</a> 
+	 - The TSTP signal</li>
+      </li>
 
-      <li><a href="#ttin">ttin</a></li>
+      <li >
+	<a href="#ttin">ttin</a> 
+	 - The TTIN signal</li>
+      </li>
 
-      <li><a href="#ttou">ttou</a></li>
+      <li >
+	<a href="#ttou">ttou</a> 
+	 - The TTOU signal</li>
+      </li>
 
-      <li><a href="#unused">unused</a></li>
+      <li >
+	<a href="#unused">unused</a> 
+	 - The UNUSED signal</li>
+      </li>
 
-      <li><a href="#urg">urg</a></li>
+      <li >
+	<a href="#urg">urg</a> 
+	 - The URG signal</li>
+      </li>
 
-      <li><a href="#usr1">usr1</a></li>
+      <li >
+	<a href="#usr1">usr1</a> 
+	 - The USR1 signal</li>
+      </li>
 
-      <li><a href="#usr2">usr2</a></li>
+      <li >
+	<a href="#usr2">usr2</a> 
+	 - The USR2 signal</li>
+      </li>
 
-      <li><a href="#vtalrm">vtalrm</a></li>
+      <li >
+	<a href="#vtalrm">vtalrm</a> 
+	 - The VTALRM signal</li>
+      </li>
 
-      <li><a href="#winch">winch</a></li>
+      <li >
+	<a href="#winch">winch</a> 
+	 - The WINCH signal</li>
+      </li>
 
-      <li><a href="#xcpu">xcpu</a></li>
+      <li >
+	<a href="#xcpu">xcpu</a> 
+	 - The XCPU signal</li>
+      </li>
 
-      <li><a href="#xfsz">xfsz</a></li>
+      <li >
+	<a href="#xfsz">xfsz</a> 
+	 - The XFSZ signal</li>
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
     
-<a name='abrt'>var <a href='../../../global/lang/Int.html'>Int</a> <em>abrt</em>;</a>
-<br>
-<p>
 
 
-        
-    <hr>
+
+
+
     
-<a name='alrm'>var <a href='../../../global/lang/Int.html'>Int</a> <em>alrm</em>;</a>
-<br>
-<p>
 
 
-        
-    <hr>
-    
-<a name='bus'>var <a href='../../../global/lang/Int.html'>Int</a> <em>bus</em>;</a>
-<br>
-<p>
+
+
+
+
 
 
         
-    <hr>
     
-<a name='chld'>var <a href='../../../global/lang/Int.html'>Int</a> <em>chld</em>;</a>
+<span >
+<hr>
+<a name='abrt'>var <a href='../../../global/lang/Int.html'>Int</a> <em>abrt</em> (static);</a>
 <br>
-<p>
+<p>The ABRT signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='cld'>var <a href='../../../global/lang/Int.html'>Int</a> <em>cld</em>;</a>
+<span >
+<hr>
+<a name='alrm'>var <a href='../../../global/lang/Int.html'>Int</a> <em>alrm</em> (static);</a>
 <br>
-<p>
+<p>The ALRM signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='cont'>var <a href='../../../global/lang/Int.html'>Int</a> <em>cont</em>;</a>
+<span >
+<hr>
+<a name='bus'>var <a href='../../../global/lang/Int.html'>Int</a> <em>bus</em> (static);</a>
 <br>
-<p>
+<p>The BUS signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='fpe'>var <a href='../../../global/lang/Int.html'>Int</a> <em>fpe</em>;</a>
+<span >
+<hr>
+<a name='chld'>var <a href='../../../global/lang/Int.html'>Int</a> <em>chld</em> (static);</a>
 <br>
-<p>
+<p>The CHLD signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='hup'>var <a href='../../../global/lang/Int.html'>Int</a> <em>hup</em>;</a>
+<span >
+<hr>
+<a name='cld'>var <a href='../../../global/lang/Int.html'>Int</a> <em>cld</em> (static);</a>
 <br>
-<p>
+<p>The CLD signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='ill'>var <a href='../../../global/lang/Int.html'>Int</a> <em>ill</em>;</a>
+<span >
+<hr>
+<a name='cont'>var <a href='../../../global/lang/Int.html'>Int</a> <em>cont</em> (static);</a>
 <br>
-<p>
+<p>The CONT signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='int'>var <a href='../../../global/lang/Int.html'>Int</a> <em>int</em>;</a>
+<span >
+<hr>
+<a name='fpe'>var <a href='../../../global/lang/Int.html'>Int</a> <em>fpe</em> (static);</a>
 <br>
-<p>
+<p>The FPE signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='io'>var <a href='../../../global/lang/Int.html'>Int</a> <em>io</em>;</a>
+<span >
+<hr>
+<a name='hup'>var <a href='../../../global/lang/Int.html'>Int</a> <em>hup</em> (static);</a>
 <br>
-<p>
+<p>The HUP signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='iot'>var <a href='../../../global/lang/Int.html'>Int</a> <em>iot</em>;</a>
+<span >
+<hr>
+<a name='ill'>var <a href='../../../global/lang/Int.html'>Int</a> <em>ill</em> (static);</a>
 <br>
-<p>
+<p>The ILL signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='kill'>var <a href='../../../global/lang/Int.html'>Int</a> <em>kill</em>;</a>
+<span >
+<hr>
+<a name='int'>var <a href='../../../global/lang/Int.html'>Int</a> <em>int</em> (static);</a>
 <br>
-<p>
+<p>The INT signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='pipe'>var <a href='../../../global/lang/Int.html'>Int</a> <em>pipe</em>;</a>
+<span >
+<hr>
+<a name='io'>var <a href='../../../global/lang/Int.html'>Int</a> <em>io</em> (static);</a>
 <br>
-<p>
+<p>The IO signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='poll'>var <a href='../../../global/lang/Int.html'>Int</a> <em>poll</em>;</a>
+<span >
+<hr>
+<a name='iot'>var <a href='../../../global/lang/Int.html'>Int</a> <em>iot</em> (static);</a>
 <br>
-<p>
+<p>The IOT signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='prof'>var <a href='../../../global/lang/Int.html'>Int</a> <em>prof</em>;</a>
+<span >
+<hr>
+<a name='kill'>var <a href='../../../global/lang/Int.html'>Int</a> <em>kill</em> (static);</a>
 <br>
-<p>
+<p>The KILL signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='pwr'>var <a href='../../../global/lang/Int.html'>Int</a> <em>pwr</em>;</a>
+<span >
+<hr>
+<a name='pipe'>var <a href='../../../global/lang/Int.html'>Int</a> <em>pipe</em> (static);</a>
 <br>
-<p>
+<p>The PIPE signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='quit'>var <a href='../../../global/lang/Int.html'>Int</a> <em>quit</em>;</a>
+<span >
+<hr>
+<a name='poll'>var <a href='../../../global/lang/Int.html'>Int</a> <em>poll</em> (static);</a>
 <br>
-<p>
+<p>The POLL signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='segv'>var <a href='../../../global/lang/Int.html'>Int</a> <em>segv</em>;</a>
+<span >
+<hr>
+<a name='prof'>var <a href='../../../global/lang/Int.html'>Int</a> <em>prof</em> (static);</a>
 <br>
-<p>
+<p>The PROF signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='stkflt'>var <a href='../../../global/lang/Int.html'>Int</a> <em>stkflt</em>;</a>
+<span >
+<hr>
+<a name='pwr'>var <a href='../../../global/lang/Int.html'>Int</a> <em>pwr</em> (static);</a>
 <br>
-<p>
+<p>The PWR signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='stop'>var <a href='../../../global/lang/Int.html'>Int</a> <em>stop</em>;</a>
+<span >
+<hr>
+<a name='quit'>var <a href='../../../global/lang/Int.html'>Int</a> <em>quit</em> (static);</a>
 <br>
-<p>
+<p>The QUIT signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='sys'>var <a href='../../../global/lang/Int.html'>Int</a> <em>sys</em>;</a>
+<span >
+<hr>
+<a name='segv'>var <a href='../../../global/lang/Int.html'>Int</a> <em>segv</em> (static);</a>
 <br>
-<p>
+<p>The SEGV signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='term'>var <a href='../../../global/lang/Int.html'>Int</a> <em>term</em>;</a>
+<span >
+<hr>
+<a name='stkflt'>var <a href='../../../global/lang/Int.html'>Int</a> <em>stkflt</em> (static);</a>
 <br>
-<p>
+<p>The STKFLT signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='trap'>var <a href='../../../global/lang/Int.html'>Int</a> <em>trap</em>;</a>
+<span >
+<hr>
+<a name='stop'>var <a href='../../../global/lang/Int.html'>Int</a> <em>stop</em> (static);</a>
 <br>
-<p>
+<p>The STOP signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='tstp'>var <a href='../../../global/lang/Int.html'>Int</a> <em>tstp</em>;</a>
+<span >
+<hr>
+<a name='sys'>var <a href='../../../global/lang/Int.html'>Int</a> <em>sys</em> (static);</a>
 <br>
-<p>
+<p>The SYS signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='ttin'>var <a href='../../../global/lang/Int.html'>Int</a> <em>ttin</em>;</a>
+<span >
+<hr>
+<a name='term'>var <a href='../../../global/lang/Int.html'>Int</a> <em>term</em> (static);</a>
 <br>
-<p>
+<p>The TERM signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='ttou'>var <a href='../../../global/lang/Int.html'>Int</a> <em>ttou</em>;</a>
+<span >
+<hr>
+<a name='trap'>var <a href='../../../global/lang/Int.html'>Int</a> <em>trap</em> (static);</a>
 <br>
-<p>
+<p>The TRAP signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='unused'>var <a href='../../../global/lang/Int.html'>Int</a> <em>unused</em>;</a>
+<span >
+<hr>
+<a name='tstp'>var <a href='../../../global/lang/Int.html'>Int</a> <em>tstp</em> (static);</a>
 <br>
-<p>
+<p>The TSTP signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='urg'>var <a href='../../../global/lang/Int.html'>Int</a> <em>urg</em>;</a>
+<span >
+<hr>
+<a name='ttin'>var <a href='../../../global/lang/Int.html'>Int</a> <em>ttin</em> (static);</a>
 <br>
-<p>
+<p>The TTIN signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='usr1'>var <a href='../../../global/lang/Int.html'>Int</a> <em>usr1</em>;</a>
+<span >
+<hr>
+<a name='ttou'>var <a href='../../../global/lang/Int.html'>Int</a> <em>ttou</em> (static);</a>
 <br>
-<p>
+<p>The TTOU signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='usr2'>var <a href='../../../global/lang/Int.html'>Int</a> <em>usr2</em>;</a>
+<span >
+<hr>
+<a name='unused'>var <a href='../../../global/lang/Int.html'>Int</a> <em>unused</em> (static);</a>
 <br>
-<p>
+<p>The UNUSED signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='vtalrm'>var <a href='../../../global/lang/Int.html'>Int</a> <em>vtalrm</em>;</a>
+<span >
+<hr>
+<a name='urg'>var <a href='../../../global/lang/Int.html'>Int</a> <em>urg</em> (static);</a>
 <br>
-<p>
+<p>The URG signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='winch'>var <a href='../../../global/lang/Int.html'>Int</a> <em>winch</em>;</a>
+<span >
+<hr>
+<a name='usr1'>var <a href='../../../global/lang/Int.html'>Int</a> <em>usr1</em> (static);</a>
 <br>
-<p>
+<p>The USR1 signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='xcpu'>var <a href='../../../global/lang/Int.html'>Int</a> <em>xcpu</em>;</a>
+<span >
+<hr>
+<a name='usr2'>var <a href='../../../global/lang/Int.html'>Int</a> <em>usr2</em> (static);</a>
 <br>
-<p>
+<p>The USR2 signal</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='xfsz'>var <a href='../../../global/lang/Int.html'>Int</a> <em>xfsz</em>;</a>
+<span >
+<hr>
+<a name='vtalrm'>var <a href='../../../global/lang/Int.html'>Int</a> <em>vtalrm</em> (static);</a>
 <br>
-<p>
+<p>The VTALRM signal</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='winch'>var <a href='../../../global/lang/Int.html'>Int</a> <em>winch</em> (static);</a>
+<br>
+<p>The WINCH signal</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='xcpu'>var <a href='../../../global/lang/Int.html'>Int</a> <em>xcpu</em> (static);</a>
+<br>
+<p>The XCPU signal</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='xfsz'>var <a href='../../../global/lang/Int.html'>Int</a> <em>xfsz</em> (static);</a>
+<br>
+<p>The XFSZ signal</p>
+
+
+</span>
+
+    
 
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -393,3 +633,4 @@
     </div>
   </body>
 </html>
+b

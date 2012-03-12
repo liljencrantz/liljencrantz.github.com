@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace i18n</title>
+    
+    <link rel="stylesheet" href="../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>i18n</em></a></h1>
+
+    <p>
+The anna i18n module (i18n is short for internationalization) is a simple high level module for making an Anna program available in different languages.</p>
+
+<p>To use the i18n module, the follow the steps outlined below:</p>
+
+<p>
+First, annotate any strings in your program that you want to be translatable, by prefixing them with the letter 't'. You will also need to macro-expand using the i18n module. A simple file might look like this:
+<pre class='anna-code'>
+expand(i18n);
+
+def greet()
+{
+    print(t"Hello, world!");
+}
+</pre>
+<p>
+The next step is to run the annaxgettext application on your source files. Use a command like this:
+</p>
+<pre>
+annaxgettext myApplication.anna >messages.pot
+</pre>
+<p>
+The above command will create a file named messages.pot, looking something like this:
+</p>
+<pre>
+# Copyright (C) 2012 
+# 
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: myApplication.anna:4
+msgid "Hello, world!\x0a"
+msgstr ""
+</pre>
+<p>
+To be continued...
+</p>
+</p>
+
+
+    
+    
+    
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#tStringLiteral">tStringLiteral</a> 
+	 - 
+The tStringLiteral function does two things. Firstly, it is used by
+the annaxgettext program to locate translatable strings in the source
+code. Secondly, at run time, Strings passed through tStringLiteral are
+translated using the gettext framework.
+
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
+
+
+    
+
+
+        
+    
+<span >
+<hr>
+<a name='tStringLiteral'>def <a href='../global/parser/Node.html'>Node</a> <em>tStringLiteral</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
+<br>
+
+<p>
+The tStringLiteral function does two things. Firstly, it is used by
+the annaxgettext program to locate translatable strings in the source
+code. Secondly, at run time, Strings passed through tStringLiteral are
+translated using the gettext framework.
+</p>
+
+
+</span>
+
+    
+
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
+b

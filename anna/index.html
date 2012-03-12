@@ -36,8 +36,15 @@ def main()
 
 	    <li>
 	      Read <a href='#examples'>Anna by examples</a> if you
-	      just want to dig in to the syntax.
+	      know a bit about programming and want to dig in to the syntax.
 	    </li>
+
+	    <li>
+	      Read <a href='tutorial.html'>language tutorial</a> if
+	      you're new to programming but want to learn.
+	    </li>  
+	    
+
 	    
 	    <li>
 	      If you already know everything there is to know about
@@ -261,7 +268,9 @@ print( .5 );
 
 	  <h3><a name="examples-lists">Lists</a></h3>
 	  <p>
-	    Lists are collections that store values at a specific integer offset.
+	    Anna has several collection types, types that represent a
+	    series of elements. The most basic of these is the List,
+	    a collection which stores values at unique integer offsets.
 	  </p>
 	  <pre class="anna-code">
 // lst is a list with four members
@@ -311,7 +320,7 @@ lst2.push("last");
 // Remove and return the last element of a list
 print(lst2.pop());
 
-// The empty property is 1 if the list is empty, and null otherwise
+// The «empty?» property is 1 if the list is empty, and null otherwise
 print(lst.empty?, "\n")
 
 // Join two lists together
@@ -348,7 +357,18 @@ objList := «Object»[1, 3, 5, "foo", 6.666]
 */
 print("foo" in objList, "\n");
 	  </pre>
-
+	  <ul>
+	    <li>
+	      To learn more about the various collection types in Anna, see the section<a href="#collections">More about collections</a>.
+	    </li>
+	    <li>Notice how there is a property
+	    called <code>empty?</code> in Anna? Question marks are
+	    valid as part of variable names in Anna, so long as
+	    they're not the first character. To learn more about legal
+	    Anna variable names an it's naming convensions, read the
+	    section <a href="#design-naming">Naming of variables and
+	    types</a>.</li>
+	  </ul>
 	  <h3><a name="examples-list-assign">Assigning to lists of variables</a></h3>
 	  <p>
 	    Anna also has a convenient short hand syntax for when you
@@ -417,7 +437,11 @@ print(hash["unknown"]);
 */
 print("unknown" in hash, "\n");
 	  </pre>
-	  
+	  <ul>
+	    <li>
+	      To learn more about the various collection types in Anna, see the section<a href="#collections">More about collections</a>.
+	    </li>
+	  </ul>
 	  <h3><a name="examples-more-calls">More on function calls</a></h3>
 	  <p>
 	    Function calls in Anna have a few additional options
@@ -540,7 +564,11 @@ print([9,2,3,8,1,6,8,1,5,1,9,4][1|2...], "\n")
 // This outputs «banana»
 print("abrainbadnoah\n"[1|2...]);
 	  </pre>
-
+	  <ul>
+	    <li>
+	      To learn more about the various collection types in Anna, see the section<a href="#collections">More about collections</a>.
+	    </li>
+	  </ul>
 	  <h3><a name="examples-blocks">Blocks</a></h3>
 	  <p>
 	    In addition to an each method, collection types offer a wide
@@ -630,16 +658,68 @@ level := (system.argument[1] == "--level") and Int::convert(system.argument[2]) 
 print(?, 1+?, (? as String)~ "hello", "hello" ~ ?, (? as Int) + 1 );
 	  </pre>
 
+
+	  <h3><a name="examples-functions-more">More on defining functions</a></h3>
+	  <pre  class="anna-code">
+/*
+  Previous examples have shown us that this is the standard way to define 
+  a function
+*/
+def myFunctionDecl(Int arg)
+{
+    return arg+1;
+}
+
+/*
+  By skipping the name of the function, we can create an anonymous function,
+  that is, a function not bound to a constant name. We can do this when we 
+  simply want to send a function as a parameter to another function call:
+*/
+print(functional.reduce([1,2,3,4], 0, def (Int a, Int b){a+b}), "\n");
+
+/*
+  Creating a named function is really just a short hand for doing two
+  things, namely creating an anonymous function and binding it to a
+  constant. We can do the two things separatly with identical meaning,
+  like this:
+*/
+
+myFunctionConst :== def (Int arg)
+{
+    return arg+1;
+}
+
+/*
+  Sometimes, it is useful to bind a function to a variable instead of a 
+  constant:
+*/
+myFunctionVar := def (Int arg){ arg+1 }
+
+/*
+  It (obviously) doesn't matter if you're calling a function variable or a 
+  function constant. This will print 8.
+*/
+print(myFunctionVar(7), "\n");
+
+/*
+  But a variable can be reassigned. This will print 7, because the function 
+  variable has been reassigned.
+*/
+myFunctionVar = def (Int arg){ arg }
+print(myFunctionVar(7), "\n");
+	  </pre>
+	  
+
 	  <h3><a name="examples-objects">Defining and creating objects</a></h3>
 	  <pre class="anna-code">
 /*
   Use the class keyword to define your own types
 */
-class MyType
+class MyClass
 {
     // This declares that the type has a member of type Int with the 
-    // name myMember.
-    var Int myMember;
+    // name myMember and the initial value 7.
+    myMember := 7;
 
     // This declares that the type has a method named myMethod
     def myMethod()
@@ -653,35 +733,81 @@ class MyType
         print(this.__type__.name, "\n");
     }
 
-    // The constructor needs to be named __init__
-
-    def __init__()
-    {
-        myMember = 7;
-    }   
-
 }
 
 /*
   Call a type in order to create a new object instance of that type.
   This calls the constructor, which sets the value of myMember to 7.
 */
-myInstance := MyType();
+myInstance := MyClass();
 
-// This will print «7» and «MyType».
+// This will print «7» and «MyClass».
 myInstance.myMethod();
 
 // Member variables are public by default.
 // For now, there is no support for non-public members.
 myInstance.myMember = 9;
 
-// This will print «9» and «MyType».
+// This will print «9» and «MyClass».
 myInstance.myMethod();
 	  </pre>
 	  
 	  <h3><a name="examples-properties">Properties</a></h3>
 	  <pre class="anna-code">
-TODO
+/*
+  Properties are method calls that look like member variables. For example, the
+  count property of the List type returns the number of elements in the list.
+*/
+myList := [1, 2, 3];
+print(myList.count, "\n"); // This prints 3
+myList.push(0);
+print(myList.count, "\n"); // This prints 4
+
+/*
+  Some properties are read only, like List::empty?, but others can be written to
+  as well as read. MutableList::count can be written to.
+*/
+myList.count = 2; // This truncates the list
+print(myList, ' ', myList.count, "\n"); // This prints [1, 2] 2
+myList.count = 5; // This will null-pad the list to five elements.
+print(myList.count, "\n"); // This prints 5
+
+/*
+  Defining you own properties is straight forward. Define a getter and
+  optionally a setter method, both with suitable parameter lists. Then
+  declare a member variable and add a property attribute to it, giving
+  the name of the getter/setter as parameters.
+*/
+class PropertyExample 
+{
+    propValue := 0;
+
+    def myGetter()
+    {
+        propValue;
+    }
+
+    def mySetter(Int val)
+    {
+        print("Setting myProperty to %\n" % [val]);
+        propValue = val;
+    }
+
+    var Int myProperty (property(myGetter, mySetter));
+}
+
+/*
+  For read only properties, there is a slightly less verbose short
+  hand. Simply define a suitable getter method and add the property
+  attribute directly to the getter method like this:
+*/
+class PropertyExample2
+{
+    def myProperty() (property)
+    {
+        3;
+    }
+}
 	  </pre>
 
 	  <h3><a name="examples-static">Static members</a></h3>
@@ -689,19 +815,19 @@ TODO
 // When defining a type, members can be set as static using the 
 // static attribute
 
-class MyType
+class MyClass
 {
     var Int staticVar (static);
 }
 
 // Static variables are shared between all instances of an object,
 // so this will print '7'
-mt1 := MyType(), mt2 := MyType();
+mt1 := MyClass(), mt2 := MyClass();
 mt1.staticVar = 7;
 print(mt2.staticVar);
 
 // Static members can be accessed by using the :: operator
-MyType::staticVar = 9;
+MyClass::staticVar = 9;
 
 // If a method is accessed using the static member access operator, the unbound
 // version of the method is returned. The unbound method does not have an 
@@ -713,7 +839,7 @@ myList := [];
 MutableList::push(myList, 7);
 
 // Methods can be defined as static, just like variables
-class MyType
+class MyClass
 {
 
     def Object staticMeth() (static)
@@ -731,7 +857,7 @@ class MyType
 
 def main()
 {
-    MyType::staticMeth();
+    MyClass::staticMeth();
 }
 	  </pre>
 
@@ -956,7 +1082,8 @@ expandCode(
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/expandCode.anna</h3>
-	      <pre class='anna-code'>
+	      <pre class='anna-code'>attribute(internal, doc("Internal module for the expandCode macro."));
+
 macro expandCode(node)
 (
     doc(
@@ -1209,7 +1336,9 @@ macro expandCode(node)
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/switch.anna</h3>
-	      <pre class='anna-code'>macro switch(node) 
+	      <pre class='anna-code'>attribute(internal, doc("Internal module for the switch macro."));
+
+macro switch(node) 
 (
     doc("
 The switch statement. This macro a conditional structure that allows
@@ -1433,7 +1562,84 @@ print(myVar.someNumber + 3, ' ', myVar.someString ~ "world", myVar.someList[1]);
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/struct.anna</h3>
-	      <pre class='anna-code'>
+	      <pre class='anna-code'>attribute(internal, doc("Internal module for the struct macro."));
+
+macro structType(node)
+(
+    doc("
+The struct type macro is used for creating simple classes aimed for data storage.
+Basically, a struct type behaves exactly like a regular class, but with a few additional abilities.", "These are:
+
+&lt;ul&gt;
+  &lt;li&gt;A suitable constructor is automatically created, that accepts one argument for each member of the struct.&lt;/li&gt;
+  &lt;li&gt;__cmp__, hashCode and toString methods are all created, doing what you would expect them to.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+Usage example:
+&lt;/p&gt;
+&lt;pre class=\"anna-code\"&gt;
+struct MyStruct
+{
+    var Int some;
+    var String other;
+}
+
+...
+// A constructor is implicitly created for struct:s.
+vv := MyStruct(some: 3, other: \"abc\");
+vv2 := MyStruct(5, \"\");
+
+// This prints MyStruct(some: 5, other:);
+print(vv2);
+&lt;/pre&gt;
+&lt;p&gt;
+Because structs implement the __cmp__ and hashCode methods, they can be used as 
+keys in dictionaries.
+&lt;/p&gt;
+")
+)
+{
+    node.function = ast(classType);
+    structName := node[0] as Identifier;
+    body := node[2] as Call;
+    constructorParam := ast({});
+    constructorBody := ast({});
+    toStringBody := (ast({res := %resStart.thaw;}) % ["resStart": StringLiteral(node, structName.name ~ "(")]) as Call;
+    cmpBody := ast({otherStruct := other as %This; otherStruct or (return ?); tmp := 0;});
+    hashCodeBody := ast({res := 0;});
+    body.each(idx, el)
+    {
+        decl := el as Call;
+        name := (decl[0] as Identifier);
+        if(name.name in ["__init__", "__cmp__", "toString"])
+        {
+            name.error("Invalid field name in struct.");
+            return NullLiteral(node);
+        }
+  
+        if(decl.function.named?("__const__") and decl[2].callTo?("__def__"))
+        {
+            continue;
+        }
+	constructorParam.push(decl.copy());
+	constructorBody.push(ast(this.%val = %val) % ["val": name.copy()]);
+	toStringBody.push(ast(res ~= %name) % ["name": StringLiteral(decl, "" ~ (if(idx != 0){ ", " } else { "" }) ~ name.name ~ ": ")]);
+	toStringBody.push(ast(res ~= this.%value) % ["value": name.copy()]);
+	cmpBody.push(ast((tmp = this.%value.__cmp__(otherStruct.%value) == 0) or (return tmp)) % ["value": name.copy()]);
+	hashCodeBody.push(ast(res = res ^bitxor this.%value.hashCode()) % ["value": name.copy()]);
+    }
+    toStringBody.push(ast(res ~= ")"));
+    toStringBody.push(ast(res));
+    body.push(ast(__const__(__init__, ?, __def__(__init__, ?, %param, {}, %body), {})) % ["param": constructorParam, "body": constructorBody]);
+    cmpBody.push(ast(return 0));
+    hashCodeBody.push(ast(return res));
+
+    body.push(ast(__const__(toString, ?, __def__(toString, ?, {}, {}, %body), {})) % ["body": toStringBody]);
+    body.push(ast(__const__(__cmp__, ?, __def__(__cmp__, ?, {var Object other}, {}, %body), {})) % ["body": cmpBody]);
+    body.push(ast(__const__(hashCode, ?, __def__(hashCode, ?, {}, {}, %body), {})) % ["body": hashCodeBody]);
+    return node;
+}
+
 macro struct(node)
 (
     doc("
@@ -1483,7 +1689,7 @@ Struct values can be any Anna expression, including another struct.
 	]
     ];
 
-    fullType := ast(class(Anon, {}, %body)) % ["body": typeBlock];
+    fullType := ast(classType(Anon, {}, %body)) % ["body": typeBlock];
     call := Call(node, fullType);
     call ~= callParam;
 //    print(fullType);
@@ -1536,8 +1742,9 @@ def main()
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/enum.anna</h3>
-	      <pre class='anna-code'>
-macro enum(definition)
+	      <pre class='anna-code'>attribute(internal, doc("Internal module for the enumType macro."));
+
+macro enumType(definition)
 (
     doc("
 The enum macro is used to define enumerations types. The basic syntax is:
@@ -1551,7 +1758,7 @@ enum TypeName
 )
 {
     body := definition[2] as Call;
-    definition.function = ast(class);
+    definition.function = ast(classType);
     
     newBody := ast(
 	{
@@ -1945,17 +2152,26 @@ TODO
 	    you to write your code with a C-like structure, e.g. using infix
 	    operators, braces and brackets. What sets Anna apart from other
 	    such languages is it's support for LISP-features such as
-	    LISP-style macros, closures, anonymous functions and
-	    continuations.  The Anna type system is static, but it supports
-	    structural typing, meaning that if the type of variable B
-	    contains all members of the type A, with compatible type
-	    signatures, then B can be freely cast into a variable of type
-	    A. 
-	  </p>
-	  <p>
-	    In order to learn more about Anna, check out the following sections:
+	    LISP-style macros, continuations, closures and anonymous functions.  
 	  </p>
 	  <ul>
+	    <li>
+	      Instead of the backtick operator of LISP, Anna uses
+	      named substitutions. This involves slightly more
+	      typing, but often makes the intention of the code
+	      clearer. See the section <a href="#misc-format">The %
+	      (format) operator</a> for more information.
+	    </li>
+	    <li>
+	      The Anna type system is static, but it uses structural
+	      typing, not inheritance, to determine if two types are
+	      compatible. Structural typing means that if the type of
+	      variable B contains all members of the type A, with
+	      compatible type signatures, then B can be freely cast
+	      into a variable of type A. For more information, see the
+	      section titled <a href='#structural_typing'>Structural
+	      typing</a>.
+	    </li>
 	    <li>
 	      <a href='#examples'>Anna by examples.</a> If you just want to
 	      dig in to the syntax.
@@ -1964,8 +2180,6 @@ TODO
 	      <a href="#sugar">Sugar and spice</a> - How the front end
 	      sugar works and what Anna looks like without makeup.
 	    </li>
-	    <li><a href='#structural_typing'>Structural typing - duck typing rethought</a></li>
-
 	  </ul>
     
 	  <h2><a name="intro_c">Anna for Java, C, C++, Go and D programmers</a></h2>
@@ -3142,7 +3356,7 @@ thisIsCode();
 	    slightly different inputs can be named the same thing,
 	    which avoids having to come up with arbitrary minor
 	    differences in function names. There are drawbacks with
-	    allowin overloadin of method names, though:
+	    allowing overloading of method names, though:
 	  </p>
 	  <ul>
 	    <li>
@@ -3168,34 +3382,29 @@ thisIsCode();
 	  </ul>
 	  <p>
 	    Anna works around these issues by introducing a second
-	    type of name for a function. All stack values, including
-	    functions, have a single variable name, which is unique
-	    within a specific namespace (that is, the name is unique
-	    with that stack frame or type). This is the «true» name of
-	    the function and can be used in any situation where an
-	    unambigous name is desired. But functions can also have an
+	    type of name for a function. All type members and stack
+	    values, including functions and methods, have exactly one
+	    canonical name, which is unique within a specific
+	    namespace (that is, the name is unique with that stack
+	    frame or type). This is the «true» name of the function
+	    and must be used in any situation where an unambigous name
+	    is needed. But functions and methods can also have an
 	    arbitrary number of aliases, specified using the alias
-	    attribute in the function declaration. If an identifier is
-	    used to find the function for a function call, and there
-	    is no function of that name, then all relevant namespaces
-	    are checked for functions with a matching alias. If one or
-	    more such functions is found, the most suitable one is
-	    chosen.
+	    attribute in the function declaration. Such aliases are
+	    also searched when performing lookup for function and
+	    method calls. If multiple function matches are found, the
+	    function with the most compatible type signature is
+	    chosen. Aliases are only used when calling a function or
+	    method.
 	  </p>
 	  <p>
 	    Note:
 	  </p>
 	  <ul>
 	    <li>
-	      If a matching function name exists within the relevant
-	      scope, any functions with a matching alias are
-	      completely ignored. Alias based function lookup only
-	      takes place if regular lookup failed.
-	    </li>
-	    <li>
 	      If a function definition is shadowed by another function
-	      of the same name, that function will not be considered
-	      for aliasing. This may be changed in a future Anna version.
+	      with the same canonical name, that function will not be
+	      considered even if it has a matching alias.
 	    </li>
 	    <li>
 	      Aliases are only used when resolving an identifier for a
@@ -3347,6 +3556,36 @@ macro setFooToValue(call)
 	    simply placeholders that are to be substituted with
 	    something else.
 	  </p>
+	  <p>
+	    The percent symbol, when not used as a prefix for an
+	    identifier, is an operator called the format operator. You
+	    can read more about the format operator in the following
+	    section.
+	  </p>
+
+	  <h2><a name="misc-format">The % (format) operator</a></h2>
+	  <p>
+	    Various Anna types implement the <code>%</code> operator,
+	    also called <code>__format__</code>. This operator should
+	    be used for interpolating a collection of values into a
+	    template containing placeholders. Some examples:
+	  </p>
+	  <pre class="anna-code">
+// Prints «This string is used as a template»
+print("This string is used as a %\n" % ["template"]);
+// Prints «A fancy string uses fancy named placeholders»
+print(
+    "A %(quality) string uses %(quality) named placeholders\n"
+     % ["quality": "fancy"]);
+
+/*
+  AST nodes also have a format operator, it works much the same way 
+  as named placeholders in strings
+
+  This will print «print(7)»
+*/
+print(ast(%someFunction(7)) % ["someVar": parser.identifier(?, "print")]);
+	  </pre>
 <!--
     <h1>A simple, annotated example</h1>
     <p>
@@ -3428,11 +3667,77 @@ m := json({data:[1,2,3,7], unit:"seconds", caption:null});
 	  </p>
 	  <pre class="anna-code">
 // Create a new date from a specified date 
-var then = isoDate(2009-1-1, 12:30);
+then := isoDate(2009-1-1, 12:30);
 
 // Move ahead x years and one hour 
 date += isoDateDelta(x-0-0, 1:00);
 	  </pre>
+	  
+	  <h1><a name="collections">More about collections</a></h1>
+	  <p>
+	    The Anna standard library comes with three different collections built in,
+	  </p>
+	  <ul>
+	    <li>
+	      <code class="anna-code">List</code>, an ordered
+	      collection using positive integer indices as keys, and
+	      which comes in both
+	      a <code class="anna-code">MutableList</code> and
+	      an <code class="anna-code">ImutableList</code> flavor,
+	      both of which are templates that can be specialized to
+	      store any type.
+	    </li>
+	    <li>
+	      <code class="anna-code">HashMap</code>, an unordered
+	      collection using arbitrary objects as keys, and is a
+	      template that can be specialized to store any key/value
+	      type pair.
+	    </li>
+	    <li>
+	      <code class="anna-code">Range</code>, which defines a
+	      (possible infinite) sequence of equally spaced integer
+	      values.
+	    </li>
+	  </ul>
+	  <h2><a name="collections-list">Lists</a></h1>
+	  <p>
+	    Anna list objects use zero based offsets, and use a
+	    dynamically allocated array to store it's values
+	    internally, meaning that accessing any element in the
+	    array by index will always be a fast operation. This also
+	    means that if there are large gaps in the List, it will
+	    take up more memory than it needs, and that inserting new
+	    elements anywhere that is not near the end of the list is
+	    an inherently slow operation.
+	  </p>
+	  <p>
+	    Lists can be used as stacks by employing
+	    the <code class="anna-code">push</code>
+	    and <code class="anna-code">pop</code> methods and
+	    checking the <code class="anna-code">empty?</code>
+	    attribute.
+	  </p>
+	  <p>
+	    When assigning beyond the last index of a list, it is
+	    dynamically resized. All previously unassigned slots are
+	    given the null value. Code
+	    like <code class="anna-code">silly=[];silly[99999999999999999]=?;</code>
+	    is an excellent way to run out of memory.
+	  </p>
+	  <p>
+	    
+	  </p>
+	  <h2><a name="collections-hashmap">HashMaps</a></h2>
+	  <p>
+	    Anna hashmap objects are one-to-one mappings that use
+	    the <code>hashCode</code> and <code>__eq__</code> methods
+	    of the key object to find the corresponding
+	    value. Hashmaps are unordered. That is, when iterating
+	    over them, the elements may be presented in any order.
+	  </p>
+          <p>
+
+	  </p>
 	  <h1><a name="sugar">Sugar and spice - How the front end sugar works and what Anna looks like without makeup</a></h1>
 	  <p>
 	    The real syntax for Anna is painfully simple. There Anna AST
@@ -3776,21 +4081,24 @@ def someFunction()
 
 	  <h1><a name="use">The use expression</a></h1>
 	  <p>
-
+	    The use expression is a short hand convenience - any use:d
+	    expressions are considered in scope and considered when
+	    performing identifier lookup.
 	  </p>
 
 	  <pre class="anna-code">
     /*
-      The use expression can be used for oth
+      The use expression can be used for other things than just importing a 
+      library.
     */
     lst := [];
     use(lst);
+    /* These calls resolve to lst.push, because lst us use:d */
     push(1);
     push(2);
     push(3);
     print(pop(), ' ', pop(), ' ', pop(), '\n');
 	  </pre>
-
 	  <h1><a name="design">Design choices</a></h1>
 	  <p>
 	    The design goals of Anna include:
@@ -4104,6 +4412,13 @@ def Int main()
 	    </li>
 	  </ul>
 	  <p>
+	    For a more complete description of the pointer magic used
+	    to avoid memory allocations for integers and characters,
+	    see for
+	    example <a href="http://nikic.github.com/2012/02/02/Pointer-magic-for-efficient-dynamic-value-representations.html">this
+	    article</a>.
+	  </p>
+	  <p>
 	    The above holds true for as long as only common operations,
 	    such as adding, subtracting, etc. are performed on the
 	    values. If e.g. reflection is employed or any other operation
@@ -4248,8 +4563,47 @@ struct anna_object
 	    allows for introspection, efficient garbage collection,
 	    etc.
 	  </p>
-
-
+	  
+	  <h1><a name="tests">The Anna test suite</a></h1>
+	  <p>
+	    Anna ships with a test suite consisting of a series of
+	    small Anna programs and their expected output and exit
+	    status. Currently, the tests suite consists of ~250 tests
+	    taking up over 4000 lines of code, which is about 9 % of
+	    the total source code in the Anna distribution.
+	  </p>
+	  <p>
+	    To run the Anna test suite, simply type <code>make
+	    test</code> at the command line prompt. Don't be surprised
+	    if a few tests fail, Anna is currently not 100 % finished.
+	  </p>
+	  <p>
+	    The test suite has multiple goals, the most important of which are:
+	  </p>
+	  <ul>
+	    <li>
+	      Regression testing for old bugs. This is the most
+	      central task for the test suite. Every major bug
+	      discovered in anna should be turned into an Anna test,
+	      so that if the same bug resurfaces, it can be quickly
+	      fixed.
+	    </li>
+	    <li>
+	      Coverage testing. Ideally, the test suite should cover
+	      every single line of Anna code. That is nowhere near true
+	      as of today.
+	    </li>
+	    <li>
+	      Overall sanity checking. A small number of test programs
+	      are computational programs that calculate e.g. the
+	      mangelbrot set, digits of Pi, perform N-body
+	      simulations, etc. The point of these programs is to
+	      check that Anna runs well on slightly larger problem
+	      sets, e.g. that the garbage collector isn't leaking too
+	      much memory. They can also provide some small degree of
+	      sanity checking on performance changes.
+	    </li>
+	  </ul>
 	  <h1><a name="limitations">Known limitations</a></h1>
 	  <p>
 	    Anna is still a work in progress. As such, there are

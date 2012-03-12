@@ -15,38 +15,98 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>unix</em></a></h1>
 
-    
+    <p>The unix module is the parent module for various low level wrappers for basic Unix functionality.</p>
+
+<p>Anna currently has a very sparse standard library, which often necessitates the use of these low level libraries, but when available, a more programmer friendly high level library should be used. The documentation for these modules is very sparse - the same documentation is also available e.g. as Unix man pages.</p>
+
+<p>The unix module is still rater incomplete. There are many, many functions that are currently missing. The ones that are there have inconsistent naming policies with regard to capitalization, abbreviations, etc. The exact policy for naming, etc. in this module will evolve over time, which can result in future incompatibilities.</p>
+
+
     
     
     <h2><a name="api-submodules">Submodules</a></h2>
     <ul>
     
-      <li><a href='../global/unix/env.html'>env</a></li>
+      <li ><a href='../global/unix/env.html'>env</a> 
+	 - The unix.env module contains low level wrappers for basic unix functionality revolving around environment variables.
+</li>
 
-      <li><a href='../global/unix/io.html'>io</a></li>
+      <li ><a href='../global/unix/error.html'>error</a> 
+	
+</li>
 
-      <li><a href='../global/unix/proc.html'>proc</a></li>
+      <li ><a href='../global/unix/io.html'>io</a> 
+	 - The unix.io module contains low level wrappers for basic unix functionality revolving around input and output.
+</li>
 
-      <li><a href='../global/unix/rLimit.html'>rLimit</a></li>
+      <li ><a href='../global/unix/locale.html'>locale</a> 
+	 - The unix.locale module contains low level wrappers for basic unix functionality revolving around localization.
+</li>
 
-      <li><a href='../global/unix/sleep.html'>sleep</a></li>
+      <li ><a href='../global/unix/proc.html'>proc</a> 
+	 - The unix.proc module contains low level wrappers for basic unix functionality revolving around processes and signals.
+</li>
 
-      <li><a href='../global/unix/time.html'>time</a></li>
+      <li ><a href='../global/unix/rLimit.html'>rLimit</a> 
+	 - The unix.rLimit module contains low level wrappers for basic unix functionality revolving around system resource limits.
+</li>
 
-      <li><a href='../global/unix/user.html'>user</a></li>
+      <li ><a href='../global/unix/sleep.html'>sleep</a> 
+	 - The unix.sleep module contains low level wrappers for basic unix functionality revolving around pausing the execution of processes.
+</li>
+
+      <li ><a href='../global/unix/term.html'>term</a> 
+	 - The unix.term module contains low level wrappers for basic unix functionality revolving around terminal handling.
+</li>
+
+      <li ><a href='../global/unix/time.html'>time</a> 
+	 - The unix.time module contains low level wrappers for basic unix functionality revolving around timekeeping.
+</li>
+
+      <li ><a href='../global/unix/user.html'>user</a> 
+	 - The unix.user module contains low level wrappers for basic unix functionality revolving around users and groups.
+</li>
 
     </ul>
     
     
-    
+
+
 
     
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+    
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -57,3 +117,4 @@
     </div>
   </body>
 </html>
+b

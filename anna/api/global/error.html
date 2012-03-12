@@ -15,41 +15,100 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>error</em></a></h1>
 
-    
+    <p>Simple high level error handling.</p>
+
+
     
     
     
     <h2><a name="api-types">Types</a></h2>
     <ul>
     
-      <li><a href='../global/error/Error.html'>Error</a></li>
+      <li ><a href='../global/error/CError.html'>CError</a>
+     - An error with an associated C error number
+      </li>
+      
+      <li ><a href='../global/error/CompilationError.html'>CompilationError</a>
+     - The base class of any errors related to dynamically compiling a piece of code.
+      </li>
+      
+      <li ><a href='../global/error/Error.html'>Error</a>
+     - The base class of any error
+      </li>
+      
+      <li ><a href='../global/error/IncompleteError.html'>IncompleteError</a>
+     - A class representing an error occuring because of of premature termination of the input, i.e. an incomplete program.
+      </li>
+      
+      <li ><a href='../global/error/LexError.html'>LexError</a>
+     - A class reresenting an error in the lexer, i.e.  in the compiler phase that deals with turning the input stream into a series of tokens.
+      </li>
+      
+      <li ><a href='../global/error/ParseError.html'>ParseError</a>
+     - A class representing an error occuring in the parser phase
+      </li>
       
     </ul>
     
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+
+
+
+
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li><a href="#raise">raise</a></li>
+      <li >
+	<a href="#raiseError">raiseError</a> 
+	 - Search the stack for a suitable handler for the specified error. If there is no such error handler, print the error and return.
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
+
+
+
+
     
-<a name='raise'>def <a href='../global/lang/Object.html'>Object</a> <em>raise</em> (<a href='../global/error/Error.html'>Error</a> error);</a>
+
+
+        
+    
+<span >
+<hr>
+<a name='raiseError'>def <a href='../global/lang/Object.html'>Object</a> <em>raiseError</em> (<a href='../global/error/Error.html'>Error</a> error) (static);</a>
 <br>
 
+<p>Search the stack for a suitable handler for the specified error. If there is no such error handler, print the error and return.</p>
 
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -60,3 +119,4 @@
     </div>
   </body>
 </html>
+b

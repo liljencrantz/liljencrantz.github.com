@@ -1,0 +1,618 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace SignalInfoFd</title>
+    
+    <link rel="stylesheet" href="../../../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Type <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/proc.html'>proc</a>.<em>SignalInfoFd</em></a></h1>
+
+    <p>A structure describing a recieved signal.</p>
+
+
+    
+    
+    
+
+
+
+    
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#__type__">__type__</a> 
+	 - The type of this object</li>
+      </li>
+
+      <li >
+	<a href="#band">band</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#code">code</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#fd">fd</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#pid">pid</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#signal">signal</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#tid">tid</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#uid">uid</a> 
+	</li>
+      </li>
+
+    </ul>
+    
+
+
+
+
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li class='anna-internal'>
+	<a href="#!__type__Getter">!__type__Getter</a> 
+	 - Getter function for the __type__ property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!bandGetter">!bandGetter</a> 
+	 - Getter function for the band property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!bandSetter">!bandSetter</a> 
+	 - Setter function for the band property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!codeGetter">!codeGetter</a> 
+	 - Getter function for the code property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!codeSetter">!codeSetter</a> 
+	 - Setter function for the code property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!fdGetter">!fdGetter</a> 
+	 - Getter function for the fd property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!fdSetter">!fdSetter</a> 
+	 - Setter function for the fd property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!pidGetter">!pidGetter</a> 
+	 - Getter function for the pid property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!pidSetter">!pidSetter</a> 
+	 - Setter function for the pid property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!signalGetter">!signalGetter</a> 
+	 - Getter function for the signal property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!signalSetter">!signalSetter</a> 
+	 - Setter function for the signal property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!tidGetter">!tidGetter</a> 
+	 - Getter function for the tid property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!tidSetter">!tidSetter</a> 
+	 - Setter function for the tid property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!uidGetter">!uidGetter</a> 
+	 - Getter function for the uid property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!uidSetter">!uidSetter</a> 
+	 - Setter function for the uid property.
+      </li>
+
+      <li >
+	<a href="#__cmp__">__cmp__</a> 
+	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
+      </li>
+
+      <li >
+	<a href="#__eq__">__eq__</a> 
+	 - Return non-null if this object is equal to the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__init__">__init__</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#hashCode">hashCode</a> 
+	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
+      </li>
+
+      <li >
+	<a href="#toString">toString</a> 
+	 - String conversion. Called by the String::convert method.
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
+
+
+        
+    
+<span >
+<hr>
+<a name='__type__'>var <a href='../../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<br>
+<p>The type of this object</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='band'>var <a href='../../../global/lang/Int.html'>Int</a> <em>band</em>;</a>
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='code'>var <a href='../../../global/lang/Int.html'>Int</a> <em>code</em>;</a>
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fd'>var <a href='../../../global/lang/Int.html'>Int</a> <em>fd</em>;</a>
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='pid'>var <a href='../../../global/lang/Int.html'>Int</a> <em>pid</em>;</a>
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='signal'>var <a href='../../../global/lang/Int.html'>Int</a> <em>signal</em>;</a>
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='tid'>var <a href='../../../global/lang/Int.html'>Int</a> <em>tid</em>;</a>
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='uid'>var <a href='../../../global/lang/Int.html'>Int</a> <em>uid</em>;</a>
+<br>
+
+</span>
+
+    
+
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!__type__Getter'>def <a href='../../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the __type__ property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!bandGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!bandGetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the band property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!bandSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!bandSetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
+<br>
+
+<p>Setter function for the band property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!codeGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!codeGetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the code property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!codeSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!codeSetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
+<br>
+
+<p>Setter function for the code property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!fdGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!fdGetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the fd property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!fdSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!fdSetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
+<br>
+
+<p>Setter function for the fd property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!pidGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!pidGetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the pid property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!pidSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!pidSetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
+<br>
+
+<p>Setter function for the pid property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!signalGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!signalGetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the signal property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!signalSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!signalSetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
+<br>
+
+<p>Setter function for the signal property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!tidGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!tidGetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the tid property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!tidSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!tidSetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
+<br>
+
+<p>Setter function for the tid property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!uidGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!uidGetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the uid property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!uidSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!uidSetter</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
+<br>
+
+<p>Setter function for the uid property.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__cmp__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__eq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is equal to the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is greater than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__init__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> this) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__neq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is not equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='hashCode'>def <a href='../../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='toString'>def <a href='../../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>String conversion. Called by the String::convert method.</p>
+
+
+</span>
+
+    
+
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
+b

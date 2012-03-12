@@ -15,76 +15,181 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>monkeypatchList</em></a></h1>
 
+    <p>Internally used module. Don't use directly.</p>
+
+
     
     
     
+
+
+
     
+
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li><a href="#all?">all?</a></li>
+      <li >
+	<a href="#all?">all?</a> 
+	 - Returns true if all members of this list are non-Null.
+      </li>
 
-      <li><a href="#listToString">listToString</a></li>
+      <li >
+	<a href="#any?">any?</a> 
+	 - Returns true if any of the members of this list are non-Null.
+      </li>
 
-      <li><a href="#partition">partition</a></li>
+      <li >
+	<a href="#listToString">listToString</a> 
+	 - Returns a string representation of this List.
+      </li>
 
-      <li><a href="#sort">sort</a></li>
+      <li >
+	<a href="#none?">none?</a> 
+	 - Returns true if none of the members of this list are non-Null.
+      </li>
 
-      <li><a href="#sortSub">sortSub</a></li>
+      <li >
+	<a href="#partition">partition</a> 
+	
+      </li>
+
+      <li >
+	<a href="#sort">sort</a> 
+	 - 
+Sort the list. If the original list is mutable, it is sorted inplace, otherwise
+a new list is returned.
+      </li>
+
+      <li >
+	<a href="#sortSub">sortSub</a> 
+	
+      </li>
 
     </ul>
     
 
-        
-    <hr>
-    
-<a name='all?'>def <a href='../global/lang/Object.html'>Object</a> <em>all?</em> (<a href='../global/lang/List.html'>List</a> this);</a>
-<br>
-Returns true if all members of this list are non-Null.<p>
 
 
-        
-    <hr>
+
+
+
+
+
     
-<a name='listToString'>def <a href='../global/lang/ImutableString.html'>ImutableString</a> <em>toString</em> (<a href='../global/lang/List.html'>List</a> this);</a>
-<br>
-Returns a string representation of this List.<p>
 
 
         
-    <hr>
     
-<a name='partition'>def <a href='../global/lang/Int.html'>Int</a> <em>partition</em> (<a href='../global/lang/MutableList.html'>MutableList</a> list, <a href='../global/lang/Int.html'>Int</a> from, <a href='../global/lang/Int.html'>Int</a> to, <a href=''>!def Int (Object first, Object second)530</a> fun);</a>
+<span >
+<hr>
+<a name='all?'>def <a href='../global/lang/Object.html'>Object</a> <em>all?</em> (<a href='../global/lang/List.html'>List</a> this) (static);</a>
 <br>
 
+<p>Returns true if all members of this list are non-Null.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='sort'>def <a href='../global/lang/MutableList.html'>MutableList</a> <em>sort</em> (<a href='../global/lang/List.html'>List</a> this, <a href=''>!def Int (Object first, Object second)530</a> fun = ?);</a>
+<span >
+<hr>
+<a name='any?'>def <a href='../global/lang/Int.html'>Int</a> <em>any?</em> (<a href='../global/lang/List.html'>List</a> this) (static);</a>
 <br>
 
+<p>Returns true if any of the members of this list are non-Null.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='listToString'>def <a href='../global/lang/ImutableString.html'>ImutableString</a> <em>toString</em> (<a href='../global/lang/List.html'>List</a> this) (static);</a>
+<br>
+
+<p>Returns a string representation of this List.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='none?'>def <a href='../global/lang/Object.html'>Object</a> <em>none?</em> (<a href='../global/lang/List.html'>List</a> this) (static);</a>
+<br>
+
+<p>Returns true if none of the members of this list are non-Null.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='partition'>def <a href='../global/lang/Int.html'>Int</a> <em>partition</em> (<a href='../global/lang/MutableList.html'>MutableList</a> list, <a href='../global/lang/Int.html'>Int</a> from, <a href='../global/lang/Int.html'>Int</a> to, <a href=''>def Int (Object first, Object second)</a> fun) (static);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='sort'>def <a href='../global/lang/MutableList.html'>MutableList</a> <em>sort</em> (<a href='../global/lang/List.html'>List</a> this, <a href=''>def Int (Object first, Object second)</a> fun = ?) (static);</a>
+<br>
+
+<p>
 Sort the list. If the original list is mutable, it is sorted inplace, otherwise
-a new list is returned<p>
+a new list is returned.</p>
 
+<p>
+The current implementation is just a placeholder. It is a standard
+Quicksort with a non-random pivot, meaning it does not provide a
+stable sort, and it is easy to trigger O(N^2) worst case behavior by
+choosing the right input. Also, the current implementation does not 
+support templating, so the returned, sorted list is simply a list of 
+objects.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='sortSub'>def <a href='../global/lang/Object.html'>Object</a> <em>sortSub</em> (<a href='../global/lang/MutableList.html'>MutableList</a> list, <a href='../global/lang/Int.html'>Int</a> from, <a href='../global/lang/Int.html'>Int</a> to, <a href=''>!def Int (Object first, Object second)530</a> fun);</a>
+<span >
+<hr>
+<a name='sortSub'>def <a href='../global/lang/Object.html'>Object</a> <em>sortSub</em> (<a href='../global/lang/MutableList.html'>MutableList</a> list, <a href='../global/lang/Int.html'>Int</a> from, <a href='../global/lang/Int.html'>Int</a> to, <a href=''>def Int (Object first, Object second)</a> fun) (static);</a>
 <br>
 
 
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -95,3 +200,4 @@ a new list is returned<p>
     </div>
   </body>
 </html>
+b

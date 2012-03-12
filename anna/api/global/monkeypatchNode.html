@@ -15,84 +15,167 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>monkeypatchNode</em></a></h1>
 
+    <p>Internally used module. Don't use directly.</p>
+
+
     
     
     
+
+
+
     
+
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-function">Operators</a></h2>
     <ul>
     
-      <li><a href="#__format__">__format__</a></li>
+      <li>
+	% 
+(Formating)
+	<a href="#__format__">__format__</a> 
+      </li>
+      
+    </ul>
+    
 
-      <li><a href="#block?">block?</a></li>
 
-      <li><a href="#callTo?">callTo?</a></li>
 
-      <li><a href="#childNamed?">childNamed?</a></li>
 
-      <li><a href="#filterByCall">filterByCall</a></li>
 
-      <li><a href="#named?">named?</a></li>
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#__format__">__format__</a> 
+	 - Replace every internal identifier (an identifier prefixed with a '%' character) in the specified AST tree with the corresponding AST tree.
+      </li>
+
+      <li >
+	<a href="#block?">block?</a> 
+	 - Returns true if the specified AST node is a block.
+      </li>
+
+      <li >
+	<a href="#callTo?">callTo?</a> 
+	 - Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.
+      </li>
+
+      <li >
+	<a href="#childNamed?">childNamed?</a> 
+	 - Returns true if this call has a parameter which is an identifier with the specified name.
+      </li>
+
+      <li >
+	<a href="#filterByCall">filterByCall</a> 
+	 - Filters the call list for direct children that are calls to the specified function. For each found child, every parameter in it's parameter list is inserted into the resulting list of Node objects. This function is often useful when checking attribute lists.
+      </li>
+
+      <li >
+	<a href="#named?">named?</a> 
+	 - Returns true if the specified AST node is an identifier with the specified name.
+      </li>
 
     </ul>
     
 
-        
-    <hr>
-    
-<a name='__format__'>def <a href='../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href=''>HashMap«String,Node»</a> data);</a>
-<br>
-Replace every internal identifier (an identifier prefixed with a '%' character) in the specified AST tree with the corresponding AST tree.<p>
 
 
-        
-    <hr>
+
+
+
+
+
     
-<a name='block?'>def <a href='../global/lang/Int.html'>Int</a> <em>block?</em> (<a href='../global/parser/Node.html'>Node</a> this);</a>
-<br>
-Returns true if the specified AST node is a block.<p>
 
 
         
-    <hr>
     
-<a name='callTo?'>def <a href='../global/lang/Int.html'>Int</a> <em>callTo?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<span >
+<hr>
+<a name='__format__'>def <a href='../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href=''>HashMap«String,Node»</a> data) (static);</a>
 <br>
-Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.<p>
+<p>This method is usually called as the % operator.</p>
+<p>Replace every internal identifier (an identifier prefixed with a '%' character) in the specified AST tree with the corresponding AST tree.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='childNamed?'>def <a href='../global/lang/Int.html'>Int</a> <em>childNamed?</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<span >
+<hr>
+<a name='block?'>def <a href='../global/lang/Int.html'>Int</a> <em>block?</em> (<a href='../global/parser/Node.html'>Node</a> this) (static);</a>
 <br>
 
+<p>Returns true if the specified AST node is a block.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='filterByCall'>def <a href=''>List«Call»</a> <em>filterByCall</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<span >
+<hr>
+<a name='callTo?'>def <a href='../global/lang/Int.html'>Int</a> <em>callTo?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
 <br>
 
+<p>Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='named?'>def <a href='../global/lang/Int.html'>Int</a> <em>named?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name);</a>
+<span >
+<hr>
+<a name='childNamed?'>def <a href='../global/lang/Int.html'>Int</a> <em>childNamed?</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
 <br>
-Returns true if the specified AST node is an identifier with the specified name.<p>
 
+<p>Returns true if this call has a parameter which is an identifier with the specified name.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='filterByCall'>def <a href=''>List«Node»</a> <em>filterByCall</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
+<br>
+
+<p>Filters the call list for direct children that are calls to the specified function. For each found child, every parameter in it's parameter list is inserted into the resulting list of Node objects. This function is often useful when checking attribute lists.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='named?'>def <a href='../global/lang/Int.html'>Int</a> <em>named?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
+<br>
+
+<p>Returns true if the specified AST node is an identifier with the specified name.</p>
+
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -103,3 +186,4 @@ Returns true if the specified AST node is an identifier with the specified name.
     </div>
   </body>
 </html>
+b

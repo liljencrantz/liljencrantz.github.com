@@ -15,98 +15,241 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <em>global</em></a></h1>
 
-    
+    <p>This is the root of the entire anna namespace.</p>
+
+
     
     
     <h2><a name="api-submodules">Submodules</a></h2>
     <ul>
     
-      <li><a href='global/ast.html'>ast</a></li>
+      <li class='anna-internal'><a href='global/annaUtil.html'>annaUtil</a> 
+	 - This is an internal helper library. Do not use it.
+</li>
 
-      <li><a href='global/attributes.html'>attributes</a></li>
+      <li class='anna-internal'><a href='global/ast.html'>ast</a> 
+	 - Internal module for the ast macro.
+</li>
 
-      <li><a href='global/cerror.html'>cerror</a></li>
+      <li class='anna-internal'><a href='global/attributes.html'>attributes</a> 
+	 - Internal module for various attribute macros.
+</li>
 
-      <li><a href='global/class.html'>class</a></li>
+      <li class='anna-internal'><a href='global/class.html'>class</a> 
+	 - Internal module for the classType macro.
+</li>
 
-      <li><a href='global/collection.html'>collection</a></li>
+      <li class='anna-internal'><a href='global/collection.html'>collection</a> 
+	 - Internal module for the __collcetion__ macro.
+</li>
 
-      <li><a href='global/ctime.html'>ctime</a></li>
+      <li ><a href='global/ctime.html'>ctime</a> 
+	 - A simple, low level time API. Unlike most other c* api:s in Anna, this one doesn't closely mimic the underlying C functions.
+</li>
 
-      <li><a href='global/date.html'>date</a></li>
+      <li ><a href='global/curses.html'>curses</a> 
+	 - Low level library for dealing with terminal input and output.
+</li>
 
-      <li><a href='global/enum.html'>enum</a></li>
+      <li ><a href='global/date.html'>date</a> 
+	 - The date module is a high level library for handling dates and time. It currently suffers from the limitation that it can only correctly handle dates within the range of a Unix timestamp. On most 32-bit platforms, this means dates from 1902 to 2038 are correctly handled.
+</li>
 
-      <li><a href='global/error.html'>error</a></li>
+      <li class='anna-internal'><a href='global/enum.html'>enum</a> 
+	 - Internal module for the enumType macro.
+</li>
 
-      <li><a href='global/errorMacros.html'>errorMacros</a></li>
+      <li ><a href='global/error.html'>error</a> 
+	 - Simple high level error handling.
+</li>
 
-      <li><a href='global/expandCode.html'>expandCode</a></li>
+      <li class='anna-internal'><a href='global/errorMacros.html'>errorMacros</a> 
+	 - Internal module for macros related to rasing errors.
+</li>
 
-      <li><a href='global/fiber.html'>fiber</a></li>
+      <li class='anna-internal'><a href='global/expandCode.html'>expandCode</a> 
+	 - Internal module for the expandCode macro.
+</li>
 
-      <li><a href='global/functional.html'>functional</a></li>
+      <li ><a href='global/fiber.html'>fiber</a> 
+	 - A simple cooperative threading library
+</li>
 
-      <li><a href='global.html'>global</a></li>
+      <li ><a href='global/functional.html'>functional</a> 
+	 - Various tools for functional programming.
+</li>
 
-      <li><a href='global/html.html'>html</a></li>
+      <li ><a href='global/getText.html'>getText</a> 
+	 - The Anna getText module is a low level wrapper around the C gettext localization library.
+</li>
 
-      <li><a href='global/io.html'>io</a></li>
+      <li ><a href='global.html'>global</a> 
+	 - This is the root of the entire anna namespace.
+</li>
 
-      <li><a href='global/iter.html'>iter</a></li>
+      <li ><a href='global/html.html'>html</a> 
+	 - HTML tools and utilities
+</li>
 
-      <li><a href='global/lang.html'>lang</a></li>
+      <li ><a href='global/i18n.html'>i18n</a> 
+	 - 
+The anna i18n module (i18n is short for internationalization) is a simple high level module for making an Anna program available in different languages.
+</li>
 
-      <li><a href='global/listAssign.html'>listAssign</a></li>
+      <li ><a href='global/io.html'>io</a> 
+	 - The io module is a high level library for handling files. It is currently rather incomplete but contains the basics needed for reading, writing and checking the status of files.
+</li>
 
-      <li><a href='global/macroUtil.html'>macroUtil</a></li>
+      <li class='anna-internal'><a href='global/iter.html'>iter</a> 
+	 - Internal module for macros related to iteration.
+</li>
 
-      <li><a href='global/mapping.html'>mapping</a></li>
+      <li ><a href='global/lang.html'>lang</a> 
+	 - The lang module contains the basic language constructs of Anna.
+</li>
 
-      <li><a href='global/math.html'>math</a></li>
+      <li class='anna-internal'><a href='global/listAssign.html'>listAssign</a> 
+	 - Internal module for macros related to declaring or assigning to multiple variables in a single expression.
+</li>
 
-      <li><a href='global/monkeypatchList.html'>monkeypatchList</a></li>
+      <li class='anna-internal'><a href='global/macroMisc.html'>macroMisc</a> 
+	 - Internal module for various default macros.
+</li>
 
-      <li><a href='global/monkeypatchMisc.html'>monkeypatchMisc</a></li>
+      <li ><a href='global/macroUtil.html'>macroUtil</a> 
+	 - This module contains various macros that are useful when writing macros.
+</li>
 
-      <li><a href='global/monkeypatchNode.html'>monkeypatchNode</a></li>
+      <li class='anna-internal'><a href='global/mapping.html'>mapping</a> 
+	 - Internal module for the __mapping__ macro.
+</li>
 
-      <li><a href='global/monkeypatchRange.html'>monkeypatchRange</a></li>
+      <li ><a href='global/math.html'>math</a> 
+	 - Basic mathematical functions and constants
+</li>
 
-      <li><a href='global/monkeypatchString.html'>monkeypatchString</a></li>
+      <li class='anna-internal'><a href='global/monkeypatchContinuation.html'>monkeypatchContinuation</a> 
+	 - Internally used module. Don't use directly.
+</li>
 
-      <li><a href='global/parser.html'>parser</a></li>
+      <li class='anna-internal'><a href='global/monkeypatchLang.html'>monkeypatchLang</a> 
+	 - Internally used module. Don't use directly.
+</li>
 
-      <li><a href='global/propertyAttribute.html'>propertyAttribute</a></li>
+      <li class='anna-internal'><a href='global/monkeypatchList.html'>monkeypatchList</a> 
+	 - Internally used module. Don't use directly.
+</li>
 
-      <li><a href='global/range.html'>range</a></li>
+      <li class='anna-internal'><a href='global/monkeypatchMisc.html'>monkeypatchMisc</a> 
+	 - Internally used module. Don't use directly.
+</li>
 
-      <li><a href='global/reflection.html'>reflection</a></li>
+      <li class='anna-internal'><a href='global/monkeypatchNode.html'>monkeypatchNode</a> 
+	 - Internally used module. Don't use directly.
+</li>
 
-      <li><a href='global/struct.html'>struct</a></li>
+      <li class='anna-internal'><a href='global/monkeypatchRange.html'>monkeypatchRange</a> 
+	 - Internally used module. Don't use directly.
+</li>
 
-      <li><a href='global/switch.html'>switch</a></li>
+      <li class='anna-internal'><a href='global/monkeypatchString.html'>monkeypatchString</a> 
+	 - Internally used module. Don't use directly.
+</li>
 
-      <li><a href='global/system.html'>system</a></li>
+      <li ><a href='global/parser.html'>parser</a> 
+	 - The parser module contains tools related to compilation of Anna code.
+</li>
 
-      <li><a href='global/template.html'>template</a></li>
+      <li class='anna-internal'><a href='global/propertyAttribute.html'>propertyAttribute</a> 
+	 - Internal module for the propertyAttribute macro.
+</li>
 
-      <li><a href='global/unix.html'>unix</a></li>
+      <li class='anna-internal'><a href='global/range.html'>range</a> 
+	 - Internal module for the __range__ macro.
+</li>
 
-      <li><a href='global/update.html'>update</a></li>
+      <li ><a href='global/readLine.html'>readLine</a> 
+	 - A wrapper for the GNU readline library.
+</li>
+
+      <li ><a href='global/reflection.html'>reflection</a> 
+	 - The reflection module contains tools used for run time introspection of functions and types.
+</li>
+
+      <li class='anna-internal'><a href='global/repl.html'>repl</a> 
+	 - 
+The anna repl implementation.
+</li>
+
+      <li ><a href='global/replTool.html'>replTool</a> 
+	 - Helper commands for the anna repl implementation. 
+This module is automatically used by the anna interactive prompt.
+</li>
+
+      <li class='anna-internal'><a href='global/struct.html'>struct</a> 
+	 - Internal module for the struct macro.
+</li>
+
+      <li class='anna-internal'><a href='global/switch.html'>switch</a> 
+	 - Internal module for the switch macro.
+</li>
+
+      <li ><a href='global/system.html'>system</a> 
+	 - The system module contains information and functionality on the currently running system.
+</li>
+
+      <li ><a href='global/template.html'>template</a> 
+	 - A simple templating library
+</li>
+
+      <li ><a href='global/unix.html'>unix</a> 
+	 - The unix module is the parent module for various low level wrappers for basic Unix functionality.
+</li>
+
+      <li class='anna-internal'><a href='global/update.html'>update</a> 
+	 - Internal module for the macros related to uodating a variable in-place.
+</li>
 
     </ul>
     
     
-    
+
+
 
     
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+    
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -117,3 +260,4 @@
     </div>
   </body>
 </html>
+b

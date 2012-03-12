@@ -15,131 +15,305 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/unix.html'>unix</a>.<em>proc</em></a></h1>
 
-    
+    <p>The unix.proc module contains low level wrappers for basic unix functionality revolving around processes and signals.</p>
+
+
     
     
     <h2><a name="api-submodules">Submodules</a></h2>
     <ul>
     
-      <li><a href='../../global/unix/proc/signal.html'>signal</a></li>
+      <li ><a href='../../global/unix/proc/signal.html'>signal</a> 
+	 - All known signals
+</li>
+
+      <li ><a href='../../global/unix/proc/signalfdFlag.html'>signalfdFlag</a> 
+	 - Flags determining the mode for unix.proc.signalfd
+</li>
+
+      <li ><a href='../../global/unix/proc/sigprocmaskFlag.html'>sigprocmaskFlag</a> 
+	 - Flags determining the mode for unix.iosigprocmask
+</li>
 
     </ul>
     
     
-    
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-types">Types</a></h2>
     <ul>
     
-      <li><a href="#exec">exec</a></li>
+      <li ><a href='../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a>
+     - A structure describing a recieved signal.
+      </li>
+      
+      <li ><a href='../../global/unix/proc/SignalSet.html'>SignalSet</a>
+     - A set of signals. Used by the unix.proc.signalfd and unix.proc.sigprocmask functions.
+      </li>
+      
+    </ul>
+    
 
-      <li><a href="#exit">exit</a></li>
 
-      <li><a href="#fork">fork</a></li>
 
-      <li><a href="#getpid">getpid</a></li>
+    
 
-      <li><a href="#getppid">getppid</a></li>
 
-      <li><a href="#getsid">getsid</a></li>
 
-      <li><a href="#kill">kill</a></li>
 
-      <li><a href="#setsid">setsid</a></li>
+    
 
-      <li><a href="#wait">wait</a></li>
 
-      <li><a href="#waitpid">waitpid</a></li>
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#exec">exec</a> 
+	 - Execute the specified program.
+      </li>
+
+      <li >
+	<a href="#exit">exit</a> 
+	 - Terminate the calling process.
+      </li>
+
+      <li >
+	<a href="#fork">fork</a> 
+	 - Create a child process.
+      </li>
+
+      <li >
+	<a href="#getpid">getpid</a> 
+	 - Get process ID.
+      </li>
+
+      <li >
+	<a href="#getppid">getppid</a> 
+	 - Get parent process ID.
+      </li>
+
+      <li >
+	<a href="#getsid">getsid</a> 
+	 - Get session ID.
+      </li>
+
+      <li >
+	<a href="#kill">kill</a> 
+	 - Send a signal to a process.
+      </li>
+
+      <li >
+	<a href="#readSignal">readSignal</a> 
+	 - Read one signal information structure form the specified file descriptor.
+      </li>
+
+      <li >
+	<a href="#setsid">setsid</a> 
+	 - Set session ID.
+      </li>
+
+      <li >
+	<a href="#signalfd">signalfd</a> 
+	 - Create a file descriptor for accepting signals.
+      </li>
+
+      <li >
+	<a href="#sigprocmask">sigprocmask</a> 
+	 - Examine and change what signals are currently blocked by this process.
+      </li>
+
+      <li >
+	<a href="#wait">wait</a> 
+	 - Wait for a process to change state.
+      </li>
+
+      <li >
+	<a href="#waitpid">waitpid</a> 
+	 - Wait for a process to change state.
+      </li>
 
     </ul>
     
 
-        
-    <hr>
-    
-<a name='exec'>def <a href='../../global/lang/Int.html'>Int</a> <em>exec</em> (<a href='../../global/lang/String.html'>String</a> filename, <a href=''>List«String»</a> argv, <a href=''>List«String»</a> envp);</a>
-<br>
-<p>
 
 
-        
-    <hr>
+
+
+
+
+
     
-<a name='exit'>def <a href='../../global/lang/Object.html'>Object</a> <em>exit</em> (<a href='../../global/lang/Int.html'>Int</a> status);</a>
-<br>
-<p>
 
 
         
-    <hr>
     
-<a name='fork'>def <a href='../../global/lang/Int.html'>Int</a> <em>fork</em> ();</a>
+<span >
+<hr>
+<a name='exec'>def <a href='../../global/lang/Int.html'>Int</a> <em>exec</em> (<a href='../../global/lang/String.html'>String</a> filename, <a href=''>List«String»</a> argv, <a href=''>List«String»</a> envp) (static);</a>
 <br>
-<p>
 
+<p>Execute the specified program.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='getpid'>def <a href='../../global/lang/Int.html'>Int</a> <em>getpid</em> ();</a>
+<span >
+<hr>
+<a name='exit'>def <a href='../../global/lang/Object.html'>Object</a> <em>exit</em> (<a href='../../global/lang/Int.html'>Int</a> status) (static);</a>
 <br>
-<p>
 
+<p>Terminate the calling process.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='getppid'>def <a href='../../global/lang/Int.html'>Int</a> <em>getppid</em> ();</a>
+<span >
+<hr>
+<a name='fork'>def <a href='../../global/lang/Int.html'>Int</a> <em>fork</em> () (static);</a>
 <br>
-<p>
 
+<p>Create a child process.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='getsid'>def <a href='../../global/lang/Int.html'>Int</a> <em>getsid</em> (<a href='../../global/lang/Int.html'>Int</a> pid);</a>
+<span >
+<hr>
+<a name='getpid'>def <a href='../../global/lang/Int.html'>Int</a> <em>getpid</em> () (static);</a>
 <br>
-<p>
 
+<p>Get process ID.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='kill'>def <a href='../../global/lang/Int.html'>Int</a> <em>kill</em> (<a href='../../global/lang/Int.html'>Int</a> pid, <a href='../../global/lang/Int.html'>Int</a> sig);</a>
+<span >
+<hr>
+<a name='getppid'>def <a href='../../global/lang/Int.html'>Int</a> <em>getppid</em> () (static);</a>
 <br>
-<p>
 
+<p>Get parent process ID.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='setsid'>def <a href='../../global/lang/Int.html'>Int</a> <em>setsid</em> ();</a>
+<span >
+<hr>
+<a name='getsid'>def <a href='../../global/lang/Int.html'>Int</a> <em>getsid</em> (<a href='../../global/lang/Int.html'>Int</a> pid) (static);</a>
 <br>
-<p>
 
+<p>Get session ID.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='wait'>def <a href='../../global/lang/Int.html'>Int</a> <em>wait</em> (<a href=''>MutableList«Int»</a> status);</a>
+<span >
+<hr>
+<a name='kill'>def <a href='../../global/lang/Int.html'>Int</a> <em>kill</em> (<a href='../../global/lang/Int.html'>Int</a> pid, <a href='../../global/lang/Int.html'>Int</a> sig) (static);</a>
 <br>
-<p>
 
+<p>Send a signal to a process.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='waitpid'>def <a href='../../global/lang/Int.html'>Int</a> <em>waitpid</em> (<a href='../../global/lang/Int.html'>Int</a> pid, <a href=''>MutableList«Int»</a> status, <a href='../../global/lang/Int.html'>Int</a> options);</a>
+<span >
+<hr>
+<a name='readSignal'>def <a href='../../global/lang/Object.html'>Object</a> <em>readSignal</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/unix/proc/SignalInfoFd.html'>SignalInfoFd</a> info) (static);</a>
 <br>
-<p>
 
+<p>Read one signal information structure form the specified file descriptor.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='setsid'>def <a href='../../global/lang/Int.html'>Int</a> <em>setsid</em> () (static);</a>
+<br>
+
+<p>Set session ID.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='signalfd'>def <a href='../../global/lang/Int.html'>Int</a> <em>signalfd</em> (<a href='../../global/lang/Int.html'>Int</a> fd, <a href='../../global/unix/proc/SignalSet.html'>SignalSet</a> mask, <a href='../../global/lang/Int.html'>Int</a> flags) (static);</a>
+<br>
+
+<p>Create a file descriptor for accepting signals.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='sigprocmask'>def <a href='../../global/lang/Int.html'>Int</a> <em>sigprocmask</em> (<a href='../../global/lang/Int.html'>Int</a> how, <a href='../../global/unix/proc/SignalSet.html'>SignalSet</a> set, <a href='../../global/unix/proc/SignalSet.html'>SignalSet</a> old) (static);</a>
+<br>
+
+<p>Examine and change what signals are currently blocked by this process.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='wait'>def <a href='../../global/lang/Int.html'>Int</a> <em>wait</em> (<a href=''>MutableList«Int»</a> status) (static);</a>
+<br>
+
+<p>Wait for a process to change state.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='waitpid'>def <a href='../../global/lang/Int.html'>Int</a> <em>waitpid</em> (<a href='../../global/lang/Int.html'>Int</a> pid, <a href=''>MutableList«Int»</a> status, <a href='../../global/lang/Int.html'>Int</a> options) (static);</a>
+<br>
+
+<p>Wait for a process to change state.</p>
+
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -150,3 +324,4 @@
     </div>
   </body>
 </html>
+b

@@ -15,194 +15,326 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/io.html'>io</a>.<em>openMode</em></a></h1>
 
+    <p>Flags determining the mode for unix.io.open</p>
+
+
     
     
     
+
+
+
     
-    
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
     <ul>
     
-      <li><a href="#append">append</a></li>
+      <li >
+	<a href="#append">append</a> 
+	 - The file is opened in append mode.</li>
+      </li>
 
-      <li><a href="#async">async</a></li>
+      <li >
+	<a href="#async">async</a> 
+	 - Enable signal-driven I/O.</li>
+      </li>
 
-      <li><a href="#closeOnExec">closeOnExec</a></li>
+      <li >
+	<a href="#closeOnExec">closeOnExec</a> 
+	 - Enable the close-on-exec flag for the new file descriptor.</li>
+      </li>
 
-      <li><a href="#create">create</a></li>
+      <li >
+	<a href="#create">create</a> 
+	 - If the file does not exist it will be created.</li>
+      </li>
 
-      <li><a href="#direct">direct</a></li>
+      <li >
+	<a href="#direct">direct</a> 
+	 - Try to minimize cache effects of the I/O to and from this file.</li>
+      </li>
 
-      <li><a href="#directory">directory</a></li>
+      <li >
+	<a href="#directory">directory</a> 
+	 - If pathname is not a directory, cause the open to fail.</li>
+      </li>
 
-      <li><a href="#exclusive">exclusive</a></li>
+      <li >
+	<a href="#exclusive">exclusive</a> 
+	 - Ensure that this call creates the file: if this flag is specified in conjunction with O_CREAT, and pathname already exists, then open() will fail.</li>
+      </li>
 
-      <li><a href="#largeFile">largeFile</a></li>
+      <li >
+	<a href="#largeFile">largeFile</a> 
+	 - (LFS) Allow files whose sizes cannot be represented in an off_t (but can be represented in an off64_t) to be opened.</li>
+      </li>
 
-      <li><a href="#noAccessTime">noAccessTime</a></li>
+      <li >
+	<a href="#noAccessTime">noAccessTime</a> 
+	 - Do not update the file last access time (st_atime in the inode) when the file is read().</li>
+      </li>
 
-      <li><a href="#noControllingTTY">noControllingTTY</a></li>
+      <li >
+	<a href="#noControllingTTY">noControllingTTY</a> 
+	 - If pathname refers to a terminal device - it will not become the process's controlling terminal even if the process does not have one.</li>
+      </li>
 
-      <li><a href="#noFollow">noFollow</a></li>
+      <li >
+	<a href="#noFollow">noFollow</a> 
+	 - If pathname is a symbolic link, then the open fails.</li>
+      </li>
 
-      <li><a href="#nonBlock">nonBlock</a></li>
+      <li >
+	<a href="#nonBlock">nonBlock</a> 
+	 - When possible, the file is opened in nonblocking mode.</li>
+      </li>
 
-      <li><a href="#readOnly">readOnly</a></li>
+      <li >
+	<a href="#readOnly">readOnly</a> 
+	 - Open file in read-only mode.</li>
+      </li>
 
-      <li><a href="#readWrite">readWrite</a></li>
+      <li >
+	<a href="#readWrite">readWrite</a> 
+	 - Open file in read-write mode.</li>
+      </li>
 
-      <li><a href="#synchronous">synchronous</a></li>
+      <li >
+	<a href="#synchronous">synchronous</a> 
+	 - The file is opened for synchronous I/O.</li>
+      </li>
 
-      <li><a href="#truncate">truncate</a></li>
+      <li >
+	<a href="#truncate">truncate</a> 
+	 - f the file already exists and is a regular file and the open mode allows writing (i.e., is writeOnly or readWrite) it will be truncated to length 0.</li>
+      </li>
 
-      <li><a href="#writeOnly">writeOnly</a></li>
+      <li >
+	<a href="#writeOnly">writeOnly</a> 
+	 - Open file in write-only mode.</li>
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
     
-<a name='append'>var <a href='../../../global/lang/Int.html'>Int</a> <em>append</em>;</a>
-<br>
-<p>
 
 
-        
-    <hr>
+
+
+
     
-<a name='async'>var <a href='../../../global/lang/Int.html'>Int</a> <em>async</em>;</a>
-<br>
-<p>
 
 
-        
-    <hr>
-    
-<a name='closeOnExec'>var <a href='../../../global/lang/Int.html'>Int</a> <em>closeOnExec</em>;</a>
-<br>
-<p>
+
+
+
+
 
 
         
-    <hr>
     
-<a name='create'>var <a href='../../../global/lang/Int.html'>Int</a> <em>create</em>;</a>
+<span >
+<hr>
+<a name='append'>var <a href='../../../global/lang/Int.html'>Int</a> <em>append</em> (static);</a>
 <br>
-<p>
+<p>The file is opened in append mode.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='direct'>var <a href='../../../global/lang/Int.html'>Int</a> <em>direct</em>;</a>
+<span >
+<hr>
+<a name='async'>var <a href='../../../global/lang/Int.html'>Int</a> <em>async</em> (static);</a>
 <br>
-<p>
+<p>Enable signal-driven I/O.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='directory'>var <a href='../../../global/lang/Int.html'>Int</a> <em>directory</em>;</a>
+<span >
+<hr>
+<a name='closeOnExec'>var <a href='../../../global/lang/Int.html'>Int</a> <em>closeOnExec</em> (static);</a>
 <br>
-<p>
+<p>Enable the close-on-exec flag for the new file descriptor.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='exclusive'>var <a href='../../../global/lang/Int.html'>Int</a> <em>exclusive</em>;</a>
+<span >
+<hr>
+<a name='create'>var <a href='../../../global/lang/Int.html'>Int</a> <em>create</em> (static);</a>
 <br>
-<p>
+<p>If the file does not exist it will be created.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='largeFile'>var <a href='../../../global/lang/Int.html'>Int</a> <em>largeFile</em>;</a>
+<span >
+<hr>
+<a name='direct'>var <a href='../../../global/lang/Int.html'>Int</a> <em>direct</em> (static);</a>
 <br>
-<p>
+<p>Try to minimize cache effects of the I/O to and from this file.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='noAccessTime'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noAccessTime</em>;</a>
+<span >
+<hr>
+<a name='directory'>var <a href='../../../global/lang/Int.html'>Int</a> <em>directory</em> (static);</a>
 <br>
-<p>
+<p>If pathname is not a directory, cause the open to fail.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='noControllingTTY'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noControllingTTY</em>;</a>
+<span >
+<hr>
+<a name='exclusive'>var <a href='../../../global/lang/Int.html'>Int</a> <em>exclusive</em> (static);</a>
 <br>
-<p>
+<p>Ensure that this call creates the file: if this flag is specified in conjunction with O_CREAT, and pathname already exists, then open() will fail.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='noFollow'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noFollow</em>;</a>
+<span >
+<hr>
+<a name='largeFile'>var <a href='../../../global/lang/Int.html'>Int</a> <em>largeFile</em> (static);</a>
 <br>
-<p>
+<p>(LFS) Allow files whose sizes cannot be represented in an off_t (but can be represented in an off64_t) to be opened.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='nonBlock'>var <a href='../../../global/lang/Int.html'>Int</a> <em>nonBlock</em>;</a>
+<span >
+<hr>
+<a name='noAccessTime'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noAccessTime</em> (static);</a>
 <br>
-<p>
+<p>Do not update the file last access time (st_atime in the inode) when the file is read().</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='readOnly'>var <a href='../../../global/lang/Int.html'>Int</a> <em>readOnly</em>;</a>
+<span >
+<hr>
+<a name='noControllingTTY'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noControllingTTY</em> (static);</a>
 <br>
-<p>
+<p>If pathname refers to a terminal device - it will not become the process's controlling terminal even if the process does not have one.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='readWrite'>var <a href='../../../global/lang/Int.html'>Int</a> <em>readWrite</em>;</a>
+<span >
+<hr>
+<a name='noFollow'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noFollow</em> (static);</a>
 <br>
-<p>
+<p>If pathname is a symbolic link, then the open fails.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='synchronous'>var <a href='../../../global/lang/Int.html'>Int</a> <em>synchronous</em>;</a>
+<span >
+<hr>
+<a name='nonBlock'>var <a href='../../../global/lang/Int.html'>Int</a> <em>nonBlock</em> (static);</a>
 <br>
-<p>
+<p>When possible, the file is opened in nonblocking mode.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='truncate'>var <a href='../../../global/lang/Int.html'>Int</a> <em>truncate</em>;</a>
+<span >
+<hr>
+<a name='readOnly'>var <a href='../../../global/lang/Int.html'>Int</a> <em>readOnly</em> (static);</a>
 <br>
-<p>
+<p>Open file in read-only mode.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='writeOnly'>var <a href='../../../global/lang/Int.html'>Int</a> <em>writeOnly</em>;</a>
+<span >
+<hr>
+<a name='readWrite'>var <a href='../../../global/lang/Int.html'>Int</a> <em>readWrite</em> (static);</a>
 <br>
-<p>
+<p>Open file in read-write mode.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='synchronous'>var <a href='../../../global/lang/Int.html'>Int</a> <em>synchronous</em> (static);</a>
+<br>
+<p>The file is opened for synchronous I/O.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='truncate'>var <a href='../../../global/lang/Int.html'>Int</a> <em>truncate</em> (static);</a>
+<br>
+<p>f the file already exists and is a regular file and the open mode allows writing (i.e., is writeOnly or readWrite) it will be truncated to length 0.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='writeOnly'>var <a href='../../../global/lang/Int.html'>Int</a> <em>writeOnly</em> (static);</a>
+<br>
+<p>Open file in write-only mode.</p>
+
+
+</span>
+
+    
 
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -213,3 +345,4 @@
     </div>
   </body>
 </html>
+b

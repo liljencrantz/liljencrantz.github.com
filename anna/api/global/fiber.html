@@ -15,71 +15,125 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>fiber</em></a></h1>
 
-    
+    <p>A simple cooperative threading library</p>
+
+
     
     
     
     <h2><a name="api-types">Types</a></h2>
     <ul>
     
-      <li><a href='../global/fiber/Fiber.html'>Fiber</a></li>
+      <li ><a href='../global/fiber/Fiber.html'>Fiber</a>
+     - A simple cooperative thread implementation
+      </li>
       
     </ul>
     
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
     <ul>
     
-      <li><a href="#current">current</a></li>
+      <li >
+	<a href="#current">current</a> 
+	 - The currently running Fiber, if any.</li>
+      </li>
 
-      <li><a href="#entry">entry</a></li>
+      <li >
+	<a href="#entry">entry</a> 
+	</li>
+      </li>
 
-      <li><a href="#fiberIndex">fiberIndex</a></li>
+      <li >
+	<a href="#fiberIndex">fiberIndex</a> 
+	 - The integer offset in the fibers list of the currently running Fiber</li>
+      </li>
 
-      <li><a href="#fibers">fibers</a></li>
+      <li >
+	<a href="#fibers">fibers</a> 
+	 - A list of all created fibers.</li>
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
     
-<a name='current'>var <a href='../global/fiber/Fiber.html'>Fiber</a> <em>current</em>;</a>
-<br>
 
 
 
-        
-    <hr>
+
+
     
-<a name='entry'>var <a href='../global/reflection/Continuation.html'>Continuation</a> <em>entry</em>;</a>
-<br>
 
 
 
-        
-    <hr>
-    
-<a name='fiberIndex'>var <a href='../global/lang/Int.html'>Int</a> <em>fiberIndex</em>;</a>
-<br>
+
+
 
 
 
         
-    <hr>
     
-<a name='fibers'>var <a href=''>MutableList«Fiber»</a> <em>fibers</em>;</a>
+<span >
+<hr>
+<a name='current'>var <a href='../global/fiber/Fiber.html'>Fiber</a> <em>current</em> (static);</a>
+<br>
+<p>The currently running Fiber, if any.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='entry'>var <a href='../global/reflection/Continuation.html'>Continuation</a> <em>entry</em> (static);</a>
 <br>
 
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fiberIndex'>var <a href='../global/lang/Int.html'>Int</a> <em>fiberIndex</em> (static);</a>
+<br>
+<p>The integer offset in the fibers list of the currently running Fiber</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fibers'>var <a href=''>MutableList«Fiber»</a> <em>fibers</em> (static);</a>
+<br>
+<p>A list of all created fibers.</p>
+
+
+</span>
+
+    
 
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -90,3 +144,4 @@
     </div>
   </body>
 </html>
+b

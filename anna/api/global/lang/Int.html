@@ -13,374 +13,680 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>Int</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>Int</em></a></h1>
 
-    The Int type is the basic integer type of the Anna language.<p>Anna Int objects are arbitrary precision, i.e. they never overflow. Small integer values, numbers that use 29 bits or less to represent (excluding the sign bit, so 30 bits total of data) can be stored directly on the stack and use no heap memory at all. Larger integers are implemented using a multiple precision library such as GNU MP.<p>Anna Int objects are imutable, meaning their value never changes. Integers can be used as hash keys and implement basic operations like addition, multiplication, etc. Dividing two integers will result in new Int object, which is the truncated value of the division. Convert one of the numbers to a Float if a floating point result is desired.<p>
+    <p>The Int type is the basic integer type of the Anna language.</p>
+
+<p>Anna Int objects are arbitrary precision, i.e. they never overflow. Small integer values, numbers that use 29 bits or less to represent (excluding the sign bit, so 30 bits total of data) can be stored directly on the stack and use no heap memory at all. Larger integers are implemented using a multiple precision library such as GNU MP.</p>
+
+<p>Anna Int objects are imutable, meaning their value never changes. Integers can be used as hash keys and implement basic operations like addition, multiplication, etc. Dividing two integers will result in new Int object, which is the truncated value of the division. Convert one of the numbers to a Float if a floating point result is desired.</p>
+
+
     
     
     
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
     <ul>
     
-      <li><a href="#!__type__Getter">!__type__Getter</a></li>
-
-      <li><a href="#__add__Int">__add__Int</a></li>
-
-      <li><a href="#__cmp__">__cmp__</a></li>
-
-      <li><a href="#__decreaseAssign__Int">__decreaseAssign__Int</a></li>
-
-      <li><a href="#__div__Int">__div__Int</a></li>
-
-      <li><a href="#__eq__">__eq__</a></li>
-
-      <li><a href="#__gt__">__gt__</a></li>
-
-      <li><a href="#__gte__">__gte__</a></li>
-
-      <li><a href="#__increaseAssign__Int">__increaseAssign__Int</a></li>
-
-      <li><a href="#__init__">__init__</a></li>
-
-      <li><a href="#__lt__">__lt__</a></li>
-
-      <li><a href="#__lte__">__lte__</a></li>
-
-      <li><a href="#__mul__Int">__mul__Int</a></li>
-
-      <li><a href="#__neg__">__neg__</a></li>
-
-      <li><a href="#__neq__">__neq__</a></li>
-
-      <li><a href="#__nextAssign__">__nextAssign__</a></li>
-
-      <li><a href="#__prevAssign__">__prevAssign__</a></li>
-
-      <li><a href="#__sub__Int">__sub__Int</a></li>
-
-      <li><a href="#abs">abs</a></li>
-
-      <li><a href="#bitandInt">bitandInt</a></li>
-
-      <li><a href="#bitorInt">bitorInt</a></li>
-
-      <li><a href="#bitxorInt">bitxorInt</a></li>
-
-      <li><a href="#convertChar">convertChar</a></li>
-
-      <li><a href="#convertFloat">convertFloat</a></li>
-
-      <li><a href="#convertInt">convertInt</a></li>
-
-      <li><a href="#convertString">convertString</a></li>
-
-      <li><a href="#expInt">expInt</a></li>
-
-      <li><a href="#format">format</a></li>
-
-      <li><a href="#hashCode">hashCode</a></li>
-
-      <li><a href="#modInt">modInt</a></li>
-
-      <li><a href="#shlInt">shlInt</a></li>
-
-      <li><a href="#shrInt">shrInt</a></li>
-
-      <li><a href="#sign">sign</a></li>
-
-      <li><a href="#toString">toString</a></li>
+      <li >
+	<a href="#__type__">__type__</a> 
+	 - The type of this object</li>
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
     
-<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
-<br>
-Getter function for the __type__ property.<p>
+    <h2><a name="api-function">Operators</a></h2>
+    <ul>
+    
+      <li>
+	+ 
+(Addition)
+	<a href="#__add__Int">__add__Int</a> 
+      </li>
+      
+      <li>
+	-= 
+(Decrease)
+	<a href="#__decreaseAssign__Int">__decreaseAssign__Int</a> 
+      </li>
+      
+      <li>
+	/ 
+(Division)
+	<a href="#__div__Int">__div__Int</a> 
+      </li>
+      
+      <li>
+	+= 
+(Increase)
+	<a href="#__increaseAssign__Int">__increaseAssign__Int</a> 
+      </li>
+      
+      <li>
+	* 
+(Multiplication)
+	<a href="#__mul__Int">__mul__Int</a> 
+      </li>
+      
+      <li>
+	- 
+(Negation)
+	<a href="#__neg__">__neg__</a> 
+      </li>
+      
+      <li>
+	++ 
+(Move to next element)
+	<a href="#__nextAssign__">__nextAssign__</a> 
+      </li>
+      
+      <li>
+	-- 
+(Move to previous element)
+	<a href="#__prevAssign__">__prevAssign__</a> 
+      </li>
+      
+      <li>
+	- 
+(Subtraction)
+	<a href="#__sub__Int">__sub__Int</a> 
+      </li>
+      
+    </ul>
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li class='anna-internal'>
+	<a href="#!__type__Getter">!__type__Getter</a> 
+	 - Getter function for the __type__ property.
+      </li>
+
+      <li >
+	<a href="#__add__Int">__add__Int</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__cmp__">__cmp__</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__decreaseAssign__Int">__decreaseAssign__Int</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__div__Int">__div__Int</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__eq__">__eq__</a> 
+	 - Return non-null if this object is equal to the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__increaseAssign__Int">__increaseAssign__Int</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__init__">__init__</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__mul__Int">__mul__Int</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__neg__">__neg__</a> 
+	 - Negate the number.
+      </li>
+
+      <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__nextAssign__">__nextAssign__</a> 
+	 - Increase a number by one step.
+      </li>
+
+      <li >
+	<a href="#__prevAssign__">__prevAssign__</a> 
+	 - Decrease a number by one step.
+      </li>
+
+      <li >
+	<a href="#__sub__Int">__sub__Int</a> 
+	
+      </li>
+
+      <li >
+	<a href="#abs">abs</a> 
+	
+      </li>
+
+      <li >
+	<a href="#bitandInt">bitandInt</a> 
+	
+      </li>
+
+      <li >
+	<a href="#bitorInt">bitorInt</a> 
+	
+      </li>
+
+      <li >
+	<a href="#bitxorInt">bitxorInt</a> 
+	
+      </li>
+
+      <li >
+	<a href="#convertChar">convertChar</a> 
+	 - Returns the ordinal number of a Char. This method returns the same value as the Char.ordinal property.
+      </li>
+
+      <li >
+	<a href="#convertFloat">convertFloat</a> 
+	 - Convert a Float to an Int, truncating any stray precision.
+      </li>
+
+      <li >
+	<a href="#convertInt">convertInt</a> 
+	 - Converts an Int to itself. This is a noop.
+      </li>
+
+      <li >
+	<a href="#convertString">convertString</a> 
+	 - Convert a String to an Int. The String must be in decimal and the entire string (not just a prefix of it) must be a legal number.
+      </li>
+
+      <li >
+	<a href="#expInt">expInt</a> 
+	
+      </li>
+
+      <li >
+	<a href="#format">format</a> 
+	 - Returns a formated version of this string in the specified base.
+      </li>
+
+      <li >
+	<a href="#hashCode">hashCode</a> 
+	
+      </li>
+
+      <li >
+	<a href="#modInt">modInt</a> 
+	
+      </li>
+
+      <li >
+	<a href="#shlInt">shlInt</a> 
+	
+      </li>
+
+      <li >
+	<a href="#shrInt">shrInt</a> 
+	
+      </li>
+
+      <li >
+	<a href="#sign">sign</a> 
+	
+      </li>
+
+      <li >
+	<a href="#toString">toString</a> 
+	
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
 
 
         
-    <hr>
     
-<a name='__add__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__add__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__decreaseAssign__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__decreaseAssign__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__div__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__div__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is equal to the other object, null otherwise.<p>
-
-
-        
-    <hr>
-    
-<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Returns non-null if this object is greater than the other object, null otherwise.<p>
-
-
-        
-    <hr>
-    
-<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is greater than or equal to the other object, null otherwise<p>
-
-
-        
-    <hr>
-    
-<a name='__increaseAssign__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__increaseAssign__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__init__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> other);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Returns non-null if this object is smaller than the other object, null otherwise.<p>
-
-
-        
-    <hr>
-    
-<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is less than or equal to the other object, null otherwise<p>
-
-
-        
-    <hr>
-    
-<a name='__mul__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__mul__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__neg__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neg__</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
-<br>
-Negate the number.<p>
-
-
-        
-    <hr>
-    
-<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is not equal to the other object, null otherwise<p>
-
-
-        
-    <hr>
-    
-<a name='__nextAssign__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__nextAssign__</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
-<br>
-Increase a number by one step.<p>
-
-
-        
-    <hr>
-    
-<a name='__prevAssign__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__prevAssign__</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
-<br>
-Decrease a number by one step.<p>
-
-
-        
-    <hr>
-    
-<a name='__sub__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__sub__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
-<br>
-
-
-
-        
-    <hr>
-    
+<span >
+<hr>
 <a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
 <br>
-The type of this object<p>
+<p>The type of this object</p>
+
+
+</span>
+
+    
 
 
         
-    <hr>
     
-<a name='abs'>def <a href='../../global/lang/Int.html'>Int</a> <em>abs</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
+<span class='anna-internal'>
+<hr>
+<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
 <br>
 
+<p>Getter function for the __type__ property.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='bitandInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>bitandInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__add__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__add__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
 <br>
+<p>This method is usually called as the + operator.</p>
 
-
+</span>
 
         
-    <hr>
     
-<a name='bitorInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>bitorInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
 
 
+</span>
 
         
-    <hr>
     
-<a name='bitxorInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>bitxorInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__decreaseAssign__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__decreaseAssign__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
 <br>
+<p>This method is usually called as the -= operator.</p>
 
-
+</span>
 
         
-    <hr>
     
-<a name='convertChar'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertChar</em> (<a href='../../global/lang/Char.html'>Char</a> value);</a>
+<span >
+<hr>
+<a name='__div__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__div__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
 <br>
-Returns the ordinal number of a Char. This method returns the same value as the Char.ordinal property.<p>
+<p>This method is usually called as the / operator.</p>
 
+</span>
 
         
-    <hr>
     
-<a name='convertFloat'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertFloat</em> (<a href='../../global/lang/Float.html'>Float</a> value);</a>
+<span >
+<hr>
+<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
-Convert a Float to an Int, truncating any stray precision.<p>
 
+<p>Return non-null if this object is equal to the other object, null otherwise.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='convertInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertInt</em> (<a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
-Converts an Int to itself. This is a noop.<p>
 
+<p>Returns non-null if this object is greater than the other object, null otherwise.</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='convertString'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertString</em> (<a href='../../global/lang/String.html'>String</a> value);</a>
+<span >
+<hr>
+<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
-Convert a String to an Int. The String must be in decimal and the entire string (not just a prefix of it) must be a legal number.<p>
 
+<p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
+
+
+</span>
 
         
-    <hr>
     
-<a name='expInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>expInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__increaseAssign__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__increaseAssign__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
 <br>
+<p>This method is usually called as the += operator.</p>
 
-
+</span>
 
         
-    <hr>
     
-<a name='format'>def <a href='../../global/lang/String.html'>String</a> <em>format</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> base = 10);</a>
+<span >
+<hr>
+<a name='__init__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> other) (bound);</a>
 <br>
-Returns a formated version of this string in the specified base.<p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
+<span >
+<hr>
+<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
 
+<p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='modInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>modInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
 
+<p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='shlInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>shlInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__mul__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__mul__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
 <br>
+<p>This method is usually called as the * operator.</p>
 
-
+</span>
 
         
-    <hr>
     
-<a name='shrInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>shrInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value);</a>
+<span >
+<hr>
+<a name='__neg__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neg__</em> (<a href='../../global/lang/Int.html'>Int</a> this) (bound);</a>
 <br>
+<p>This method is usually called as the - operator.</p>
+<p>Negate the number.</p>
 
 
+</span>
 
         
-    <hr>
     
-<a name='sign'>def <a href='../../global/lang/Int.html'>Int</a> <em>sign</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
+<span >
+<hr>
+<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
 
+<p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/Int.html'>Int</a> this);</a>
+<span >
+<hr>
+<a name='__nextAssign__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__nextAssign__</em> (<a href='../../global/lang/Int.html'>Int</a> this) (bound);</a>
+<br>
+<p>This method is usually called as the ++ operator.</p>
+<p>Increase a number by one step.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__prevAssign__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__prevAssign__</em> (<a href='../../global/lang/Int.html'>Int</a> this) (bound);</a>
+<br>
+<p>This method is usually called as the -- operator.</p>
+<p>Decrease a number by one step.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__sub__Int'>def <a href='../../global/lang/Int.html'>Int</a> <em>__sub__Int</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+<p>This method is usually called as the - operator.</p>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='abs'>def <a href='../../global/lang/Int.html'>Int</a> <em>abs</em> (<a href='../../global/lang/Int.html'>Int</a> this) (bound);</a>
 <br>
 
 
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='bitandInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>bitandInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='bitorInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>bitorInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='bitxorInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>bitxorInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='convertChar'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertChar</em> (<a href='../../global/lang/Char.html'>Char</a> value) (static);</a>
+<br>
+
+<p>Returns the ordinal number of a Char. This method returns the same value as the Char.ordinal property.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='convertFloat'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertFloat</em> (<a href='../../global/lang/Float.html'>Float</a> value) (static);</a>
+<br>
+
+<p>Convert a Float to an Int, truncating any stray precision.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='convertInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertInt</em> (<a href='../../global/lang/Int.html'>Int</a> value) (static);</a>
+<br>
+
+<p>Converts an Int to itself. This is a noop.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='convertString'>def <a href='../../global/lang/Int.html'>Int</a> <em>convertString</em> (<a href='../../global/lang/String.html'>String</a> value) (static);</a>
+<br>
+
+<p>Convert a String to an Int. The String must be in decimal and the entire string (not just a prefix of it) must be a legal number.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='expInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>expInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='format'>def <a href='../../global/lang/String.html'>String</a> <em>format</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> base = 10) (bound);</a>
+<br>
+
+<p>Returns a formated version of this string in the specified base.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Int.html'>Int</a> this) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='modInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>modInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='shlInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>shlInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='shrInt'>def <a href='../../global/lang/Int.html'>Int</a> <em>shrInt</em> (<a href='../../global/lang/Int.html'>Int</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='sign'>def <a href='../../global/lang/Int.html'>Int</a> <em>sign</em> (<a href='../../global/lang/Int.html'>Int</a> this) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/Int.html'>Int</a> this) (bound);</a>
+<br>
+
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -391,3 +697,4 @@ Returns a formated version of this string in the specified base.<p>
     </div>
   </body>
 </html>
+b

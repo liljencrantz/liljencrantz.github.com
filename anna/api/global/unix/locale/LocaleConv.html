@@ -1,0 +1,912 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace LocaleConv</title>
+    
+    <link rel="stylesheet" href="../../../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Type <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/locale.html'>locale</a>.<em>LocaleConv</em></a></h1>
+
+    <p>Detailed local information regarding numeric formating.</p>
+
+
+    
+    
+    
+
+
+
+    
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#__type__">__type__</a> 
+	 - The type of this object</li>
+      </li>
+
+      <li >
+	<a href="#currencySymbol">currencySymbol</a> 
+	 - Local currency symbol.</li>
+      </li>
+
+      <li >
+	<a href="#decimalPoint">decimalPoint</a> 
+	 - Decimal-point separator used for non-monetary quantities.</li>
+      </li>
+
+      <li >
+	<a href="#fracDigits">fracDigits</a> 
+	 - Local fractional digits.</li>
+      </li>
+
+      <li >
+	<a href="#grouping">grouping</a> 
+	 - The amount of digits that form each of the groups to be separated by thousandsSeparator separator for non-monetary quantities.</li>
+      </li>
+
+      <li >
+	<a href="#internationalCurrencySymbol">internationalCurrencySymbol</a> 
+	 - International currency symbol.</li>
+      </li>
+
+      <li >
+	<a href="#internationalFracDigits">internationalFracDigits</a> 
+	 - International fractional digits.</li>
+      </li>
+
+      <li >
+	<a href="#monetaryDecimalPoint">monetaryDecimalPoint</a> 
+	 - Decimal-point separator used for monetary quantities.</li>
+      </li>
+
+      <li >
+	<a href="#monetaryGrouping">monetaryGrouping</a> 
+	 - The amount of digits that form each of the groups to be separated by monetaryThousandsSeparator separator for monetary quantities.</li>
+      </li>
+
+      <li >
+	<a href="#monetaryThousandsSeparator">monetaryThousandsSeparator</a> 
+	 - Separators used to delimit groups of digits to the left of the decimal point for monetary quantities.</li>
+      </li>
+
+      <li >
+	<a href="#negativeCurrencySymbolPrecedes">negativeCurrencySymbolPrecedes</a> 
+	 - 1 if currencySymbol precedes a negative value, null if succeeds.</li>
+      </li>
+
+      <li >
+	<a href="#negativeSeparateBySpace">negativeSeparateBySpace</a> 
+	 - 1 if a space separates currency_symbol from a negative value, null otherwise.</li>
+      </li>
+
+      <li >
+	<a href="#negativeSign">negativeSign</a> 
+	 - Sign for negative values</li>
+      </li>
+
+      <li >
+	<a href="#negativeSignPosition">negativeSignPosition</a> 
+	 - 
+Positive and negative sign positions:
+<ul>
+<li>0: Parentheses surround the quantity and currency_symbol.</li>
+<li>1: The sign string precedes the quantity and currency_symbol.</li>
+<li>2: The sign string succeeds the quantity and currency_symbol.</li>
+<li>3: The sign string immediately precedes the currency_symbol.</li>
+<li>4: The sign string immediately succeeds the currency_symbol.</li>
+</ul>
+</li>
+      </li>
+
+      <li >
+	<a href="#positiveCurrencySymbolPrecedes">positiveCurrencySymbolPrecedes</a> 
+	 - 1 if currencySymbol precedes a positive value, null if succeeds.</li>
+      </li>
+
+      <li >
+	<a href="#positiveSeparateBySpace">positiveSeparateBySpace</a> 
+	 - 1 if a space separates currency_symbol from a positive value, null otherwise.</li>
+      </li>
+
+      <li >
+	<a href="#positiveSign">positiveSign</a> 
+	 - Sign for positive values</li>
+      </li>
+
+      <li >
+	<a href="#positiveSignPosition">positiveSignPosition</a> 
+	 - 
+Positive and negative sign positions:
+<ul>
+<li>0: Parentheses surround the quantity and currency_symbol.</li>
+<li>1: The sign string precedes the quantity and currency_symbol.</li>
+<li>2: The sign string succeeds the quantity and currency_symbol.</li>
+<li>3: The sign string immediately precedes the currency_symbol.</li>
+<li>4: The sign string immediately succeeds the currency_symbol.</li>
+</ul>
+</li>
+      </li>
+
+      <li >
+	<a href="#thousandsSeparator">thousandsSeparator</a> 
+	 - Separators used to delimit groups of digits to the left of the decimal point for non-monetary quantities.</li>
+      </li>
+
+    </ul>
+    
+
+
+
+
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li class='anna-internal'>
+	<a href="#!__type__Getter">!__type__Getter</a> 
+	 - Getter function for the __type__ property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!currencySymbolGetter">!currencySymbolGetter</a> 
+	 - Getter function for the currencySymbol property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!decimalPointGetter">!decimalPointGetter</a> 
+	 - Getter function for the decimalPoint property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!fracDigitsGetter">!fracDigitsGetter</a> 
+	 - Getter function for the fracDigits property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!groupingGetter">!groupingGetter</a> 
+	 - Getter function for the grouping property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!internationalCurrencySymbolGetter">!internationalCurrencySymbolGetter</a> 
+	 - Getter function for the internationalCurrencySymbol property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!internationalFracDigitsGetter">!internationalFracDigitsGetter</a> 
+	 - Getter function for the internationalFracDigits property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!monetaryDecimalPointGetter">!monetaryDecimalPointGetter</a> 
+	 - Getter function for the monetaryDecimalPoint property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!monetaryGroupingGetter">!monetaryGroupingGetter</a> 
+	 - Getter function for the monetaryGrouping property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!monetaryThousandsSeparatorGetter">!monetaryThousandsSeparatorGetter</a> 
+	 - Getter function for the monetaryThousandsSeparator property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!negativeCurrencySymbolPrecedesGetter">!negativeCurrencySymbolPrecedesGetter</a> 
+	 - Getter function for the negativeCurrencySymbolPrecedes property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!negativeSeparateBySpaceGetter">!negativeSeparateBySpaceGetter</a> 
+	 - Getter function for the negativeSeparateBySpace property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!negativeSignGetter">!negativeSignGetter</a> 
+	 - Getter function for the negativeSign property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!negativeSignPositionGetter">!negativeSignPositionGetter</a> 
+	 - Getter function for the negativeSignPosition property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!positiveCurrencySymbolPrecedesGetter">!positiveCurrencySymbolPrecedesGetter</a> 
+	 - Getter function for the positiveCurrencySymbolPrecedes property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!positiveSeparateBySpaceGetter">!positiveSeparateBySpaceGetter</a> 
+	 - Getter function for the positiveSeparateBySpace property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!positiveSignGetter">!positiveSignGetter</a> 
+	 - Getter function for the positiveSign property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!positiveSignPositionGetter">!positiveSignPositionGetter</a> 
+	 - Getter function for the positiveSignPosition property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!thousandsSeparatorGetter">!thousandsSeparatorGetter</a> 
+	 - Getter function for the thousandsSeparator property.
+      </li>
+
+      <li >
+	<a href="#__cmp__">__cmp__</a> 
+	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
+      </li>
+
+      <li >
+	<a href="#__eq__">__eq__</a> 
+	 - Return non-null if this object is equal to the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__init__">__init__</a> 
+	
+      </li>
+
+      <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#hashCode">hashCode</a> 
+	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
+      </li>
+
+      <li >
+	<a href="#toString">toString</a> 
+	 - String conversion. Called by the String::convert method.
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
+
+
+        
+    
+<span >
+<hr>
+<a name='__type__'>var <a href='../../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<br>
+<p>The type of this object</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='currencySymbol'>var <a href='../../../global/lang/String.html'>String</a> <em>currencySymbol</em>;</a>
+<br>
+<p>Local currency symbol.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='decimalPoint'>var <a href='../../../global/lang/String.html'>String</a> <em>decimalPoint</em>;</a>
+<br>
+<p>Decimal-point separator used for non-monetary quantities.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='fracDigits'>var <a href='../../../global/lang/Int.html'>Int</a> <em>fracDigits</em>;</a>
+<br>
+<p>Local fractional digits.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='grouping'>var <a href='../../../global/lang/String.html'>String</a> <em>grouping</em>;</a>
+<br>
+<p>The amount of digits that form each of the groups to be separated by thousandsSeparator separator for non-monetary quantities.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='internationalCurrencySymbol'>var <a href='../../../global/lang/String.html'>String</a> <em>internationalCurrencySymbol</em>;</a>
+<br>
+<p>International currency symbol.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='internationalFracDigits'>var <a href='../../../global/lang/Int.html'>Int</a> <em>internationalFracDigits</em>;</a>
+<br>
+<p>International fractional digits.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='monetaryDecimalPoint'>var <a href='../../../global/lang/String.html'>String</a> <em>monetaryDecimalPoint</em>;</a>
+<br>
+<p>Decimal-point separator used for monetary quantities.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='monetaryGrouping'>var <a href='../../../global/lang/String.html'>String</a> <em>monetaryGrouping</em>;</a>
+<br>
+<p>The amount of digits that form each of the groups to be separated by monetaryThousandsSeparator separator for monetary quantities.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='monetaryThousandsSeparator'>var <a href='../../../global/lang/String.html'>String</a> <em>monetaryThousandsSeparator</em>;</a>
+<br>
+<p>Separators used to delimit groups of digits to the left of the decimal point for monetary quantities.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='negativeCurrencySymbolPrecedes'>var <a href='../../../global/lang/Object.html'>Object</a> <em>negativeCurrencySymbolPrecedes</em>;</a>
+<br>
+<p>1 if currencySymbol precedes a negative value, null if succeeds.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='negativeSeparateBySpace'>var <a href='../../../global/lang/Object.html'>Object</a> <em>negativeSeparateBySpace</em>;</a>
+<br>
+<p>1 if a space separates currency_symbol from a negative value, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='negativeSign'>var <a href='../../../global/lang/String.html'>String</a> <em>negativeSign</em>;</a>
+<br>
+<p>Sign for negative values</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='negativeSignPosition'>var <a href='../../../global/lang/Int.html'>Int</a> <em>negativeSignPosition</em>;</a>
+<br>
+<p>
+Positive and negative sign positions:
+<ul>
+<li>0: Parentheses surround the quantity and currency_symbol.</li>
+<li>1: The sign string precedes the quantity and currency_symbol.</li>
+<li>2: The sign string succeeds the quantity and currency_symbol.</li>
+<li>3: The sign string immediately precedes the currency_symbol.</li>
+<li>4: The sign string immediately succeeds the currency_symbol.</li>
+</ul>
+</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='positiveCurrencySymbolPrecedes'>var <a href='../../../global/lang/Object.html'>Object</a> <em>positiveCurrencySymbolPrecedes</em>;</a>
+<br>
+<p>1 if currencySymbol precedes a positive value, null if succeeds.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='positiveSeparateBySpace'>var <a href='../../../global/lang/Object.html'>Object</a> <em>positiveSeparateBySpace</em>;</a>
+<br>
+<p>1 if a space separates currency_symbol from a positive value, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='positiveSign'>var <a href='../../../global/lang/String.html'>String</a> <em>positiveSign</em>;</a>
+<br>
+<p>Sign for positive values</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='positiveSignPosition'>var <a href='../../../global/lang/Int.html'>Int</a> <em>positiveSignPosition</em>;</a>
+<br>
+<p>
+Positive and negative sign positions:
+<ul>
+<li>0: Parentheses surround the quantity and currency_symbol.</li>
+<li>1: The sign string precedes the quantity and currency_symbol.</li>
+<li>2: The sign string succeeds the quantity and currency_symbol.</li>
+<li>3: The sign string immediately precedes the currency_symbol.</li>
+<li>4: The sign string immediately succeeds the currency_symbol.</li>
+</ul>
+</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='thousandsSeparator'>var <a href='../../../global/lang/String.html'>String</a> <em>thousandsSeparator</em>;</a>
+<br>
+<p>Separators used to delimit groups of digits to the left of the decimal point for non-monetary quantities.</p>
+
+
+</span>
+
+    
+
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!__type__Getter'>def <a href='../../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the __type__ property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!currencySymbolGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!currencySymbolGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the currencySymbol property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!decimalPointGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!decimalPointGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the decimalPoint property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!fracDigitsGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!fracDigitsGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the fracDigits property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!groupingGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!groupingGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the grouping property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!internationalCurrencySymbolGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!internationalCurrencySymbolGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the internationalCurrencySymbol property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!internationalFracDigitsGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!internationalFracDigitsGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the internationalFracDigits property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!monetaryDecimalPointGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!monetaryDecimalPointGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the monetaryDecimalPoint property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!monetaryGroupingGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!monetaryGroupingGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the monetaryGrouping property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!monetaryThousandsSeparatorGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!monetaryThousandsSeparatorGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the monetaryThousandsSeparator property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!negativeCurrencySymbolPrecedesGetter'>def <a href='../../../global/lang/Object.html'>Object</a> <em>!negativeCurrencySymbolPrecedesGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the negativeCurrencySymbolPrecedes property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!negativeSeparateBySpaceGetter'>def <a href='../../../global/lang/Object.html'>Object</a> <em>!negativeSeparateBySpaceGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the negativeSeparateBySpace property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!negativeSignGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!negativeSignGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the negativeSign property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!negativeSignPositionGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!negativeSignPositionGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the negativeSignPosition property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!positiveCurrencySymbolPrecedesGetter'>def <a href='../../../global/lang/Object.html'>Object</a> <em>!positiveCurrencySymbolPrecedesGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the positiveCurrencySymbolPrecedes property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!positiveSeparateBySpaceGetter'>def <a href='../../../global/lang/Object.html'>Object</a> <em>!positiveSeparateBySpaceGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the positiveSeparateBySpace property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!positiveSignGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!positiveSignGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the positiveSign property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!positiveSignPositionGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!positiveSignPositionGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the positiveSignPosition property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!thousandsSeparatorGetter'>def <a href='../../../global/lang/String.html'>String</a> <em>!thousandsSeparatorGetter</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the thousandsSeparator property.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__cmp__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__eq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is equal to the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is greater than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__init__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../../global/unix/locale/LocaleConv.html'>LocaleConv</a> this) (bound);</a>
+<br>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__neq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is not equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='hashCode'>def <a href='../../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='toString'>def <a href='../../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>String conversion. Called by the String::convert method.</p>
+
+
+</span>
+
+    
+
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
+b

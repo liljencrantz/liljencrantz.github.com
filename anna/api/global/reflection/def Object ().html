@@ -1,0 +1,577 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anna - documentation for namespace def Object ()</title>
+    
+    <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
+    <script type="text/javascript" src="../../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../../js/anna.js"></script>
+
+  </head>
+  <body>
+    
+    <div class="anna-content">
+      <div class="anna-main">
+	<div class="anna-main-inner">
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/reflection.html'>reflection</a>.<em>def Object ()</em></a></h1>
+
+    
+    
+    
+    
+
+
+
+    
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
+    <ul>
+    
+      <li >
+	<a href="#__type__">__type__</a> 
+	 - The type of this object</li>
+      </li>
+
+      <li >
+	<a href="#attribute">attribute</a> 
+	 - All attributes specified for this function.</li>
+      </li>
+
+      <li >
+	<a href="#defaultValue">defaultValue</a> 
+	 - A list of the default values for the input parameters of this function. Null means no default value exists.</li>
+      </li>
+
+      <li >
+	<a href="#filename">filename</a> 
+	 - The name of the file in which this function was defined.</li>
+      </li>
+
+      <li >
+	<a href="#inputName">inputName</a> 
+	 - A list of the input names of this function.</li>
+      </li>
+
+      <li >
+	<a href="#inputType">inputType</a> 
+	 - A list of the input types of this function.</li>
+      </li>
+
+      <li >
+	<a href="#name">name</a> 
+	 - The name of this function.</li>
+      </li>
+
+      <li >
+	<a href="#outputType">outputType</a> 
+	 - The return type of this function.</li>
+      </li>
+
+      <li >
+	<a href="#variadic?">variadic?</a> 
+	 - True if this function accepts unnamed variadic arguments.</li>
+      </li>
+
+      <li >
+	<a href="#variadicNamed?">variadicNamed?</a> 
+	 - True if this function accepts variadic named arguments.</li>
+      </li>
+
+    </ul>
+    
+
+
+
+
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li class='anna-internal'>
+	<a href="#!__type__Getter">!__type__Getter</a> 
+	 - Getter function for the __type__ property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!attributeGetter">!attributeGetter</a> 
+	 - Getter function for the attribute property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!defaultValueGetter">!defaultValueGetter</a> 
+	 - Getter function for the defaultValue property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!filenameGetter">!filenameGetter</a> 
+	 - Getter function for the filename property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!inputNameGetter">!inputNameGetter</a> 
+	 - Getter function for the inputName property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!inputTypeGetter">!inputTypeGetter</a> 
+	 - Getter function for the inputType property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!nameGetter">!nameGetter</a> 
+	 - Getter function for the name property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!outputTypeGetter">!outputTypeGetter</a> 
+	 - Getter function for the outputType property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!variadic?Getter">!variadic?Getter</a> 
+	 - Getter function for the variadic? property.
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#!variadicNamed?Getter">!variadicNamed?Getter</a> 
+	 - Getter function for the variadicNamed? property.
+      </li>
+
+      <li >
+	<a href="#__cmp__">__cmp__</a> 
+	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
+      </li>
+
+      <li >
+	<a href="#__eq__">__eq__</a> 
+	 - Return non-null if this object is equal to the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__init__">__init__</a> 
+	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
+      </li>
+
+      <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#hashCode">hashCode</a> 
+	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
+      </li>
+
+      <li >
+	<a href="#toString">toString</a> 
+	
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
+
+
+        
+    
+<span >
+<hr>
+<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<br>
+<p>The type of this object</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='attribute'>var <a href='../../global/parser/Call.html'>Call</a> <em>attribute</em>;</a>
+<br>
+<p>All attributes specified for this function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='defaultValue'>var <a href=''>ImutableList«Node»</a> <em>defaultValue</em>;</a>
+<br>
+<p>A list of the default values for the input parameters of this function. Null means no default value exists.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='filename'>var <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>filename</em>;</a>
+<br>
+<p>The name of the file in which this function was defined.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='inputName'>var <a href=''>ImutableList«String»</a> <em>inputName</em>;</a>
+<br>
+<p>A list of the input names of this function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='inputType'>var <a href=''>ImutableList«Type»</a> <em>inputType</em>;</a>
+<br>
+<p>A list of the input types of this function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='name'>var <a href='../../global/lang/String.html'>String</a> <em>name</em>;</a>
+<br>
+<p>The name of this function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='outputType'>var <a href='../../global/reflection/Type.html'>Type</a> <em>outputType</em>;</a>
+<br>
+<p>The return type of this function.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='variadic?'>var <a href='../../global/lang/Int.html'>Int</a> <em>variadic?</em>;</a>
+<br>
+<p>True if this function accepts unnamed variadic arguments.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='variadicNamed?'>var <a href='../../global/lang/Int.html'>Int</a> <em>variadicNamed?</em>;</a>
+<br>
+<p>True if this function accepts variadic named arguments.</p>
+
+
+</span>
+
+    
+
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the __type__ property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!attributeGetter'>def <a href='../../global/parser/Call.html'>Call</a> <em>!attributeGetter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the attribute property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!defaultValueGetter'>def <a href=''>ImutableList«Node»</a> <em>!defaultValueGetter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the defaultValue property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!filenameGetter'>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>!filenameGetter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the filename property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!inputNameGetter'>def <a href=''>ImutableList«String»</a> <em>!inputNameGetter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the inputName property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!inputTypeGetter'>def <a href=''>ImutableList«Type»</a> <em>!inputTypeGetter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the inputType property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!nameGetter'>def <a href='../../global/lang/String.html'>String</a> <em>!nameGetter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the name property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!outputTypeGetter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!outputTypeGetter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the outputType property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!variadic?Getter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!variadic?Getter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the variadic? property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!variadicNamed?Getter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!variadicNamed?Getter</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the variadicNamed? property.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is equal to the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is greater than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__init__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is not equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/reflection/Function.html'>Function</a> this) (bound);</a>
+<br>
+
+
+</span>
+
+    
+
+
+	</div>
+      </div>
+      <div class="anna-left-menu">
+	<div class="anna-left-menu-inner">
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
+	  <div>
+	    <h2>Table of content</h2>
+	    <div class="toc"></div>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
+b

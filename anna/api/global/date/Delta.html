@@ -13,210 +13,444 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/date.html'>date</a>.<em>Delta</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/date.html'>date</a>.<em>Delta</em></a></h1>
 
-    An object representing a time delta, e.g. the difference between two points in time.<p>
+    <p>
+An object representing a time delta, e.g. the difference between two
+points in time.
+</p>
+
+<p>
+A time delta stores year, month, day, hour, minute, second and
+microsecond components independently. This is because the different
+components do not always have the same size. For example, depending on
+what Date it is applied to a delta of one month might translate to a
+difference of 28, 29, 30 or 31 actual days. Keep these kinds of issues
+in mind when creating delta objects. It is entirely possible to create
+some very confusing time deltas. For example a time delta constructed
+by calling Delta(month:1,day:-30) might, when applied to a Date
+object, result in a Date one day later, the same day, or one or two
+days earlier than the original Date, depending on the number of days
+in the month the object was applied to.
+</p>
+
+
     
     
     
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+    <h2><a name="api-other">Constants, variables and properties</a></h2>
     <ul>
     
-      <li><a href="#!__type__Getter">!__type__Getter</a></li>
+      <li >
+	<a href="#__type__">__type__</a> 
+	 - The type of this object</li>
+      </li>
 
-      <li><a href="#__add__">__add__</a></li>
+      <li >
+	<a href="#day">day</a> 
+	 - The day component of the time delta.</li>
+      </li>
 
-      <li><a href="#__cmp__">__cmp__</a></li>
+      <li >
+	<a href="#hour">hour</a> 
+	 - The hour component of the time delta.</li>
+      </li>
 
-      <li><a href="#__eq__">__eq__</a></li>
+      <li >
+	<a href="#microsecond">microsecond</a> 
+	 - The microsecond component of the time delta.</li>
+      </li>
 
-      <li><a href="#__gt__">__gt__</a></li>
+      <li >
+	<a href="#minute">minute</a> 
+	 - The minute component of the time delta.</li>
+      </li>
 
-      <li><a href="#__gte__">__gte__</a></li>
+      <li >
+	<a href="#month">month</a> 
+	 - The month component of the time delta.</li>
+      </li>
 
-      <li><a href="#__init__">__init__</a></li>
+      <li >
+	<a href="#second">second</a> 
+	 - The second component of the time delta.</li>
+      </li>
 
-      <li><a href="#__lt__">__lt__</a></li>
-
-      <li><a href="#__lte__">__lte__</a></li>
-
-      <li><a href="#__neq__">__neq__</a></li>
-
-      <li><a href="#hashCode">hashCode</a></li>
-
-      <li><a href="#toString">toString</a></li>
+      <li >
+	<a href="#year">year</a> 
+	 - The year component of the time delta.</li>
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
     
-<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
-<br>
-Getter function for the __type__ property.<p>
+    <h2><a name="api-function">Operators</a></h2>
+    <ul>
+    
+      <li>
+	+ 
+(Addition)
+	<a href="#__add__">__add__</a> 
+      </li>
+      
+      <li>
+	- 
+(Subtraction)
+	<a href="#__sub__">__sub__</a> 
+      </li>
+      
+    </ul>
+    
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
+    <ul>
+    
+      <li class='anna-internal'>
+	<a href="#!__type__Getter">!__type__Getter</a> 
+	 - Getter function for the __type__ property.
+      </li>
+
+      <li >
+	<a href="#__add__">__add__</a> 
+	 - Create a new Delta object, which is the sum of the two time deltas.
+      </li>
+
+      <li >
+	<a href="#__cmp__">__cmp__</a> 
+	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
+      </li>
+
+      <li >
+	<a href="#__eq__">__eq__</a> 
+	 - Return non-null if this object is equal to the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__init__">__init__</a> 
+	 - Construct a new Delta object with the specified time delta components.
+      </li>
+
+      <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+      </li>
+
+      <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__sub__">__sub__</a> 
+	 - Create a new Delta object, which is the difference between the two time deltas.
+      </li>
+
+      <li >
+	<a href="#hashCode">hashCode</a> 
+	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
+      </li>
+
+      <li >
+	<a href="#toString">toString</a> 
+	 - Return a string representation of this time delta object
+      </li>
+
+    </ul>
+    
+
+
+
+
+
+
 
 
         
-    <hr>
     
-<a name='__add__'>def <a href='../../global/date/Delta.html'>Delta</a> <em>__add__</em> (<a href='../../global/date/Delta.html'>Delta</a> this, <a href='../../global/date/Delta.html'>Delta</a> other);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.<p>
-
-
-        
-    <hr>
-    
-<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is equal to the other object, null otherwise.<p>
-
-
-        
-    <hr>
-    
-<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Returns non-null if this object is greater than the other object, null otherwise.<p>
-
-
-        
-    <hr>
-    
-<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is greater than or equal to the other object, null otherwise<p>
-
-
-        
-    <hr>
-    
-<a name='__init__'>def <a href='../../global/date/Delta.html'>Delta</a> <em>__init__</em> (<a href='../../global/date/Delta.html'>Delta</a> this, <a href='../../global/lang/Int.html'>Int</a> year = 0, <a href='../../global/lang/Int.html'>Int</a> month = 0, <a href='../../global/lang/Int.html'>Int</a> day = 0, <a href='../../global/lang/Int.html'>Int</a> hour = 0, <a href='../../global/lang/Int.html'>Int</a> minute = 0, <a href='../../global/lang/Int.html'>Int</a> second = 0, <a href='../../global/lang/Int.html'>Int</a> microsecond = 0);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Returns non-null if this object is smaller than the other object, null otherwise.<p>
-
-
-        
-    <hr>
-    
-<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is less than or equal to the other object, null otherwise<p>
-
-
-        
-    <hr>
-    
-<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other);</a>
-<br>
-Return non-null if this object is not equal to the other object, null otherwise<p>
-
-
-        
-    <hr>
-    
+<span >
+<hr>
 <a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
 <br>
-The type of this object<p>
+<p>The type of this object</p>
 
+
+</span>
 
         
-    <hr>
     
+<span >
+<hr>
 <a name='day'>var <a href='../../global/lang/Int.html'>Int</a> <em>day</em>;</a>
 <br>
+<p>The day component of the time delta.</p>
 
 
-
-        
-    <hr>
-    
-<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this);</a>
-<br>
-Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.<p>
-
+</span>
 
         
-    <hr>
     
+<span >
+<hr>
 <a name='hour'>var <a href='../../global/lang/Int.html'>Int</a> <em>hour</em>;</a>
 <br>
+<p>The hour component of the time delta.</p>
 
 
+</span>
 
         
-    <hr>
     
+<span >
+<hr>
 <a name='microsecond'>var <a href='../../global/lang/Int.html'>Int</a> <em>microsecond</em>;</a>
 <br>
+<p>The microsecond component of the time delta.</p>
 
 
+</span>
 
         
-    <hr>
     
+<span >
+<hr>
 <a name='minute'>var <a href='../../global/lang/Int.html'>Int</a> <em>minute</em>;</a>
 <br>
+<p>The minute component of the time delta.</p>
 
 
+</span>
 
         
-    <hr>
     
+<span >
+<hr>
 <a name='month'>var <a href='../../global/lang/Int.html'>Int</a> <em>month</em>;</a>
 <br>
+<p>The month component of the time delta.</p>
 
 
+</span>
 
         
-    <hr>
     
+<span >
+<hr>
 <a name='second'>var <a href='../../global/lang/Int.html'>Int</a> <em>second</em>;</a>
 <br>
+<p>The second component of the time delta.</p>
 
 
-
-        
-    <hr>
-    
-<a name='toString'>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>toString</em> (<a href='../../global/date/Delta.html'>Delta</a> this);</a>
-<br>
-
-
+</span>
 
         
-    <hr>
     
+<span >
+<hr>
 <a name='year'>var <a href='../../global/lang/Int.html'>Int</a> <em>year</em>;</a>
 <br>
+<p>The year component of the time delta.</p>
 
 
+</span>
 
     
+
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
+<br>
+
+<p>Getter function for the __type__ property.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__add__'>def <a href='../../global/date/Delta.html'>Delta</a> <em>__add__</em> (<a href='../../global/date/Delta.html'>Delta</a> this, <a href='../../global/date/Delta.html'>Delta</a> other) (bound);</a>
+<br>
+<p>This method is usually called as the + operator.</p>
+<p>Create a new Delta object, which is the sum of the two time deltas.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is equal to the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is greater than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__init__'>def <a href='../../global/date/Delta.html'>Delta</a> <em>__init__</em> (<a href='../../global/date/Delta.html'>Delta</a> this, <a href='../../global/lang/Int.html'>Int</a> year = 0, <a href='../../global/lang/Int.html'>Int</a> month = 0, <a href='../../global/lang/Int.html'>Int</a> day = 0, <a href='../../global/lang/Int.html'>Int</a> hour = 0, <a href='../../global/lang/Int.html'>Int</a> minute = 0, <a href='../../global/lang/Int.html'>Int</a> second = 0, <a href='../../global/lang/Int.html'>Int</a> microsecond = 0) (bound);</a>
+<br>
+
+<p>Construct a new Delta object with the specified time delta components.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
+<br>
+
+<p>Return non-null if this object is not equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__sub__'>def <a href='../../global/date/Delta.html'>Delta</a> <em>__sub__</em> (<a href='../../global/date/Delta.html'>Delta</a> this, <a href='../../global/date/Delta.html'>Delta</a> other) (bound);</a>
+<br>
+<p>This method is usually called as the - operator.</p>
+<p>Create a new Delta object, which is the difference between the two time deltas.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
+<br>
+
+<p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='toString'>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>toString</em> (<a href='../../global/date/Delta.html'>Delta</a> this) (bound);</a>
+<br>
+
+<p>Return a string representation of this time delta object</p>
+
+
+</span>
+
+    
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -227,3 +461,4 @@ Hash function. Should always return the same number for the same object and shou
     </div>
   </body>
 </html>
+b

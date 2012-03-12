@@ -15,74 +15,139 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>attributes</em></a></h1>
 
+    <p>Internal module for various attribute macros.</p>
+
+
     
     
     
+
+
+
     
+
+
+
+
     
-    <h2><a name="api-other">Other members</a></h2>
+
+
+
+
+
+    
+    <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li><a href="#blockAttribute">blockAttribute</a></li>
+      <li >
+	<a href="#blockAttribute">blockAttribute</a> 
+	 - The block attribute. Tells the compiler that return expresisons should not target this function. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.
+      </li>
 
-      <li><a href="#boundAttribute">boundAttribute</a></li>
+      <li >
+	<a href="#boundAttribute">boundAttribute</a> 
+	 - The bound attribute. Tells the compiler that this method, when called, should implicitly be supplied with an additional first member, the object of which it is a member. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.
+      </li>
 
-      <li><a href="#internalAttribute">internalAttribute</a></li>
+      <li >
+	<a href="#internalAttribute">internalAttribute</a> 
+	 - The internal attribute. Currently does nothing. In the future, this attribute will tell the compiler to hide internal members when doing interface checking. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.
+      </li>
 
-      <li><a href="#loopAttribute">loopAttribute</a></li>
+      <li >
+	<a href="#loopAttribute">loopAttribute</a> 
+	 - The loop attribute. Used to tell the compiler that break and continue expressions should target this function. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.
+      </li>
 
-      <li><a href="#staticAttribute">staticAttribute</a></li>
+      <li >
+	<a href="#staticAttribute">staticAttribute</a> 
+	 - The static attribute. Used to tell the compiler that a type member should be statis. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.
+      </li>
 
     </ul>
     
 
-        
-    <hr>
+
+
+
+
+
+
+
     
-<a name='blockAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>blockAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
-<br>
-
-
-
-        
-    <hr>
-    
-<a name='boundAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>boundAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
-<br>
-
 
 
         
-    <hr>
     
-<a name='internalAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>internalAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
+<span >
+<hr>
+<a name='blockAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>blockAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
 <br>
 
+<p>The block attribute. Tells the compiler that return expresisons should not target this function. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='loopAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>loopAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
+<span >
+<hr>
+<a name='boundAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>boundAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
 <br>
 
+<p>The bound attribute. Tells the compiler that this method, when called, should implicitly be supplied with an additional first member, the object of which it is a member. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.</p>
 
+
+</span>
 
         
-    <hr>
     
-<a name='staticAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>staticAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node);</a>
+<span >
+<hr>
+<a name='internalAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>internalAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
 <br>
 
+<p>The internal attribute. Currently does nothing. In the future, this attribute will tell the compiler to hide internal members when doing interface checking. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.</p>
 
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='loopAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>loopAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
+<br>
+
+<p>The loop attribute. Used to tell the compiler that break and continue expressions should target this function. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='staticAttribute'>def <a href='../global/parser/Node.html'>Node</a> <em>staticAttribute</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
+<br>
+
+<p>The static attribute. Used to tell the compiler that a type member should be statis. This macro is a no-op, the compiler will automatically check for the presence of this attribute and adjust accordingly.</p>
+
+
+</span>
 
     
+
 
 	</div>
       </div>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
-	  
+
+	  <div>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	  </div>
 	  <div>
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
@@ -93,3 +158,4 @@
     </div>
   </body>
 </html>
+b
