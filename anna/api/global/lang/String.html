@@ -77,6 +77,12 @@
       </li>
       
       <li>
+	in 
+(Check if element is in collection)
+	<a href="#__in__">__in__</a> 
+      </li>
+      
+      <li>
 	~ 
 (Join two collections into one)
 	<a href="#__join__">__join__</a> 
@@ -175,6 +181,11 @@
       </li>
 
       <li >
+	<a href="#__in__">__in__</a> 
+	
+      </li>
+
+      <li >
 	<a href="#__init__">__init__</a> 
 	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
       </li>
@@ -192,6 +203,11 @@
       <li >
 	<a href="#__lte__">__lte__</a> 
 	 - Return non-null if this object is less than or equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#__map__">__map__</a> 
+	 - Exacute the specified function once for each element and return a list containing the output of each function call.
       </li>
 
       <li >
@@ -236,6 +252,11 @@
 
       <li >
 	<a href="#split">split</a> 
+	 - Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
+      </li>
+
+      <li >
+	<a href="#splitChar">splitChar</a> 
 	 - Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
       </li>
 
@@ -475,6 +496,16 @@
     
 <span >
 <hr>
+<a name='__in__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__in__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> char) (bound);</a>
+<br>
+<p>This method is usually called as the in operator.</p>
+
+</span>
+
+        
+    
+<span >
+<hr>
 <a name='__init__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
 <br>
 
@@ -513,6 +544,18 @@
 <br>
 
 <p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__map__'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__map__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href=''>def Object (Int key, Char value)</a> block) (bound);</a>
+<br>
+
+<p>Exacute the specified function once for each element and return a list containing the output of each function call.</p>
 
 
 </span>
@@ -613,7 +656,19 @@
     
 <span >
 <hr>
-<a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> char, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);</a>
+<a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/String.html'>String</a> charList, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);</a>
+<br>
+
+<p>Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='splitChar'>def <a href=''>MutableList«String»</a> <em>splitChar</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> char, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);</a>
 <br>
 
 <p>Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>

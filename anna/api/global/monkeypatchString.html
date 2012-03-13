@@ -39,6 +39,12 @@
 	<a href="#__format__List__">__format__List__</a> <a href="#__format__Map__">__format__Map__</a> 
       </li>
       
+      <li>
+	in 
+(Check if element is in collection)
+	<a href="#__in__">__in__</a> 
+      </li>
+      
     </ul>
     
 
@@ -66,6 +72,11 @@
       </li>
 
       <li >
+	<a href="#__in__">__in__</a> 
+	
+      </li>
+
+      <li >
 	<a href="#lpad">lpad</a> 
 	 - Pad the left side of this string with the specified character up to a minimum of the specified number of characters
       </li>
@@ -82,6 +93,11 @@
 
       <li >
 	<a href="#split">split</a> 
+	 - Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
+      </li>
+
+      <li >
+	<a href="#splitChar">splitChar</a> 
 	 - Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
       </li>
 
@@ -142,6 +158,16 @@
     
 <span >
 <hr>
+<a name='__in__'>def <a href='../global/lang/Int.html'>Int</a> <em>__in__</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> char) (static);</a>
+<br>
+<p>This method is usually called as the in operator.</p>
+
+</span>
+
+        
+    
+<span >
+<hr>
 <a name='lpad'>def <a href='../global/lang/String.html'>String</a> <em>lpad</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Int.html'>Int</a> count, <a href='../global/lang/Char.html'>Char</a> char = ' ') (static);</a>
 <br>
 
@@ -178,7 +204,19 @@
     
 <span >
 <hr>
-<a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> char, <a href='../global/lang/Object.html'>Object</a> allowEmpty = 1) (static);</a>
+<a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/String.html'>String</a> charList, <a href='../global/lang/Object.html'>Object</a> allowEmpty = 1) (static);</a>
+<br>
+
+<p>Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='splitChar'>def <a href=''>MutableList«String»</a> <em>splitChar</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> char, <a href='../global/lang/Object.html'>Object</a> allowEmpty = 1) (static);</a>
 <br>
 
 <p>Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>
