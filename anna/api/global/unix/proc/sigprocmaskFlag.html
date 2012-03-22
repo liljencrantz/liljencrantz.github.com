@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../../js/jquery.js"></script>
     <script type="text/javascript" src="../../../../js/anna.js"></script>
+    <script type="text/javascript" src="../../../../js/keywordList.js"></script>
+    <script type="text/javascript">
+      anna.basePath = "../../../../";
+    </script>
 
   </head>
   <body>
@@ -30,17 +34,17 @@
     
       <li >
 	<a href="#block">block</a> 
-	</li>
+	 - Block all the specified signals in addition to signals currently blocked.</li>
       </li>
 
       <li >
 	<a href="#setMask">setMask</a> 
-	</li>
+	 - Set the exact new signal block mask.</li>
       </li>
 
       <li >
 	<a href="#unblock">unblock</a> 
-	</li>
+	 - Stop blocking the specified signals.</li>
       </li>
 
     </ul>
@@ -70,6 +74,8 @@
 <hr>
 <a name='block'>var <a href='../../../global/lang/Int.html'>Int</a> <em>block</em> (static);</a>
 <br>
+<p>Block all the specified signals in addition to signals currently blocked.</p>
+
 
 </span>
 
@@ -79,6 +85,8 @@
 <hr>
 <a name='setMask'>var <a href='../../../global/lang/Int.html'>Int</a> <em>setMask</em> (static);</a>
 <br>
+<p>Set the exact new signal block mask.</p>
+
 
 </span>
 
@@ -88,6 +96,8 @@
 <hr>
 <a name='unblock'>var <a href='../../../global/lang/Int.html'>Int</a> <em>unblock</em> (static);</a>
 <br>
+<p>Stop blocking the specified signals.</p>
+
 
 </span>
 
@@ -102,10 +112,14 @@
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
 
+	  <div class="anna-search">
+	  </div>
+
 	  <div>
-	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show documentation for internal members</label>
 	  </div>
 	  <div>
+
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
 	    

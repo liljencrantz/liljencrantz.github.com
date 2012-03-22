@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../js/jquery.js"></script>
     <script type="text/javascript" src="../../../js/anna.js"></script>
+    <script type="text/javascript" src="../../../js/keywordList.js"></script>
+    <script type="text/javascript">
+      anna.basePath = "../../../";
+    </script>
 
   </head>
   <body>
@@ -29,7 +33,7 @@
     <ul>
     
       <li >
-	<a href="#@errorType:157">@errorType:157</a> 
+	<a href="#@errorType:161">@errorType:161</a> 
 	</li>
       </li>
 
@@ -40,17 +44,17 @@
 
       <li >
 	<a href="#errno">errno</a> 
-	</li>
+	 - The C error number</li>
       </li>
 
       <li >
 	<a href="#message">message</a> 
-	</li>
+	 - The error message</li>
       </li>
 
       <li >
 	<a href="#source">source</a> 
-	</li>
+	 - The continuation that triggered this error.</li>
       </li>
 
     </ul>
@@ -96,7 +100,7 @@
 
       <li >
 	<a href="#__init__">__init__</a> 
-	
+	 - Create a new error with the specified c error number.
       </li>
 
       <li >
@@ -121,7 +125,7 @@
 
       <li >
 	<a href="#toString">toString</a> 
-	
+	 - A string representation of this Error.
       </li>
 
     </ul>
@@ -138,7 +142,7 @@
     
 <span >
 <hr>
-<a name='@errorType:157'>var <a href='../../global/lang/Object.html'>Object</a> <em>@errorType:157</em> (static);</a>
+<a name='@errorType:161'>var <a href='../../global/lang/Object.html'>Object</a> <em>@errorType:161</em> (static);</a>
 <br>
 
 </span>
@@ -160,6 +164,8 @@
 <hr>
 <a name='errno'>var <a href='../../global/lang/Int.html'>Int</a> <em>errno</em>;</a>
 <br>
+<p>The C error number</p>
+
 
 </span>
 
@@ -169,6 +175,8 @@
 <hr>
 <a name='message'>var <a href='../../global/lang/String.html'>String</a> <em>message</em>;</a>
 <br>
+<p>The error message</p>
+
 
 </span>
 
@@ -178,6 +186,8 @@
 <hr>
 <a name='source'>var <a href='../../global/reflection/Continuation.html'>Continuation</a> <em>source</em>;</a>
 <br>
+<p>The continuation that triggered this error.</p>
+
 
 </span>
 
@@ -251,6 +261,8 @@
 <a name='__init__'>def <a href='../../global/error/CError.html'>CError</a> <em>__init__</em> (<a href='../../global/error/CError.html'>CError</a> this, <a href='../../global/lang/Int.html'>Int</a> errno) (bound);</a>
 <br>
 
+<p>Create a new error with the specified c error number.</p>
+
 
 </span>
 
@@ -309,6 +321,8 @@
 <a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/error/Error.html'>Error</a> this) (bound);</a>
 <br>
 
+<p>A string representation of this Error.</p>
+
 
 </span>
 
@@ -320,10 +334,14 @@
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
 
+	  <div class="anna-search">
+	  </div>
+
 	  <div>
-	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show documentation for internal members</label>
 	  </div>
 	  <div>
+
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
 	    

@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../js/jquery.js"></script>
     <script type="text/javascript" src="../../../js/anna.js"></script>
+    <script type="text/javascript" src="../../../js/keywordList.js"></script>
+    <script type="text/javascript">
+      anna.basePath = "../../../";
+    </script>
 
   </head>
   <body>
@@ -77,7 +81,7 @@
       <li>
 	[] 
 (Get elements of collection)
-	<a href="#__get__Int__">__get__Int__</a> <a href="#__get__Range__">__get__Range__</a> 
+	<a href="#get">get</a> <a href="#getRange">getRange</a> 
       </li>
       
       <li>
@@ -165,16 +169,6 @@
       </li>
 
       <li >
-	<a href="#__get__Int__">__get__Int__</a> 
-	 - Return the item at the specified offset.
-      </li>
-
-      <li >
-	<a href="#__get__Range__">__get__Range__</a> 
-	 - Return the items in the specified range.
-      </li>
-
-      <li >
 	<a href="#__gt__">__gt__</a> 
 	 - Returns non-null if this object is greater than the other object, null otherwise.
       </li>
@@ -222,6 +216,16 @@
       <li >
 	<a href="#__neq__">__neq__</a> 
 	 - Return non-null if this object is not equal to the other object, null otherwise
+      </li>
+
+      <li >
+	<a href="#get">get</a> 
+	
+      </li>
+
+      <li >
+	<a href="#getRange">getRange</a> 
+	
       </li>
 
       <li >
@@ -464,30 +468,6 @@
     
 <span >
 <hr>
-<a name='__get__Int__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__get__Int__</em> (<a href='../../global/lang/ImutableString.html'>ImutableString</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
-<br>
-<p>This method is usually called as the [] operator.</p>
-<p>Return the item at the specified offset.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='__get__Range__'>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>__get__Range__</em> (<a href='../../global/lang/ImutableString.html'>ImutableString</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);</a>
-<br>
-<p>This method is usually called as the [] operator.</p>
-<p>Return the items in the specified range.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
 <a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
 
@@ -539,9 +519,7 @@
 
 <p>The join operator can be used like this:</p>
 
-<p><pre class='anna-code'>
-myString := "Hello, " ~ userName;
-</pre></p>
+<p><pre class='anna-code'>myString := "Hello, " ~ userName;</pre></p>
 
 
 </span>
@@ -603,6 +581,26 @@ myString := "Hello, " ~ userName;
 
 <p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='get'>def <a href='../../global/lang/Char.html'>Char</a> <em>get</em> (<a href='../../global/lang/ImutableString.html'>ImutableString</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
+<br>
+<p>This method is usually called as the [] operator.</p>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='getRange'>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>getRange</em> (<a href='../../global/lang/ImutableString.html'>ImutableString</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);</a>
+<br>
+<p>This method is usually called as the [] operator.</p>
 
 </span>
 
@@ -716,10 +714,14 @@ myString := "Hello, " ~ userName;
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
 
+	  <div class="anna-search">
+	  </div>
+
 	  <div>
-	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show documentation for internal members</label>
 	  </div>
 	  <div>
+
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
 	    

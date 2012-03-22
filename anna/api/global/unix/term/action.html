@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../../js/jquery.js"></script>
     <script type="text/javascript" src="../../../../js/anna.js"></script>
+    <script type="text/javascript" src="../../../../js/keywordList.js"></script>
+    <script type="text/javascript">
+      anna.basePath = "../../../../";
+    </script>
 
   </head>
   <body>
@@ -30,17 +34,17 @@
     
       <li >
 	<a href="#drain">drain</a> 
-	</li>
+	 - Empty output buffer and apply specified action.</li>
       </li>
 
       <li >
 	<a href="#flush">flush</a> 
-	</li>
+	 - Apply specified action once outout in buffer has been written.</li>
       </li>
 
       <li >
 	<a href="#now">now</a> 
-	</li>
+	 - Take the specified action now,</li>
       </li>
 
     </ul>
@@ -70,6 +74,8 @@
 <hr>
 <a name='drain'>var <a href='../../../global/lang/Int.html'>Int</a> <em>drain</em> (static);</a>
 <br>
+<p>Empty output buffer and apply specified action.</p>
+
 
 </span>
 
@@ -79,6 +85,8 @@
 <hr>
 <a name='flush'>var <a href='../../../global/lang/Int.html'>Int</a> <em>flush</em> (static);</a>
 <br>
+<p>Apply specified action once outout in buffer has been written.</p>
+
 
 </span>
 
@@ -88,6 +96,8 @@
 <hr>
 <a name='now'>var <a href='../../../global/lang/Int.html'>Int</a> <em>now</em> (static);</a>
 <br>
+<p>Take the specified action now,</p>
+
 
 </span>
 
@@ -102,10 +112,14 @@
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
 
+	  <div class="anna-search">
+	  </div>
+
 	  <div>
-	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show documentation for internal members</label>
 	  </div>
 	  <div>
+
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
 	    

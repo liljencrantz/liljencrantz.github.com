@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../js/jquery.js"></script>
     <script type="text/javascript" src="../../../js/anna.js"></script>
+    <script type="text/javascript" src="../../../js/keywordList.js"></script>
+    <script type="text/javascript">
+      anna.basePath = "../../../";
+    </script>
 
   </head>
   <body>
@@ -75,7 +79,7 @@
       <li>
 	[] 
 (Get elements of collection)
-	<a href="#__get__Int__">__get__Int__</a> <a href="#__get__Range__">__get__Range__</a> 
+	<a href="#get">get</a> <a href="#getRange">getRange</a> 
       </li>
       
       <li>
@@ -99,7 +103,7 @@
       <li>
 	[] 
 (Set elements of collection)
-	<a href="#__set__Int__">__set__Int__</a> <a href="#__set__Range__">__set__Range__</a> 
+	<a href="#set">set</a> <a href="#setRange">setRange</a> 
       </li>
       
     </ul>
@@ -174,16 +178,6 @@
       </li>
 
       <li >
-	<a href="#__get__Int__">__get__Int__</a> 
-	 - Return the item at the specified offset.
-      </li>
-
-      <li >
-	<a href="#__get__Range__">__get__Range__</a> 
-	 - Return the items in the specified range.
-      </li>
-
-      <li >
 	<a href="#__gt__">__gt__</a> 
 	 - Returns non-null if this object is greater than the other object, null otherwise.
       </li>
@@ -234,13 +228,13 @@
       </li>
 
       <li >
-	<a href="#__set__Int__">__set__Int__</a> 
-	 - Set the item at the specified offset to the specified value.
+	<a href="#get">get</a> 
+	
       </li>
 
       <li >
-	<a href="#__set__Range__">__set__Range__</a> 
-	 - Set all of the items in the specified Range to the items in the specified list.
+	<a href="#getRange">getRange</a> 
+	
       </li>
 
       <li >
@@ -266,6 +260,16 @@
       <li >
 	<a href="#search__Char__">search__Char__</a> 
 	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+      </li>
+
+      <li >
+	<a href="#set">set</a> 
+	
+      </li>
+
+      <li >
+	<a href="#setRange">setRange</a> 
+	
       </li>
 
       <li >
@@ -495,30 +499,6 @@
     
 <span >
 <hr>
-<a name='__get__Int__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__get__Int__</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
-<br>
-<p>This method is usually called as the [] operator.</p>
-<p>Return the item at the specified offset.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='__get__Range__'>def <a href='../../global/lang/MutableString.html'>MutableString</a> <em>__get__Range__</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);</a>
-<br>
-<p>This method is usually called as the [] operator.</p>
-<p>Return the items in the specified range.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
 <a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
 <br>
 
@@ -570,9 +550,7 @@
 
 <p>The join operator can be used like this:</p>
 
-<p><pre class='anna-code'>
-myString := "Hello, " ~ userName;
-</pre></p>
+<p><pre class='anna-code'>myString := "Hello, " ~ userName;</pre></p>
 
 
 </span>
@@ -641,11 +619,9 @@ myString := "Hello, " ~ userName;
     
 <span >
 <hr>
-<a name='__set__Int__'>def <a href='../../global/lang/Char.html'>Char</a> <em>__set__Int__</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Int.html'>Int</a> index, <a href='../../global/lang/Char.html'>Char</a> value) (bound);</a>
+<a name='get'>def <a href='../../global/lang/Char.html'>Char</a> <em>get</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
 <br>
 <p>This method is usually called as the [] operator.</p>
-<p>Set the item at the specified offset to the specified value.</p>
-
 
 </span>
 
@@ -653,11 +629,9 @@ myString := "Hello, " ~ userName;
     
 <span >
 <hr>
-<a name='__set__Range__'>def <a href='../../global/lang/MutableString.html'>MutableString</a> <em>__set__Range__</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Range.html'>Range</a> range, <a href='../../global/lang/String.html'>String</a> value) (bound);</a>
+<a name='getRange'>def <a href='../../global/lang/MutableString.html'>MutableString</a> <em>getRange</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);</a>
 <br>
 <p>This method is usually called as the [] operator.</p>
-<p>Set all of the items in the specified Range to the items in the specified list.</p>
-
 
 </span>
 
@@ -723,6 +697,26 @@ myString := "Hello, " ~ userName;
     
 <span >
 <hr>
+<a name='set'>def <a href='../../global/lang/Char.html'>Char</a> <em>set</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Int.html'>Int</a> index, <a href='../../global/lang/Char.html'>Char</a> value) (bound);</a>
+<br>
+<p>This method is usually called as the [] operator.</p>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='setRange'>def <a href='../../global/lang/MutableString.html'>MutableString</a> <em>setRange</em> (<a href='../../global/lang/MutableString.html'>MutableString</a> this, <a href='../../global/lang/Range.html'>Range</a> range, <a href='../../global/lang/String.html'>String</a> value) (bound);</a>
+<br>
+<p>This method is usually called as the [] operator.</p>
+
+</span>
+
+        
+    
+<span >
+<hr>
 <a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/String.html'>String</a> charList, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);</a>
 <br>
 
@@ -773,10 +767,14 @@ myString := "Hello, " ~ userName;
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
 
+	  <div class="anna-search">
+	  </div>
+
 	  <div>
-	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show documentation for internal members</label>
 	  </div>
 	  <div>
+
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
 	    

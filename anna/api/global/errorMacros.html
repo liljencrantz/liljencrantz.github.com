@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../js/jquery.js"></script>
     <script type="text/javascript" src="../../js/anna.js"></script>
+    <script type="text/javascript" src="../../js/keywordList.js"></script>
+    <script type="text/javascript">
+      anna.basePath = "../../";
+    </script>
 
   </head>
   <body>
@@ -41,12 +45,12 @@
     
       <li >
 	<a href="#collect">collect</a> 
-	
+	 - Collect errors in the specified code blocks.
       </li>
 
       <li >
 	<a href="#errorType">errorType</a> 
-	
+	 - A type suitable for defining error types
       </li>
 
       <li >
@@ -74,6 +78,8 @@
 <a name='collect'>def <a href='../global/parser/Node.html'>Node</a> <em>collect</em> (<a href='../global/parser/Call.html'>Call</a> definition) (static);</a>
 <br>
 
+<p>Collect errors in the specified code blocks.</p>
+
 
 </span>
 
@@ -83,6 +89,8 @@
 <hr>
 <a name='errorType'>def <a href='../global/parser/Node.html'>Node</a> <em>errorType</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
 <br>
+
+<p>A type suitable for defining error types</p>
 
 
 </span>
@@ -105,10 +113,14 @@
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
 
+	  <div class="anna-search">
+	  </div>
+
 	  <div>
-	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show documentation for internal members</label>
 	  </div>
 	  <div>
+
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
 	    

@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../js/jquery.js"></script>
     <script type="text/javascript" src="../../../js/anna.js"></script>
+    <script type="text/javascript" src="../../../js/keywordList.js"></script>
+    <script type="text/javascript">
+      anna.basePath = "../../../";
+    </script>
 
   </head>
   <body>
@@ -82,7 +86,7 @@
       <li>
 	[] 
 (Get elements of collection)
-	<a href="#getIndex">getIndex</a> <a href="#getRange">getRange</a> 
+	<a href="#get">get</a> <a href="#getRange">getRange</a> 
       </li>
       
       <li>
@@ -229,21 +233,24 @@
       </li>
 
       <li >
-	<a href="#getIndex">getIndex</a> 
+	<a href="#get">get</a> 
 	
       </li>
 
       <li >
 	<a href="#getRange">getRange</a> 
-	 - <pre class='anna-code'>
-myList := [1,2,3,4,5,6];
-print(myList[1|2...]); // This will print [2, 4, 6]
-</pre>
+	 - <pre class='anna-code'>myList := [1,2,3,4,5,6];
+print(myList[1|2...]); // This will print [2, 4, 6]</pre>
       </li>
 
       <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
+      </li>
+
+      <li >
+	<a href="#indexOf">indexOf</a> 
+	 - Returns the index of the first location of the specified item in the list.
       </li>
 
       <li >
@@ -568,9 +575,7 @@ a new list is returned.
 
 <p>The join operator can be used like this:</p>
 
-<p><pre class='anna-code'>
-combinedCollection := firstCollection ~ secondCollection;
-</pre></p>
+<p><pre class='anna-code'>combinedCollection := firstCollection ~ secondCollection;</pre></p>
 
 <p>Note that the join operator joins two collections. If all you want to do is add one element to an existing collection, use the <a href='#push'>push method</a>.</p>
 
@@ -653,7 +658,7 @@ combinedCollection := firstCollection ~ secondCollection;
     
 <span >
 <hr>
-<a name='getIndex'>def <a href='../../global/lang/Object.html'>Object</a> <em>getIndex</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
+<a name='get'>def <a href='../../global/lang/Object.html'>Object</a> <em>get</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
 <br>
 <p>This method is usually called as the [] operator.</p>
 
@@ -666,10 +671,8 @@ combinedCollection := firstCollection ~ secondCollection;
 <a name='getRange'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>getRange</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);</a>
 <br>
 <p>This method is usually called as the [] operator.</p>
-<p><pre class='anna-code'>
-myList := [1,2,3,4,5,6];
-print(myList[1|2...]); // This will print [2, 4, 6]
-</pre></p>
+<p><pre class='anna-code'>myList := [1,2,3,4,5,6];
+print(myList[1|2...]); // This will print [2, 4, 6]</pre></p>
 
 
 </span>
@@ -682,6 +685,18 @@ print(myList[1|2...]); // This will print [2, 4, 6]
 <br>
 
 <p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='indexOf'>def <a href='../../global/lang/Int.html'>Int</a> <em>indexOf</em> (<a href='../../global/lang/List.html'>List</a> this, <a href='../../global/lang/Object.html'>Object</a> value) (bound);</a>
+<br>
+
+<p>Returns the index of the first location of the specified item in the list.</p>
 
 
 </span>
@@ -742,10 +757,14 @@ objects.</p>
       <div class="anna-left-menu">
 	<div class="anna-left-menu-inner">
 
+	  <div class="anna-search">
+	  </div>
+
 	  <div>
-	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show internal members</label>
+	    <input type="checkbox" id="anna-internal-toggle"><label for="anna-internal-toggle">Show documentation for internal members</label>
 	  </div>
 	  <div>
+
 	    <h2>Table of content</h2>
 	    <div class="toc"></div>
 	    
