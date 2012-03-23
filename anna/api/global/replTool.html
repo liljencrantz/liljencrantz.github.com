@@ -19,8 +19,10 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>replTool</em></a></h1>
 
-    <p>Helper commands for the anna repl implementation. 
-This module is automatically used by the anna interactive prompt.</p>
+    <p>
+Helper commands for the anna repl (interactive prompt) implementation.
+This module is automatically used by the anna interactive prompt, and
+there is very rarely any reason to use it manually.</p>
 
 
     
@@ -51,23 +53,16 @@ This module is automatically used by the anna interactive prompt.</p>
 
       <li >
 	<a href="#formatList">formatList</a> 
-	
+	 - Internal helper method for dir and help, used to line break a list of strings.
       </li>
 
       <li >
 	<a href="#help">help</a> 
-	 - This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible for the user.
+	 - This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible about that object to the user.
       </li>
 
     </ul>
     
-
-
-
-
-
-
-
 
     
 
@@ -91,6 +86,8 @@ This module is automatically used by the anna interactive prompt.</p>
 <a name='formatList'>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>formatList</em> (<a href='../global/lang/List.html'>List</a> wordList) (static);</a>
 <br>
 
+<p>Internal helper method for dir and help, used to line break a list of strings.</p>
+
 
 </span>
 
@@ -101,13 +98,14 @@ This module is automatically used by the anna interactive prompt.</p>
 <a name='help'>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>help</em> (<a href='../global/lang/Object.html'>Object</a> object) (static);</a>
 <br>
 
-<p>This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible for the user.</p>
+<p>This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible about that object to the user.</p>
+
+<p>If the object is a Type</p>
 
 
 </span>
 
     
-
 
 	</div>
       </div>
@@ -131,4 +129,3 @@ This module is automatically used by the anna interactive prompt.</p>
     </div>
   </body>
 </html>
-b

@@ -19,7 +19,11 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>Buffer</em></a></h1>
 
-    <p>The buffer type represents a byte oriented mutable array of binary data. It is primarily used for reading and writing from file descriptors.</p>
+    <p>The buffer type represents a byte oriented mutable array of binary data. It is primarily used for reading and writing from file descriptors, but can also be used to encode text strings to a specific encoding and various other low level tasks.</p>
+
+<p>Buffers are in many ways similar to a list of Int objects, except that the values have a range of 0 to 255 and can not be null. These differences make it possible to make the Buffer type significantly more efficient than a List, in addition to making them suitable for low level calls like unix.io.read and unix.io.write.</p>
+
+<p>All buffers are read-write, though it is possible that a future Anna version will provide read only buffers.</p>
 
 
     
@@ -182,13 +186,6 @@
 
     </ul>
     
-
-
-
-
-
-
-
 
         
     
@@ -465,7 +462,6 @@
 
     
 
-
 	</div>
       </div>
       <div class="anna-left-menu">
@@ -488,4 +484,3 @@
     </div>
   </body>
 </html>
-b
