@@ -17,12 +17,14 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>monkeypatchNode</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>monkeypatchNode</em></a></h1>
 
     <p>Internally used module. Don't use directly.</p>
 
 
     
+    
+
     
     
 
@@ -46,44 +48,46 @@
     </ul>
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li >
+        <li >
 	<a href="#__format__">__format__</a> 
 	 - Replace every internal identifier (an identifier prefixed with a '%' character) in the specified AST tree with the corresponding AST tree.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#block?">block?</a> 
 	 - Returns true if the specified AST node is a block.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#callTo?">callTo?</a> 
 	 - Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#childNamed?">childNamed?</a> 
 	 - Returns true if this call has a parameter which is an identifier with the specified name.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#filterByCall">filterByCall</a> 
 	 - Filters the call list for direct children that are calls to the specified function. For each found child, every parameter in it's parameter list is inserted into the resulting list of Node objects. This function is often useful when checking attribute lists.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#named?">named?</a> 
 	 - Returns true if the specified AST node is an identifier with the specified name.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -94,8 +98,9 @@
     
 <span >
 <hr>
-<a name='__format__'>def <a href='../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href=''>HashMap«String,Node»</a> data) (static);</a>
-<br>
+<a name='__format__'></a>def <a href='../global/parser/Node.html'>Node</a> <em>__format__</em> (<a href='../global/parser/Node.html'>Node</a> this, HashMap«String,Node» data) (static);
+<p>
+
 <p>This method is usually called as the % operator.</p>
 <p>Replace every internal identifier (an identifier prefixed with a '%' character) in the specified AST tree with the corresponding AST tree.</p>
 
@@ -106,8 +111,9 @@
     
 <span >
 <hr>
-<a name='block?'>def <a href='../global/lang/Int.html'>Int</a> <em>block?</em> (<a href='../global/parser/Node.html'>Node</a> this) (static);</a>
-<br>
+<a name='block?'></a>def <a href='../global/lang/Int.html'>Int</a> <em>block?</em> (<a href='../global/parser/Node.html'>Node</a> this) (static);
+<p>
+
 
 <p>Returns true if the specified AST node is a block.</p>
 
@@ -118,8 +124,9 @@
     
 <span >
 <hr>
-<a name='callTo?'>def <a href='../global/lang/Int.html'>Int</a> <em>callTo?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
-<br>
+<a name='callTo?'></a>def <a href='../global/lang/Int.html'>Int</a> <em>callTo?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name) (static);
+<p>
+
 
 <p>Returns true if the specified AST node is a call node and the function node is an identifier with the specified name.</p>
 
@@ -130,8 +137,9 @@
     
 <span >
 <hr>
-<a name='childNamed?'>def <a href='../global/lang/Int.html'>Int</a> <em>childNamed?</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
-<br>
+<a name='childNamed?'></a>def <a href='../global/lang/Int.html'>Int</a> <em>childNamed?</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name) (static);
+<p>
+
 
 <p>Returns true if this call has a parameter which is an identifier with the specified name.</p>
 
@@ -142,8 +150,9 @@
     
 <span >
 <hr>
-<a name='filterByCall'>def <a href=''>List«Node»</a> <em>filterByCall</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
-<br>
+<a name='filterByCall'></a>def List«Node» <em>filterByCall</em> (<a href='../global/parser/Call.html'>Call</a> this, <a href='../global/lang/String.html'>String</a> name) (static);
+<p>
+
 
 <p>Filters the call list for direct children that are calls to the specified function. For each found child, every parameter in it's parameter list is inserted into the resulting list of Node objects. This function is often useful when checking attribute lists.</p>
 
@@ -154,8 +163,9 @@
     
 <span >
 <hr>
-<a name='named?'>def <a href='../global/lang/Int.html'>Int</a> <em>named?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name) (static);</a>
-<br>
+<a name='named?'></a>def <a href='../global/lang/Int.html'>Int</a> <em>named?</em> (<a href='../global/parser/Node.html'>Node</a> this, <a href='../global/lang/String.html'>String</a> name) (static);
+<p>
+
 
 <p>Returns true if the specified AST node is an identifier with the specified name.</p>
 

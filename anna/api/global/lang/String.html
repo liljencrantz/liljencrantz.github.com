@@ -17,12 +17,16 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>String</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em class='anna-link-main'>String</em></a></h1>
 
     <p>The String type represents any character string, either a mutable or imutable one. It is the intersection of the MutableString and the ImutableString.</p>
 
 
     
+    <h3><a name='module-child'>Types that can mask as this type</a></h3>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/ImutableString.html' class='anna-link-main'>ImutableString</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/MutableString.html' class='anna-link-main'>MutableString</a></span><h3><a name='module-child'>Types that this module can mask as</a></h3>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/ImutableString.html' class='anna-link-main'>ImutableString</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a></span>
+
     
     
 
@@ -101,179 +105,267 @@
     </ul>
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li class='anna-internal'>
+        <li class='anna-internal'>
 	<a href="#!__type__Getter">!__type__Getter</a> 
 	 - Getter function for the __type__ property.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!countGetter">!countGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!freezeGetter">!freezeGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!thawGetter">!thawGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__appendAssign__">__appendAssign__</a> 
 	 - Append the specified items to this collection.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__cmp__">__cmp__</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__each__">__each__</a> 
 	 - Execute the specified function once for each element.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__eq__">__eq__</a> 
 	 - Return non-null if this object is equal to the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__filter__">__filter__</a> 
 	 - Runs the specified test on each character in the string, and return a new string with the characters for which the test returned null removed.
-      </li>
-
-      <li >
+	</li>
+	
+      
+	<li>
+	  __format__:
+	<ul>
+	
+        <li >
 	<a href="#__format__List__">__format__List__</a> 
 	 - String formating. Replaces each % character found in the format string with the corresponding object from the list of parameters.
-      </li>
-
-      <li >
+	</li>
+	
+        <li >
 	<a href="#__format__Map__">__format__Map__</a> 
 	 - String formating. Replaces each %(NAME) token found in the format string with the corresponding object from the map of named parameters.
-      </li>
-
-      <li >
-	<a href="#__gt__">__gt__</a> 
-	 - Returns non-null if this object is greater than the other object, null otherwise.
-      </li>
-
-      <li >
-	<a href="#__gte__">__gte__</a> 
-	 - Return non-null if this object is greater than or equal to the other object, null otherwise
-      </li>
-
-      <li >
-	<a href="#__in__">__in__</a> 
+	</li>
 	
-      </li>
-
-      <li >
-	<a href="#__init__">__init__</a> 
-	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
-      </li>
-
-      <li >
-	<a href="#__join__">__join__</a> 
+	</ul>
+	</li>
 	
-      </li>
-
-      <li >
-	<a href="#__lt__">__lt__</a> 
-	 - Returns non-null if this object is smaller than the other object, null otherwise.
-      </li>
-
-      <li >
-	<a href="#__lte__">__lte__</a> 
-	 - Return non-null if this object is less than or equal to the other object, null otherwise
-      </li>
-
-      <li >
-	<a href="#__map__">__map__</a> 
-	 - Exacute the specified function once for each element and return a list containing the output of each function call.
-      </li>
-
-      <li >
-	<a href="#__mul__">__mul__</a> 
+      
+        <li >
+	<a href="#__format__List__">__format__List__</a> 
+	 - String formating. Replaces each % character found in the format string with the corresponding object from the list of parameters.
+	</li>
 	
-      </li>
-
-      <li >
-	<a href="#__neq__">__neq__</a> 
-	 - Return non-null if this object is not equal to the other object, null otherwise
-      </li>
-
-      <li >
-	<a href="#convert">convert</a> 
-	 - Convert any object into a String. This is done by calling the toString method of the Object.
-      </li>
-
-      <li >
+      
+        <li >
+	<a href="#__format__Map__">__format__Map__</a> 
+	 - String formating. Replaces each %(NAME) token found in the format string with the corresponding object from the map of named parameters.
+	</li>
+	
+      
+	<li>
+	  __get__:
+	<ul>
+	
+        <li >
 	<a href="#get">get</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+        <li >
 	<a href="#getRange">getRange</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+	</ul>
+	</li>
+	
+      
+        <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+	</li>
+	
+      
+        <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+	</li>
+	
+      
+        <li >
+	<a href="#__in__">__in__</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#__init__">__init__</a> 
+	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
+	</li>
+	
+      
+        <li >
+	<a href="#__join__">__join__</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+	</li>
+	
+      
+        <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+	</li>
+	
+      
+        <li >
+	<a href="#__map__">__map__</a> 
+	 - Exacute the specified function once for each element and return a list containing the output of each function call.
+	</li>
+	
+      
+        <li >
+	<a href="#__mul__">__mul__</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+	</li>
+	
+      
+        <li >
+	<a href="#convert">convert</a> 
+	 - Convert any object into a String. This is done by calling the toString method of the Object.
+	</li>
+	
+      
+        <li >
+	<a href="#get">get</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#getRange">getRange</a> 
+	
+	</li>
+	
+      
+        <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#join">join</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#lpad">lpad</a> 
 	 - Pad the left side of this string with the specified character up to a minimum of the specified number of characters
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#rpad">rpad</a> 
 	 - Pad the right side of this string with the specified character up to a minimum of the specified number of characters
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#search__Char__">search__Char__</a> 
 	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
+	<a href="#search__Char__">search__Char__</a> 
+	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+	</li>
+	
+      
+	<li>
+	  split:
+	<ul>
+	
+        <li >
 	<a href="#split">split</a> 
 	 - Split this string on every occurence of the specified characters and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
-      </li>
-
-      <li >
+	</li>
+	
+        <li >
 	<a href="#splitChar">splitChar</a> 
 	 - Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
-      </li>
-
-      <li >
+	</li>
+	
+        <li >
 	<a href="#splitList">splitList</a> 
 	 - Split this string on every occurence of the specified characters and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
-      </li>
-
-      <li >
+	</li>
+	
+	</ul>
+	</li>
+	
+      
+        <li >
+	<a href="#splitChar">splitChar</a> 
+	 - Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
+	</li>
+	
+      
+        <li >
+	<a href="#splitList">splitList</a> 
+	 - Split this string on every occurence of the specified characters and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.
+	</li>
+	
+      
+        <li >
 	<a href="#toString">toString</a> 
 	
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -281,7 +373,7 @@
     
 <span >
 <hr>
-<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<a name='__type__'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
 
@@ -292,7 +384,7 @@
     
 <span >
 <hr>
-<a name='count'>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;</a>
+<a name='count'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;
 <br>
 
 </span>
@@ -301,7 +393,7 @@
     
 <span >
 <hr>
-<a name='freeze'>var <a href='../../global/lang/String.html'>String</a> <em>freeze</em>;</a>
+<a name='freeze'></a>var <a href='../../global/lang/String.html'>String</a> <em>freeze</em>;
 <br>
 
 </span>
@@ -310,7 +402,7 @@
     
 <span >
 <hr>
-<a name='thaw'>var <a href='../../global/lang/MutableString.html'>MutableString</a> <em>thaw</em>;</a>
+<a name='thaw'></a>var <a href='../../global/lang/MutableString.html'>MutableString</a> <em>thaw</em>;
 <br>
 
 </span>
@@ -322,8 +414,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
-<br>
+<a name='!__type__Getter'></a>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the __type__ property.</p>
 
@@ -334,18 +427,9 @@
     
 <span >
 <hr>
-<a name='!countGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!countGetter</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);</a>
-<br>
+<a name='!countGetter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!countGetter</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);
+<p>
 
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='!freezeGetter'>def <a href='../../global/lang/String.html'>String</a> <em>!freezeGetter</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);</a>
-<br>
 
 
 </span>
@@ -354,8 +438,9 @@
     
 <span >
 <hr>
-<a name='!thawGetter'>def <a href='../../global/lang/MutableString.html'>MutableString</a> <em>!thawGetter</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);</a>
-<br>
+<a name='!freezeGetter'></a>def <a href='../../global/lang/String.html'>String</a> <em>!freezeGetter</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);
+<p>
+
 
 
 </span>
@@ -364,8 +449,20 @@
     
 <span >
 <hr>
-<a name='__appendAssign__'>def <a href='../../global/lang/String.html'>String</a> <em>__appendAssign__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='!thawGetter'></a>def <a href='../../global/lang/MutableString.html'>MutableString</a> <em>!thawGetter</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__appendAssign__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__appendAssign__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 <p>This method is usually called as the ~= operator.</p>
 <p>Append the specified items to this collection.</p>
 
@@ -376,8 +473,9 @@
     
 <span >
 <hr>
-<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 
 </span>
@@ -386,8 +484,9 @@
     
 <span >
 <hr>
-<a name='__each__'>def <a href='../../global/lang/String.html'>String</a> <em>__each__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href=''>def Object (Int key, Char value)</a> block) (bound);</a>
-<br>
+<a name='__each__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__each__</em> (<a href='../../global/lang/String.html'>String</a> this, def Object (Int key, Char value) block) (bound);
+<p>
+
 
 <p>Execute the specified function once for each element.</p>
 
@@ -398,8 +497,9 @@
     
 <span >
 <hr>
-<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__eq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is equal to the other object, null otherwise.</p>
 
@@ -410,8 +510,9 @@
     
 <span >
 <hr>
-<a name='__filter__'>def <a href='../../global/lang/String.html'>String</a> <em>__filter__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href=''>def Object (Int idx, Char value)</a> body) (bound);</a>
-<br>
+<a name='__filter__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__filter__</em> (<a href='../../global/lang/String.html'>String</a> this, def Object (Int idx, Char value) body) (bound);
+<p>
+
 
 <p>Runs the specified test on each character in the string, and return a new string with the characters for which the test returned null removed.</p>
 
@@ -422,8 +523,9 @@
     
 <span >
 <hr>
-<a name='__format__List__'>def <a href='../../global/lang/String.html'>String</a> <em>__format__List__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/List.html'>List</a> data) (bound);</a>
-<br>
+<a name='__format__List__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__format__List__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/List.html'>List</a> data) (bound);
+<p>
+<code>__format__List__</code> can also be called using any of the following aliases: <code>__format__</code>.
 <p>This method is usually called as the % operator.</p>
 <p>String formating. Replaces each % character found in the format string with the corresponding object from the list of parameters.</p>
 
@@ -436,8 +538,9 @@
     
 <span >
 <hr>
-<a name='__format__Map__'>def <a href='../../global/lang/String.html'>String</a> <em>__format__Map__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href=''>HashMap«String,Object»</a> data) (bound);</a>
-<br>
+<a name='__format__Map__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__format__Map__</em> (<a href='../../global/lang/String.html'>String</a> this, HashMap«String,Object» data) (bound);
+<p>
+<code>__format__Map__</code> can also be called using any of the following aliases: <code>__format__</code>.
 <p>This method is usually called as the % operator.</p>
 <p>String formating. Replaces each %(NAME) token found in the format string with the corresponding object from the map of named parameters.</p>
 
@@ -450,8 +553,9 @@
     
 <span >
 <hr>
-<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is greater than the other object, null otherwise.</p>
 
@@ -462,8 +566,9 @@
     
 <span >
 <hr>
-<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
 
@@ -474,8 +579,9 @@
     
 <span >
 <hr>
-<a name='__in__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__in__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> char) (bound);</a>
-<br>
+<a name='__in__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__in__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> char) (bound);
+<p>
+
 <p>This method is usually called as the in operator.</p>
 
 </span>
@@ -484,8 +590,9 @@
     
 <span >
 <hr>
-<a name='__init__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='__init__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.</p>
 
@@ -496,8 +603,9 @@
     
 <span >
 <hr>
-<a name='__join__'>def <a href='../../global/lang/String.html'>String</a> <em>__join__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__join__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__join__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 <p>This method is usually called as the ~ operator.</p>
 
 </span>
@@ -506,8 +614,9 @@
     
 <span >
 <hr>
-<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
 
@@ -518,8 +627,9 @@
     
 <span >
 <hr>
-<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
 
@@ -530,8 +640,9 @@
     
 <span >
 <hr>
-<a name='__map__'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__map__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href=''>def Object (Int key, Char value)</a> block) (bound);</a>
-<br>
+<a name='__map__'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__map__</em> (<a href='../../global/lang/String.html'>String</a> this, def Object (Int key, Char value) block) (bound);
+<p>
+
 
 <p>Exacute the specified function once for each element and return a list containing the output of each function call.</p>
 
@@ -542,8 +653,9 @@
     
 <span >
 <hr>
-<a name='__mul__'>def <a href='../../global/lang/String.html'>String</a> <em>__mul__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> times) (bound);</a>
-<br>
+<a name='__mul__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__mul__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> times) (bound);
+<p>
+
 <p>This method is usually called as the * operator.</p>
 
 </span>
@@ -552,8 +664,9 @@
     
 <span >
 <hr>
-<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__neq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
@@ -564,8 +677,9 @@
     
 <span >
 <hr>
-<a name='convert'>def <a href='../../global/lang/String.html'>String</a> <em>convert</em> (<a href='../../global/lang/Object.html'>Object</a> value) (static);</a>
-<br>
+<a name='convert'></a>def <a href='../../global/lang/String.html'>String</a> <em>convert</em> (<a href='../../global/lang/Object.html'>Object</a> value) (static);
+<p>
+
 
 <p>Convert any object into a String. This is done by calling the toString method of the Object.</p>
 
@@ -576,8 +690,9 @@
     
 <span >
 <hr>
-<a name='get'>def <a href='../../global/lang/Char.html'>Char</a> <em>get</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
-<br>
+<a name='get'></a>def <a href='../../global/lang/Char.html'>Char</a> <em>get</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);
+<p>
+<code>get</code> can also be called using any of the following aliases: <code>__get__</code>.
 <p>This method is usually called as the [] operator.</p>
 
 </span>
@@ -586,8 +701,9 @@
     
 <span >
 <hr>
-<a name='getRange'>def <a href='../../global/lang/String.html'>String</a> <em>getRange</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);</a>
-<br>
+<a name='getRange'></a>def <a href='../../global/lang/String.html'>String</a> <em>getRange</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);
+<p>
+<code>getRange</code> can also be called using any of the following aliases: <code>__get__</code>.
 <p>This method is usually called as the [] operator.</p>
 
 </span>
@@ -596,8 +712,9 @@
     
 <span >
 <hr>
-<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
 
@@ -608,8 +725,9 @@
     
 <span >
 <hr>
-<a name='join'>def <a href='../../global/lang/String.html'>String</a> <em>join</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/List.html'>List</a> list) (bound);</a>
-<br>
+<a name='join'></a>def <a href='../../global/lang/String.html'>String</a> <em>join</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/List.html'>List</a> list) (bound);
+<p>
+
 
 
 </span>
@@ -618,8 +736,9 @@
     
 <span >
 <hr>
-<a name='lpad'>def <a href='../../global/lang/String.html'>String</a> <em>lpad</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> count, <a href='../../global/lang/Char.html'>Char</a> char = ' ') (bound);</a>
-<br>
+<a name='lpad'></a>def <a href='../../global/lang/String.html'>String</a> <em>lpad</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> count, <a href='../../global/lang/Char.html'>Char</a> char = ' ') (bound);
+<p>
+
 
 <p>Pad the left side of this string with the specified character up to a minimum of the specified number of characters</p>
 
@@ -630,8 +749,9 @@
     
 <span >
 <hr>
-<a name='rpad'>def <a href='../../global/lang/String.html'>String</a> <em>rpad</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> count, <a href='../../global/lang/Char.html'>Char</a> char = ' ') (bound);</a>
-<br>
+<a name='rpad'></a>def <a href='../../global/lang/String.html'>String</a> <em>rpad</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> count, <a href='../../global/lang/Char.html'>Char</a> char = ' ') (bound);
+<p>
+
 
 <p>Pad the right side of this string with the specified character up to a minimum of the specified number of characters</p>
 
@@ -642,8 +762,9 @@
     
 <span >
 <hr>
-<a name='search__Char__'>def <a href='../../global/lang/Int.html'>Int</a> <em>search__Char__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> ch) (bound);</a>
-<br>
+<a name='search__Char__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>search__Char__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> ch) (bound);
+<p>
+<code>search__Char__</code> can also be called using any of the following aliases: <code>search</code>.
 
 <p>Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.</p>
 
@@ -654,8 +775,9 @@
     
 <span >
 <hr>
-<a name='split'>def <a href=''>MutableList«String»</a> <em>split</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/String.html'>String</a> charList, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);</a>
-<br>
+<a name='split'></a>def MutableList«String» <em>split</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/String.html'>String</a> charList, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);
+<p>
+
 
 <p>Split this string on every occurence of the specified characters and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>
 
@@ -666,8 +788,9 @@
     
 <span >
 <hr>
-<a name='splitChar'>def <a href=''>MutableList«String»</a> <em>splitChar</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> char, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);</a>
-<br>
+<a name='splitChar'></a>def MutableList«String» <em>splitChar</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> char, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);
+<p>
+<code>splitChar</code> can also be called using any of the following aliases: <code>split</code>.
 
 <p>Split this string on every occurence of the specified character and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>
 
@@ -678,8 +801,9 @@
     
 <span >
 <hr>
-<a name='splitList'>def <a href=''>MutableList«String»</a> <em>splitList</em> (<a href='../../global/lang/String.html'>String</a> this, <a href=''>List«Char»</a> charList, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);</a>
-<br>
+<a name='splitList'></a>def MutableList«String» <em>splitList</em> (<a href='../../global/lang/String.html'>String</a> this, List«Char» charList, <a href='../../global/lang/Object.html'>Object</a> allowEmpty = 1) (bound);
+<p>
+<code>splitList</code> can also be called using any of the following aliases: <code>split</code>.
 
 <p>Split this string on every occurence of the specified characters and return the resulting array of Strings. If allowEmpty is null, empty strings will be ignored.</p>
 
@@ -690,8 +814,9 @@
     
 <span >
 <hr>
-<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);</a>
-<br>
+<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/String.html'>String</a> this) (bound);
+<p>
+
 
 
 </span>

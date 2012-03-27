@@ -17,19 +17,16 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>json</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>json</em></a></h1>
 
-    <p>A simple JSON library. Only Anna => Json serialization has currently been written. Since Anna has no boolean type, true/false varluse currently aren't handled.</p>
-
-
-    
-    
-    
-
+    <p>A simple JSON library. Only Anna => Json serialization has currently been implemented.</p>
 
 
     
+    
 
+    
+    
 
 
 
@@ -38,16 +35,18 @@
 
 
 
+    
 
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li >
+        <li >
 	<a href="#to">to</a> 
-	 - Serialize the specified object into JSON
-      </li>
-
+	 - Serialize the specified object into JSON. Since Anna has no boolean type, true/false values currently aren't handled.
+	</li>
+	
+      
     </ul>
     
 
@@ -58,10 +57,18 @@
     
 <span >
 <hr>
-<a name='to'>def <a href='../global/lang/String.html'>String</a> <em>to</em> (<a href='../global/lang/Object.html'>Object</a> o) (static);</a>
-<br>
+<a name='to'></a>def <a href='../global/lang/String.html'>String</a> <em>to</em> (<a href='../global/lang/Object.html'>Object</a> o) (static);
+<p>
 
-<p>Serialize the specified object into JSON</p>
+
+<p>Serialize the specified object into JSON. Since Anna has no boolean type, true/false values currently aren't handled.</p>
+
+<p>Usage:</p>
+
+<p><pre class='anna-code'>
+json.to(["key": [1,2,?]}])
+// Result: "{"key": [1, 2, null]}"
+</pre></p>
 
 
 </span>

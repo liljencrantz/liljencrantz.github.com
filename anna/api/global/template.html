@@ -17,13 +17,15 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>template</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>template</em></a></h1>
 
     <p>A simple templating library</p>
 
 
     
     
+
+    
     
 
 
@@ -34,20 +36,20 @@
 
 
     
-
-
-
-
 
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li >
+        <li >
 	<a href="#template">template</a> 
+	 - A simple proof of concept HTML templating engine. Uses a templating
+system very similar to e.g, Ruby on Rails, but the template is
+compiled into the calling code, in order to provide the template with
+the properly typed parameters.
+	</li>
 	
-      </li>
-
+      
     </ul>
     
 
@@ -58,8 +60,70 @@
     
 <span >
 <hr>
-<a name='template'>def <a href='../global/parser/Node.html'>Node</a> <em>template</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);</a>
-<br>
+<a name='template'></a>def <a href='../global/parser/Node.html'>Node</a> <em>template</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);
+<p>
+
+
+<p>A simple proof of concept HTML templating engine. Uses a templating
+system very similar to e.g, Ruby on Rails, but the template is
+compiled into the calling code, in order to provide the template with
+the properly typed parameters.</p>
+
+<p>The template macro must be given exactly one input argument, namely the file name (as a String literal) of the template file.</p>
+
+<p>A simple usage example, consists of two files, the first one called myTemplate.html:</p>
+
+<p><pre>
+Greetings, &lt;%= userName %&gt;
+
+&lt;%
+hobbyList.each(hobby)
+{
+%&gt;
+You enjoy &lt;%= hobby %&gt;, don't you?
+&lt;%
+}
+%&gt;
+</pre></p>
+
+<p>The second file, called myTemplateExample.anna:</p>
+
+<p><pre class='anna-code'>
+expand(template);
+def main()
+{
+    userName := "Benjamin";
+    hobbyList := ["Cooking", "Meeting friends", "Long walks on the beach"];
+    print(template("myTemplate.html"));
+}
+</pre></p>
+
+<p>The output of running myTemplateExample.anna will be:</p>
+
+<p><pre>
+Greetings, Benjamin
+
+
+You enjoy Cooking, don't you?
+
+You enjoy Meeting friends, don't you?
+
+You enjoy Long walks on the beach, don't you?
+
+</pre></p>
+
+<p>Note that all variables that are visible where the template macro is called in myTemplateExample.anna are available in the template file, and the type of each variable is known.</p>
+
+<p>There are three types of tags in the template library:
+
+<ul>
+    <li>&lt;% code... %&gt;: The specified code will be executed.</li>
+    <li>&lt;%= code... %&gt;: The specified code will be executed and it's output will be html escaped and printed.</li>
+    <li>&lt;%! code... %&gt;: The specified code will be executed and it's output will be printed.</li>
+</ul>
+</p>
+
+<p>This template library is merely a proof of concept. The most important limitation is that it doesn't track the original source line of any generated code, which means that any code positions given in error messages are meaningless.</p>
 
 
 </span>

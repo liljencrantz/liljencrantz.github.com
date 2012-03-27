@@ -17,12 +17,16 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>List</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em class='anna-link-main'>List</em></a></h1>
 
     <p>The List type represents any list, either a mutable or imutable one. It is the intersection of the MutableList and the ImutableList.</p>
 
 
     
+    <h3><a name='module-child'>Types that can mask as this type</a></h3>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/ImutableList.html' class='anna-link-main'>ImutableList</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/MutableList.html' class='anna-link-main'>MutableList</a></span><h3><a name='module-child'>Types that this module can mask as</a></h3>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/ImutableList.html' class='anna-link-main'>ImutableList</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a></span>
+
     
     
 
@@ -104,171 +108,216 @@
     </ul>
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li class='anna-internal'>
+        <li class='anna-internal'>
 	<a href="#!__type__Getter">!__type__Getter</a> 
 	 - Getter function for the __type__ property.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!countGetter">!countGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!empty?Getter">!empty?Getter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!firstGetter">!firstGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!freezeGetter">!freezeGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!lastGetter">!lastGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#!thawGetter">!thawGetter</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__appendAssign__">__appendAssign__</a> 
 	 - Append the specified items to this collection.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__cmp__">__cmp__</a> 
 	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__each__">__each__</a> 
 	 - Execute the specified function once for each element.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__eq__">__eq__</a> 
 	 - Return non-null if this object is equal to the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__filter__">__filter__</a> 
 	 - Execute the specified function once for each element and return a new object of the same type, containing the elements for which the function returned non-null.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__find__">__find__</a> 
 	 - Exacute the specified function once for each element until the function returns a non-null value, then return the corresponding element. Returns null if no element matched.
-      </li>
-
-      <li >
-	<a href="#__gt__">__gt__</a> 
-	 - Returns non-null if this object is greater than the other object, null otherwise.
-      </li>
-
-      <li >
-	<a href="#__gte__">__gte__</a> 
-	 - Return non-null if this object is greater than or equal to the other object, null otherwise
-      </li>
-
-      <li >
-	<a href="#__in__">__in__</a> 
+	</li>
 	
-      </li>
-
-      <li >
-	<a href="#__init__">__init__</a> 
-	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
-      </li>
-
-      <li >
-	<a href="#__join__">__join__</a> 
+      
+	<li>
+	  __get__:
+	<ul>
 	
-      </li>
-
-      <li >
-	<a href="#__lt__">__lt__</a> 
-	 - Returns non-null if this object is smaller than the other object, null otherwise.
-      </li>
-
-      <li >
-	<a href="#__lte__">__lte__</a> 
-	 - Return non-null if this object is less than or equal to the other object, null otherwise
-      </li>
-
-      <li >
-	<a href="#__map__">__map__</a> 
-	 - Exacute the specified function once for each element and return a list containing the output of each function call.
-      </li>
-
-      <li >
-	<a href="#__neq__">__neq__</a> 
-	 - Return non-null if this object is not equal to the other object, null otherwise
-      </li>
-
-      <li >
-	<a href="#all?">all?</a> 
-	 - Returns true if all members of this list are non-Null.
-      </li>
-
-      <li >
-	<a href="#any?">any?</a> 
-	 - Returns true if any of the members of this list are non-Null.
-      </li>
-
-      <li >
+        <li >
 	<a href="#get">get</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+        <li >
 	<a href="#getRange">getRange</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+	</ul>
+	</li>
+	
+      
+        <li >
+	<a href="#__gt__">__gt__</a> 
+	 - Returns non-null if this object is greater than the other object, null otherwise.
+	</li>
+	
+      
+        <li >
+	<a href="#__gte__">__gte__</a> 
+	 - Return non-null if this object is greater than or equal to the other object, null otherwise
+	</li>
+	
+      
+        <li >
+	<a href="#__in__">__in__</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#__init__">__init__</a> 
+	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
+	</li>
+	
+      
+        <li >
+	<a href="#__join__">__join__</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#__lt__">__lt__</a> 
+	 - Returns non-null if this object is smaller than the other object, null otherwise.
+	</li>
+	
+      
+        <li >
+	<a href="#__lte__">__lte__</a> 
+	 - Return non-null if this object is less than or equal to the other object, null otherwise
+	</li>
+	
+      
+        <li >
+	<a href="#__map__">__map__</a> 
+	 - Exacute the specified function once for each element and return a list containing the output of each function call.
+	</li>
+	
+      
+        <li >
+	<a href="#__neq__">__neq__</a> 
+	 - Return non-null if this object is not equal to the other object, null otherwise
+	</li>
+	
+      
+        <li >
+	<a href="#all?">all?</a> 
+	 - Returns true if all members of this list are non-Null.
+	</li>
+	
+      
+        <li >
+	<a href="#any?">any?</a> 
+	 - Returns true if any of the members of this list are non-Null.
+	</li>
+	
+      
+        <li >
+	<a href="#get">get</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#getRange">getRange</a> 
+	
+	</li>
+	
+      
+        <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#indexOf">indexOf</a> 
 	 - Returns the index of the first location of the specified item in the list.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#none?">none?</a> 
 	 - Returns true if none of the members of this list are non-Null.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#sort">sort</a> 
 	 - 
 Sort the list. If the original list is mutable, it is sorted inplace, otherwise
 a new list is returned.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#toString">toString</a> 
 	 - Returns a string representation of this List.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -276,7 +325,7 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<a name='__type__'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
 
@@ -287,7 +336,7 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='count'>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;</a>
+<a name='count'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;
 <br>
 
 </span>
@@ -296,7 +345,7 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='empty?'>var <a href='../../global/lang/Int.html'>Int</a> <em>empty?</em>;</a>
+<a name='empty?'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>empty?</em>;
 <br>
 
 </span>
@@ -305,7 +354,7 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='first'>var <a href='../../global/lang/Object.html'>Object</a> <em>first</em>;</a>
+<a name='first'></a>var <a href='../../global/lang/Object.html'>Object</a> <em>first</em>;
 <br>
 
 </span>
@@ -314,7 +363,7 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='freeze'>var <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>freeze</em>;</a>
+<a name='freeze'></a>var <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>freeze</em>;
 <br>
 
 </span>
@@ -323,7 +372,7 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='last'>var <a href='../../global/lang/Object.html'>Object</a> <em>last</em>;</a>
+<a name='last'></a>var <a href='../../global/lang/Object.html'>Object</a> <em>last</em>;
 <br>
 
 </span>
@@ -332,7 +381,7 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='thaw'>var <a href='../../global/lang/MutableList.html'>MutableList</a> <em>thaw</em>;</a>
+<a name='thaw'></a>var <a href='../../global/lang/MutableList.html'>MutableList</a> <em>thaw</em>;
 <br>
 
 </span>
@@ -344,8 +393,9 @@ a new list is returned.
     
 <span class='anna-internal'>
 <hr>
-<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
-<br>
+<a name='!__type__Getter'></a>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the __type__ property.</p>
 
@@ -356,18 +406,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='!countGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!countGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);</a>
-<br>
+<a name='!countGetter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!countGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);
+<p>
 
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='!empty?Getter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!empty?Getter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);</a>
-<br>
 
 
 </span>
@@ -376,18 +417,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='!firstGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!firstGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);</a>
-<br>
+<a name='!empty?Getter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!empty?Getter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);
+<p>
 
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='!freezeGetter'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>!freezeGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);</a>
-<br>
 
 
 </span>
@@ -396,18 +428,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='!lastGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!lastGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);</a>
-<br>
+<a name='!firstGetter'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>!firstGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);
+<p>
 
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='!thawGetter'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>!thawGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);</a>
-<br>
 
 
 </span>
@@ -416,8 +439,42 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__appendAssign__'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__appendAssign__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/ImutableList.html'>ImutableList</a> value) (bound);</a>
-<br>
+<a name='!freezeGetter'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>!freezeGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='!lastGetter'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>!lastGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='!thawGetter'></a>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>!thawGetter</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this) (bound);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__appendAssign__'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__appendAssign__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/List.html'>List</a> value) (bound);
+<p>
+
 <p>This method is usually called as the ~= operator.</p>
 <p>Append the specified items to this collection.</p>
 
@@ -428,8 +485,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
 
@@ -440,8 +498,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__each__'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__each__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href=''>def Object (Int key, Object value)</a> block) (bound);</a>
-<br>
+<a name='__each__'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__each__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, def Object (Int key, Object value) block) (bound);
+<p>
+
 
 <p>Execute the specified function once for each element.</p>
 
@@ -452,8 +511,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__eq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is equal to the other object, null otherwise.</p>
 
@@ -464,8 +524,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__filter__'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__filter__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href=''>def Object (Int key, Object value)</a> block) (bound);</a>
-<br>
+<a name='__filter__'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__filter__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, def Object (Int key, Object value) block) (bound);
+<p>
+
 
 <p>Execute the specified function once for each element and return a new object of the same type, containing the elements for which the function returned non-null.</p>
 
@@ -476,8 +537,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__find__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__find__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href=''>def Object (Int key, Object value)</a> block) (bound);</a>
-<br>
+<a name='__find__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__find__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, def Object (Int key, Object value) block) (bound);
+<p>
+
 
 <p>Exacute the specified function once for each element until the function returns a non-null value, then return the corresponding element. Returns null if no element matched.</p>
 
@@ -488,8 +550,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is greater than the other object, null otherwise.</p>
 
@@ -500,8 +563,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
 
@@ -512,8 +576,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__in__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__in__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Object.html'>Object</a> value) (bound);</a>
-<br>
+<a name='__in__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__in__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Object.html'>Object</a> value) (bound);
+<p>
+
 <p>This method is usually called as the in operator.</p>
 
 </span>
@@ -522,8 +587,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__init__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='__init__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.</p>
 
@@ -534,8 +600,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__join__'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__join__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/List.html'>List</a> other) (bound);</a>
-<br>
+<a name='__join__'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__join__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/List.html'>List</a> other) (bound);
+<p>
+
 <p>This method is usually called as the ~ operator.</p>
 
 </span>
@@ -544,8 +611,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
 
@@ -556,8 +624,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
 
@@ -568,8 +637,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__map__'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__map__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href=''>def Object (Int key, Object value)</a> block) (bound);</a>
-<br>
+<a name='__map__'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>__map__</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, def Object (Int key, Object value) block) (bound);
+<p>
+
 
 <p>Exacute the specified function once for each element and return a list containing the output of each function call.</p>
 
@@ -580,8 +650,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__neq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
@@ -592,8 +663,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='all?'>def <a href='../../global/lang/Object.html'>Object</a> <em>all?</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);</a>
-<br>
+<a name='all?'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>all?</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);
+<p>
+
 
 <p>Returns true if all members of this list are non-Null.</p>
 
@@ -604,8 +676,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='any?'>def <a href='../../global/lang/Int.html'>Int</a> <em>any?</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);</a>
-<br>
+<a name='any?'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>any?</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);
+<p>
+
 
 <p>Returns true if any of the members of this list are non-Null.</p>
 
@@ -616,8 +689,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='get'>def <a href='../../global/lang/Object.html'>Object</a> <em>get</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);</a>
-<br>
+<a name='get'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>get</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Int.html'>Int</a> index) (bound);
+<p>
+<code>get</code> can also be called using any of the following aliases: <code>__get__</code>.
 <p>This method is usually called as the [] operator.</p>
 
 </span>
@@ -626,8 +700,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='getRange'>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>getRange</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);</a>
-<br>
+<a name='getRange'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>getRange</em> (<a href='../../global/lang/ImutableList.html'>ImutableList</a> this, <a href='../../global/lang/Range.html'>Range</a> range) (bound);
+<p>
+<code>getRange</code> can also be called using any of the following aliases: <code>__get__</code>.
 <p>This method is usually called as the [] operator.</p>
 
 </span>
@@ -636,8 +711,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
 
@@ -648,8 +724,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='indexOf'>def <a href='../../global/lang/Int.html'>Int</a> <em>indexOf</em> (<a href='../../global/lang/List.html'>List</a> this, <a href='../../global/lang/Object.html'>Object</a> value) (bound);</a>
-<br>
+<a name='indexOf'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>indexOf</em> (<a href='../../global/lang/List.html'>List</a> this, <a href='../../global/lang/Object.html'>Object</a> value) (bound);
+<p>
+
 
 <p>Returns the index of the first location of the specified item in the list.</p>
 
@@ -660,8 +737,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='none?'>def <a href='../../global/lang/Object.html'>Object</a> <em>none?</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);</a>
-<br>
+<a name='none?'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>none?</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);
+<p>
+
 
 <p>Returns true if none of the members of this list are non-Null.</p>
 
@@ -672,8 +750,9 @@ a new list is returned.
     
 <span >
 <hr>
-<a name='sort'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>sort</em> (<a href='../../global/lang/List.html'>List</a> this, <a href=''>def Int (Object first, Object second)</a> fun = ?) (bound);</a>
-<br>
+<a name='sort'></a>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>sort</em> (<a href='../../global/lang/List.html'>List</a> this, def Int (Object first, Object second) fun = ?) (bound);
+<p>
+
 
 <p>
 Sort the list. If the original list is mutable, it is sorted inplace, otherwise
@@ -694,8 +773,9 @@ objects.</p>
     
 <span >
 <hr>
-<a name='toString'>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>toString</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);</a>
-<br>
+<a name='toString'></a>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>toString</em> (<a href='../../global/lang/List.html'>List</a> this) (bound);
+<p>
+
 
 <p>Returns a string representation of this List.</p>
 

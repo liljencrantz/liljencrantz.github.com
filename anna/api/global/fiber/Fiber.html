@@ -17,12 +17,15 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/fiber.html'>fiber</a>.<em>Fiber</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/fiber.html'>fiber</a>.<em class='anna-link-main'>Fiber</em></a></h1>
 
     <p>A simple cooperative thread implementation</p>
 
 
     
+    <h3><a name='module-child'>Types that this module can mask as</a></h3>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a></span>
+
     
     
 
@@ -55,89 +58,100 @@
 
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li class='anna-internal'>
+        <li class='anna-internal'>
 	<a href="#!__type__Getter">!__type__Getter</a> 
 	 - Getter function for the __type__ property.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__cmp__">__cmp__</a> 
 	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__eq__">__eq__</a> 
 	 - Return non-null if this object is equal to the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gt__">__gt__</a> 
 	 - Returns non-null if this object is greater than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gte__">__gte__</a> 
 	 - Return non-null if this object is greater than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__init__">__init__</a> 
 	 - Create a new Fiber
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lt__">__lt__</a> 
 	 - Returns non-null if this object is smaller than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lte__">__lte__</a> 
 	 - Return non-null if this object is less than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__neq__">__neq__</a> 
 	 - Return non-null if this object is not equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#disable">disable</a> 
 	 - Make it no longer possible to run the specified fiber.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#enable">enable</a> 
 	 - Call Fiber.enable in order to make this Fiber runnable. This is done autmoatically at Fiber creation.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#run">run</a> 
 	 - Subclasses of Fiber should reimplement this method
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#toString">toString</a> 
 	 - String conversion. Called by the String::convert method.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#yield">yield</a> 
 	 - Yield the currently running Fiber and pick a new fiber to run.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -145,7 +159,7 @@
     
 <span >
 <hr>
-<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<a name='__type__'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
 
@@ -156,7 +170,7 @@
     
 <span >
 <hr>
-<a name='continuation'>var <a href='../../global/reflection/Continuation.html'>Continuation</a> <em>continuation</em>;</a>
+<a name='continuation'></a>var <a href='../../global/reflection/Continuation.html'>Continuation</a> <em>continuation</em>;
 <br>
 <p>The continuation to call to continue executing this fiber.</p>
 
@@ -167,7 +181,7 @@
     
 <span >
 <hr>
-<a name='idx'>var <a href='../../global/lang/Int.html'>Int</a> <em>idx</em>;</a>
+<a name='idx'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>idx</em>;
 <br>
 <p>The integer index of this Fiber in the global fibers list</p>
 
@@ -181,8 +195,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
-<br>
+<a name='!__type__Getter'></a>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the __type__ property.</p>
 
@@ -193,8 +208,9 @@
     
 <span >
 <hr>
-<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
 
@@ -205,8 +221,9 @@
     
 <span >
 <hr>
-<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__eq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is equal to the other object, null otherwise.</p>
 
@@ -217,8 +234,9 @@
     
 <span >
 <hr>
-<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is greater than the other object, null otherwise.</p>
 
@@ -229,8 +247,9 @@
     
 <span >
 <hr>
-<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
 
@@ -241,8 +260,9 @@
     
 <span >
 <hr>
-<a name='__init__'>def <a href='../../global/fiber/Fiber.html'>Fiber</a> <em>__init__</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);</a>
-<br>
+<a name='__init__'></a>def <a href='../../global/fiber/Fiber.html'>Fiber</a> <em>__init__</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);
+<p>
+
 
 <p>Create a new Fiber</p>
 
@@ -253,8 +273,9 @@
     
 <span >
 <hr>
-<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
 
@@ -265,8 +286,9 @@
     
 <span >
 <hr>
-<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
 
@@ -277,8 +299,9 @@
     
 <span >
 <hr>
-<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__neq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
@@ -289,8 +312,9 @@
     
 <span >
 <hr>
-<a name='disable'>def <a href='../../global/lang/Null.html'>Null</a> <em>disable</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);</a>
-<br>
+<a name='disable'></a>def <a href='../../global/lang/Null.html'>Null</a> <em>disable</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);
+<p>
+
 
 <p>Make it no longer possible to run the specified fiber.</p>
 
@@ -301,8 +325,9 @@
     
 <span >
 <hr>
-<a name='enable'>def <a href='../../global/lang/Object.html'>Object</a> <em>enable</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);</a>
-<br>
+<a name='enable'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>enable</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);
+<p>
+
 
 <p>Call Fiber.enable in order to make this Fiber runnable. This is done autmoatically at Fiber creation.</p>
 
@@ -313,8 +338,9 @@
     
 <span >
 <hr>
-<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
 
@@ -325,8 +351,9 @@
     
 <span >
 <hr>
-<a name='run'>def <a href='../../global/fiber/Fiber.html'>Fiber</a> <em>run</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);</a>
-<br>
+<a name='run'></a>def <a href='../../global/fiber/Fiber.html'>Fiber</a> <em>run</em> (<a href='../../global/fiber/Fiber.html'>Fiber</a> this) (bound);
+<p>
+
 
 <p>Subclasses of Fiber should reimplement this method</p>
 
@@ -337,8 +364,9 @@
     
 <span >
 <hr>
-<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>String conversion. Called by the String::convert method.</p>
 
@@ -349,8 +377,9 @@
     
 <span >
 <hr>
-<a name='yield'>def <a href='../../global/lang/Object.html'>Object</a> <em>yield</em> () (static);</a>
-<br>
+<a name='yield'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>yield</em> () (static);
+<p>
+
 
 <p>Yield the currently running Fiber and pick a new fiber to run.</p>
 

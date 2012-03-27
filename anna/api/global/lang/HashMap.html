@@ -17,7 +17,7 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em>HashMap</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<em class='anna-link-main'>HashMap</em></a></h1>
 
     <p>A HashMap represents a set of mappings from keys to values.</p>
 
@@ -27,6 +27,9 @@
 
 
     
+    <h3><a name='module-child'>Types that this module can mask as</a></h3>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a></span>
+
     
     
 
@@ -49,6 +52,16 @@
       <li >
 	<a href="#default">default</a> 
 	 - The default value returned by this map if the specified key does not exist.</li>
+      </li>
+
+      <li >
+	<a href="#keys">keys</a> 
+	 - Returns a list containing all the keys of this HashMap.</li>
+      </li>
+
+      <li >
+	<a href="#values">values</a> 
+	 - Returns a list containing all the values of this HashMap.</li>
       </li>
 
     </ul>
@@ -82,119 +95,154 @@
     </ul>
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li class='anna-internal'>
+        <li class='anna-internal'>
 	<a href="#!__type__Getter">!__type__Getter</a> 
 	 - Getter function for the __type__ property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!countGetter">!countGetter</a> 
 	 - Getter function for the count property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!defaultGetter">!defaultGetter</a> 
 	 - Getter function for the default property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!defaultSetter">!defaultSetter</a> 
 	 - Setter function for the default property.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li class='anna-internal'>
+	<a href="#!keysGetter">!keysGetter</a> 
+	 - Getter function for the keys property.
+	</li>
+	
+      
+        <li class='anna-internal'>
+	<a href="#!valuesGetter">!valuesGetter</a> 
+	 - Getter function for the values property.
+	</li>
+	
+      
+        <li >
 	<a href="#__cmp__">__cmp__</a> 
 	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__each__">__each__</a> 
 	 - Execute the specified function once for each element.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__eq__">__eq__</a> 
 	 - Return non-null if this object is equal to the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__get__">__get__</a> 
 	 - Returns the value associated with the specified key.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gt__">__gt__</a> 
 	 - Returns non-null if this object is greater than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gte__">__gte__</a> 
 	 - Return non-null if this object is greater than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__in__">__in__</a> 
 	 - Returns true if the specified key exists in the Hash
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__init__">__init__</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lt__">__lt__</a> 
 	 - Returns non-null if this object is smaller than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lte__">__lte__</a> 
 	 - Return non-null if this object is less than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__map__">__map__</a> 
 	 - Exacute the specified function once for each element and return a list containing the output of each function call.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__neq__">__neq__</a> 
 	 - Return non-null if this object is not equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__setAll__">__setAll__</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__set__">__set__</a> 
 	 - Assigns the specified value to the specified key.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
+	<a href="#clear">clear</a> 
+	 - Clear the HashMap, removing all mappings from it. The result is an empty HashMap.
+	</li>
+	
+      
+        <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#remove">remove</a> 
 	 - Remove the mapping with the specified key from the map
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#toString">toString</a> 
 	 - Returns a String representation of this HashMap.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -202,7 +250,7 @@
     
 <span >
 <hr>
-<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<a name='__type__'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
 
@@ -213,7 +261,7 @@
     
 <span >
 <hr>
-<a name='count'>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;</a>
+<a name='count'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>count</em>;
 <br>
 <p>The number of elements in this Map.</p>
 
@@ -224,9 +272,31 @@
     
 <span >
 <hr>
-<a name='default'>var <a href='../../global/lang/Object.html'>Object</a> <em>default</em>;</a>
+<a name='default'></a>var <a href='../../global/lang/Object.html'>Object</a> <em>default</em>;
 <br>
 <p>The default value returned by this map if the specified key does not exist.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='keys'></a>var <a href='../../global/lang/MutableList.html'>MutableList</a> <em>keys</em>;
+<br>
+<p>Returns a list containing all the keys of this HashMap.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='values'></a>var <a href='../../global/lang/MutableList.html'>MutableList</a> <em>values</em>;
+<br>
+<p>Returns a list containing all the values of this HashMap.</p>
 
 
 </span>
@@ -238,8 +308,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
-<br>
+<a name='!__type__Getter'></a>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the __type__ property.</p>
 
@@ -250,8 +321,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!countGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!countGetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (internal, bound);</a>
-<br>
+<a name='!countGetter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!countGetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the count property.</p>
 
@@ -262,8 +334,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!defaultGetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!defaultGetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (internal, bound);</a>
-<br>
+<a name='!defaultGetter'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>!defaultGetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the default property.</p>
 
@@ -274,8 +347,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!defaultSetter'>def <a href='../../global/lang/Object.html'>Object</a> <em>!defaultSetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> value) (internal, bound);</a>
-<br>
+<a name='!defaultSetter'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>!defaultSetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> value) (internal, bound);
+<p>
+
 
 <p>Setter function for the default property.</p>
 
@@ -284,10 +358,37 @@
 
         
     
+<span class='anna-internal'>
+<hr>
+<a name='!keysGetter'></a>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>!keysGetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (internal, bound);
+<p>
+
+
+<p>Getter function for the keys property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!valuesGetter'></a>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>!valuesGetter</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (internal, bound);
+<p>
+
+
+<p>Getter function for the values property.</p>
+
+
+</span>
+
+        
+    
 <span >
 <hr>
-<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
 
@@ -298,8 +399,9 @@
     
 <span >
 <hr>
-<a name='__each__'>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__each__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href=''>def Object (Object key, Object value)</a> block) (bound);</a>
-<br>
+<a name='__each__'></a>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__each__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, def Object (Object key, Object value) block) (bound);
+<p>
+
 
 <p>Execute the specified function once for each element.</p>
 
@@ -310,8 +412,9 @@
     
 <span >
 <hr>
-<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__eq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is equal to the other object, null otherwise.</p>
 
@@ -322,8 +425,9 @@
     
 <span >
 <hr>
-<a name='__get__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__get__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key) (bound);</a>
-<br>
+<a name='__get__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__get__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key) (bound);
+<p>
+
 <p>This method is usually called as the [] operator.</p>
 <p>Returns the value associated with the specified key.</p>
 
@@ -334,8 +438,9 @@
     
 <span >
 <hr>
-<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is greater than the other object, null otherwise.</p>
 
@@ -346,8 +451,9 @@
     
 <span >
 <hr>
-<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
 
@@ -358,8 +464,9 @@
     
 <span >
 <hr>
-<a name='__in__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__in__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key) (bound);</a>
-<br>
+<a name='__in__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__in__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key) (bound);
+<p>
+
 <p>This method is usually called as the in operator.</p>
 <p>Returns true if the specified key exists in the Hash</p>
 
@@ -370,8 +477,9 @@
     
 <span >
 <hr>
-<a name='__init__'>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__init__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Pair.html'>Pair</a> value...) (bound);</a>
-<br>
+<a name='__init__'></a>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__init__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Pair.html'>Pair</a> value...) (bound);
+<p>
+
 
 
 </span>
@@ -380,8 +488,9 @@
     
 <span >
 <hr>
-<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
 
@@ -392,8 +501,9 @@
     
 <span >
 <hr>
-<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
 
@@ -404,8 +514,9 @@
     
 <span >
 <hr>
-<a name='__map__'>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href=''>def Object (Object key, Object value)</a> block) (bound);</a>
-<br>
+<a name='__map__'></a>def <a href='../../global/lang/MutableList.html'>MutableList</a> <em>__map__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, def Object (Object key, Object value) block) (bound);
+<p>
+
 
 <p>Exacute the specified function once for each element and return a list containing the output of each function call.</p>
 
@@ -416,8 +527,9 @@
     
 <span >
 <hr>
-<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__neq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
@@ -428,8 +540,9 @@
     
 <span >
 <hr>
-<a name='__setAll__'>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__setAll__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Pair.html'>Pair</a> value...) (bound);</a>
-<br>
+<a name='__setAll__'></a>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>__setAll__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Pair.html'>Pair</a> value...) (bound);
+<p>
+
 
 
 </span>
@@ -438,8 +551,9 @@
     
 <span >
 <hr>
-<a name='__set__'>def <a href='../../global/lang/Object.html'>Object</a> <em>__set__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key, <a href='../../global/lang/Object.html'>Object</a> value) (bound);</a>
-<br>
+<a name='__set__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__set__</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key, <a href='../../global/lang/Object.html'>Object</a> value) (bound);
+<p>
+
 <p>This method is usually called as the [] operator.</p>
 <p>Assigns the specified value to the specified key.</p>
 
@@ -450,8 +564,22 @@
     
 <span >
 <hr>
-<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='clear'></a>def <a href='../../global/lang/HashMap.html'>HashMap</a> <em>clear</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (bound);
+<p>
+
+
+<p>Clear the HashMap, removing all mappings from it. The result is an empty HashMap.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
 
@@ -462,8 +590,9 @@
     
 <span >
 <hr>
-<a name='remove'>def <a href='../../global/lang/Object.html'>Object</a> <em>remove</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key) (bound);</a>
-<br>
+<a name='remove'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>remove</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this, <a href='../../global/lang/Object.html'>Object</a> key) (bound);
+<p>
+
 
 <p>Remove the mapping with the specified key from the map</p>
 
@@ -474,8 +603,9 @@
     
 <span >
 <hr>
-<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (bound);</a>
-<br>
+<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/HashMap.html'>HashMap</a> this) (bound);
+<p>
+
 
 <p>Returns a String representation of this HashMap.</p>
 

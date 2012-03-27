@@ -17,7 +17,7 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>replTool</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>replTool</em></a></h1>
 
     <p>
 Helper commands for the anna repl (interactive prompt) implementation.
@@ -27,6 +27,8 @@ there is very rarely any reason to use it manually.</p>
 
     
     
+
+    
     
 
 
@@ -37,30 +39,29 @@ there is very rarely any reason to use it manually.</p>
 
 
     
-
-
-
-
 
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li >
+        <li >
 	<a href="#dir">dir</a> 
 	 - This is an additional help function for the interactive Anna command line. If takes any object as a parameter and lists all members of that type ina a format suitable for the screen. This is just a very thin wrapper around the member property of the Type type.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#formatList">formatList</a> 
 	 - Internal helper method for dir and help, used to line break a list of strings.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#help">help</a> 
 	 - This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible about that object to the user.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -71,8 +72,9 @@ there is very rarely any reason to use it manually.</p>
     
 <span >
 <hr>
-<a name='dir'>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>dir</em> (<a href='../global/lang/Object.html'>Object</a> object) (static);</a>
-<br>
+<a name='dir'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>dir</em> (<a href='../global/lang/Object.html'>Object</a> object) (static);
+<p>
+
 
 <p>This is an additional help function for the interactive Anna command line. If takes any object as a parameter and lists all members of that type ina a format suitable for the screen. This is just a very thin wrapper around the member property of the Type type.</p>
 
@@ -83,8 +85,9 @@ there is very rarely any reason to use it manually.</p>
     
 <span >
 <hr>
-<a name='formatList'>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>formatList</em> (<a href='../global/lang/List.html'>List</a> wordList) (static);</a>
-<br>
+<a name='formatList'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>formatList</em> (<a href='../global/lang/List.html'>List</a> wordList) (static);
+<p>
+
 
 <p>Internal helper method for dir and help, used to line break a list of strings.</p>
 
@@ -95,8 +98,9 @@ there is very rarely any reason to use it manually.</p>
     
 <span >
 <hr>
-<a name='help'>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>help</em> (<a href='../global/lang/Object.html'>Object</a> object) (static);</a>
-<br>
+<a name='help'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>help</em> (<a href='../global/lang/Object.html'>Object</a> object) (static);
+<p>
+
 
 <p>This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible about that object to the user.</p>
 

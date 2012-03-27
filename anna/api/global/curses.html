@@ -17,7 +17,7 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em>curses</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>curses</em></a></h1>
 
     <p>Low level library for dealing with terminal input and output.</p>
 
@@ -25,6 +25,8 @@
 
 
     
+    
+
     
     <h2><a name="api-submodules">Submodules</a></h2>
     <ul>
@@ -50,34 +52,52 @@
 
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li >
+        <li >
 	<a href="#setterm">setterm</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#setupterm">setupterm</a> 
 	 - Set up the terminfo database for output on the specified file descriptor, configure the database for the terminal type named by the term variable (if term is null, the TERM environment variable is inspected).
-      </li>
-
-      <li >
+	</li>
+	
+      
+	<li>
+	  tparm:
+	<ul>
+	
+        <li >
 	<a href="#tparmInt">tparmInt</a> 
 	 - Parametrize the specified string with the specified argument
-      </li>
-
-      <li >
+	</li>
+	
+        <li >
 	<a href="#tparmString">tparmString</a> 
 	 - Parametrize the specified string with the specified argument
-      </li>
-
+	</li>
+	
+	</ul>
+	</li>
+	
+      
+        <li >
+	<a href="#tparmInt">tparmInt</a> 
+	 - Parametrize the specified string with the specified argument
+	</li>
+	
+      
+        <li >
+	<a href="#tparmString">tparmString</a> 
+	 - Parametrize the specified string with the specified argument
+	</li>
+	
+      
     </ul>
     
 
@@ -88,8 +108,9 @@
     
 <span >
 <hr>
-<a name='setterm'>def <a href='../global/lang/Int.html'>Int</a> <em>setterm</em> (<a href='../global/lang/String.html'>String</a> term) (static);</a>
-<br>
+<a name='setterm'></a>def <a href='../global/lang/Int.html'>Int</a> <em>setterm</em> (<a href='../global/lang/String.html'>String</a> term) (static);
+<p>
+
 
 
 </span>
@@ -98,8 +119,9 @@
     
 <span >
 <hr>
-<a name='setupterm'>def <a href='../global/lang/Int.html'>Int</a> <em>setupterm</em> (<a href='../global/lang/String.html'>String</a> term, <a href='../global/lang/Int.html'>Int</a> fd, <a href=''>MutableList«Int»</a> error) (static);</a>
-<br>
+<a name='setupterm'></a>def <a href='../global/lang/Int.html'>Int</a> <em>setupterm</em> (<a href='../global/lang/String.html'>String</a> term, <a href='../global/lang/Int.html'>Int</a> fd, MutableList«Int» error) (static);
+<p>
+
 
 <p>Set up the terminfo database for output on the specified file descriptor, configure the database for the terminal type named by the term variable (if term is null, the TERM environment variable is inspected).</p>
 
@@ -110,8 +132,9 @@
     
 <span >
 <hr>
-<a name='tparmInt'>def <a href='../global/lang/String.html'>String</a> <em>tparmInt</em> (<a href='../global/lang/String.html'>String</a> string, <a href='../global/lang/Int.html'>Int</a> param) (static);</a>
-<br>
+<a name='tparmInt'></a>def <a href='../global/lang/String.html'>String</a> <em>tparmInt</em> (<a href='../global/lang/String.html'>String</a> string, <a href='../global/lang/Int.html'>Int</a> param) (static);
+<p>
+<code>tparmInt</code> can also be called using any of the following aliases: <code>tparm</code>.
 
 <p>Parametrize the specified string with the specified argument</p>
 
@@ -122,8 +145,9 @@
     
 <span >
 <hr>
-<a name='tparmString'>def <a href='../global/lang/String.html'>String</a> <em>tparmString</em> (<a href='../global/lang/String.html'>String</a> string, <a href='../global/lang/String.html'>String</a> param) (static);</a>
-<br>
+<a name='tparmString'></a>def <a href='../global/lang/String.html'>String</a> <em>tparmString</em> (<a href='../global/lang/String.html'>String</a> string, <a href='../global/lang/String.html'>String</a> param) (static);
+<p>
+<code>tparmString</code> can also be called using any of the following aliases: <code>tparm</code>.
 
 <p>Parametrize the specified string with the specified argument</p>
 

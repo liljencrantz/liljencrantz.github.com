@@ -17,12 +17,14 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/unix.html'>unix</a>.<em>error</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../../global.html'>global</a>.<a href='../../global/unix.html'>unix</a>.<em class='anna-link-main'>error</em></a></h1>
 
     <p>The unix.error module contains low level wrappers around C functions that revolve around error handling.</p>
 
 
     
+    
+
     
     <h2><a name="api-submodules">Submodules</a></h2>
     <ul>
@@ -54,29 +56,28 @@
 
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li class='anna-internal'>
+        <li class='anna-internal'>
 	<a href="#!errnoGetter">!errnoGetter</a> 
 	 - Getter function for the errno property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!errnoSetter">!errnoSetter</a> 
 	 - Setter function for the errno property.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#errorString">errorString</a> 
 	 - Returns a string that describes the error code passed in the argument. Equivalent to the C strerror function.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -84,7 +85,7 @@
     
 <span >
 <hr>
-<a name='errno'>var <a href='../../global/lang/Int.html'>Int</a> <em>errno</em>;</a>
+<a name='errno'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>errno</em>;
 <br>
 <p>The latest C library error to occur</p>
 
@@ -98,8 +99,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!errnoGetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!errnoGetter</em> (<a href='../../global/unix/error.html'>error</a> this) (internal, bound);</a>
-<br>
+<a name='!errnoGetter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!errnoGetter</em> (<a href='../../global/unix/error.html'>error</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the errno property.</p>
 
@@ -110,8 +112,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!errnoSetter'>def <a href='../../global/lang/Int.html'>Int</a> <em>!errnoSetter</em> (<a href='../../global/unix/error.html'>error</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
-<br>
+<a name='!errnoSetter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!errnoSetter</em> (<a href='../../global/unix/error.html'>error</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (internal, bound);
+<p>
+
 
 <p>Setter function for the errno property.</p>
 
@@ -122,8 +125,9 @@
     
 <span >
 <hr>
-<a name='errorString'>def <a href='../../global/lang/String.html'>String</a> <em>errorString</em> (<a href='../../global/lang/Int.html'>Int</a> error) (static);</a>
-<br>
+<a name='errorString'></a>def <a href='../../global/lang/String.html'>String</a> <em>errorString</em> (<a href='../../global/lang/Int.html'>Int</a> error) (static);
+<p>
+
 
 <p>Returns a string that describes the error code passed in the argument. Equivalent to the C strerror function.</p>
 

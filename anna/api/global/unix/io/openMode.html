@@ -17,12 +17,14 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/io.html'>io</a>.<em>openMode</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/io.html'>io</a>.<em class='anna-link-main'>openMode</em></a></h1>
 
     <p>Flags determining the mode for unix.io.open</p>
 
 
     
+    
+
     
     
 
@@ -125,17 +127,13 @@
 
     
 
-
-
-
-
     
 
         
     
 <span >
 <hr>
-<a name='append'>var <a href='../../../global/lang/Int.html'>Int</a> <em>append</em> (static);</a>
+<a name='append'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>append</em> (static);
 <br>
 <p>The file is opened in append mode.</p>
 
@@ -146,7 +144,7 @@
     
 <span >
 <hr>
-<a name='async'>var <a href='../../../global/lang/Int.html'>Int</a> <em>async</em> (static);</a>
+<a name='async'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>async</em> (static);
 <br>
 <p>Enable signal-driven I/O.</p>
 
@@ -157,7 +155,7 @@
     
 <span >
 <hr>
-<a name='closeOnExec'>var <a href='../../../global/lang/Int.html'>Int</a> <em>closeOnExec</em> (static);</a>
+<a name='closeOnExec'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>closeOnExec</em> (static);
 <br>
 <p>Enable the close-on-exec flag for the new file descriptor.</p>
 
@@ -168,7 +166,7 @@
     
 <span >
 <hr>
-<a name='create'>var <a href='../../../global/lang/Int.html'>Int</a> <em>create</em> (static);</a>
+<a name='create'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>create</em> (static);
 <br>
 <p>If the file does not exist it will be created.</p>
 
@@ -179,7 +177,7 @@
     
 <span >
 <hr>
-<a name='direct'>var <a href='../../../global/lang/Int.html'>Int</a> <em>direct</em> (static);</a>
+<a name='direct'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>direct</em> (static);
 <br>
 <p>Try to minimize cache effects of the I/O to and from this file.</p>
 
@@ -190,7 +188,7 @@
     
 <span >
 <hr>
-<a name='directory'>var <a href='../../../global/lang/Int.html'>Int</a> <em>directory</em> (static);</a>
+<a name='directory'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>directory</em> (static);
 <br>
 <p>If pathname is not a directory, cause the open to fail.</p>
 
@@ -201,7 +199,7 @@
     
 <span >
 <hr>
-<a name='exclusive'>var <a href='../../../global/lang/Int.html'>Int</a> <em>exclusive</em> (static);</a>
+<a name='exclusive'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>exclusive</em> (static);
 <br>
 <p>Ensure that this call creates the file: if this flag is specified in conjunction with O_CREAT, and pathname already exists, then open() will fail.</p>
 
@@ -212,7 +210,7 @@
     
 <span >
 <hr>
-<a name='largeFile'>var <a href='../../../global/lang/Int.html'>Int</a> <em>largeFile</em> (static);</a>
+<a name='largeFile'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>largeFile</em> (static);
 <br>
 <p>(LFS) Allow files whose sizes cannot be represented in an off_t (but can be represented in an off64_t) to be opened.</p>
 
@@ -223,7 +221,7 @@
     
 <span >
 <hr>
-<a name='noAccessTime'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noAccessTime</em> (static);</a>
+<a name='noAccessTime'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>noAccessTime</em> (static);
 <br>
 <p>Do not update the file last access time (st_atime in the inode) when the file is read().</p>
 
@@ -234,7 +232,7 @@
     
 <span >
 <hr>
-<a name='noControllingTTY'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noControllingTTY</em> (static);</a>
+<a name='noControllingTTY'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>noControllingTTY</em> (static);
 <br>
 <p>If pathname refers to a terminal device - it will not become the process's controlling terminal even if the process does not have one.</p>
 
@@ -245,7 +243,7 @@
     
 <span >
 <hr>
-<a name='noFollow'>var <a href='../../../global/lang/Int.html'>Int</a> <em>noFollow</em> (static);</a>
+<a name='noFollow'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>noFollow</em> (static);
 <br>
 <p>If pathname is a symbolic link, then the open fails.</p>
 
@@ -256,7 +254,7 @@
     
 <span >
 <hr>
-<a name='nonBlock'>var <a href='../../../global/lang/Int.html'>Int</a> <em>nonBlock</em> (static);</a>
+<a name='nonBlock'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>nonBlock</em> (static);
 <br>
 <p>When possible, the file is opened in nonblocking mode.</p>
 
@@ -267,7 +265,7 @@
     
 <span >
 <hr>
-<a name='readOnly'>var <a href='../../../global/lang/Int.html'>Int</a> <em>readOnly</em> (static);</a>
+<a name='readOnly'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>readOnly</em> (static);
 <br>
 <p>Open file in read-only mode.</p>
 
@@ -278,7 +276,7 @@
     
 <span >
 <hr>
-<a name='readWrite'>var <a href='../../../global/lang/Int.html'>Int</a> <em>readWrite</em> (static);</a>
+<a name='readWrite'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>readWrite</em> (static);
 <br>
 <p>Open file in read-write mode.</p>
 
@@ -289,7 +287,7 @@
     
 <span >
 <hr>
-<a name='synchronous'>var <a href='../../../global/lang/Int.html'>Int</a> <em>synchronous</em> (static);</a>
+<a name='synchronous'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>synchronous</em> (static);
 <br>
 <p>The file is opened for synchronous I/O.</p>
 
@@ -300,7 +298,7 @@
     
 <span >
 <hr>
-<a name='truncate'>var <a href='../../../global/lang/Int.html'>Int</a> <em>truncate</em> (static);</a>
+<a name='truncate'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>truncate</em> (static);
 <br>
 <p>f the file already exists and is a regular file and the open mode allows writing (i.e., is writeOnly or readWrite) it will be truncated to length 0.</p>
 
@@ -311,7 +309,7 @@
     
 <span >
 <hr>
-<a name='writeOnly'>var <a href='../../../global/lang/Int.html'>Int</a> <em>writeOnly</em> (static);</a>
+<a name='writeOnly'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>writeOnly</em> (static);
 <br>
 <p>Open file in write-only mode.</p>
 

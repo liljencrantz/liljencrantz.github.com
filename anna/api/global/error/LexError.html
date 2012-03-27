@@ -17,12 +17,15 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/error.html'>error</a>.<em>LexError</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/error.html'>error</a>.<em class='anna-link-main'>LexError</em></a></h1>
 
     <p>A class reresenting an error in the lexer, i.e.  in the compiler phase that deals with turning the input stream into a series of tokens.</p>
 
 
     
+    <h3><a name='module-child'>Types that this module can mask as</a></h3>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/error.html'>error</a>.<a href='../../global/error/CompilationError.html' class='anna-link-main'>CompilationError</a>, <a href='../../global.html'>global</a>.<a href='../../global/error.html'>error</a>.<a href='../../global/error/Error.html' class='anna-link-main'>Error</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a></span>
+
     
     
 
@@ -65,69 +68,76 @@
 
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li class='anna-internal'>
+        <li class='anna-internal'>
 	<a href="#!__type__Getter">!__type__Getter</a> 
 	 - Getter function for the __type__ property.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__cmp__">__cmp__</a> 
 	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__eq__">__eq__</a> 
 	 - Return non-null if this object is equal to the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gt__">__gt__</a> 
 	 - Returns non-null if this object is greater than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gte__">__gte__</a> 
 	 - Return non-null if this object is greater than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__init__">__init__</a> 
 	 - Create a new error with the specified error message.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lt__">__lt__</a> 
 	 - Returns non-null if this object is smaller than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lte__">__lte__</a> 
 	 - Return non-null if this object is less than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__neq__">__neq__</a> 
 	 - Return non-null if this object is not equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#toString">toString</a> 
 	 - A string representation of this Error.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -135,7 +145,7 @@
     
 <span >
 <hr>
-<a name='@errorType:162'>var <a href='../../global/lang/Object.html'>Object</a> <em>@errorType:162</em> (static);</a>
+<a name='@errorType:162'></a>var <a href='../../global/lang/Object.html'>Object</a> <em>@errorType:162</em> (static);
 <br>
 
 </span>
@@ -144,7 +154,7 @@
     
 <span >
 <hr>
-<a name='@errorType:165'>var <a href='../../global/lang/Object.html'>Object</a> <em>@errorType:165</em> (static);</a>
+<a name='@errorType:165'></a>var <a href='../../global/lang/Object.html'>Object</a> <em>@errorType:165</em> (static);
 <br>
 
 </span>
@@ -153,7 +163,7 @@
     
 <span >
 <hr>
-<a name='__type__'>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<a name='__type__'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
 
@@ -164,7 +174,7 @@
     
 <span >
 <hr>
-<a name='message'>var <a href='../../global/lang/String.html'>String</a> <em>message</em>;</a>
+<a name='message'></a>var <a href='../../global/lang/String.html'>String</a> <em>message</em>;
 <br>
 <p>The error message</p>
 
@@ -175,7 +185,7 @@
     
 <span >
 <hr>
-<a name='source'>var <a href='../../global/reflection/Continuation.html'>Continuation</a> <em>source</em>;</a>
+<a name='source'></a>var <a href='../../global/reflection/Continuation.html'>Continuation</a> <em>source</em>;
 <br>
 <p>The continuation that triggered this error.</p>
 
@@ -189,8 +199,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!__type__Getter'>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
-<br>
+<a name='!__type__Getter'></a>def <a href='../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../global/lang/Object.html'>Object</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the __type__ property.</p>
 
@@ -201,8 +212,9 @@
     
 <span >
 <hr>
-<a name='__cmp__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
 
@@ -213,8 +225,9 @@
     
 <span >
 <hr>
-<a name='__eq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__eq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is equal to the other object, null otherwise.</p>
 
@@ -225,8 +238,9 @@
     
 <span >
 <hr>
-<a name='__gt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is greater than the other object, null otherwise.</p>
 
@@ -237,8 +251,9 @@
     
 <span >
 <hr>
-<a name='__gte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
 
@@ -249,8 +264,9 @@
     
 <span >
 <hr>
-<a name='__init__'>def <a href='../../global/error/Error.html'>Error</a> <em>__init__</em> (<a href='../../global/error/Error.html'>Error</a> this, <a href='../../global/lang/String.html'>String</a> message = ?) (bound);</a>
-<br>
+<a name='__init__'></a>def <a href='../../global/error/Error.html'>Error</a> <em>__init__</em> (<a href='../../global/error/Error.html'>Error</a> this, <a href='../../global/lang/String.html'>String</a> message = ?) (bound);
+<p>
+
 
 <p>Create a new error with the specified error message.</p>
 
@@ -261,8 +277,9 @@
     
 <span >
 <hr>
-<a name='__lt__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lt__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
 
@@ -273,8 +290,9 @@
     
 <span >
 <hr>
-<a name='__lte__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lte__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
 
@@ -285,8 +303,9 @@
     
 <span >
 <hr>
-<a name='__neq__'>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__neq__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
@@ -297,8 +316,9 @@
     
 <span >
 <hr>
-<a name='hashCode'>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
 
@@ -309,8 +329,9 @@
     
 <span >
 <hr>
-<a name='toString'>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/error/Error.html'>Error</a> this) (bound);</a>
-<br>
+<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/error/Error.html'>Error</a> this) (bound);
+<p>
+
 
 <p>A string representation of this Error.</p>
 

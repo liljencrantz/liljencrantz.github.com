@@ -17,12 +17,15 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/time.html'>time</a>.<em>TimeVal</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/time.html'>time</a>.<em class='anna-link-main'>TimeVal</em></a></h1>
 
     <p>A data structure representing a point in time as the amount of time that has elapsed since the epoch.</p>
 
 
     
+    <h3><a name='module-child'>Types that this module can mask as</a></h3>
+<span class='anna-compat'><a href='../../../global.html'>global</a>.<a href='../../../global/lang.html'>lang</a>.<a href='../../../global/lang/Object.html' class='anna-link-main'>Object</a>, <a href='../../../global.html'>global</a>.<a href='../../../global/unix.html'>unix</a>.<a href='../../../global/unix/time.html'>time</a>.<a href='../../../global/unix/time/TimeZone.html' class='anna-link-main'>TimeZone</a></span>
+
     
     
 
@@ -55,89 +58,100 @@
 
     
 
-
-
-
-
     
     <h2><a name="api-function">Methods and functions</a></h2>
     <ul>
     
-      <li class='anna-internal'>
+        <li class='anna-internal'>
 	<a href="#!__type__Getter">!__type__Getter</a> 
 	 - Getter function for the __type__ property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!secGetter">!secGetter</a> 
 	 - Getter function for the sec property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!secSetter">!secSetter</a> 
 	 - Setter function for the sec property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!usecGetter">!usecGetter</a> 
 	 - Getter function for the usec property.
-      </li>
-
-      <li class='anna-internal'>
+	</li>
+	
+      
+        <li class='anna-internal'>
 	<a href="#!usecSetter">!usecSetter</a> 
 	 - Setter function for the usec property.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__cmp__">__cmp__</a> 
 	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__eq__">__eq__</a> 
 	 - Return non-null if this object is equal to the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gt__">__gt__</a> 
 	 - Returns non-null if this object is greater than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__gte__">__gte__</a> 
 	 - Return non-null if this object is greater than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__init__">__init__</a> 
 	
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lt__">__lt__</a> 
 	 - Returns non-null if this object is smaller than the other object, null otherwise.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__lte__">__lte__</a> 
 	 - Return non-null if this object is less than or equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#__neq__">__neq__</a> 
 	 - Return non-null if this object is not equal to the other object, null otherwise
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
-      </li>
-
-      <li >
+	</li>
+	
+      
+        <li >
 	<a href="#toString">toString</a> 
 	 - String conversion. Called by the String::convert method.
-      </li>
-
+	</li>
+	
+      
     </ul>
     
 
@@ -145,7 +159,7 @@
     
 <span >
 <hr>
-<a name='__type__'>var <a href='../../../global/reflection/Type.html'>Type</a> <em>__type__</em>;</a>
+<a name='__type__'></a>var <a href='../../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
 
@@ -156,7 +170,7 @@
     
 <span >
 <hr>
-<a name='sec'>var <a href='../../../global/lang/Int.html'>Int</a> <em>sec</em>;</a>
+<a name='sec'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>sec</em>;
 <br>
 <p>Seconds</p>
 
@@ -167,7 +181,7 @@
     
 <span >
 <hr>
-<a name='usec'>var <a href='../../../global/lang/Int.html'>Int</a> <em>usec</em>;</a>
+<a name='usec'></a>var <a href='../../../global/lang/Int.html'>Int</a> <em>usec</em>;
 <br>
 <p>Microseconds.</p>
 
@@ -181,8 +195,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!__type__Getter'>def <a href='../../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (internal, bound);</a>
-<br>
+<a name='!__type__Getter'></a>def <a href='../../../global/reflection/Type.html'>Type</a> <em>!__type__Getter</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the __type__ property.</p>
 
@@ -193,8 +208,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!secGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!secGetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this) (internal, bound);</a>
-<br>
+<a name='!secGetter'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>!secGetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the sec property.</p>
 
@@ -205,8 +221,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!secSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!secSetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
-<br>
+<a name='!secSetter'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>!secSetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);
+<p>
+
 
 <p>Setter function for the sec property.</p>
 
@@ -217,8 +234,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!usecGetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!usecGetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this) (internal, bound);</a>
-<br>
+<a name='!usecGetter'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>!usecGetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this) (internal, bound);
+<p>
+
 
 <p>Getter function for the usec property.</p>
 
@@ -229,8 +247,9 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!usecSetter'>def <a href='../../../global/lang/Int.html'>Int</a> <em>!usecSetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);</a>
-<br>
+<a name='!usecSetter'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>!usecSetter</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this, <a href='../../../global/lang/Int.html'>Int</a> value) (internal, bound);
+<p>
+
 
 <p>Setter function for the usec property.</p>
 
@@ -241,8 +260,9 @@
     
 <span >
 <hr>
-<a name='__cmp__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__cmp__'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
 
@@ -253,8 +273,9 @@
     
 <span >
 <hr>
-<a name='__eq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__eq__'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>__eq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is equal to the other object, null otherwise.</p>
 
@@ -265,8 +286,9 @@
     
 <span >
 <hr>
-<a name='__gt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gt__'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is greater than the other object, null otherwise.</p>
 
@@ -277,8 +299,9 @@
     
 <span >
 <hr>
-<a name='__gte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__gte__'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>__gte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is greater than or equal to the other object, null otherwise</p>
 
@@ -289,8 +312,9 @@
     
 <span >
 <hr>
-<a name='__init__'>def <a href='../../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this) (bound);</a>
-<br>
+<a name='__init__'></a>def <a href='../../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../../global/unix/time/TimeVal.html'>TimeVal</a> this) (bound);
+<p>
+
 
 
 </span>
@@ -299,8 +323,9 @@
     
 <span >
 <hr>
-<a name='__lt__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lt__'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lt__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Returns non-null if this object is smaller than the other object, null otherwise.</p>
 
@@ -311,8 +336,9 @@
     
 <span >
 <hr>
-<a name='__lte__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__lte__'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>__lte__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is less than or equal to the other object, null otherwise</p>
 
@@ -323,8 +349,9 @@
     
 <span >
 <hr>
-<a name='__neq__'>def <a href='../../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);</a>
-<br>
+<a name='__neq__'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>__neq__</em> (<a href='../../../global/lang/Object.html'>Object</a> this, <a href='../../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
 
 <p>Return non-null if this object is not equal to the other object, null otherwise</p>
 
@@ -335,8 +362,9 @@
     
 <span >
 <hr>
-<a name='hashCode'>def <a href='../../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='hashCode'></a>def <a href='../../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
 
@@ -347,8 +375,9 @@
     
 <span >
 <hr>
-<a name='toString'>def <a href='../../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);</a>
-<br>
+<a name='toString'></a>def <a href='../../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../../global/lang/Object.html'>Object</a> this) (bound);
+<p>
+
 
 <p>String conversion. Called by the String::convert method.</p>
 
