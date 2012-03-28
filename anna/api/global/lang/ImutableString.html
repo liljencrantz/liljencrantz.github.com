@@ -29,7 +29,7 @@
     
     <h3><a name='module-child'>Types that can mask as this type</a></h3>
 <span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/String.html' class='anna-link-main'>String</a></span><h3><a name='module-child'>Types that this module can mask as</a></h3>
-<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/String.html' class='anna-link-main'>String</a></span>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a>, <a href='../../global.html'>global</a>.<a href='../../global/markdown.html'>markdown</a>.<a href='../../global/markdown/PreProcessor.html' class='anna-link-main'>PreProcessor</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/String.html' class='anna-link-main'>String</a></span>
 
     
     
@@ -265,7 +265,7 @@
       
         <li >
 	<a href="#__mul__">__mul__</a> 
-	 - Returns this string repeated the specified number of times.
+	 - Returns a copy of this string, repeated the specified number of times
 	</li>
 	
       
@@ -306,20 +306,44 @@
 	
       
         <li >
+	<a href="#replace">replace</a> 
+	 - Replace all occurances in this string of the specified original with the specified replacement.
+	</li>
+	
+      
+        <li >
 	<a href="#rpad">rpad</a> 
 	 - Pad the right side of this string with the specified character up to a minimum of the specified number of characters
 	</li>
 	
       
+	<li>
+	  search:
+	<ul>
+	
         <li >
-	<a href="#search__Char__">search__Char__</a> 
+	<a href="#searchChar">searchChar</a> 
+	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+	</li>
+	
+        <li >
+	<a href="#searchString">searchString</a> 
+	 - Search for the specified Substring in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+	</li>
+	
+	</ul>
+	</li>
+	
+      
+        <li >
+	<a href="#searchChar">searchChar</a> 
 	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
 	</li>
 	
       
         <li >
-	<a href="#search__Char__">search__Char__</a> 
-	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+	<a href="#searchString">searchString</a> 
+	 - Search for the specified Substring in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
 	</li>
 	
       
@@ -667,10 +691,12 @@
     
 <span >
 <hr>
-<a name='__mul__'></a>def <a href='../../global/lang/ImutableString.html'>ImutableString</a> <em>__mul__</em> (<a href='../../global/lang/ImutableString.html'>ImutableString</a> this, <a href='../../global/lang/Int.html'>Int</a> times) (bound);
+<a name='__mul__'></a>def <a href='../../global/lang/String.html'>String</a> <em>__mul__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> count) (bound);
 <p>
 
 <p>This method is usually called as the * operator.</p>
+<p>Returns a copy of this string, repeated the specified number of times</p>
+
 <p>Returns this string repeated the specified number of times.</p>
 
 
@@ -750,6 +776,21 @@
     
 <span >
 <hr>
+<a name='replace'></a>def <a href='../../global/lang/String.html'>String</a> <em>replace</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/String.html'>String</a> original, <a href='../../global/lang/String.html'>String</a> replacement) (bound);
+<p>
+
+
+<p>Replace all occurances in this string of the specified original with the specified replacement.</p>
+
+<p>This method is currently rather inefficient.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
 <a name='rpad'></a>def <a href='../../global/lang/String.html'>String</a> <em>rpad</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Int.html'>Int</a> count, <a href='../../global/lang/Char.html'>Char</a> char = ' ') (bound);
 <p>
 
@@ -763,11 +804,28 @@
     
 <span >
 <hr>
-<a name='search__Char__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>search__Char__</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> ch) (bound);
+<a name='searchChar'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>searchChar</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/Char.html'>Char</a> ch, <a href='../../global/lang/Int.html'>Int</a> from = 0) (bound);
 <p>
-<code>search__Char__</code> can also be called using any of the following aliases: <code>search</code>.
+<code>searchChar</code> can also be called using any of the following aliases: <code>search</code>.
 
 <p>Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.</p>
+
+<p>This method is currently rather inefficient.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='searchString'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>searchString</em> (<a href='../../global/lang/String.html'>String</a> this, <a href='../../global/lang/String.html'>String</a> string, <a href='../../global/lang/Int.html'>Int</a> from = 0) (bound);
+<p>
+<code>searchString</code> can also be called using any of the following aliases: <code>search</code>.
+
+<p>Search for the specified Substring in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.</p>
+
+<p>This method is currently rather inefficient.</p>
 
 
 </span>

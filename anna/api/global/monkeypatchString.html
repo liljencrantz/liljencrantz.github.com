@@ -51,6 +51,12 @@
 	<a href="#__in__">__in__</a> 
       </li>
       
+      <li>
+	* 
+(Multiplication)
+	<a href="#__mul__">__mul__</a> 
+      </li>
+      
     </ul>
     
 
@@ -101,8 +107,20 @@
 	
       
         <li >
+	<a href="#__mul__">__mul__</a> 
+	 - Returns a copy of this string, repeated the specified number of times
+	</li>
+	
+      
+        <li >
 	<a href="#lpad">lpad</a> 
 	 - Pad the left side of this string with the specified character up to a minimum of the specified number of characters
+	</li>
+	
+      
+        <li >
+	<a href="#replace">replace</a> 
+	 - Replace all occurances in this string of the specified original with the specified replacement.
 	</li>
 	
       
@@ -112,15 +130,33 @@
 	</li>
 	
       
+	<li>
+	  search:
+	<ul>
+	
         <li >
-	<a href="#search__Char__">search__Char__</a> 
+	<a href="#searchChar">searchChar</a> 
+	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+	</li>
+	
+        <li >
+	<a href="#searchString">searchString</a> 
+	 - Search for the specified Substring in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+	</li>
+	
+	</ul>
+	</li>
+	
+      
+        <li >
+	<a href="#searchChar">searchChar</a> 
 	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
 	</li>
 	
       
         <li >
-	<a href="#search__Char__">search__Char__</a> 
-	 - Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
+	<a href="#searchString">searchString</a> 
+	 - Search for the specified Substring in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.
 	</li>
 	
       
@@ -223,11 +259,39 @@
     
 <span >
 <hr>
+<a name='__mul__'></a>def <a href='../global/lang/String.html'>String</a> <em>__mul__</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Int.html'>Int</a> count) (static);
+<p>
+
+<p>This method is usually called as the * operator.</p>
+<p>Returns a copy of this string, repeated the specified number of times</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
 <a name='lpad'></a>def <a href='../global/lang/String.html'>String</a> <em>lpad</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Int.html'>Int</a> count, <a href='../global/lang/Char.html'>Char</a> char = ' ') (static);
 <p>
 
 
 <p>Pad the left side of this string with the specified character up to a minimum of the specified number of characters</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='replace'></a>def <a href='../global/lang/String.html'>String</a> <em>replace</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/String.html'>String</a> original, <a href='../global/lang/String.html'>String</a> replacement) (static);
+<p>
+
+
+<p>Replace all occurances in this string of the specified original with the specified replacement.</p>
+
+<p>This method is currently rather inefficient.</p>
 
 
 </span>
@@ -249,11 +313,28 @@
     
 <span >
 <hr>
-<a name='search__Char__'></a>def <a href='../global/lang/Int.html'>Int</a> <em>search__Char__</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> ch) (static);
+<a name='searchChar'></a>def <a href='../global/lang/Int.html'>Int</a> <em>searchChar</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/Char.html'>Char</a> ch, <a href='../global/lang/Int.html'>Int</a> from = 0) (static);
 <p>
-<code>search__Char__</code> can also be called using any of the following aliases: <code>search</code>.
+<code>searchChar</code> can also be called using any of the following aliases: <code>search</code>.
 
 <p>Search for the specified Character in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.</p>
+
+<p>This method is currently rather inefficient.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='searchString'></a>def <a href='../global/lang/Int.html'>Int</a> <em>searchString</em> (<a href='../global/lang/String.html'>String</a> this, <a href='../global/lang/String.html'>String</a> string, <a href='../global/lang/Int.html'>Int</a> from = 0) (static);
+<p>
+<code>searchString</code> can also be called using any of the following aliases: <code>search</code>.
+
+<p>Search for the specified Substring in the specified string. Returns the offset of the first occurance of the character if found, null otherwise.</p>
+
+<p>This method is currently rather inefficient.</p>
 
 
 </span>

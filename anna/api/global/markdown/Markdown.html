@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Anna - documentation for namespace CError</title>
+    <title>Anna - documentation for namespace Markdown</title>
     
     <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../js/jquery.js"></script>
@@ -17,14 +17,12 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/error.html'>error</a>.<em class='anna-link-main'>CError</em></a></h1>
-
-    <p>An error with an associated C error number</p>
-
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/markdown.html'>markdown</a>.<em class='anna-link-main'>Markdown</em></a></h1>
 
     
+    
     <h3><a name='module-child'>Types that this module can mask as</a></h3>
-<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/error.html'>error</a>.<a href='../../global/error/Error.html' class='anna-link-main'>Error</a>, <a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a>, <a href='../../global.html'>global</a>.<a href='../../global/markdown.html'>markdown</a>.<a href='../../global/markdown/PreProcessor.html' class='anna-link-main'>PreProcessor</a></span>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a>, <a href='../../global.html'>global</a>.<a href='../../global/markdown.html'>markdown</a>.<a href='../../global/markdown/PreProcessor.html' class='anna-link-main'>PreProcessor</a></span>
 
     
     
@@ -36,28 +34,8 @@
     <ul>
     
       <li >
-	<a href="#@errorType:169">@errorType:169</a> 
-	</li>
-      </li>
-
-      <li >
 	<a href="#__type__">__type__</a> 
 	 - The type of this object</li>
-      </li>
-
-      <li >
-	<a href="#errno">errno</a> 
-	 - The C error number</li>
-      </li>
-
-      <li >
-	<a href="#message">message</a> 
-	 - The error message</li>
-      </li>
-
-      <li >
-	<a href="#source">source</a> 
-	 - The continuation that triggered this error.</li>
       </li>
 
     </ul>
@@ -104,7 +82,7 @@
       
         <li >
 	<a href="#__init__">__init__</a> 
-	 - Create a new error with the specified c error number.
+	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
 	</li>
 	
       
@@ -127,6 +105,12 @@
 	
       
         <li >
+	<a href="#convert">convert</a> 
+	
+	</li>
+	
+      
+        <li >
 	<a href="#hashCode">hashCode</a> 
 	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
 	</li>
@@ -134,7 +118,7 @@
       
         <li >
 	<a href="#toString">toString</a> 
-	 - A string representation of this Error.
+	 - String conversion. Called by the String::convert method.
 	</li>
 	
       
@@ -145,51 +129,9 @@
     
 <span >
 <hr>
-<a name='@errorType:169'></a>var <a href='../../global/lang/Object.html'>Object</a> <em>@errorType:169</em> (static);
-<br>
-
-</span>
-
-        
-    
-<span >
-<hr>
 <a name='__type__'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='errno'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>errno</em>;
-<br>
-<p>The C error number</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='message'></a>var <a href='../../global/lang/String.html'>String</a> <em>message</em>;
-<br>
-<p>The error message</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='source'></a>var <a href='../../global/reflection/Continuation.html'>Continuation</a> <em>source</em>;
-<br>
-<p>The continuation that triggered this error.</p>
 
 
 </span>
@@ -266,11 +208,11 @@
     
 <span >
 <hr>
-<a name='__init__'></a>def <a href='../../global/error/CError.html'>CError</a> <em>__init__</em> (<a href='../../global/error/CError.html'>CError</a> this, <a href='../../global/lang/Int.html'>Int</a> errno) (bound);
+<a name='__init__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
 <p>
 
 
-<p>Create a new error with the specified c error number.</p>
+<p>Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.</p>
 
 
 </span>
@@ -318,6 +260,17 @@
     
 <span >
 <hr>
+<a name='convert'></a>def <a href='../../global/lang/ImutableList.html'>ImutableList</a> <em>convert</em> (<a href='../../global/markdown/Markdown.html'>Markdown</a> this, <a href='../../global/lang/String.html'>String</a> source) (bound);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
 <a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
 <p>
 
@@ -331,11 +284,11 @@
     
 <span >
 <hr>
-<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/error/Error.html'>Error</a> this) (bound);
+<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
 <p>
 
 
-<p>A string representation of this Error.</p>
+<p>String conversion. Called by the String::convert method.</p>
 
 
 </span>
