@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../../js/anna.js"></script>
     <script type="text/javascript" src="../../js/keywordList.js"></script>
     <script type="text/javascript">
-      anna.basePath = "../../";
+      anna.basePath = &quot;../../&quot;;
     </script>
 
   </head>
@@ -19,7 +19,7 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>collection</em></a></h1>
 
-    <p>Internal module for the __collcetion__ macro.</p>
+    <p>Various functions that can be used to transform collections such as Lists and HashMap.</p>
 
 
     
@@ -42,13 +42,19 @@
     <ul>
     
         <li >
-	<a href="#__collection__">__collection__</a> 
+	<a href="#flatten">flatten</a> 
 	 - 
-Handle a collection literal and turn it into a call to either
-MutableList or HashMap. If the collection arguments are mappings, the
-collection becomes a HashMap. If there is a template specialization
-with two arguments, the collection becomes a HashMap. Otherwise, it
-becomes a MutableList.
+Return a MutableList containing all the elements of the List of Lists given as input.
+	</li>
+	
+      
+        <li >
+	<a href="#zip">zip</a> 
+	 - Return a MutableList of ImutableList objects, where each ImutableList
+contains the i-th element from each of the argument lists. The
+returned list is truncated in length to the length of the shortest
+argument sequence. The specialization of the ImutableList is the
+intersection of the static types of all the argument lists.
 	</li>
 	
       
@@ -62,16 +68,29 @@ becomes a MutableList.
     
 <span >
 <hr>
-<a name='__collection__'></a>def <a href='../global/parser/Node.html'>Node</a> <em>__collection__</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);
+<a name='flatten'></a>def <a href='../global/lang/MutableList.html'>MutableList</a> <em>flatten</em> (List«List» input) (static);
 <p>
 
 
 <p>
-Handle a collection literal and turn it into a call to either
-MutableList or HashMap. If the collection arguments are mappings, the
-collection becomes a HashMap. If there is a template specialization
-with two arguments, the collection becomes a HashMap. Otherwise, it
-becomes a MutableList.</p>
+Return a MutableList containing all the elements of the List of Lists given as input.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='zip'></a>def MutableList«ImutableList» <em>zip</em> (<a href='../global/lang/List.html'>List</a> input...) (static);
+<p>
+
+
+<p>Return a MutableList of ImutableList objects, where each ImutableList
+contains the i-th element from each of the argument lists. The
+returned list is truncated in length to the length of the shortest
+argument sequence. The specialization of the ImutableList is the
+intersection of the static types of all the argument lists.</p>
 
 
 </span>

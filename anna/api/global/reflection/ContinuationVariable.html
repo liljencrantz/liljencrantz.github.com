@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Anna - documentation for namespace Type</title>
+    <title>Anna - documentation for namespace ContinuationVariable</title>
     
     <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../js/jquery.js"></script>
@@ -17,11 +17,9 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/reflection.html'>reflection</a>.<em class='anna-link-main'>Type</em></a></h1>
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/reflection.html'>reflection</a>.<em class='anna-link-main'>ContinuationVariable</em></a></h1>
 
-    <p>The Type type represents an Anna Type. It is mostly used for object introspection.</p>
-
-
+    
     
     <h3><a name='module-child'>Types that this module can mask as</a></h3>
 <span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a>, <a href='../../global.html'>global</a>.<a href='../../global/date.html'>date</a>.<a href='../../global/date/Timezone.html' class='anna-link-main'>Timezone</a></span>
@@ -41,28 +39,28 @@
       </li>
 
       <li >
-	<a href="#attribute">attribute</a> 
-	 - All attributes specified for this type.</li>
-      </li>
-
-      <li >
-	<a href="#filename">filename</a> 
-	 - The name of the file in which this type was defined, if any.</li>
-      </li>
-
-      <li >
-	<a href="#member">member</a> 
-	 - A list of all members of this type.</li>
-      </li>
-
-      <li >
-	<a href="#module?">module?</a> 
-	 - Is true if this type represents a module.</li>
+	<a href="#continuation">continuation</a> 
+	 - The continuation that this ContinuationVariable is a variable in.</li>
       </li>
 
       <li >
 	<a href="#name">name</a> 
-	 - The name of this type.</li>
+	 - The name of this variable.</li>
+      </li>
+
+      <li class='anna-internal'>
+	<a href="#offset">offset</a> 
+	 - The offset in the activation frame of this variable.</li>
+      </li>
+
+      <li >
+	<a href="#type">type</a> 
+	 - The name of this variable.</li>
+      </li>
+
+      <li >
+	<a href="#value">value</a> 
+	 - The value of this variable.</li>
       </li>
 
     </ul>
@@ -84,38 +82,26 @@
 	
       
         <li class='anna-internal'>
-	<a href="#!attributeGetter">!attributeGetter</a> 
-	 - Getter function for the attribute property.
-	</li>
-	
-      
-        <li class='anna-internal'>
-	<a href="#!filenameGetter">!filenameGetter</a> 
-	 - Getter function for the filename property.
-	</li>
-	
-      
-        <li class='anna-internal'>
-	<a href="#!memberGetter">!memberGetter</a> 
-	 - Getter function for the member property.
-	</li>
-	
-      
-        <li class='anna-internal'>
-	<a href="#!module?Getter">!module?Getter</a> 
-	 - Getter function for the module? property.
-	</li>
-	
-      
-        <li class='anna-internal'>
 	<a href="#!nameGetter">!nameGetter</a> 
 	 - Getter function for the name property.
 	</li>
 	
       
+        <li class='anna-internal'>
+	<a href="#!typeGetter">!typeGetter</a> 
+	 - Getter function for the type property.
+	</li>
+	
+      
+        <li class='anna-internal'>
+	<a href="#!valueGetter">!valueGetter</a> 
+	 - Getter function for the value property.
+	</li>
+	
+      
         <li >
 	<a href="#__cmp__">__cmp__</a> 
-	
+	 - Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.
 	</li>
 	
       
@@ -162,20 +148,14 @@
 	
       
         <li >
-	<a href="#abides">abides</a> 
-	
-	</li>
-	
-      
-        <li >
 	<a href="#hashCode">hashCode</a> 
-	
+	 - Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.
 	</li>
 	
       
         <li >
 	<a href="#toString">toString</a> 
-	
+	 - Returns a String representation of this member.
 	</li>
 	
       
@@ -197,42 +177,9 @@
     
 <span >
 <hr>
-<a name='attribute'></a>var <a href='../../global/parser/Call.html'>Call</a> <em>attribute</em>;
+<a name='continuation'></a>var <a href='../../global/reflection/Continuation.html'>Continuation</a> <em>continuation</em>;
 <br>
-<p>All attributes specified for this type.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='filename'></a>var <a href='../../global/lang/String.html'>String</a> <em>filename</em>;
-<br>
-<p>The name of the file in which this type was defined, if any.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='member'></a>var ImutableList«Member» <em>member</em>;
-<br>
-<p>A list of all members of this type.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='module?'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>module?</em>;
-<br>
-<p>Is true if this type represents a module.</p>
+<p>The continuation that this ContinuationVariable is a variable in.</p>
 
 
 </span>
@@ -243,7 +190,40 @@
 <hr>
 <a name='name'></a>var <a href='../../global/lang/String.html'>String</a> <em>name</em>;
 <br>
-<p>The name of this type.</p>
+<p>The name of this variable.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='offset'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>offset</em> (internal);
+<br>
+<p>The offset in the activation frame of this variable.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='type'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>type</em>;
+<br>
+<p>The name of this variable.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='value'></a>var <a href='../../global/lang/Object.html'>Object</a> <em>value</em>;
+<br>
+<p>The value of this variable.</p>
 
 
 </span>
@@ -268,59 +248,7 @@
     
 <span class='anna-internal'>
 <hr>
-<a name='!attributeGetter'></a>def <a href='../../global/parser/Call.html'>Call</a> <em>!attributeGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the attribute property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!filenameGetter'></a>def <a href='../../global/lang/String.html'>String</a> <em>!filenameGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the filename property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!memberGetter'></a>def ImutableList«Member» <em>!memberGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the member property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!module?Getter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!module?Getter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the module? property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!nameGetter'></a>def <a href='../../global/lang/String.html'>String</a> <em>!nameGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
+<a name='!nameGetter'></a>def <a href='../../global/lang/String.html'>String</a> <em>!nameGetter</em> (<a href='../../global/reflection/ContinuationVariable.html'>ContinuationVariable</a> this) (internal, bound);
 <p>
 
 
@@ -331,11 +259,39 @@
 
         
     
-<span >
+<span class='anna-internal'>
 <hr>
-<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/reflection/Type.html'>Type</a> this, <a href='../../global/reflection/Type.html'>Type</a> other) (bound);
+<a name='!typeGetter'></a>def <a href='../../global/reflection/Type.html'>Type</a> <em>!typeGetter</em> (<a href='../../global/reflection/ContinuationVariable.html'>ContinuationVariable</a> this) (internal, bound);
 <p>
 
+
+<p>Getter function for the type property.</p>
+
+
+</span>
+
+        
+    
+<span class='anna-internal'>
+<hr>
+<a name='!valueGetter'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>!valueGetter</em> (<a href='../../global/reflection/ContinuationVariable.html'>ContinuationVariable</a> this) (internal, bound);
+<p>
+
+
+<p>Getter function for the value property.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/lang/Object.html'>Object</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
+<p>
+
+
+<p>Comparison method. Should return a negative number, zero or a positive number if the compared object is smaller than, equal to or greater than the object being called, respectively. If the objects can't be compared, null should be returned.</p>
 
 
 </span>
@@ -435,9 +391,11 @@
     
 <span >
 <hr>
-<a name='abides'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>abides</em> (<a href='../../global/reflection/Type.html'>Type</a> this, <a href='../../global/reflection/Type.html'>Type</a> other) (bound);
+<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
 <p>
 
+
+<p>Hash function. Should always return the same number for the same object and should also return the same number for two equal objects.</p>
 
 
 </span>
@@ -446,20 +404,11 @@
     
 <span >
 <hr>
-<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (bound);
+<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/reflection/ContinuationVariable.html'>ContinuationVariable</a> this) (bound);
 <p>
 
 
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (bound);
-<p>
-
+<p>Returns a String representation of this member.</p>
 
 
 </span>

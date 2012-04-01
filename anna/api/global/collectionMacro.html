@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Anna - documentation for namespace json</title>
+    <title>Anna - documentation for namespace collectionMacro</title>
     
     <link rel="stylesheet" href="../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../js/jquery.js"></script>
@@ -17,9 +17,9 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>json</em></a></h1>
+    <h1><a name="api-overview">Namespace <a href='../global.html'>global</a>.<em class='anna-link-main'>collectionMacro</em></a></h1>
 
-    <p>A simple JSON library. Only Anna => Json serialization has currently been implemented.</p>
+    <p>Internal module for the __collcetion__ macro.</p>
 
 
     
@@ -42,8 +42,13 @@
     <ul>
     
         <li >
-	<a href="#to">to</a> 
-	 - Serialize the specified object into JSON. Since Anna has no boolean type, true/false values currently aren't handled.
+	<a href="#__collection__">__collection__</a> 
+	 - 
+Handle a collection literal and turn it into a call to either
+MutableList or HashMap. If the collection arguments are mappings, the
+collection becomes a HashMap. If there is a template specialization
+with two arguments, the collection becomes a HashMap. Otherwise, it
+becomes a MutableList.
 	</li>
 	
       
@@ -57,18 +62,16 @@
     
 <span >
 <hr>
-<a name='to'></a>def <a href='../global/lang/String.html'>String</a> <em>to</em> (<a href='../global/lang/Object.html'>Object</a> o) (static);
+<a name='__collection__'></a>def <a href='../global/parser/Node.html'>Node</a> <em>__collection__</em> (<a href='../global/parser/Call.html'>Call</a> node) (static);
 <p>
 
 
-<p>Serialize the specified object into JSON. Since Anna has no boolean type, true/false values currently aren't handled.</p>
-
-<p>Usage:</p>
-
-<p><pre class='anna-code'>
-json.to(["key": [1,2,?]}])
-// Result: "{"key": [1, 2, null]}"
-</pre></p>
+<p>
+Handle a collection literal and turn it into a call to either
+MutableList or HashMap. If the collection arguments are mappings, the
+collection becomes a HashMap. If there is a template specialization
+with two arguments, the collection becomes a HashMap. Otherwise, it
+becomes a MutableList.</p>
 
 
 </span>

@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../../js/anna.js"></script>
     <script type="text/javascript" src="../../js/keywordList.js"></script>
     <script type="text/javascript">
-      anna.basePath = "../../";
+      anna.basePath = &quot;../../&quot;;
     </script>
 
   </head>
@@ -30,6 +30,15 @@ there is very rarely any reason to use it manually.</p>
 
     
     
+    <h2><a name="api-types">Types</a></h2>
+    <ul>
+    
+      <li ><a href='../global/replTool/HtmlState.html'>HtmlState</a>
+     - Different states for the Html parsing state machine.
+      </li>
+      
+    </ul>
+    
 
 
 
@@ -46,19 +55,46 @@ there is very rarely any reason to use it manually.</p>
     
         <li >
 	<a href="#dir">dir</a> 
-	 - This is an additional help function for the interactive Anna command line. If takes any object as a parameter and lists all members of that type ina a format suitable for the screen. This is just a very thin wrapper around the member property of the Type type.
+	 - 
+This is an additional help function for the interactive Anna command line. If 
+takes any object as a parameter and lists all members of that type ina a format 
+suitable for the screen. This is just a very thin wrapper around the member 
+property of the Type type.
 	</li>
 	
       
         <li >
-	<a href="#formatList">formatList</a> 
-	 - Internal helper method for dir and help, used to line break a list of strings.
+	<a href="#formatHtml">formatHtml</a> 
+	 - 
+Format the specified HTML snippet into something suitable for printing in a 
+terminal. This function does not correctly handle arbitrary HTML. The following
+is a short rundown of the currently supported HTML subset:
+
+<ul>
+<li>&lt;li&gt; elements are converted into bullet points. Ordered lists are not handled differently and are also converted into bullets.</li>
+<li>&lt;p&gt; tags are rendered as double line breaks.</li>
+<li>&lt;pre&gt; content is rendered verbatim, except html tags are still stripped.</li> 
+<li>All other HTML tags are stripped.</li>
+<li>Numbered html escapes as well as the &amp;gt;, &amp;lt;, &amp;amp; and &amp;quot; html escapes are unescaped.</li>
+<li>Text is line breaked to 80 columns.</li>
+</ul>
+
+
 	</li>
 	
       
         <li >
 	<a href="#help">help</a> 
-	 - This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible about that object to the user.
+	 - 
+This is the main help function of the interactive Anna command
+line. It takes any object as a parameter and uses introspection to
+provide as much help as possible about that object to the user.
+	</li>
+	
+      
+        <li >
+	<a href="#linebreak">linebreak</a> 
+	 - Internal helper method for dir and help, used to line break a list of strings.
 	</li>
 	
       
@@ -76,7 +112,11 @@ there is very rarely any reason to use it manually.</p>
 <p>
 
 
-<p>This is an additional help function for the interactive Anna command line. If takes any object as a parameter and lists all members of that type ina a format suitable for the screen. This is just a very thin wrapper around the member property of the Type type.</p>
+<p>
+This is an additional help function for the interactive Anna command line. If 
+takes any object as a parameter and lists all members of that type ina a format 
+suitable for the screen. This is just a very thin wrapper around the member 
+property of the Type type.</p>
 
 
 </span>
@@ -85,26 +125,65 @@ there is very rarely any reason to use it manually.</p>
     
 <span >
 <hr>
-<a name='formatList'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>formatList</em> (<a href='../global/lang/List.html'>List</a> wordList) (static);
+<a name='formatHtml'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>formatHtml</em> (<a href='../global/lang/String.html'>String</a> input) (static);
+<p>
+
+
+<p>
+Format the specified HTML snippet into something suitable for printing in a 
+terminal. This function does not correctly handle arbitrary HTML. The following
+is a short rundown of the currently supported HTML subset:
+
+<ul>
+<li>&lt;li&gt; elements are converted into bullet points. Ordered lists are not handled differently and are also converted into bullets.</li>
+<li>&lt;p&gt; tags are rendered as double line breaks.</li>
+<li>&lt;pre&gt; content is rendered verbatim, except html tags are still stripped.</li> 
+<li>All other HTML tags are stripped.</li>
+<li>Numbered html escapes as well as the &amp;gt;, &amp;lt;, &amp;amp; and &amp;quot; html escapes are unescaped.</li>
+<li>Text is line breaked to 80 columns.</li>
+</ul>
+
+</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='help'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>help</em> (<a href='../global/lang/Object.html'>Object</a> object = global) (static);
+<p>
+
+
+<p>
+This is the main help function of the interactive Anna command
+line. It takes any object as a parameter and uses introspection to
+provide as much help as possible about that object to the user.</p>
+
+<p>
+If the supplied object is a type, help for that type is shown,
+otherwise help for the type of the supplied object is shown. For
+example, <code>help(Int)</code> and <code>help(3)</code> will both
+display help for the Int type.</p>
+
+<p>
+The basic information shown by the help function is the same
+information available in the api documentation, and is gathered from
+the doc attribute of declarations.</p>
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='linebreak'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>linebreak</em> (<a href='../global/lang/List.html'>List</a> wordList, <a href='../global/lang/String.html'>String</a> prefix = "", <a href='../global/lang/String.html'>String</a> firstPrefix = "") (static);
 <p>
 
 
 <p>Internal helper method for dir and help, used to line break a list of strings.</p>
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='help'></a>def <a href='../global/lang/MutableString.html'>MutableString</a> <em>help</em> (<a href='../global/lang/Object.html'>Object</a> object) (static);
-<p>
-
-
-<p>This is the main help function of the interactive Anna command line. It takes any object as a parameter and uses introspection to provide as much help as possible about that object to the user.</p>
-
-<p>If the object is a Type</p>
 
 
 </span>

@@ -1104,48 +1104,48 @@ expandCode(
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/expandCode.anna</h3>
-	      <pre class='anna-code'>attribute(internal, doc("Internal module for the expandCode macro."));
+	      <pre class='anna-code'>attribute(internal, doc(&quot;Internal module for the expandCode macro.&quot;));
 
 macro expandCode(node)
 (
     doc(
-	"
+	&quot;
     The expandCode macro is used to create multiple instances of the
     same basic piece of code but with slight variations. One example
     of where this is useful is the constructor for date.Delta, where
-    we need to assign every argument to the equivalent member:",
+    we need to assign every argument to the equivalent member:&quot;,
 
-        code:"
+        code:&quot;
     this.year = year;
     this.month = month;
     ...
-    this.microsecond = microsecond;",
+    this.microsecond = microsecond;&quot;,
 
-    "The expandCode macro allows us to write the same thing in a less
-    verbose way.",
+    &quot;The expandCode macro allows us to write the same thing in a less
+    verbose way.&quot;,
 
-        code:"
+        code:&quot;
     expandCode(
 	this.%name = %name,
-	name: [year, ..., microsecond]);",
+	name: [year, ..., microsecond]);&quot;,
     
-        "
+        &quot;
     During the compilation pass the expandCode macro will expand the
     above code into statements identical to the ones given
     above. Using expandCode not only allows you to write less code,
-    because you're not repeating yourself, you can quickly change the
-    code in a single place.",
+    because you&#39;re not repeating yourself, you can quickly change the
+    code in a single place.&quot;,
 
-        "
+        &quot;
     Code equivalent to code written using expandCode can usually be
     created using the reflection api, but such code offers no compile time type
     safety and is significantly more verbose.
-")
+&quot;)
 )
 {
     if(node.count &lt; 2)
     {
-	node.error("Too few arguments to expandCode macro - expected at least two arguments");
+	node.error(&quot;Too few arguments to expandCode macro - expected at least two arguments&quot;);
 	return ?;
     }
     count := ? as Int;
@@ -1156,7 +1156,7 @@ macro expandCode(node)
 
     node.each(chld)	
     {
-	if(chld.callTo?("__mapping__"))
+	if(chld.callTo?(&quot;__mapping__&quot;))
 	{
 	    valNode.push(chld);
 	}
@@ -1172,13 +1172,13 @@ macro expandCode(node)
 	checkCallCount(call, 2);
 	checkNodeType(call[0], InternalIdentifier);
         name := (call[0] as InternalIdentifier).name;
-	checkNodeCallTo(call[1], "__collection__");
+	checkNodeCallTo(call[1], &quot;__collection__&quot;);
         lst := call[1] as Call;
 	if(count)
 	{
 	    if(count != lst.count)
 	    {
-		lst.error("Wrong number of parameters in list");
+		lst.error(&quot;Wrong number of parameters in list&quot;);
 		return ?;
 	    }
 	    lst[1...].each(idx, val)
@@ -1196,7 +1196,7 @@ macro expandCode(node)
 	}
     }
 
-    res := Call(node, Identifier(node, "nothing"));
+    res := Call(node, Identifier(node, &quot;nothing&quot;));
     codeNode.each(code)
     {
 	res ~= param.map(p){ code % p };
@@ -1358,11 +1358,11 @@ macro expandCode(node)
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/switch.anna</h3>
-	      <pre class='anna-code'>attribute(internal, doc("Internal module for the switch macro."));
+	      <pre class='anna-code'>attribute(internal, doc(&quot;Internal module for the switch macro.&quot;));
 
 macro switch(node) 
 (
-    doc("
+    doc(&quot;
 The switch statement. This macro a conditional structure that allows
 you to execute one of many potential code blocks. It strongly
 resembles the switch statement found in e.g. C, and Java. 
@@ -1421,40 +1421,40 @@ Note that at most, one of the switch blocks are run, namely the first
 block to match. Also note that any type of values can be used in switch 
 expressions, not just Int values.
 
-")
+&quot;)
 )
 {
     checkCallCount(node, 2);
     checkNodeBlock(node[1]);
     switchBody := node[1] as Call;
-//    print(node, '\n');
+//    print(node, &#39;\n&#39;);
     switchBlock := Call(
 	node, 
-	Identifier(node, "__block__"),
+	Identifier(node, &quot;__block__&quot;),
 	ast(%val := %input));
     lastIf := ? as Call;
     switchBody.each(idx, caseNode)
     {
 	def makeCond(Node cond)
 	{
-	    return ast(%val == %cond) % ["cond":cond]
+	    return ast(%val == %cond) % [&quot;cond&quot;:cond]
 	}
 
         checkNodeType(caseNode, Call);
         caseCall := caseNode as Call;
         next := ? as Call;
-  	if(caseCall.callTo?("case"))
+  	if(caseCall.callTo?(&quot;case&quot;))
 	{
 	    if(caseCall.count &lt; 2)
 	    {
 		caseCall.error(
-                    "Call has " ~ caseCall.count ~ 
-                    " paramters, expected at least 2");
+                    &quot;Call has &quot; ~ caseCall.count ~ 
+                    &quot; paramters, expected at least 2&quot;);
 		return NullLiteral(caseCall);
 		
 	    }
 	    checkNodeBlock(caseCall[-1]);
-            if(caseCall.count == 2 and caseCall[0].callTo?( "cast"))
+            if(caseCall.count == 2 and caseCall[0].callTo?( &quot;cast&quot;))
             {
                 caseCast := caseCall[0] as Call;
 		checkCallCount(caseCast, 2);
@@ -1464,10 +1464,10 @@ expressions, not just Int values.
 		    (ast(
 			if(%val as %type, %caseBody, {})
 			) % [
-			    "caseBody": caseBody,
+			    &quot;caseBody&quot;: caseBody,
                             ] % [
-                                "type": caseCast[1],
-                                "varName": caseCast[0],
+                                &quot;type&quot;: caseCast[1],
+                                &quot;varName&quot;: caseCast[0],
                                 ]) as Call;
 	    } 
             else
@@ -1476,8 +1476,8 @@ expressions, not just Int values.
 		(1..(caseCall.count-1)).each(idx)
 		{
 		    cond = ast(%cond1 or %cond2) % [
-			"cond1": cond,
-			"cond2": makeCond(caseCall[idx])
+			&quot;cond1&quot;: cond,
+			&quot;cond2&quot;: makeCond(caseCall[idx])
 			]; 
 		}
 		next =
@@ -1485,18 +1485,18 @@ expressions, not just Int values.
 			ast(
 			    if(%cond, %caseBody, {})
 			    ) % [
-				"cond": cond,
-				"caseBody": caseCall[-1]
+				&quot;cond&quot;: cond,
+				&quot;caseBody&quot;: caseCall[-1]
 				]) as Call;
 	    }
 	} 
         else
 	{
-	    if(caseCall.callTo?("default"))
+	    if(caseCall.callTo?(&quot;default&quot;))
 	    {
 		if(idx != switchBody.count-1)
 		{
-		    caseCall.error("Invalid position for default");
+		    caseCall.error(&quot;Invalid position for default&quot;);
 		    return NullLiteral(node);
 		}
 		checkCallCount(caseCall, 1);
@@ -1505,7 +1505,7 @@ expressions, not just Int values.
 	    } 
             else
 	    {
-		if(caseCall.callTo?("cases"))
+		if(caseCall.callTo?(&quot;cases&quot;))
 		{
 		    checkCallCount(caseCall, 2);
 		    checkNodeBlock(caseCall[-1]);
@@ -1515,14 +1515,14 @@ expressions, not just Int values.
 			    ast(
 				if(%val in %items, %caseBody, {})
 				) % [
-				    "items": caseCall[0],
-				    "caseBody": caseCall[-1]
+				    &quot;items&quot;: caseCall[0],
+				    &quot;caseBody&quot;: caseCall[-1]
 				    ]) as Call;
                  
 		} 
                 else
 		{
-                    caseNode.error("Expected a case or default statement");
+                    caseNode.error(&quot;Expected a case or default statement&quot;);
 		    return NullLiteral(node);
 		}
 	    }
@@ -1531,7 +1531,7 @@ expressions, not just Int values.
 	{
 	    lastIf[2] = if(!next.block?())
 	    {
-		Call(node, Identifier(node, "__block__"), next);
+		Call(node, Identifier(node, &quot;__block__&quot;), next);
 	    } 
             else 
 	    {
@@ -1550,8 +1550,8 @@ expressions, not just Int values.
     }
     
     res := Call(node, switchBlock) % [
-	"val": Identifier(node, identifier("switchValue")), 
-	"input": node[0]];
+	&quot;val&quot;: Identifier(node, identifier(&quot;switchValue&quot;)), 
+	&quot;input&quot;: node[0]];
 //    print(res);
     return res;
 }
@@ -1584,13 +1584,13 @@ print(myVar.someNumber + 3, myVar.someString ~ "world", myVar.someList[1]);
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/struct.anna</h3>
-	      <pre class='anna-code'>attribute(internal, doc("Internal module for the struct macro."));
+	      <pre class='anna-code'>attribute(internal, doc(&quot;Internal module for the struct macro.&quot;));
 
 macro structType(node)
 (
-    doc("
+    doc(&quot;
 The struct type macro is used for creating simple classes aimed for data storage.
-Basically, a struct type behaves exactly like a regular class, but with a few additional abilities.", "These are:
+Basically, a struct type behaves exactly like a regular class, but with a few additional abilities.&quot;, &quot;These are:
 
 &lt;ul&gt;
   &lt;li&gt;A suitable constructor is automatically created, that accepts one argument for each member of the struct.&lt;/li&gt;
@@ -1599,7 +1599,7 @@ Basically, a struct type behaves exactly like a regular class, but with a few ad
 &lt;p&gt;
 Usage example:
 &lt;/p&gt;
-&lt;pre class=\"anna-code\"&gt;
+&lt;pre class=\&quot;anna-code\&quot;&gt;
 struct MyStruct
 {
     var Int some;
@@ -1608,8 +1608,8 @@ struct MyStruct
 
 ...
 // A constructor is implicitly created for struct:s.
-vv := MyStruct(some: 3, other: \"abc\");
-vv2 := MyStruct(5, \"\");
+vv := MyStruct(some: 3, other: \&quot;abc\&quot;);
+vv2 := MyStruct(5, \&quot;\&quot;);
 
 // This prints MyStruct(some: 5, other:);
 print(vv2);
@@ -1618,7 +1618,7 @@ print(vv2);
 Because structs implement the __cmp__ and hashCode methods, they can be used as 
 keys in dictionaries.
 &lt;/p&gt;
-")
+&quot;)
 )
 {
     node.function = ast(classType);
@@ -1626,47 +1626,54 @@ keys in dictionaries.
     body := node[2] as Call;
     constructorParam := ast({});
     constructorBody := ast({});
-    toStringBody := (ast({res := %resStart.thaw;}) % ["resStart": StringLiteral(node, structName.name ~ "(")]) as Call;
+    toStringBody := (ast({res := %resStart.thaw;}) % [&quot;resStart&quot;: StringLiteral(node, structName.name ~ &quot;(&quot;)]) as Call;
     cmpBody := ast({otherStruct := other as %This; otherStruct or (return ?); tmp := 0;});
     hashCodeBody := ast({res := 0;});
+    customToString := ? as Int;
     body.each(idx, el)
     {
         decl := el as Call;
         name := (decl[0] as Identifier);
-        if(name.name in ["__init__", "__cmp__", "toString"])
+        if(name.name in [&quot;__init__&quot;, &quot;__cmp__&quot;])
         {
-            name.error("Invalid field name in struct.");
+            name.error(&quot;Invalid field name in struct.&quot;);
             return NullLiteral(node);
         }
-  
-        if(decl.function.named?("__const__") and decl[2].callTo?("__def__"))
+        if(name.name == &quot;toString&quot;)
+        {
+            customToString := 1;
+        }
+        if(decl.function.named?(&quot;__const__&quot;) and decl[2].callTo?(&quot;__def__&quot;))
         {
             continue;
         }
 	constructorParam.push(decl.copy());
-	constructorBody.push(ast(this.%val = %val) % ["val": name.copy()]);
-	toStringBody.push(ast(res ~= %name) % ["name": StringLiteral(decl, "" ~ (if(idx != 0){ ", " } else { "" }) ~ name.name ~ ": ")]);
-	toStringBody.push(ast(res ~= this.%value) % ["value": name.copy()]);
-	cmpBody.push(ast((tmp = this.%value.__cmp__(otherStruct.%value) == 0) or (return tmp)) % ["value": name.copy()]);
-	hashCodeBody.push(ast(res = res ^bitxor this.%value.hashCode()) % ["value": name.copy()]);
+	constructorBody.push(ast(this.%val = %val) % [&quot;val&quot;: name.copy()]);
+	toStringBody.push(ast(res ~= %name) % [&quot;name&quot;: StringLiteral(decl, &quot;&quot; ~ (if(idx != 0){ &quot;, &quot; } else { &quot;&quot; }) ~ name.name ~ &quot;: &quot;)]);
+	toStringBody.push(ast(res ~= this.%value) % [&quot;value&quot;: name.copy()]);
+	cmpBody.push(ast((tmp = this.%value.__cmp__(otherStruct.%value) == 0) or (return tmp)) % [&quot;value&quot;: name.copy()]);
+	hashCodeBody.push(ast(res = res ^bitxor this.%value.hashCode()) % [&quot;value&quot;: name.copy()]);
     }
-    toStringBody.push(ast(res ~= ")"));
+    toStringBody.push(ast(res ~= &quot;)&quot;));
     toStringBody.push(ast(res));
-    body.push(ast(__const__(__init__, ?, __def__(__init__, ?, %param, {}, %body), {})) % ["param": constructorParam, "body": constructorBody]);
+    body.push(ast(__const__(__init__, ?, __def__(__init__, ?, %param, {}, %body), {})) % [&quot;param&quot;: constructorParam, &quot;body&quot;: constructorBody]);
     cmpBody.push(ast(return 0));
     hashCodeBody.push(ast(return res));
 
-    body.push(ast(__const__(toString, ?, __def__(toString, ?, {}, {}, %body), {})) % ["body": toStringBody]);
-    body.push(ast(__const__(__cmp__, ?, __def__(__cmp__, ?, {var Object other}, {}, %body), {})) % ["body": cmpBody]);
-    body.push(ast(__const__(hashCode, ?, __def__(hashCode, ?, {}, {}, %body), {})) % ["body": hashCodeBody]);
+    if(!customToString)
+    {
+        body.push(ast(__const__(toString, ?, __def__(toString, ?, {}, {}, %body), {})) % [&quot;body&quot;: toStringBody]);
+    }
+    body.push(ast(__const__(__cmp__, ?, __def__(__cmp__, ?, {var Object other}, {}, %body), {})) % [&quot;body&quot;: cmpBody]);
+    body.push(ast(__const__(hashCode, ?, __def__(hashCode, ?, {}, {}, %body), {})) % [&quot;body&quot;: hashCodeBody]);
     return node;
 }
 
 macro struct(node)
 (
-    doc("
+    doc(&quot;
 The struct macro is used as a short hand for defining objects used
-exclusively for quick access to it's members. It is used by passing a
+exclusively for quick access to it&#39;s members. It is used by passing a
 set of name/value mappings like so:
 
 foo := struct(something: 3, other: getMeSomeOtherObject());
@@ -1678,40 +1685,40 @@ member will have an initial value of 3, and the other member will have
 the return value of getMeSomeOtherObject as its value.
 
 Struct values can be any Anna expression, including another struct. 
-")
+&quot;)
 )
 {
-    initBlock := Call(node, Identifier(node, "__block__"));
-    typeBlock := Call(node, Identifier(node, "__block__"));
+    initBlock := Call(node, Identifier(node, &quot;__block__&quot;));
+    typeBlock := Call(node, Identifier(node, &quot;__block__&quot;));
     callParam := MutableList«Node»();
     node.each(item)
     {
-	checkNodeCallTo(item, "__mapping__");
+	checkNodeCallTo(item, &quot;__mapping__&quot;);
         mapping := item as Call;
         varType := 
 	    if(mapping[1].__type__ != NullLiteral)
 	    {
-		ast(__staticTypeOf__(%value)) % ["value": mapping[1]];
+		ast(__staticTypeOf__(%value)) % [&quot;value&quot;: mapping[1]];
 	    }
 	    else
 	    {
 		ast(Object);
 	    }
 	typeBlock ~= [ast(__var__(%name, %type, ?, {}))
-		      % ["name": mapping[0], "type": varType]];
+		      % [&quot;name&quot;: mapping[0], &quot;type&quot;: varType]];
         callParam ~= [mapping[1]];
-	initBlock ~= [ast(this.%name = %name) % ["name": mapping[0]]];
+	initBlock ~= [ast(this.%name = %name) % [&quot;name&quot;: mapping[0]]];
     }
     initParam := typeBlock.copy() as Call;
     typeBlock ~= [
 	ast(__const__(__init__, ?, __def__(__init__, Object, %initParam, {}, %initBlock), {})) %
 	[
-	    "initParam": initParam,
-	    "initBlock": initBlock
+	    &quot;initParam&quot;: initParam,
+	    &quot;initBlock&quot;: initBlock
 	]
     ];
 
-    fullType := ast(classType(Anon, {}, %body)) % ["body": typeBlock];
+    fullType := ast(classType(Anon, {}, %body)) % [&quot;body&quot;: typeBlock];
     call := Call(node, fullType);
     call ~= callParam;
 //    print(fullType);
@@ -1764,11 +1771,11 @@ def main()
 	    <div class='anna-code-popup-inner'>
               <span class='anna-code-popup-close'>X</span>
               <h3>Source code for bootstrap/enum.anna</h3>
-	      <pre class='anna-code'>attribute(internal, doc("Internal module for the enumType macro."));
+	      <pre class='anna-code'>attribute(internal, doc(&quot;Internal module for the enumType macro.&quot;));
 
 macro enumType(definition)
 (
-    doc("
+    doc(&quot;
 The enum macro is used to define enumerations types. The basic syntax is:
 
 enum TypeName
@@ -1776,7 +1783,7 @@ enum TypeName
     enumName, someOtherEnumName, enumWithValue64= 64, ...
 }
 
-")
+&quot;)
 )
 {
     body := definition[2] as Call;
@@ -1792,7 +1799,7 @@ enum TypeName
 	{
 	    if( !this.%value)
 	    {
-		return "?";
+		return &quot;?&quot;;
 	    }
 	}
     );
@@ -1848,7 +1855,7 @@ enum TypeName
 	{
 	    id = el as Identifier;
 	}
-	if(el.callTo?("__assign__"))
+	if(el.callTo?(&quot;__assign__&quot;))
 	{
   	    ass := el as Call;
 	    checkCallCount(ass, 2);
@@ -1859,7 +1866,7 @@ enum TypeName
 	    if(nextIdx &lt;= idx and !isFirst)
 	    {
 		ass[1].error(
-                    "Invalid enum value %. Previous value was % and values must be increasing." % [
+                    &quot;Invalid enum value %. Previous value was % and values must be increasing.&quot; % [
                         nextIdx, idx-1]);
 		return ?;
 	    }
@@ -1872,10 +1879,10 @@ enum TypeName
 	if(!id)
 	{
 	    
-	    definition.error("Unexpected thingie");
+	    definition.error(&quot;Unexpected thingie&quot;);
 	    return ?;
 	}
-	getter := "!" ~ id.name ~ "Getter";
+	getter := &quot;!&quot; ~ id.name ~ &quot;Getter&quot;;
 	fun := ast(
 	    def %Type %name() (static) 
 	    {
@@ -1894,19 +1901,19 @@ enum TypeName
 	
 	fun = (
 	    fun % [
-		"name": Identifier(definition, getter),
-		"myValue": IntLiteral(definition, idx)
+		&quot;name&quot;: Identifier(definition, getter),
+		&quot;myValue&quot;: IntLiteral(definition, idx)
 		]) as Call;
 	
 	prop = (
 	    prop % [
-		"name": Identifier(definition, id.name),
-		"functionName": Identifier(definition, getter)
+		&quot;name&quot;: Identifier(definition, id.name),
+		&quot;functionName&quot;: Identifier(definition, getter)
 		]) as Call;
 	cmp = (
 	    cmp % [
-		"intValue": IntLiteral(definition, idx),
-		"strValue": StringLiteral(definition, id.name)
+		&quot;intValue&quot;: IntLiteral(definition, idx),
+		&quot;strValue&quot;: StringLiteral(definition, id.name)
 		]) as Call;
 	
 	newBody ~= [fun];
@@ -1928,12 +1935,12 @@ enum TypeName
     
     definition[2] = newBody;
     definition = (definition % [
-		      "value": Identifier(?, identifier("value")),
-		      "Type": definition[0].copy(),
-		      "valueGetter": Identifier(?, identifier("valueGetter")),
+		      &quot;value&quot;: Identifier(?, identifier(&quot;value&quot;)),
+		      &quot;Type&quot;: definition[0].copy(),
+		      &quot;valueGetter&quot;: Identifier(?, identifier(&quot;valueGetter&quot;)),
 		      ]) as Call;
 
-//    print(definition,"\n");	    
+//    print(definition,&quot;\n&quot;);	    
 
     return definition;
 }

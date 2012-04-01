@@ -1,14 +1,14 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Anna - documentation for namespace Type</title>
+    <title>Anna - documentation for namespace HtmlMode</title>
     
     <link rel="stylesheet" href="../../../css/anna.css" type="text/css" />
     <script type="text/javascript" src="../../../js/jquery.js"></script>
     <script type="text/javascript" src="../../../js/anna.js"></script>
     <script type="text/javascript" src="../../../js/keywordList.js"></script>
     <script type="text/javascript">
-      anna.basePath = &quot;../../../&quot;;
+      anna.basePath = "../../../";
     </script>
 
   </head>
@@ -17,14 +17,12 @@
     <div class="anna-content">
       <div class="anna-main">
 	<div class="anna-main-inner">
-    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/reflection.html'>reflection</a>.<em class='anna-link-main'>Type</em></a></h1>
-
-    <p>The Type type represents an Anna Type. It is mostly used for object introspection.</p>
-
+    <h1><a name="api-overview">Type <a href='../../global.html'>global</a>.<a href='../../global/replTool.html'>replTool</a>.<em class='anna-link-main'>HtmlMode</em></a></h1>
 
     
+    
     <h3><a name='module-child'>Types that this module can mask as</a></h3>
-<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a>, <a href='../../global.html'>global</a>.<a href='../../global/date.html'>date</a>.<a href='../../global/date/Timezone.html' class='anna-link-main'>Timezone</a></span>
+<span class='anna-compat'><a href='../../global.html'>global</a>.<a href='../../global/lang.html'>lang</a>.<a href='../../global/lang/Object.html' class='anna-link-main'>Object</a></span>
 
     
     
@@ -36,33 +34,48 @@
     <ul>
     
       <li >
+	<a href="#@value:242">@value:242</a> 
+	</li>
+      </li>
+
+      <li >
 	<a href="#__type__">__type__</a> 
 	 - The type of this object</li>
       </li>
 
       <li >
-	<a href="#attribute">attribute</a> 
-	 - All attributes specified for this type.</li>
+	<a href="#__value">__value</a> 
+	</li>
       </li>
 
       <li >
-	<a href="#filename">filename</a> 
-	 - The name of the file in which this type was defined, if any.</li>
+	<a href="#li">li</a> 
+	</li>
       </li>
 
       <li >
-	<a href="#member">member</a> 
-	 - A list of all members of this type.</li>
+	<a href="#pre">pre</a> 
+	</li>
       </li>
 
       <li >
-	<a href="#module?">module?</a> 
-	 - Is true if this type represents a module.</li>
+	<a href="#tagContent">tagContent</a> 
+	</li>
       </li>
 
       <li >
-	<a href="#name">name</a> 
-	 - The name of this type.</li>
+	<a href="#tagName">tagName</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#text">text</a> 
+	</li>
+      </li>
+
+      <li >
+	<a href="#textSpace">textSpace</a> 
+	</li>
       </li>
 
     </ul>
@@ -83,33 +96,45 @@
 	</li>
 	
       
-        <li class='anna-internal'>
-	<a href="#!attributeGetter">!attributeGetter</a> 
-	 - Getter function for the attribute property.
+        <li >
+	<a href="#!liGetter">!liGetter</a> 
+	
 	</li>
 	
       
-        <li class='anna-internal'>
-	<a href="#!filenameGetter">!filenameGetter</a> 
-	 - Getter function for the filename property.
+        <li >
+	<a href="#!preGetter">!preGetter</a> 
+	
 	</li>
 	
       
-        <li class='anna-internal'>
-	<a href="#!memberGetter">!memberGetter</a> 
-	 - Getter function for the member property.
+        <li >
+	<a href="#!tagContentGetter">!tagContentGetter</a> 
+	
 	</li>
 	
       
-        <li class='anna-internal'>
-	<a href="#!module?Getter">!module?Getter</a> 
-	 - Getter function for the module? property.
+        <li >
+	<a href="#!tagNameGetter">!tagNameGetter</a> 
+	
 	</li>
 	
       
-        <li class='anna-internal'>
-	<a href="#!nameGetter">!nameGetter</a> 
-	 - Getter function for the name property.
+        <li >
+	<a href="#!textGetter">!textGetter</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#!textSpaceGetter">!textSpaceGetter</a> 
+	
+	</li>
+	
+      
+        <li >
+	<a href="#@valueGetter:243">@valueGetter:243</a> 
+	
 	</li>
 	
       
@@ -139,7 +164,7 @@
       
         <li >
 	<a href="#__init__">__init__</a> 
-	 - Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.
+	
 	</li>
 	
       
@@ -162,12 +187,6 @@
 	
       
         <li >
-	<a href="#abides">abides</a> 
-	
-	</li>
-	
-      
-        <li >
 	<a href="#hashCode">hashCode</a> 
 	
 	</li>
@@ -186,6 +205,15 @@
     
 <span >
 <hr>
+<a name='@value:242'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>@value:242</em>;
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
 <a name='__type__'></a>var <a href='../../global/reflection/Type.html'>Type</a> <em>__type__</em>;
 <br>
 <p>The type of this object</p>
@@ -197,10 +225,8 @@
     
 <span >
 <hr>
-<a name='attribute'></a>var <a href='../../global/parser/Call.html'>Call</a> <em>attribute</em>;
+<a name='__value'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>__value</em>;
 <br>
-<p>All attributes specified for this type.</p>
-
 
 </span>
 
@@ -208,10 +234,8 @@
     
 <span >
 <hr>
-<a name='filename'></a>var <a href='../../global/lang/String.html'>String</a> <em>filename</em>;
+<a name='li'></a>var <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>li</em> (static);
 <br>
-<p>The name of the file in which this type was defined, if any.</p>
-
 
 </span>
 
@@ -219,10 +243,8 @@
     
 <span >
 <hr>
-<a name='member'></a>var ImutableList«Member» <em>member</em>;
+<a name='pre'></a>var <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>pre</em> (static);
 <br>
-<p>A list of all members of this type.</p>
-
 
 </span>
 
@@ -230,10 +252,8 @@
     
 <span >
 <hr>
-<a name='module?'></a>var <a href='../../global/lang/Int.html'>Int</a> <em>module?</em>;
+<a name='tagContent'></a>var <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>tagContent</em> (static);
 <br>
-<p>Is true if this type represents a module.</p>
-
 
 </span>
 
@@ -241,10 +261,26 @@
     
 <span >
 <hr>
-<a name='name'></a>var <a href='../../global/lang/String.html'>String</a> <em>name</em>;
+<a name='tagName'></a>var <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>tagName</em> (static);
 <br>
-<p>The name of this type.</p>
 
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='text'></a>var <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>text</em> (static);
+<br>
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='textSpace'></a>var <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>textSpace</em> (static);
+<br>
 
 </span>
 
@@ -266,65 +302,11 @@
 
         
     
-<span class='anna-internal'>
+<span >
 <hr>
-<a name='!attributeGetter'></a>def <a href='../../global/parser/Call.html'>Call</a> <em>!attributeGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
+<a name='!liGetter'></a>def <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>!liGetter</em> () (static);
 <p>
 
-
-<p>Getter function for the attribute property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!filenameGetter'></a>def <a href='../../global/lang/String.html'>String</a> <em>!filenameGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the filename property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!memberGetter'></a>def ImutableList«Member» <em>!memberGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the member property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!module?Getter'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>!module?Getter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the module? property.</p>
-
-
-</span>
-
-        
-    
-<span class='anna-internal'>
-<hr>
-<a name='!nameGetter'></a>def <a href='../../global/lang/String.html'>String</a> <em>!nameGetter</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (internal, bound);
-<p>
-
-
-<p>Getter function for the name property.</p>
 
 
 </span>
@@ -333,7 +315,73 @@
     
 <span >
 <hr>
-<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/reflection/Type.html'>Type</a> this, <a href='../../global/reflection/Type.html'>Type</a> other) (bound);
+<a name='!preGetter'></a>def <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>!preGetter</em> () (static);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='!tagContentGetter'></a>def <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>!tagContentGetter</em> () (static);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='!tagNameGetter'></a>def <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>!tagNameGetter</em> () (static);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='!textGetter'></a>def <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>!textGetter</em> () (static);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='!textSpaceGetter'></a>def <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>!textSpaceGetter</em> () (static);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='@valueGetter:243'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>@valueGetter:243</em> (<a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> this) (bound);
+<p>
+
+
+
+</span>
+
+        
+    
+<span >
+<hr>
+<a name='__cmp__'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>__cmp__</em> (<a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> this, <a href='../../global/lang/Object.html'>Object</a> other) (bound);
 <p>
 
 
@@ -383,11 +431,9 @@
     
 <span >
 <hr>
-<a name='__init__'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>__init__</em> (<a href='../../global/lang/Object.html'>Object</a> this) (bound);
+<a name='__init__'></a>def <a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> <em>__init__</em> (<a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> this, <a href='../../global/lang/Int.html'>Int</a> value) (bound);
 <p>
 
-
-<p>Constructor for the specified type. This method is run during object creation and should be overloaded to perform object setup.</p>
 
 
 </span>
@@ -435,7 +481,7 @@
     
 <span >
 <hr>
-<a name='abides'></a>def <a href='../../global/lang/Object.html'>Object</a> <em>abides</em> (<a href='../../global/reflection/Type.html'>Type</a> this, <a href='../../global/reflection/Type.html'>Type</a> other) (bound);
+<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> this) (bound);
 <p>
 
 
@@ -446,18 +492,7 @@
     
 <span >
 <hr>
-<a name='hashCode'></a>def <a href='../../global/lang/Int.html'>Int</a> <em>hashCode</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (bound);
-<p>
-
-
-
-</span>
-
-        
-    
-<span >
-<hr>
-<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/reflection/Type.html'>Type</a> this) (bound);
+<a name='toString'></a>def <a href='../../global/lang/String.html'>String</a> <em>toString</em> (<a href='../../global/replTool/HtmlMode.html'>HtmlMode</a> this) (bound);
 <p>
 
 

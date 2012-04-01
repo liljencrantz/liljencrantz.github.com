@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../../js/anna.js"></script>
     <script type="text/javascript" src="../../js/keywordList.js"></script>
     <script type="text/javascript">
-      anna.basePath = "../../";
+      anna.basePath = &quot;../../&quot;;
     </script>
 
   </head>
@@ -43,7 +43,11 @@
     
         <li >
 	<a href="#print">print</a> 
-	 - Print all the unnamed arguments to the function.
+	 - 
+Print all the unnamed arguments to the function, separated by a space
+character. Efter the final argument has been printed, a trailing
+newline is also printed. The arguments are converted to strings by
+calling their toString method.
 	</li>
 	
       
@@ -61,12 +65,22 @@
 <p>
 
 
-<p>Print all the unnamed arguments to the function.</p>
+<p>
+Print all the unnamed arguments to the function, separated by a space
+character. Efter the final argument has been printed, a trailing
+newline is also printed. The arguments are converted to strings by
+calling their toString method.</p>
 
-<p>The print function understands two named arguments:
+<p>
+The print function understands two named arguments, both of which must
+be Strings:
+
 <ul>
-<li><code>sep</code>, which is the separator to print between the unnamed arguments (default is the space character).</li>
-<li><code>end</code>, which is the character to print after the last argument (default is the newline character)</li>
+  <li><code>sep</code>, which is the separator to print between the unnamed 
+  arguments (the default is the space character) and</li>
+
+  <li><code>end</code>, which is the character to print after the last 
+  argument (the default is the newline character).</li>
 </ul></p>
 
 

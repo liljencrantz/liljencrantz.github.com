@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../js/anna.js"></script>
     <script type="text/javascript" src="../js/keywordList.js"></script>
     <script type="text/javascript">
-      anna.basePath = "../";
+      anna.basePath = &quot;../&quot;;
     </script>
 
   </head>
@@ -19,7 +19,7 @@
 	<div class="anna-main-inner">
     <h1><a name="api-overview">Namespace <em class='anna-link-main'>global</em></a></h1>
 
-    <p>This is the root of the entire anna namespace.</p>
+    <p>The global module is the root of the entire anna namespace.</p>
 
 
     
@@ -45,7 +45,11 @@
 	 - Internal module for the classType macro.
 </li>
 
-      <li class='anna-internal'><a href='global/collection.html'>collection</a> 
+      <li ><a href='global/collection.html'>collection</a> 
+	 - Various functions that can be used to transform collections such as Lists and HashMap.
+</li>
+
+      <li class='anna-internal'><a href='global/collectionMacro.html'>collectionMacro</a> 
 	 - Internal module for the __collcetion__ macro.
 </li>
 
@@ -90,7 +94,7 @@
 </li>
 
       <li ><a href='global.html'>global</a> 
-	 - This is the root of the entire anna namespace.
+	 - The global module is the root of the entire anna namespace.
 </li>
 
       <li ><a href='global/html.html'>html</a> 
@@ -135,15 +139,12 @@ The anna i18n module (i18n is short for internationalization) is a simple high l
 </li>
 
       <li ><a href='global/markdown.html'>markdown</a> 
-	
+	 - A simple and currently very incomplete implementation of a markdown
+parser.
 </li>
 
       <li ><a href='global/math.html'>math</a> 
 	 - Basic mathematical functions and constants
-</li>
-
-      <li class='anna-internal'><a href='global/monkeypatchContinuation.html'>monkeypatchContinuation</a> 
-	 - Internally used module. Don't use directly.
 </li>
 
       <li class='anna-internal'><a href='global/monkeypatchLang.html'>monkeypatchLang</a> 
